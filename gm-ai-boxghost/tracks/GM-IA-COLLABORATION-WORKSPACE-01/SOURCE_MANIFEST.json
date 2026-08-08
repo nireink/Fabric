@@ -1,0 +1,322 @@
+{
+  "schema_version": "1.0",
+  "track_id": "GM-IA-COLLABORATION-WORKSPACE-01",
+  "revision": 10,
+  "files": [
+    {
+      "path": "TRACK_STATE.md",
+      "sha256": "2efe76fa052a3a69eab2b9b5661ccd269b4d9813f7ac82376b72e8d1f1d6cc81",
+      "media_type": "text/markdown",
+      "sensitivity": "INTERNAL",
+      "source_ref": "publication-reconciliation-blocked-v0.1"
+    },
+    {
+      "path": "SCOPE.md",
+      "sha256": "5cdde97c5efa03f192c4163cb87ed0df5239df094f65a36c38cef4115a4a88a7",
+      "media_type": "text/markdown",
+      "sensitivity": "INTERNAL",
+      "source_ref": "owner-approval-transition-v0.1"
+    },
+    {
+      "path": "CONTEXT_PACK.md",
+      "sha256": "51431505c916edcb84eed1c6fbd6613f141cc1ac430282d85e13687f8a017696",
+      "media_type": "text/markdown",
+      "sensitivity": "INTERNAL",
+      "source_ref": "publication-reconciliation-blocked-v0.1"
+    },
+    {
+      "path": "dialog/events.jsonl",
+      "sha256": "cd8bda72c00d2d6ae4e0383259fdb8b4f4886cb01197a178939b09c990bbb9b0",
+      "media_type": "application/x-ndjson",
+      "sensitivity": "INTERNAL",
+      "source_ref": "publication-reconciliation-blocked-v0.1"
+    },
+    {
+      "path": "interventions/chatgpt-work/01-initial-proposal/GM_AI_WORKSPACE_INITIAL_PROPOSAL_v0.1.md",
+      "sha256": "519f9d835b55e75c33c4d0028bb8788ae7446e83f1053098bd56cbcfbd29b255",
+      "media_type": "text/markdown",
+      "sensitivity": "INTERNAL",
+      "source_ref": "chatgpt-work-intervention-01"
+    },
+    {
+      "path": "interventions/claude-chat/02-critical-review/GM_AI_WORKSPACE_CRITICAL_REVIEW_v0.1.md",
+      "sha256": "36feb9bdde1cb48b16639d19533888e51971764c03ef97d43b7d598b6764aef2",
+      "media_type": "text/markdown",
+      "sensitivity": "INTERNAL",
+      "source_ref": "claude-chat-intervention-02-formalized"
+    },
+    {
+      "path": "interventions/chatgpt-work/03-adjustment/GM_AI_WORKSPACE_ADJUSTMENT_AFTER_CRITICAL_REVIEW_v0.2.md",
+      "sha256": "2658245c4c71c13547d8e5bfcfd75fa643aa68c32dc9420db10394b0519e8c15",
+      "media_type": "text/markdown",
+      "sensitivity": "INTERNAL",
+      "source_ref": "chatgpt-work-intervention-03"
+    },
+    {
+      "path": "interventions/claude-chat/04-consolidation/GM_AI_WORKSPACE_CONSOLIDATION_v0.2.md",
+      "sha256": "92ed93eebf225c73f5985a14557b11615c0392213ee4dfccf85f684a73db798e",
+      "media_type": "text/markdown",
+      "sensitivity": "INTERNAL",
+      "source_ref": "claude-chat-intervention-04-formalized"
+    },
+    {
+      "path": "interventions/chatgpt-work/05-handoff-verifiable/EXECUTIVE_INDEX.md",
+      "sha256": "7437128ebcbdbef8d2acb29d08a8b30af1246aae3035825c6fa73ed87eb57b11",
+      "media_type": "text/markdown",
+      "sensitivity": "INTERNAL",
+      "source_ref": "chatgpt-work-intervention-05"
+    },
+    {
+      "path": "interventions/chatgpt-work/05-handoff-verifiable/BOXGHOST_STRUCTURE.md",
+      "sha256": "547f0cd9487783752e7f7e9e62a0ce0dd1ec68b4ab9a40cf5dc9b4d2e73af9aa",
+      "media_type": "text/markdown",
+      "sensitivity": "INTERNAL",
+      "source_ref": "chatgpt-work-intervention-05"
+    },
+    {
+      "path": "interventions/chatgpt-work/05-handoff-verifiable/TRACK_AND_WORKFLOW_MODEL.md",
+      "sha256": "e26c42225ad199e13f7bfdc20702c7525a7c56d723e395993b1fc3fe15bd072f",
+      "media_type": "text/markdown",
+      "sensitivity": "INTERNAL",
+      "source_ref": "chatgpt-work-intervention-05"
+    },
+    {
+      "path": "interventions/chatgpt-work/05-handoff-verifiable/APPROVAL_MODEL.md",
+      "sha256": "0a6a52135512f06334e910bbc37a2cd48d7ecb014e7477033223fc80e1b17d64",
+      "media_type": "text/markdown",
+      "sensitivity": "INTERNAL",
+      "source_ref": "chatgpt-work-intervention-05"
+    },
+    {
+      "path": "interventions/chatgpt-work/05-handoff-verifiable/SENSITIVITY_AND_SECRET_HANDLING_POLICY.md",
+      "sha256": "67bd37d0dc01f122df80c9d4acb15bc5bd7db6b2f2201aef80c3ef457870c517",
+      "media_type": "text/markdown",
+      "sensitivity": "INTERNAL",
+      "source_ref": "chatgpt-work-intervention-05"
+    },
+    {
+      "path": "interventions/chatgpt-work/05-handoff-verifiable/SESSION_CAPTURE_BY_PROVIDER.md",
+      "sha256": "91e7d84cc846504c62653ccba6c62f6736be98a95b7af28ebe1bc0d98da49253",
+      "media_type": "text/markdown",
+      "sensitivity": "INTERNAL",
+      "source_ref": "chatgpt-work-intervention-05"
+    },
+    {
+      "path": "interventions/chatgpt-work/05-handoff-verifiable/BOXGHOST_OPERATIONS.md",
+      "sha256": "d97ff8428aae8742d53cdd2f8a3acdf8ac0ee08cfaf26998a2ed716d024761e9",
+      "media_type": "text/markdown",
+      "sensitivity": "INTERNAL",
+      "source_ref": "chatgpt-work-intervention-05"
+    },
+    {
+      "path": "interventions/chatgpt-work/05-handoff-verifiable/AGENT_COORDINATION_PROTOCOL.md",
+      "sha256": "fe40926e3323a5b85cc5427b293415f8b6a62e9c7bf90e82bfa3e483467a8903",
+      "media_type": "text/markdown",
+      "sensitivity": "INTERNAL",
+      "source_ref": "chatgpt-work-intervention-05"
+    },
+    {
+      "path": "interventions/chatgpt-work/05-handoff-verifiable/GM_AI_WORKSPACE_IMPLEMENTATION_SCOPE_v0.1.md",
+      "sha256": "993c23ef7bb0a86615645c71fcf83ff3855ac710b961b6d6ea23412306171630",
+      "media_type": "text/markdown",
+      "sensitivity": "INTERNAL",
+      "source_ref": "chatgpt-work-intervention-05"
+    },
+    {
+      "path": "interventions/chatgpt-work/05-handoff-verifiable/RETURNED_FOR_CHANGES_CROSS_VALIDATION_v0.3.md",
+      "sha256": "947a58975174f27c2df1194527d00a20da6b220ffdf1114ab50d55dca99042b4",
+      "media_type": "text/markdown",
+      "sensitivity": "INTERNAL",
+      "source_ref": "chatgpt-work-audit-remediation-v0.1"
+    },
+    {
+      "path": "interventions/claude-code/06-read-only-audit/FINAL_POST_DEPLOYMENT_VERIFICATION.md",
+      "sha256": "6ca464613c810b6c5ff41f20eb479dbd18fffc7dedc2725ded4de604a17f501e",
+      "media_type": "text/markdown",
+      "sensitivity": "INTERNAL",
+      "source_ref": "claude-code-final-post-deployment-verification"
+    },
+    {
+      "path": "approvals/apr-7c613757-a5d5-4e16-90c6-a0c17cd90907.json",
+      "sha256": "446d93c7cb56d9bbdc1209a845527a13390f53ca48db86480ac1613f6abe4217",
+      "media_type": "application/json",
+      "sensitivity": "INTERNAL",
+      "source_ref": "eduardo-owner-scope-approval-v0.1"
+    },
+    {
+      "path": "interventions/claude-code/08-final-audit/INTERVENTION_08_FINAL_AUDIT.md",
+      "sha256": "779007b7ac5673f3bc06f7a540c4bf46d7490d8e18f4961b7e65ec8e1f97e46c",
+      "media_type": "text/markdown",
+      "sensitivity": "INTERNAL",
+      "source_ref": "claude-code-intervention-08-final-audit"
+    },
+    {
+      "path": "publication/OWNER_DIRECTIVE_CANONICAL_PERSISTENCE_AND_GIT_RECONCILIATION.md",
+      "sha256": "682c676abb801e5af3b614274276f8a5befe691a7c8f8cbfcd6545a09572f425",
+      "media_type": "text/markdown",
+      "sensitivity": "INTERNAL",
+      "source_ref": "eduardo-owner-release-directive-v0.1"
+    },
+    {
+      "path": "approvals/apr-e0c9a490-6202-4ff8-aa16-6ced100fe98c.json",
+      "sha256": "f064bf18869e0a4b3ccb55ed6de20ebe2b212ece10f99346fc84493178025314",
+      "media_type": "application/json",
+      "sensitivity": "INTERNAL",
+      "source_ref": "eduardo-release-action-approval-v0.1"
+    },
+    {
+      "path": "publication/PUBLICATION_ATTEMPT_02_REMOTE_DIVERGENCE_BLOCKED.md",
+      "sha256": "190b71b8a335b00caa942668000b2fec7486895dd95aac14bd8af2b72cb1455a",
+      "media_type": "text/markdown",
+      "sensitivity": "INTERNAL",
+      "source_ref": "codex-publication-attempt-02"
+    },
+    {
+      "path": "evidence/publication/REMOTE_README_DIFF_84feea2f_TO_479c1e87.patch",
+      "sha256": "690bd847464a9d2b539e84de8a3c376f0968cd9102e1f1555ac6e37ea0b237c4",
+      "media_type": "text/x-diff",
+      "sensitivity": "INTERNAL",
+      "source_ref": "git-remote-readme-divergence-evidence"
+    },
+    {
+      "path": "publication/PUBLICATION_ATTEMPT_03_README_SEMANTIC_CONFLICT_BLOCKED.md",
+      "sha256": "820d92f446869b28defd619dfb0d25c04b8ee9cbcb9857ca99d8bb186bf6c863",
+      "media_type": "text/markdown",
+      "sensitivity": "INTERNAL",
+      "source_ref": "codex-publication-attempt-03"
+    },
+    {
+      "path": "publication/CODEX_FINAL_RESPONSE_ATTEMPT_03.md",
+      "sha256": "95b3886b92cdb23603b7455db131613ad6cc42c5bf5711dd3dddbeeb73b588e0",
+      "media_type": "text/markdown",
+      "sensitivity": "INTERNAL",
+      "source_ref": "codex-final-response-publication-attempt-03"
+    },
+    {
+      "path": "attachments/codex/05c4b81b-5673-4f7c-9c57-362ea5515e5a/pasted-text.txt",
+      "sha256": "dc02c64332c9a2b6225ddcd5f482a9b21745ae0356a9fb104c3b96c263b438f8",
+      "media_type": "text/plain",
+      "sensitivity": "INTERNAL",
+      "source_ref": "codex-local-attachment-05c4b81b"
+    },
+    {
+      "path": "attachments/codex/05c4b81b-5673-4f7c-9c57-362ea5515e5a/PROVENANCE.json",
+      "sha256": "d1f2731e11b6189ed97229b5ec904cdf54e5a5160a4d15fb15b3aa72a30ce393",
+      "media_type": "application/json",
+      "sensitivity": "INTERNAL",
+      "source_ref": "codex-local-attachment-provenance-05c4b81b"
+    },
+    {
+      "path": "attachments/codex/2eff626e-d050-42e0-8ef2-177ebcaba96e/pasted-text.txt",
+      "sha256": "6b9e3f3a713e3215883a97269d6f6731bfadd7e50da09e1d456287e43a54680d",
+      "media_type": "text/plain",
+      "sensitivity": "INTERNAL",
+      "source_ref": "codex-local-attachment-2eff626e"
+    },
+    {
+      "path": "attachments/codex/2eff626e-d050-42e0-8ef2-177ebcaba96e/PROVENANCE.json",
+      "sha256": "fa9eaae81e785f5423b7bc18ff4ffbb4e4281e12ef98498fdfc38c70bee422dd",
+      "media_type": "application/json",
+      "sensitivity": "INTERNAL",
+      "source_ref": "codex-local-attachment-provenance-2eff626e"
+    },
+    {
+      "path": "captures/claude-code/5b90fed7-bc79-4805-af6b-2b7806136e30/session.jsonl",
+      "sha256": "09eb1630f98decf4bc357ebcfcc0f490571aa97fefb717c5cfe2f71516c7c170",
+      "media_type": "application/x-ndjson",
+      "sensitivity": "INTERNAL",
+      "source_ref": "claude-code-local-session-5b90fed7"
+    },
+    {
+      "path": "captures/claude-code/5b90fed7-bc79-4805-af6b-2b7806136e30/PROVENANCE.json",
+      "sha256": "95600c033dd8c922b6a48ba07ddb81f09550b37ee8379423bf134227cfb707e0",
+      "media_type": "application/json",
+      "sensitivity": "INTERNAL",
+      "source_ref": "claude-code-local-session-provenance-5b90fed7"
+    },
+    {
+      "path": "captures/codex/AGENT_LOCAL_CONTEXT_INGESTION_2026-08-02.md",
+      "sha256": "fecc8aadde0689e51676ab1ba7416aa92b4768dc74c4e8b71c697f0cbd8257a4",
+      "media_type": "text/markdown",
+      "sensitivity": "INTERNAL",
+      "source_ref": "codex-agent-local-context-ingestion"
+    },
+    {
+      "path": "captures/codex/AGENT_LOCAL_CONTEXT_INGESTION_FINAL_RESPONSE.md",
+      "sha256": "13709c0ce45908f569e819e45b43687431db7f8690c1b7e0ad43f704536827d0",
+      "media_type": "text/markdown",
+      "sensitivity": "INTERNAL",
+      "source_ref": "codex-agent-local-context-ingestion-final-response"
+    },
+    {
+      "path": "attachments/codex/85035a06-ade3-4c4b-b5dc-0de25d8feded/pasted-text.txt",
+      "sha256": "7787c09be4339aad495960de24590762912a3ff5a0004bbe90fad1cc09535cfe",
+      "media_type": "text/plain",
+      "sensitivity": "INTERNAL",
+      "source_ref": "codex-owner-reactivation-decision-attachment"
+    },
+    {
+      "path": "attachments/codex/85035a06-ade3-4c4b-b5dc-0de25d8feded/PROVENANCE.json",
+      "sha256": "f2f1939e3ae0e385dbb52c834adb7d08f3936e657fe5a0f229489d8a8a83d2c6",
+      "media_type": "application/json",
+      "sensitivity": "INTERNAL",
+      "source_ref": "codex-owner-reactivation-decision-provenance"
+    },
+    {
+      "path": "evidence/publication/REMOTE_README_479c1e87_ORIGINAL.md",
+      "sha256": "8fa7743da82c3eb24b6e15706e2b08b93aa7ad16826fd961bad4b279753e1dd6",
+      "media_type": "text/markdown",
+      "sensitivity": "INTERNAL",
+      "source_ref": "git-remote-readme-original-479c1e87"
+    },
+    {
+      "path": "decisions/OWNER_REPOSITORY_REACTIVATION_DECISION_v0.1.md",
+      "sha256": "cfa61ab304436e3b6f279367e6e2796bcc7367b1ba37d94c15aa0d8188413512",
+      "media_type": "text/markdown",
+      "sensitivity": "INTERNAL",
+      "source_ref": "eduardo-owner-repository-reactivation-v0.1"
+    },
+    {
+      "path": "publication/PUBLICATION_ATTEMPT_04_GITHUB_AUTH_BLOCKED.md",
+      "sha256": "26e42883c299c62aa5a436cd72ccbbe10348217c285b6ed2c0dd873c63997735",
+      "media_type": "text/markdown",
+      "sensitivity": "INTERNAL",
+      "source_ref": "codex-publication-attempt-04"
+    },
+    {
+      "path": "publication/CODEX_FINAL_RESPONSE_ATTEMPT_04.md",
+      "sha256": "0c7bdd91aed030fe12a870e6734ebece58883650239625d8753c2dca6442c6a4",
+      "media_type": "text/markdown",
+      "sensitivity": "INTERNAL",
+      "source_ref": "codex-final-response-publication-attempt-04"
+    },
+    {
+      "path": "publication/OWNER_RESUME_DIRECTIVE_PRE_RECONCILIATION.md",
+      "sha256": "a8dddc16a98b91bf16cd485cc75db7c57099f84e5df7078c8596f3b495e206db",
+      "media_type": "text/markdown",
+      "sensitivity": "INTERNAL",
+      "source_ref": "eduardo-publication-resume-pre-reconciliation"
+    },
+    {
+      "path": "publication/PUBLICATION_ATTEMPT_05_PRECOMMIT_VALIDATION.md",
+      "sha256": "ac63983f9fd918bb713a7e3dffc3ac511f78dd674b6bb7eb40305fd22c3676f0",
+      "media_type": "text/markdown",
+      "sensitivity": "INTERNAL",
+      "source_ref": "codex-publication-attempt-05-precommit-validation"
+    },
+    {
+      "path": "publication/PUBLICATION_ATTEMPT_05_PUBLISHED.md",
+      "sha256": "a654369953ac3ea7e849a5dd8ebf38fe65a1fef85961eea0aa2e728a2860d4a2",
+      "media_type": "text/markdown",
+      "sensitivity": "INTERNAL",
+      "source_ref": "codex-publication-attempt-05-published"
+    },
+    {
+      "path": "publication/CODEX_FINAL_RESPONSE_ATTEMPT_05.md",
+      "sha256": "5d181413b156d7c45b13b019c725fa2a9e193a00486da1168673c9348bcd6751",
+      "media_type": "text/markdown",
+      "sensitivity": "INTERNAL",
+      "source_ref": "codex-final-response-publication-attempt-05"
+    }
+  ]
+}

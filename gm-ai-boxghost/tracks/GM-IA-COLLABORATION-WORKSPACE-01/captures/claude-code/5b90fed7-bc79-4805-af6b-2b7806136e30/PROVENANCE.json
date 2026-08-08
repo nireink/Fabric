@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "source_agent": "CLAUDE_CODE",
+  "source_application": "CLAUDE_CODE_LOCAL",
+  "source_original_path": "C:\\Users\\elbur\\.claude\\projects\\D--NZXTG7-GYPPORT-GYPPORT-ERP-GYPPORT-Fabric\\5b90fed7-bc79-4805-af6b-2b7806136e30.jsonl",
+  "source_attachment_id": "5b90fed7-bc79-4805-af6b-2b7806136e30",
+  "original_filename": "5b90fed7-bc79-4805-af6b-2b7806136e30.jsonl",
+  "captured_at": "2026-08-02T09:58:27-05:00",
+  "original_size_bytes": 905659,
+  "original_last_write_time": "2026-08-02T08:51:48.0920000-05:00",
+  "sha256": "09eb1630f98decf4bc357ebcfcc0f490571aa97fefb717c5cfe2f71516c7c170",
+  "object_ref": "objects/sha256/09/09eb1630f98decf4bc357ebcfcc0f490571aa97fefb717c5cfe2f71516c7c170",
+  "track": "GM-IA-COLLABORATION-WORKSPACE-01",
+  "content_class": "conversation",
+  "evidence_type": "claude-code-project-session",
+  "jsonl_lines": 370,
+  "jsonl_valid_lines": 370,
+  "secret_scan": "PASS",
+  "persistence_status": "PERSISTED",
+  "sensitivity": "INTERNAL"
+}

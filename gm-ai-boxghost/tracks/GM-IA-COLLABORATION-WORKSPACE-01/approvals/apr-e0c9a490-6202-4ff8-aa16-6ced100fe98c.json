@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0",
+  "id": "apr-e0c9a490-6202-4ff8-aa16-6ced100fe98c",
+  "track_id": "GM-IA-COLLABORATION-WORKSPACE-01",
+  "scope_type": "RELEASE_ACTION",
+  "scope_ref": "publication/OWNER_DIRECTIVE_CANONICAL_PERSISTENCE_AND_GIT_RECONCILIATION.md",
+  "scope_sha256": "682c676abb801e5af3b614274276f8a5befe691a7c8f8cbfcd6545a09572f425",
+  "decision": "APPROVED_WITH_CONDITIONS",
+  "conditions": [
+    "Publicar exclusivamente la implementación auditada del alcance v0.1",
+    "Reconciliar sin eliminar el commit remoto ni perder cambios locales",
+    "No usar reset destructivo ni force push",
+    "Detenerse ante contradicción semántica y solicitar únicamente la decisión puntual",
+    "Excluir BoxGhost, Fabric, v0.2 y cambios ajenos del commit del módulo",
+    "Ejecutar staging, commit y push solo después de validaciones conformes"
+  ],
+  "granted_by": "eduardo",
+  "granted_at": "2026-08-02T09:37:53-05:00",
+  "effective_from": "2026-08-02T09:37:53-05:00",
+  "expires_at": null,
+  "revocable": true,
+  "revoked_by": null,
+  "revoked_at": null,
+  "revocation_reason": null,
+  "evidence_refs": [
+    "publication/OWNER_DIRECTIVE_CANONICAL_PERSISTENCE_AND_GIT_RECONCILIATION.md",
+    "publication/PUBLICATION_ATTEMPT_02_REMOTE_DIVERGENCE_BLOCKED.md",
+    "publication/PUBLICATION_ATTEMPT_03_README_SEMANTIC_CONFLICT_BLOCKED.md",
+    "dialog/events.jsonl"
+  ],
+  "source_capture_ref": "publication/OWNER_DIRECTIVE_CANONICAL_PERSISTENCE_AND_GIT_RECONCILIATION.md",
+  "approval_text_sha256": "dc02c64332c9a2b6225ddcd5f482a9b21745ae0356a9fb104c3b96c263b438f8",
+  "sensitivity": "INTERNAL"
+}

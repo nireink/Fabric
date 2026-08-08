@@ -1,0 +1,33 @@
+{
+  "checkpoint_id": "GYPPORT-MCK-F1-CP-0001",
+  "date": "2026-08-01",
+  "protocol_version": "1.0",
+  "scope_roots": [
+    "D:\\NZXTG7\\GYPPORT\\GYPPORT ERP\\GYPPORT\\Fabric",
+    "D:\\NZXTG7\\GYPPORT\\GYPPORT ERP\\GYPPORT\\Gystigo\\docs"
+  ],
+  "physical_pdf_files": 233,
+  "unique_pdf_binaries": 175,
+  "exact_duplicate_groups": 58,
+  "exact_duplicate_extra_copies": 58,
+  "physical_bytes": 2833870450,
+  "unique_bytes": 1595362761,
+  "physical_pages": 47404,
+  "unique_pages": 31118,
+  "unreadable_physical_files": 0,
+  "deep_analysis": {
+    "completed_unique_documents": 2,
+    "completed_pages": 10,
+    "status": "IN_PROGRESS_PROVISIONAL",
+    "global_conclusions_allowed": false
+  },
+  "source_immutability": "PRESERVED",
+  "code_analysis": "NOT_PERFORMED",
+  "gystigo_modified": false,
+  "git_actions": {
+    "staging": false,
+    "commit": false,
+    "push": false
+  },
+  "inventory_file": "PHYSICAL_PDF_INVENTORY_2026-08-01.csv"
+}

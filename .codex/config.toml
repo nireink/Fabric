@@ -1,0 +1,6 @@
+# Configuración conservadora de proyecto.
+# Codex solo carga esta capa cuando el proyecto está marcado como confiable.
+# No colocar aquí autenticación, proveedores ni secretos.
+
+project_doc_max_bytes = 65536
+

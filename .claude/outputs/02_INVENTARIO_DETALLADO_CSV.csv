@@ -1,0 +1,378 @@
+RUTA_RELATIVA,TIPO,TAMAÑO_BYTES,FECHA_MOD,CARPETA_CATEGORIA,CATEGORÍA,PRIORIDAD,ESTADO_ESTIMADO
+".chatgpt/approved-prompts/README.md",md,129,2026-07-30,.chatgpt/approved-prompts,"Memoria ChatGPT/Claude",MEDIA,vigente
+".chatgpt/CANONICAL_MEMORY.md",md,669,2026-07-30,.chatgpt,"Memoria ChatGPT/Claude",MEDIA,vigente
+".chatgpt/checkpoints/CHECKPOINT_TEMPLATE.md",md,197,2026-07-30,.chatgpt/checkpoints,"Memoria ChatGPT/Claude",MEDIA,vigente
+".chatgpt/continuity-packets/CONTINUITY_PACKET_TEMPLATE.md",md,304,2026-07-30,.chatgpt/continuity-packets,"Memoria ChatGPT/Claude",MEDIA,vigente
+".chatgpt/conversation-exports/README.md",md,286,2026-07-30,.chatgpt/conversation-exports,"Memoria ChatGPT/Claude",MEDIA,vigente
+".chatgpt/conversation-summaries/CONVERSATION_SUMMARY_TEMPLATE.md",md,247,2026-07-30,.chatgpt/conversation-summaries,"Memoria ChatGPT/Claude",MEDIA,vigente
+".chatgpt/CURRENT_STATE.md",md,1660,2026-08-01,.chatgpt,"Memoria ChatGPT/Claude",MEDIA,vigente
+".chatgpt/DECISION_REGISTER.md",md,1002,2026-08-01,.chatgpt,"Memoria ChatGPT/Claude",MEDIA,vigente
+".chatgpt/PROJECT_CONTEXT.md",md,756,2026-07-30,.chatgpt,"Memoria ChatGPT/Claude",MEDIA,vigente
+".chatgpt/README.md",md,904,2026-07-30,.chatgpt,"Memoria ChatGPT/Claude",MEDIA,vigente
+".chatgpt/UNRESOLVED_REGISTER.md",md,512,2026-07-30,.chatgpt,"Memoria ChatGPT/Claude",MEDIA,vigente
+".chatgpt/working-prompts/README.md",md,127,2026-07-30,.chatgpt/working-prompts,"Memoria ChatGPT/Claude",MEDIA,vigente
+".codex/README.md",md,570,2026-07-30,.codex,"Configuración Agentes",MEDIA,vigente
+"AGENTS.md",md,2274,2026-07-30,.,"Documentación Raíz",ALTA,vigente
+"AI_Workspace/README.md",md,414,2026-07-30,AI_Workspace,"Workspace AI",MEDIA,vigente
+"Backup_Tooling/integrity-checks/INTEGRITY_CHECKLIST.md",md,480,2026-07-30,Backup_Tooling/integrity-checks,"Infraestructura",MEDIA,vigente
+"Backup_Tooling/README.md",md,349,2026-07-30,Backup_Tooling,"Infraestructura",MEDIA,vigente
+"Backup_Tooling/restore-procedures/RESTORE_CHECKLIST.md",md,554,2026-07-30,Backup_Tooling/restore-procedures,"Infraestructura",MEDIA,vigente
+"Backup_Tooling/scripts/README.md",md,769,2026-07-30,Backup_Tooling/scripts,"Infraestructura",MEDIA,vigente
+"CHATGPT.md",md,853,2026-07-30,.,"Documentación Raíz",ALTA,vigente
+"CLAUDE.md",md,737,2026-07-30,.,"Documentación Raíz",ALTA,vigente
+"Governance/README.md",md,308,2026-07-30,Governance,"Gobernanza",MEDIA-ALTA,vigente
+"INSTALL_WINDOWS.md",md,821,2026-07-30,.,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/Accounting/Contabilidad-Financiera-Intermedia-final---2023.pdf",pdf,6111610,2026-07-27,Knowledge/Books/Accounting,"Contabilidad y NIIF",ALTA,vigente
+"Knowledge/Books/Accounting/Fundamentos de la Contabilidad Financiera.pdf",pdf,348751,2026-07-27,Knowledge/Books/Accounting,"Contabilidad y NIIF",ALTA,vigente
+"Knowledge/Books/Accounting/Introduccion A La Informacion Contable EstimacionY Aplicacion Dr. Jumah.pdf",pdf,1460786,2026-07-27,Knowledge/Books/Accounting,"Contabilidad y NIIF",ALTA,vigente
+"Knowledge/Books/Accounting/Memento Práctico Contable 2022.pdf",pdf,181484,2026-07-27,Knowledge/Books/Accounting,"Contabilidad y NIIF",ALTA,vigente
+"Knowledge/Books/Accounting/Principios_de_contabilidad_4ta_Edicion.pdf",pdf,4079232,2026-07-27,Knowledge/Books/Accounting,"Contabilidad y NIIF",ALTA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/1 Tenant/tenants.txt",txt,759,2026-06-01,Knowledge/Books/Base_Iincial_GYPPORT/1 Tenant,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/1. Arquitectura conceptual de GYPPO.txt",txt,1648,2026-07-25,Knowledge/Books/Base_Iincial_GYPPORT,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/1. Arquitectura conceptual de GYPPORT 002.txt",txt,1990,2026-07-30,Knowledge/Books/Base_Iincial_GYPPORT,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/10. Auditoría/audit_action_types.txt",txt,272,2026-06-02,Knowledge/Books/Base_Iincial_GYPPORT/10. Auditoría,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/10. Auditoría/audit_logs.txt",txt,819,2026-06-02,Knowledge/Books/Base_Iincial_GYPPORT/10. Auditoría,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/10. Auditoría/security_logs.txt",txt,541,2026-06-02,Knowledge/Books/Base_Iincial_GYPPORT/10. Auditoría,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/2 Catálogos/catalog_groups.txt",txt,354,2026-06-01,Knowledge/Books/Base_Iincial_GYPPORT/2 Catálogos,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/2 Catálogos/catalog_items.txt",txt,601,2026-06-01,Knowledge/Books/Base_Iincial_GYPPORT/2 Catálogos,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/2 Catálogos/catalog_item_translations.txt",txt,418,2026-06-01,Knowledge/Books/Base_Iincial_GYPPORT/2 Catálogos,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/3 Geography/countries.txt",txt,201,2026-06-01,Knowledge/Books/Base_Iincial_GYPPORT/3 Geography,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/3 Geography/currencies.txt",txt,233,2026-06-01,Knowledge/Books/Base_Iincial_GYPPORT/3 Geography,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/3 Geography/geo_locations.txt",txt,1378,2026-06-01,Knowledge/Books/Base_Iincial_GYPPORT/3 Geography,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/3 Geography/geo_location_aliases.txt",txt,369,2026-06-01,Knowledge/Books/Base_Iincial_GYPPORT/3 Geography,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/3 Geography/geo_location_translations.txt",txt,729,2026-06-01,Knowledge/Books/Base_Iincial_GYPPORT/3 Geography,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/3 Geography/geo_types.txt",txt,614,2026-06-01,Knowledge/Books/Base_Iincial_GYPPORT/3 Geography,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/3 Geography/languages.txt",txt,172,2026-06-01,Knowledge/Books/Base_Iincial_GYPPORT/3 Geography,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/4 Party/parties.txt",txt,1244,2026-06-01,Knowledge/Books/Base_Iincial_GYPPORT/4 Party,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/4 Party/party_addresses.txt",txt,773,2026-06-01,Knowledge/Books/Base_Iincial_GYPPORT/4 Party,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/4 Party/party_contacts.txt",txt,691,2026-06-01,Knowledge/Books/Base_Iincial_GYPPORT/4 Party,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/4 Party/party_relationships.txt",txt,690,2026-06-01,Knowledge/Books/Base_Iincial_GYPPORT/4 Party,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/4 Party/party_roles.txt",txt,596,2026-06-01,Knowledge/Books/Base_Iincial_GYPPORT/4 Party,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/4 Party/party_tax_profiles.txt",txt,721,2026-06-01,Knowledge/Books/Base_Iincial_GYPPORT/4 Party,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/5 Organization/organizations.txt",txt,607,2026-06-01,Knowledge/Books/Base_Iincial_GYPPORT/5 Organization,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/5 Organization/organization_tax_profiles.txt",txt,986,2026-06-01,Knowledge/Books/Base_Iincial_GYPPORT/5 Organization,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/6 SRI Ecuador/document_sequences.txt",txt,821,2026-06-01,Knowledge/Books/Base_Iincial_GYPPORT/6 SRI Ecuador,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/6 SRI Ecuador/emission_points.txt",txt,622,2026-06-01,Knowledge/Books/Base_Iincial_GYPPORT/6 SRI Ecuador,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/6 SRI Ecuador/sri_establishments.txt",txt,777,2026-06-01,Knowledge/Books/Base_Iincial_GYPPORT/6 SRI Ecuador,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/7. Branch/branches.txt",txt,1327,2026-06-01,Knowledge/Books/Base_Iincial_GYPPORT/7. Branch,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/7. Branch/branch_addresses.txt",txt,678,2026-06-01,Knowledge/Books/Base_Iincial_GYPPORT/7. Branch,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/7. Branch/branch_contacts.txt",txt,487,2026-06-01,Knowledge/Books/Base_Iincial_GYPPORT/7. Branch,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/7. Branch/cost_centers.txt",txt,513,2026-06-01,Knowledge/Books/Base_Iincial_GYPPORT/7. Branch,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/7. Branch/departments.txt",txt,647,2026-06-02,Knowledge/Books/Base_Iincial_GYPPORT/7. Branch,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/7. Branch/Parte 7 ALTER TABLE branches ejecuta al final de todos lo branchs.txt",txt,142,2026-06-01,Knowledge/Books/Base_Iincial_GYPPORT/7. Branch,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/8. Employee/employees.txt",txt,1463,2026-06-01,Knowledge/Books/Base_Iincial_GYPPORT/8. Employee,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/8. Employee/employee_branches.txt",txt,520,2026-06-01,Knowledge/Books/Base_Iincial_GYPPORT/8. Employee,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/9. Security (RBAC)/permissions.txt",txt,384,2026-06-01,Knowledge/Books/Base_Iincial_GYPPORT/9. Security (RBAC),"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/9. Security (RBAC)/roles.txt",txt,556,2026-06-01,Knowledge/Books/Base_Iincial_GYPPORT/9. Security (RBAC),"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/9. Security (RBAC)/role_permissions.txt",txt,574,2026-06-01,Knowledge/Books/Base_Iincial_GYPPORT/9. Security (RBAC),"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/9. Security (RBAC)/role_scopes.txt",txt,398,2026-06-01,Knowledge/Books/Base_Iincial_GYPPORT/9. Security (RBAC),"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/9. Security (RBAC)/user_accounts.txt",txt,1200,2026-06-01,Knowledge/Books/Base_Iincial_GYPPORT/9. Security (RBAC),"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/9. Security (RBAC)/user_branches.txt",txt,614,2026-06-01,Knowledge/Books/Base_Iincial_GYPPORT/9. Security (RBAC),"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/9. Security (RBAC)/user_establishments.txt",txt,693,2026-06-01,Knowledge/Books/Base_Iincial_GYPPORT/9. Security (RBAC),"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/9. Security (RBAC)/user_roles.txt",txt,645,2026-06-01,Knowledge/Books/Base_Iincial_GYPPORT/9. Security (RBAC),"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/9. Security (RBAC)/user_sessions.txt",txt,515,2026-06-01,Knowledge/Books/Base_Iincial_GYPPORT/9. Security (RBAC),"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Core Businees Dev V3/1 ERD-01 Núcleo — Negocio GYPPORT  tenants/tenants.txt",txt,1067,2026-06-06,Knowledge/Books/Base_Iincial_GYPPORT/Core Businees Dev V3/1 ERD-01 Núcleo — Negocio GYPPORT  tenants,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Core Businees Dev V3/1 ERD-01 Núcleo — Negocio GYPPORT  tenants/tenant_settings.txt",txt,1048,2026-06-06,Knowledge/Books/Base_Iincial_GYPPORT/Core Businees Dev V3/1 ERD-01 Núcleo — Negocio GYPPORT  tenants,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Core Businees Dev V3/2 ERD-05 Organización/organizations.txt",txt,1122,2026-06-06,Knowledge/Books/Base_Iincial_GYPPORT/Core Businees Dev V3/2 ERD-05 Organización,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Core Businees Dev V3/2 ERD-05 Organización/organization_settings.txt",txt,884,2026-06-06,Knowledge/Books/Base_Iincial_GYPPORT/Core Businees Dev V3/2 ERD-05 Organización,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Core Businees Dev V3/2 ERD-05 Organización/organization_tax_profiles.txt",txt,1853,2026-06-06,Knowledge/Books/Base_Iincial_GYPPORT/Core Businees Dev V3/2 ERD-05 Organización,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Core Businees Dev V3/3 ERD-06 SRI Ecuador/document_sequences.txt",txt,0,2026-06-06,Knowledge/Books/Base_Iincial_GYPPORT/Core Businees Dev V3/3 ERD-06 SRI Ecuador,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Core Businees Dev V3/3 ERD-06 SRI Ecuador/emission_points.txt",txt,657,2026-06-06,Knowledge/Books/Base_Iincial_GYPPORT/Core Businees Dev V3/3 ERD-06 SRI Ecuador,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Core Businees Dev V3/3 ERD-06 SRI Ecuador/sri_establishments.txt",txt,1026,2026-06-06,Knowledge/Books/Base_Iincial_GYPPORT/Core Businees Dev V3/3 ERD-06 SRI Ecuador,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/GYPPORT®.txt",txt,1282,2026-07-25,Knowledge/Books/Base_Iincial_GYPPORT,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/01 Global Master Tablas.docx",docx,15217,2026-06-07,Knowledge/Books/Base_Iincial_GYPPORT/Master data base,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/07 ORGANIZATIONS/organizations.txt",txt,1264,2026-06-06,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/07 ORGANIZATIONS,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/07 ORGANIZATIONS/organization_settings.txt",txt,758,2026-06-06,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/07 ORGANIZATIONS,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/07 ORGANIZATIONS/organization_tax_profiles.txt",txt,1381,2026-06-06,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/07 ORGANIZATIONS,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/08 SRI ECUADOR/document_sequences.txt",txt,1310,2026-06-06,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/08 SRI ECUADOR,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/08 SRI ECUADOR/emission_points.txt",txt,737,2026-06-06,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/08 SRI ECUADOR,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/08 SRI ECUADOR/sri_establishments.txt",txt,1369,2026-06-06,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/08 SRI ECUADOR,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/09 Branch/branches.txt",txt,2290,2026-06-06,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/09 Branch,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/09 Branch/branch_addresses.txt",txt,1518,2026-06-06,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/09 Branch,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/09 Branch/branch_contacts.txt",txt,1347,2026-06-06,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/09 Branch,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/09 Branch/branch_cost_centers.txt",txt,0,2026-06-06,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/09 Branch,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/09 Branch/branch_departments.txt",txt,1412,2026-06-06,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/09 Branch,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/09 Branch/cost_centers.txt",txt,1925,2026-06-06,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/09 Branch,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/09 Branch/departments.txt",txt,1856,2026-06-06,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/09 Branch,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/10 EMPLOYEE/employees.txt",txt,2600,2026-06-06,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/10 EMPLOYEE,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/10 EMPLOYEE/employee_branches.txt",txt,1594,2026-06-06,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/10 EMPLOYEE,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/10 EMPLOYEE/employee_cost_centers.txt",txt,1576,2026-06-06,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/10 EMPLOYEE,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/10 EMPLOYEE/employee_departments.txt",txt,1527,2026-06-06,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/10 EMPLOYEE,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/10 EMPLOYEE/employee_positions.txt",txt,1484,2026-06-06,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/10 EMPLOYEE,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/11 SECURITY  RBAC/permissions.txt",txt,866,2026-06-06,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/11 SECURITY  RBAC,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/11 SECURITY  RBAC/roles.txt",txt,1060,2026-06-06,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/11 SECURITY  RBAC,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/11 SECURITY  RBAC/role_permissions.txt",txt,961,2026-06-06,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/11 SECURITY  RBAC,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/11 SECURITY  RBAC/role_scopes.txt",txt,1132,2026-06-06,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/11 SECURITY  RBAC,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/11 SECURITY  RBAC/user_accounts.txt",txt,1791,2026-06-06,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/11 SECURITY  RBAC,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/11 SECURITY  RBAC/user_branches.txt",txt,1055,2026-06-06,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/11 SECURITY  RBAC,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/11 SECURITY  RBAC/user_establishments.txt",txt,1149,2026-06-06,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/11 SECURITY  RBAC,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/11 SECURITY  RBAC/user_roles.txt",txt,1025,2026-06-06,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/11 SECURITY  RBAC,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/11 SECURITY  RBAC/user_sessions.txt",txt,1167,2026-06-06,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/11 SECURITY  RBAC,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/12 AUDIT/audit_action_types.txt",txt,693,2026-06-06,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/12 AUDIT,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/12 AUDIT/audit_logs.txt",txt,1675,2026-06-06,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/12 AUDIT,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/12 AUDIT/security_logs.txt",txt,1377,2026-06-06,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/12 AUDIT,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Catalogos/Arquitectura GYPPORT Business Catalogos.pdf",pdf,118999,2026-06-06,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Catalogos,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Catalogos/Arquitectura GYPPORT Business Validar Catalogos Completos.pdf",pdf,72712,2026-06-07,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Catalogos,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Catalogos/Arquitectura GYPPORT Business Validar Catalogos.pdf",pdf,68884,2026-06-07,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Catalogos,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Catalogos/catalog_groups.txt",txt,2647,2026-06-06,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Catalogos,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Catalogos/countries.txt",txt,817,2026-06-06,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Catalogos,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Catalogos/Division Policita Edcuador.xlsx",xlsx,73404,2026-06-12,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Catalogos,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Catalogos/geo_types.txt",txt,602,2026-06-06,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Catalogos,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Logica Base Master/Base de Clientes ERP00.pdf",pdf,119377,2026-06-05,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Logica Base Master,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Logica Base Master/Base de Clientes ERP01.pdf",pdf,118770,2026-06-05,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Logica Base Master,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Logica Base Master/Base de Clientes ERP01.txt",txt,396,2026-06-05,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Logica Base Master,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Logica Base Master/Base de Clientes ERP02.pdf",pdf,84658,2026-06-05,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Logica Base Master,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Logica Base Master/Base de Clientes ERP03.pdf",pdf,105214,2026-06-05,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Logica Base Master,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Logica Base Master/Base de Clientes ERP03.txt",txt,245,2026-06-05,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Logica Base Master,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Logica Base Master/Base de Clientes ERP04.pdf",pdf,117376,2026-06-05,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Logica Base Master,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Logica Base Master/Base de Clientes ERP04.txt",txt,294,2026-06-05,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Logica Base Master,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Logica Base Master/Base de Clientes ERP05.pdf",pdf,87310,2026-06-05,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Logica Base Master,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Logica Base Master/Base de Clientes ERP05.txt",txt,305,2026-06-05,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Logica Base Master,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Logica Base Master/Base de Clientes ERP06.pdf",pdf,80434,2026-06-05,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Logica Base Master,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Logica Base Master/Base de Clientes ERP07.pdf",pdf,155206,2026-06-05,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Logica Base Master,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Logica Base Master/Base de Clientes ERP08 Resumen.pdf",pdf,77383,2026-06-05,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Logica Base Master,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Logica Base Master/Base de Clientes ERP09.pdf",pdf,128060,2026-06-05,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Logica Base Master,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Logica Base Master/Base de Clientes ERP09.txt",txt,333,2026-06-05,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Logica Base Master,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Logica Base Master/Base de Clientes ERP10.pdf",pdf,196489,2026-06-05,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Logica Base Master,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Logica Base Master/Base de Clientes ERP10.txt",txt,102,2026-06-05,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Logica Base Master,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Logica Base Master/Base de Clientes ERP11.pdf",pdf,141872,2026-06-05,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Logica Base Master,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Logica Base Master/Base de Clientes ERP11.txt",txt,349,2026-06-05,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Logica Base Master,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Logica Base Master/Base de Clientes ERP12 Base de datos.txt",txt,55920,2026-06-05,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Logica Base Master,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Logica Base Master/Base de Clientes ERP12.pdf",pdf,136473,2026-06-05,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Logica Base Master,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Logica Base Master/Base de Clientes ERP13 agregado tablas actuales.pdf",pdf,144030,2026-06-05,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Logica Base Master,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Logica Base Master/Base de Clientes ERP13 Base de datos agregado tablas actuales.txt",txt,59987,2026-06-05,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Logica Base Master,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Logica Base Master/Base de Clientes ERP14.pdf",pdf,136718,2026-06-05,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Logica Base Master,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Logica Base Master/Base de Clientes ERP14.txt",txt,3803,2026-06-05,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Logica Base Master,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Logica Base Master/Base de Clientes ERP15.pdf",pdf,159750,2026-06-05,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Logica Base Master,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Logica Base Master/Base de Clientes ERP16.pdf",pdf,128934,2026-06-05,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Logica Base Master,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Logica Base Master/Base de Clientes ERP17.pdf",pdf,118226,2026-06-05,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Logica Base Master,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Logica Base Master/Base de Clientes ERP17.txt",txt,412,2026-06-05,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Logica Base Master,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Logica Base Master/Base de Clientes ERP18.pdf",pdf,150193,2026-06-05,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Logica Base Master,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Logica Base Master/Base de Clientes ERP18.txt",txt,1655,2026-06-05,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Logica Base Master,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Logica Base Master/Base de Clientes ERP19.pdf",pdf,136209,2026-06-05,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Logica Base Master,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Logica Base Master/Base de Clientes ERP19.txt",txt,734,2026-06-05,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Logica Base Master,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Logica Base Master/Base de Clientes ERP20.pdf",pdf,147533,2026-06-05,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Logica Base Master,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Logica Base Master/Base de Clientes ERP20.txt",txt,156,2026-06-05,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Logica Base Master,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Logica Base Master/Base de Clientes ERP21.pdf",pdf,117302,2026-06-05,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Logica Base Master,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Logica Base Master/Base de Clientes ERP21.txt",txt,250,2026-06-05,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Logica Base Master,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Logica Base Master/Base de Clientes ERP22.pdf",pdf,126719,2026-06-05,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Logica Base Master,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Logica Base Master/Base de Clientes ERP23.pdf",pdf,195195,2026-06-05,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Logica Base Master,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Logica Base Master/Base de Clientes ERP23.txt",txt,127,2026-06-05,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Logica Base Master,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Nuevo Text Document.txt",txt,1731,2026-06-06,Knowledge/Books/Base_Iincial_GYPPORT/Master data base,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/PDF/Arquitectura GYPPORT Business 01.pdf",pdf,107196,2026-06-06,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/PDF,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/PDF/Arquitectura GYPPORT Business 02.pdf",pdf,97586,2026-06-06,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/PDF,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/PDF/Arquitectura GYPPORT Business 03.pdf",pdf,114644,2026-06-06,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/PDF,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/PDF/Arquitectura GYPPORT Business 04.pdf",pdf,122135,2026-06-06,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/PDF,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/PDF/Arquitectura GYPPORT Business 05.pdf",pdf,34572,2026-06-06,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/PDF,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/PDF/Arquitectura GYPPORT Business 06.pdf",pdf,97378,2026-06-06,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/PDF,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/PDF/Arquitectura GYPPORT Business 07.pdf",pdf,120285,2026-06-06,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/PDF,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/PDF/Arquitectura GYPPORT Business 08.pdf",pdf,150081,2026-06-06,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/PDF,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/PDF/Arquitectura GYPPORT Business 09.pdf",pdf,202840,2026-06-06,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/PDF,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/PDF/Arquitectura GYPPORT Business 10.pdf",pdf,208424,2026-06-06,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/PDF,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/PDF/Arquitectura GYPPORT Business 11.pdf",pdf,109488,2026-06-06,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/PDF,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/PDF/Arquitectura GYPPORT Business 12.pdf",pdf,132181,2026-06-06,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/PDF,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/PDF/Arquitectura GYPPORT Business 13.pdf",pdf,83622,2026-06-06,Knowledge/Books/Base_Iincial_GYPPORT/Master data base/PDF,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/Master data base/Script 01 Crena nueva base.txt",txt,20653,2026-06-06,Knowledge/Books/Base_Iincial_GYPPORT/Master data base,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/PDF/ERP Multitenant 01.pdf",pdf,1370159,2026-06-05,Knowledge/Books/Base_Iincial_GYPPORT/PDF,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/PDF/ERP Multitenant 02.pdf",pdf,1141929,2026-06-05,Knowledge/Books/Base_Iincial_GYPPORT/PDF,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/PDF/ERP Multitenant 03.pdf",pdf,828836,2026-06-05,Knowledge/Books/Base_Iincial_GYPPORT/PDF,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/PDF/ERP Multitenant 04.pdf",pdf,936313,2026-06-05,Knowledge/Books/Base_Iincial_GYPPORT/PDF,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/PDF/ERP Multitenant 05.pdf",pdf,5635404,2026-06-05,Knowledge/Books/Base_Iincial_GYPPORT/PDF,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/PDF/T001-COREV2_01.pdf",pdf,148295,2026-06-01,Knowledge/Books/Base_Iincial_GYPPORT/PDF,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/PDF/T002-Diseñar la versión empresarial completa (Core v2).pdf",pdf,211878,2026-06-01,Knowledge/Books/Base_Iincial_GYPPORT/PDF,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/PDF/T003-Roles y permisos (RBAC).pdf",pdf,182967,2026-06-01,Knowledge/Books/Base_Iincial_GYPPORT/PDF,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/PDF/T004_Módulo de organizaciones.pdf",pdf,137884,2026-06-01,Knowledge/Books/Base_Iincial_GYPPORT/PDF,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/PDF/T005_Sucursales (branches).pdf",pdf,147330,2026-06-01,Knowledge/Books/Base_Iincial_GYPPORT/PDF,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/PDF/T006_Establecimientos SRI.pdf",pdf,142058,2026-06-01,Knowledge/Books/Base_Iincial_GYPPORT/PDF,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/PDF/T007-Auditoría (created_by, updated_by).pdf",pdf,213586,2026-06-01,Knowledge/Books/Base_Iincial_GYPPORT/PDF,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/PDF/T008-Catálogos globales.pdf",pdf,151623,2026-06-01,Knowledge/Books/Base_Iincial_GYPPORT/PDF,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/PDF/T009-Soft delete.pdf",pdf,194083,2026-06-01,Knowledge/Books/Base_Iincial_GYPPORT/PDF,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/PDF/T010-UUIDs además de IDs numéricos.pdf",pdf,184737,2026-06-01,Knowledge/Books/Base_Iincial_GYPPORT/PDF,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/PDF/T011-DB_001.pdf",pdf,144348,2026-06-01,Knowledge/Books/Base_Iincial_GYPPORT/PDF,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/PDF/T012-DB_001.pdf",pdf,207499,2026-06-01,Knowledge/Books/Base_Iincial_GYPPORT/PDF,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/PDF/T013-DB_002.pdf",pdf,144418,2026-06-01,Knowledge/Books/Base_Iincial_GYPPORT/PDF,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/PDF/T014-DB_002 - Diccionario de datos.pdf",pdf,114345,2026-06-01,Knowledge/Books/Base_Iincial_GYPPORT/PDF,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/PDF/T015-DB_002 - Diccionario de datos.pdf",pdf,124874,2026-06-01,Knowledge/Books/Base_Iincial_GYPPORT/PDF,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/PDF/T016-DB_002 - EMPLOYES.pdf",pdf,98069,2026-06-01,Knowledge/Books/Base_Iincial_GYPPORT/PDF,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/PDF/T017-DB_002 - EMPLOYES.pdf",pdf,53750,2026-06-01,Knowledge/Books/Base_Iincial_GYPPORT/PDF,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/PDF/T018-DB_002 - EMPLOYES.pdf",pdf,92996,2026-06-01,Knowledge/Books/Base_Iincial_GYPPORT/PDF,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/PDF/T019-DB_002 - DB OPCION 1.pdf",pdf,169600,2026-06-01,Knowledge/Books/Base_Iincial_GYPPORT/PDF,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/PDF/T020-DB_002 - DB OPCION 1.pdf",pdf,131470,2026-06-01,Knowledge/Books/Base_Iincial_GYPPORT/PDF,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/PDF/T021-DB_002 - DB OPCION 1.pdf",pdf,122195,2026-06-01,Knowledge/Books/Base_Iincial_GYPPORT/PDF,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/PDF/T022-DB_002 - DB OPCION 1.pdf",pdf,142839,2026-06-01,Knowledge/Books/Base_Iincial_GYPPORT/PDF,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/PDF/T023-DB_002 - DB OPCION 1.pdf",pdf,157200,2026-06-01,Knowledge/Books/Base_Iincial_GYPPORT/PDF,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/PDF/T024-DB_002 - DB OPCION 1  Resumen.pdf",pdf,134509,2026-06-01,Knowledge/Books/Base_Iincial_GYPPORT/PDF,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/PDF/T025-DB_002 - DB OPCION 1  GEO_LOCATIONS Y GEO TYPES.pdf",pdf,160349,2026-06-01,Knowledge/Books/Base_Iincial_GYPPORT/PDF,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/PDF/T026-DB_002 - DB OPCION 1  GEO_LOCATIONS Y GEO TYPES.pdf",pdf,129598,2026-06-01,Knowledge/Books/Base_Iincial_GYPPORT/PDF,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/PDF/T027.docx",docx,24538,2026-06-01,Knowledge/Books/Base_Iincial_GYPPORT/PDF,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/PDF/T028-DB_002 - DB OPCION 1  INICIO ERP.pdf",pdf,122424,2026-06-01,Knowledge/Books/Base_Iincial_GYPPORT/PDF,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/PDF/T029-DB_002 - ORGANIZACION DE ARCHIVOS.pdf",pdf,99862,2026-06-01,Knowledge/Books/Base_Iincial_GYPPORT/PDF,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/PDF/T030-DB_002 - INICIO ESTRUCTURA.pdf",pdf,89297,2026-06-01,Knowledge/Books/Base_Iincial_GYPPORT/PDF,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/PDF/T031-DB_002 - INICIO ESTRUCTURA Database Design.pdf",pdf,183257,2026-06-01,Knowledge/Books/Base_Iincial_GYPPORT/PDF,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/PDF/T032-DB_002 - INICIO ESTRUCTURA SQL definitivo.pdf",pdf,147591,2026-06-01,Knowledge/Books/Base_Iincial_GYPPORT/PDF,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/PDF/T033-DB_002 - INICIO ESTRUCTURA Diagramas ER.pdf",pdf,91720,2026-06-01,Knowledge/Books/Base_Iincial_GYPPORT/PDF,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/PDF/T034-DB_002 - INICIO ESTRUCTURA Spring Boot.pdf",pdf,234363,2026-06-01,Knowledge/Books/Base_Iincial_GYPPORT/PDF,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/PDF/T035-DB_002 - INICIO ESTRUCTURA REACT.pdf",pdf,4671385,2026-06-01,Knowledge/Books/Base_Iincial_GYPPORT/PDF,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Base_Iincial_GYPPORT/PDF/T036-DB_002 - TOTAL TABLAS BASE DATOS CREADAS.pdf",pdf,77792,2026-06-02,Knowledge/Books/Base_Iincial_GYPPORT/PDF,"Base Inicial GYPPORT",CRÍTICA,vigente
+"Knowledge/Books/Business_Management/Administración Robbins Coulter 10ma Edicion.pdf",pdf,6627485,2026-07-27,Knowledge/Books/Business_Management,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/Business_Management/Administración Robbins Coulter 8va Edicion.pdf",pdf,8518255,2026-07-27,Knowledge/Books/Business_Management,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/Business_Management/El-Ejecutivo-Eficaz-en-Accion.pdf",pdf,13883764,2026-07-27,Knowledge/Books/Business_Management,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/Business_Management/Introducción a la teoría general de la Administracion Idalverto Chiavenato 7ma Edición.pdf",pdf,49906601,2026-07-27,Knowledge/Books/Business_Management,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/Business_Management/Introducción a la teoría general de la administración, Décima edición.pdf",pdf,3109842,2026-07-27,Knowledge/Books/Business_Management,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/Databases/Database System Concepts by Avi Silberschatz-2019.pdf",pdf,16288017,2026-07-27,Knowledge/Books/Databases,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/Databases/Designing Data-Intensive Applications de Martin Kleppmann 2017.pdf",pdf,4377248,2026-07-27,Knowledge/Books/Databases,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/Databases/FUNDAMENTOS DE BASE DE DATOS.pdf",pdf,8971828,2026-05-31,Knowledge/Books/Databases,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/Databases/FUNDAMENTOS DE BASE DE DATOS_1.pdf",pdf,2504627,2026-05-31,Knowledge/Books/Databases,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/Databases/FUNDAMENTOS DE BASE DE DATOS_2.pdf",pdf,2125904,2026-05-31,Knowledge/Books/Databases,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/Databases/FUNDAMENTOS DE BASE DE DATOS_3.pdf",pdf,4106571,2026-05-31,Knowledge/Books/Databases,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/Databases/SQL Performance Explained de Markus Winand.pdf",pdf,1252662,2026-07-27,Knowledge/Books/Databases,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/OneNote/20260702 ERP.pdf",pdf,5789992,2026-08-01,Knowledge/Books/OneNote,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/OneNote/ERP GYPPORT Business.pdf",pdf,9615531,2026-08-01,Knowledge/Books/OneNote,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/OneNote/GYPPORT POO.pdf",pdf,4837118,2026-08-01,Knowledge/Books/OneNote,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/OneNote/GYPPORT® Governance Documentation Architecture (GD.pdf",pdf,116939,2026-08-01,Knowledge/Books/OneNote,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/OneNote/QUE ES GYPPORT.pdf",pdf,5246573,2026-08-01,Knowledge/Books/OneNote,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/OneNote/UI Dashboard Engine.pdf",pdf,5054697,2026-08-01,Knowledge/Books/OneNote,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/100 Things Every Designer Needs to Know about People What Makes Them Tick (Susan Weinschenk).pdf",pdf,8554829,2025-11-05,Knowledge/Books/PFDS,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/2026/07-guia-de-datos-y-gobernanza-de-datos.pdf",pdf,1370539,2026-07-27,Knowledge/Books/PFDS/2026,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/2026/2023.10_CECA_MAGAN_Abogados_Guia_Gobernanza_Datos_vfinal.pdf",pdf,783095,2026-07-27,Knowledge/Books/PFDS/2026,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/2026/About Face (de Alan Cooper).pdf",pdf,32966872,2026-07-27,Knowledge/Books/PFDS/2026,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/2026/CpituloGobernanzadelosdatos.pdf",pdf,199214,2026-07-27,Knowledge/Books/PFDS/2026,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/2026/Design Is a Job.pdf",pdf,583235,2026-07-27,Knowledge/Books/PFDS/2026,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/2026/Don't Make Me Think (de Steve Krug).pdf",pdf,15050766,2026-07-27,Knowledge/Books/PFDS/2026,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/2026/lawsofux.pdf",pdf,28363634,2026-07-27,Knowledge/Books/PFDS/2026,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/2026/Refactoring UI de Adam Wathan y Steve Schoger.pdf",pdf,55665277,2026-07-27,Knowledge/Books/PFDS/2026,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/780262773-Design-Elements-Third-Edition-by-Timothy-Samara.pdf",pdf,69844871,2025-11-05,Knowledge/Books/PFDS,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/Color Theory (Dan Scott).pdf",pdf,2293040,2025-11-05,Knowledge/Books/PFDS,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/Color Vision and Colorimetry Theory and Applications (Daniel Malacara).pdf",pdf,14246297,2025-11-05,Knowledge/Books/PFDS,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/Color Works Best Practices for Graphic Designers An Essential Guide to Understanding and Applying Color Design Principles (Eddie Opara, John Cantwell).pdf",pdf,9694908,2025-11-05,Knowledge/Books/PFDS,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/colors/Color Theory (Dan Scott).pdf",pdf,2293040,2025-11-05,Knowledge/Books/PFDS/colors,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/colors/Color Vision and Colorimetry Theory and Applications (Daniel Malacara).pdf",pdf,14246297,2025-11-05,Knowledge/Books/PFDS/colors,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/colors/Color Works Best Practices for Graphic Designers An Essential Guide to Understanding and Applying Color Design Principles (Eddie Opara, John Cantwell).pdf",pdf,9694908,2025-11-05,Knowledge/Books/PFDS/colors,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/colors/Colour Perception Mind and the Physical World (Rainer Mausfeld, Dieter Heyer).pdf",pdf,5614023,2025-11-05,Knowledge/Books/PFDS/colors,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/colors/Contemporary Color Theory and Use (Steven Bleicher).pdf",pdf,13969690,2025-11-05,Knowledge/Books/PFDS/colors,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/colors/How to Learn Digital Painting Learn Color Theory Painting Characteres, Prop, Effects, and Backgrounds (Mitch Leeuwe).pdf",pdf,15370383,2025-11-05,Knowledge/Books/PFDS/colors,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/colors/Principio de diseño de combinacion de colores (Chino).pdf",pdf,51063075,2025-11-05,Knowledge/Books/PFDS/colors,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/colors/The Complete Guide for Choosing Colors (Ran Segall, Flux Academy).pdf",pdf,3214886,2025-11-05,Knowledge/Books/PFDS/colors,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/colors/The Designers Dictionary of Color (Sean Adams).pdf",pdf,86514693,2025-11-05,Knowledge/Books/PFDS/colors,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/Colour Perception Mind and the Physical World (Rainer Mausfeld, Dieter Heyer).pdf",pdf,5614023,2025-11-05,Knowledge/Books/PFDS,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/Contemporary Color Theory and Use (Steven Bleicher).pdf",pdf,13969690,2025-11-05,Knowledge/Books/PFDS,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/Design by Nature Using Universal Forms and Principles in Design (Maggie Macnab).pdf",pdf,22453485,2025-11-05,Knowledge/Books/PFDS,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/Design Elements A Graphic Style Manual Understanding the Rules and Knowing When to Break Them, 2nd Edition (Timothy Samara).pdf",pdf,102399610,2025-11-05,Knowledge/Books/PFDS,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/Design Evolution. Handbook of Basic Design Principles Applied in Contemporary Design (Timothy Samara).pdf",pdf,77485882,2025-11-05,Knowledge/Books/PFDS,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/Design for Developers (Adrian Twarog, George Moller).pdf",pdf,9569925,2025-11-05,Knowledge/Books/PFDS,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/Design for how People Think (John Whalen).pdf",pdf,17387337,2025-11-05,Knowledge/Books/PFDS,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/Design of Future Things, The Norman, Donald (Norman, Donald A).pdf",pdf,1582584,2025-11-05,Knowledge/Books/PFDS,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/Design Systems Handbook (Marco Suarez, Jina Anne, Katie Sylor-Miller etc.).pdf",pdf,3518953,2025-11-05,Knowledge/Books/PFDS,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/design-principles/Design by Nature Using Universal Forms and Principles in Design (Maggie Macnab).pdf",pdf,22453485,2025-11-05,Knowledge/Books/PFDS/design-principles,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/design-principles/dokumen.pub_universal-principles-of-ux-100-timeless-strategies-to-create-positive-interactions-between-people-and-technology-volume-4.pdf",pdf,30106411,2025-11-05,Knowledge/Books/PFDS/design-principles,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/design-principles/ebin.pub_tragic-design-the-true-impact-of-bad-design-and-how-to-fix-it.pdf",pdf,13317243,2025-11-05,Knowledge/Books/PFDS/design-principles,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/design-principles/Universal Principles of Design, Revised and Updated 125 Ways to Enhance Usability, Influence Perception, Increase Appeal, Make… (William Lidwell, Kritina Holden, Jill Butler).pdf",pdf,11941894,2025-11-05,Knowledge/Books/PFDS/design-principles,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/design-tools/Figma/Designing and Prototyping Interfaces with Figma Learn essential UXUI design principles by creating interactive prototypes for… (Fabio Staiano).pdf",pdf,8753088,2025-11-05,Knowledge/Books/PFDS/design-tools/Figma,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/design-tools/Figma/Designing in Figma (Eugene Fedorenko).pdf",pdf,16088509,2025-11-05,Knowledge/Books/PFDS/design-tools/Figma,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/design-tools/Figma/Designing User Interfaces Exploring User Interfaces, UI Elements, Design Prototypes and the Figma UI Design Tool (English... (Dario Calonaci).pdf",pdf,5195303,2025-11-05,Knowledge/Books/PFDS/design-tools/Figma,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/design-tools/Figma/UX Design with Figma User-Centered Interface Design and Prototyping with Figma (Design Thinking) (Tom Green, Kevin Brandon).pdf",pdf,22930020,2025-11-05,Knowledge/Books/PFDS/design-tools/Figma,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/Designing and Prototyping Interfaces with Figma Learn essential UXUI design principles by creating interactive prototypes for… (Fabio Staiano).pdf",pdf,8753088,2025-11-05,Knowledge/Books/PFDS,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/Designing in Figma (Eugene Fedorenko).pdf",pdf,16088509,2025-11-05,Knowledge/Books/PFDS,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/Designing Interfaces Patterns for Effective Interaction Design (Tidwell, Jenifer, Brewer, Charles, Valencia etc.).pdf",pdf,30933946,2025-11-05,Knowledge/Books/PFDS,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/Designing User Interfaces (Michał Malewicz, Diana Malewicz).pdf",pdf,84975881,2025-11-05,Knowledge/Books/PFDS,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/Designing User Interfaces Exploring User Interfaces, UI Elements, Design Prototypes and the Figma UI Design Tool (English... (Dario Calonaci).pdf",pdf,5195303,2025-11-05,Knowledge/Books/PFDS,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/Designing UX Forms Create Forms That Don’t Drive Your Users Crazy (Jessica Enders).pdf",pdf,11681495,2025-11-05,Knowledge/Books/PFDS,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/Designing UX Prototyping (Ben Coleman, Dan Goodwin).pdf",pdf,14851024,2025-11-05,Knowledge/Books/PFDS,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/Designing_with_the_Mind_in_Mind_Simple_G.pdf",pdf,6513986,2025-11-05,Knowledge/Books/PFDS,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/DesignOps Handbook (Kate Battles, Meredith Black, Dave Malouf etc.).pdf",pdf,1367160,2025-11-05,Knowledge/Books/PFDS,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/dokumen.pub_universal-principles-of-ux-100-timeless-strategies-to-create-positive-interactions-between-people-and-technology-volume-4-rockport-universal.pdf",pdf,30106411,2025-11-05,Knowledge/Books/PFDS,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/Dont Make Me Think, Revisited A Common Sense Approach to Web Usability 3rd Edition (Steve Krug).pdf",pdf,8908982,2025-11-05,Knowledge/Books/PFDS,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/ebin.pub_tragic-design-the-true-impact-of-bad-design-and-how-to-fix-it.pdf",pdf,13317243,2025-11-05,Knowledge/Books/PFDS,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/Effective UI The Art of Building Great User Experience in Software (Jonathan Anderson, John McRee, Robb Wilson).pdf",pdf,6392529,2025-11-05,Knowledge/Books/PFDS,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/Emotional Design Why We Love (Or Hate) Everyday Things (Donald A. Norman).pdf",pdf,14455952,2025-11-05,Knowledge/Books/PFDS,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/Fixing Bad UX Designs (Lisandra Maioli).pdf",pdf,49240157,2025-11-05,Knowledge/Books/PFDS,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/Graphic Design Rules (Stefan G. Bucher).pdf",pdf,33619687,2025-11-05,Knowledge/Books/PFDS,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/graphic-design/780262773-Design-Elements-Third-Edition-by-Timothy-Samara.pdf",pdf,69844871,2025-11-05,Knowledge/Books/PFDS/graphic-design,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/graphic-design/Design Elements A Graphic Style Manual Understanding the Rules and Knowing When to Break Them, 2nd Edition (Timothy Samara).pdf",pdf,102399610,2025-11-05,Knowledge/Books/PFDS/graphic-design,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/graphic-design/Design Evolution. Handbook of Basic Design Principles Applied in Contemporary Design (Timothy Samara).pdf",pdf,77485882,2025-11-05,Knowledge/Books/PFDS/graphic-design,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/graphic-design/Graphic Design Rules (Stefan G. Bucher).pdf",pdf,33619687,2025-11-05,Knowledge/Books/PFDS/graphic-design,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/graphic-design/Mueller-Brockmann_Josef_Grid_Systems_in_Graphic_Design_Raster_Systeme_fuer_die_Visuele_Gestaltung_English_German_no_OCR.pdf",pdf,19175256,2025-11-05,Knowledge/Books/PFDS/graphic-design,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/How to Learn Digital Painting Learn Color Theory Painting Characteres, Prop, Effects, and Backgrounds (Mitch Leeuwe).pdf",pdf,15370383,2025-11-05,Knowledge/Books/PFDS,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/Laws of UX - Using Psychology to Design Better Products  Services (Jon Yablonski).pdf",pdf,21667652,2025-11-05,Knowledge/Books/PFDS,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/Laws of UX Using Psychology to Design Better Products  Services (Jon Yablonski).pdf",pdf,2217719,2025-11-05,Knowledge/Books/PFDS,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/Living with Complexity.pdf",pdf,6325990,2025-11-05,Knowledge/Books/PFDS,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/Mueller-Brockmann_Josef_Grid_Systems_in_Graphic_Design_Raster_Systeme_fuer_die_Visuele_Gestaltung_English_German_no_OCR.pdf",pdf,19175256,2025-11-05,Knowledge/Books/PFDS,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/Neuro Web Design What Makes Them Click (Susan M. Weinschenk).pdf",pdf,12029559,2025-11-05,Knowledge/Books/PFDS,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/Practical UI Patterns for Design Systems. Fast-Track Interaction Design for a Seamless User Experience (Diana MacDonald).pdf",pdf,12541450,2025-11-05,Knowledge/Books/PFDS,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/Principio de diseño de combinacion de colores (Chino).pdf",pdf,51063075,2025-11-05,Knowledge/Books/PFDS,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/Principles of Product Design (Aarron Walter).pdf",pdf,2781691,2025-11-05,Knowledge/Books/PFDS,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/psychology/100 Things Every Designer Needs to Know about People What Makes Them Tick (Susan Weinschenk).pdf",pdf,8554829,2025-11-05,Knowledge/Books/PFDS/psychology,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/psychology/Donald A. Norman/English/Design of Future Things, The Norman, Donald (Norman, Donald A).pdf",pdf,1582584,2025-11-05,Knowledge/Books/PFDS/psychology/Donald A. Norman/English,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/psychology/Donald A. Norman/English/Emotional Design Why We Love (Or Hate) Everyday Things (Donald A. Norman).pdf",pdf,14455952,2025-11-05,Knowledge/Books/PFDS/psychology/Donald A. Norman/English,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/psychology/Donald A. Norman/English/Living with Complexity.pdf",pdf,6325990,2025-11-05,Knowledge/Books/PFDS/psychology/Donald A. Norman/English,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/psychology/Donald A. Norman/English/The Design of Everyday Things by Don Norman.pdf",pdf,3100112,2025-11-05,Knowledge/Books/PFDS/psychology/Donald A. Norman/English,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/psychology/Laws of UX - Using Psychology to Design Better Products  Services (Jon Yablonski).pdf",pdf,21667652,2025-11-05,Knowledge/Books/PFDS/psychology,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/psychology/Laws of UX Using Psychology to Design Better Products  Services (Jon Yablonski).pdf",pdf,2217719,2025-11-05,Knowledge/Books/PFDS/psychology,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/psychology/Neuro Web Design What Makes Them Click (Susan M. Weinschenk).pdf",pdf,12029559,2025-11-05,Knowledge/Books/PFDS/psychology,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/Refactoring UI (Adam Wathan, Steve Schoger).pdf",pdf,11401803,2025-11-05,Knowledge/Books/PFDS,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/Signage and Wayfinding Design A Complete Guide to Creating Environmental Graphic Design Systems (Chris Calori, David Vanden-Eynden).pdf",pdf,29726738,2025-11-05,Knowledge/Books/PFDS,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/Simple and Usable (Giles Colborne).pdf",pdf,11751361,2025-11-05,Knowledge/Books/PFDS,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/Strategic Writing for UX Drive Engagement, Conversion, and Retention with Every Word - 2nd Edition (Torrey Podmajersky).pdf",pdf,4400292,2025-11-05,Knowledge/Books/PFDS,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/The Complete Guide for Choosing Colors (Ran Segall, Flux Academy).pdf",pdf,3214886,2025-11-05,Knowledge/Books/PFDS,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/The Design of Everyday Things by Don Norman.pdf",pdf,3100112,2025-11-05,Knowledge/Books/PFDS,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/The Designers Dictionary of Color (Sean Adams).pdf",pdf,86514693,2025-11-05,Knowledge/Books/PFDS,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/The Ultimate UI Design Roadmap (Michael Filipiuk).pdf",pdf,14304067,2025-11-05,Knowledge/Books/PFDS,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/the-basics-of-ux-design.pdf",pdf,10371358,2025-11-05,Knowledge/Books/PFDS,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/The_Elements_of_User_Experience_Jesse_Ja.pdf",pdf,1593699,2025-11-05,Knowledge/Books/PFDS,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/This Is UX (Chino).pdf",pdf,10951962,2025-11-05,Knowledge/Books/PFDS,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/UI/Designing Interfaces/Designing Interfaces Patterns for Effective Interaction Design (Tidwell, Jenifer, Brewer, Charles, Valencia etc.).pdf",pdf,30933946,2025-11-05,Knowledge/Books/PFDS/UI/Designing Interfaces,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/UI/Designing Interfaces/vdoc.pub_designing-interfaces.pdf",pdf,61662222,2025-11-05,Knowledge/Books/PFDS/UI/Designing Interfaces,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/UI/Designing User Interfaces (Michał Malewicz, Diana Malewicz).pdf",pdf,84975881,2025-11-05,Knowledge/Books/PFDS/UI,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/UI/Effective UI The Art of Building Great User Experience in Software (Jonathan Anderson, John McRee, Robb Wilson).pdf",pdf,6392529,2025-11-05,Knowledge/Books/PFDS/UI,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/UI/Practical UI Patterns for Design Systems. Fast-Track Interaction Design for a Seamless User Experience (Diana MacDonald).pdf",pdf,12541450,2025-11-05,Knowledge/Books/PFDS/UI,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/UI/Refactoring UI (Adam Wathan, Steve Schoger).pdf",pdf,11401803,2025-11-05,Knowledge/Books/PFDS/UI,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/UI/The Ultimate UI Design Roadmap (Michael Filipiuk).pdf",pdf,14304067,2025-11-05,Knowledge/Books/PFDS/UI,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/UI/UI Design Principles Learn to create beautiful and usable interfaces from scratch (Michael Filipiuk, (ed.)).pdf",pdf,32587637,2025-11-05,Knowledge/Books/PFDS/UI,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/UI/Web UI Design for the Human Eye Principles of Visual Consistency (UX Pin).pdf",pdf,2924130,2025-11-05,Knowledge/Books/PFDS/UI,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/UI Design Principles Learn to create beautiful and usable interfaces from scratch (Michael Filipiuk, (ed.)).pdf",pdf,32587637,2025-11-05,Knowledge/Books/PFDS,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/Universal Principles of Design, Revised and Updated 125 Ways to Enhance Usability, Influence Perception, Increase Appeal, Make… (William Lidwell, Kritina Holden, Jill Butler).pdf",pdf,11941894,2025-11-05,Knowledge/Books/PFDS,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/UX/Design for Developers (Adrian Twarog, George Moller).pdf",pdf,9569925,2025-11-05,Knowledge/Books/PFDS/UX,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/UX/Design for how People Think (John Whalen).pdf",pdf,17387337,2025-11-05,Knowledge/Books/PFDS/UX,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/UX/Design Systems Handbook (Marco Suarez, Jina Anne, Katie Sylor-Miller etc.).pdf",pdf,3518953,2025-11-05,Knowledge/Books/PFDS/UX,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/UX/Designing UX Forms Create Forms That Don’t Drive Your Users Crazy (Jessica Enders).pdf",pdf,11681495,2025-11-05,Knowledge/Books/PFDS/UX,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/UX/Designing UX Prototyping (Ben Coleman, Dan Goodwin).pdf",pdf,14851024,2025-11-05,Knowledge/Books/PFDS/UX,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/UX/Designing_with_the_Mind_in_Mind_Simple_G.pdf",pdf,6513986,2025-11-05,Knowledge/Books/PFDS/UX,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/UX/DesignOps Handbook (Kate Battles, Meredith Black, Dave Malouf etc.).pdf",pdf,1367160,2025-11-05,Knowledge/Books/PFDS/UX,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/UX/Dont Make Me Think, Revisited A Common Sense Approach to Web Usability 3rd Edition (Steve Krug).pdf",pdf,8908982,2025-11-05,Knowledge/Books/PFDS/UX,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/UX/Fixing Bad UX Designs (Lisandra Maioli).pdf",pdf,49240157,2025-11-05,Knowledge/Books/PFDS/UX,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/UX/Libro Languaje Chino.pdf",pdf,10951962,2025-11-05,Knowledge/Books/PFDS/UX,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/UX/Principles of Product Design (Aarron Walter).pdf",pdf,2781691,2025-11-05,Knowledge/Books/PFDS/UX,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/UX/Simple and Usable (Giles Colborne).pdf",pdf,11751361,2025-11-05,Knowledge/Books/PFDS/UX,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/UX/Strategic Writing for UX Drive Engagement, Conversion, and Retention with Every Word - 2nd Edition (Torrey Podmajersky).pdf",pdf,4400292,2025-11-05,Knowledge/Books/PFDS/UX,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/UX/the-basics-of-ux-design.pdf",pdf,10371358,2025-11-05,Knowledge/Books/PFDS/UX,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/UX/The_Elements_of_User_Experience_Jesse_Ja.pdf",pdf,1593699,2025-11-05,Knowledge/Books/PFDS/UX,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/UX/UX Fundamentals for Non-UX Professionals User Experience Principles for Managers, Writers, Designers, and Developers (Edward Stull).pdf",pdf,9990787,2025-11-05,Knowledge/Books/PFDS/UX,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/UX/UX Writing Designing User-Centered Content [Team-IRA] (Jason C. K. Tham, Tharon Howard etc.).pdf",pdf,23915247,2025-11-05,Knowledge/Books/PFDS/UX,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/UX Design with Figma User-Centered Interface Design and Prototyping with Figma (Design Thinking) (Tom Green, Kevin Brandon).pdf",pdf,22930020,2025-11-05,Knowledge/Books/PFDS,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/UX Fundamentals for Non-UX Professionals User Experience Principles for Managers, Writers, Designers, and Developers (Edward Stull).pdf",pdf,9990787,2025-11-05,Knowledge/Books/PFDS,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/UX Writing Designing User-Centered Content [Team-IRA] (Jason C. K. Tham, Tharon Howard etc.).pdf",pdf,23915247,2025-11-05,Knowledge/Books/PFDS,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/vdoc.pub_designing-interfaces.pdf",pdf,61662222,2025-11-05,Knowledge/Books/PFDS,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/Wayfinding Designs Worldwide (Liaoning Shenyang etc.).pdf",pdf,47035219,2025-11-05,Knowledge/Books/PFDS,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/wayfinding-design/Signage and Wayfinding Design A Complete Guide to Creating Environmental Graphic Design Systems (Chris Calori, David Vanden-Eynden).pdf",pdf,29726738,2025-11-05,Knowledge/Books/PFDS/wayfinding-design,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/wayfinding-design/Wayfinding Designs Worldwide (Liaoning Shenyang etc.).pdf",pdf,47035219,2025-11-05,Knowledge/Books/PFDS/wayfinding-design,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/PFDS/Web UI Design for the Human Eye Principles of Visual Consistency (UX Pin).pdf",pdf,2924130,2025-11-05,Knowledge/Books/PFDS,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/Software_Development/Algorithms/Introduction to Algorithms (conocido como CLRS) de Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest y Clifford.pdf",pdf,5726585,2026-07-26,Knowledge/Books/Software_Development/Algorithms,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/Software_Development/Clean_Code/Codigo limpio - Robert Cecil Martin.pdf",pdf,4522452,2026-07-26,Knowledge/Books/Software_Development/Clean_Code,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/Software_Ingeniering/Software_Ingeniering.pdf",pdf,3384217,2026-07-26,Knowledge/Books/Software_Ingeniering,"Documentación Raíz",ALTA,vigente
+"Knowledge/Books/UI_UX_Design/Design Patterns Elements of Reusable Object-Oriented Software.pdf",pdf,19196026,2026-07-26,Knowledge/Books/UI_UX_Design,"Documentación Raíz",ALTA,vigente
+"Knowledge/Corpus/Checkpoints/GYPPORT-KB-CORPUS-CP-0001/GYPPORT_KNOWLEDGE_CORPUS_CHECKPOINT_CP-0001.md",md,8132,2026-07-30,Knowledge/Corpus/Checkpoints/GYPPORT-KB-CORPUS-CP-0001,"Procesos y Arquitectura",CRÍTICA,vigente
+"Knowledge/Corpus/manifests/CORPUS_MANIFEST_TEMPLATE.md",md,188,2026-07-30,Knowledge/Corpus/manifests,"Procesos y Arquitectura",CRÍTICA,vigente
+"Knowledge/Corpus/README.md",md,287,2026-07-30,Knowledge/Corpus,"Procesos y Arquitectura",CRÍTICA,vigente
+"Knowledge/Corpus/source-register/SOURCE_REGISTER_TEMPLATE.md",md,188,2026-07-30,Knowledge/Corpus/source-register,"Procesos y Arquitectura",CRÍTICA,vigente
+"Knowledge/Derived/README.md",md,359,2026-07-30,Knowledge/Derived,"Documentación Raíz",ALTA,vigente
+"Knowledge/Governance/Prompts/GYPPORT_LOCAL_KNOWLEDGE_CORPUS_EXECUTION_PROMPT_v1.0.md",md,17905,2026-07-30,Knowledge/Governance/Prompts,"Documentación Raíz",ALTA,vigente
+"Knowledge/GYPPORT_KNOWLEDGE_BOOKS_PLACEMENT_CP-0002_2026-07-30.md",md,16994,2026-07-30,Knowledge,"Documentación Raíz",ALTA,vigente
+"Knowledge/Processing/knowledge-units/KN_TEMPLATE.md",md,418,2026-07-30,Knowledge/Processing/knowledge-units,"Documentación Raíz",ALTA,vigente
+"Knowledge/Processing/matrices/MATRIX_REGISTER.md",md,706,2026-07-30,Knowledge/Processing/matrices,"Documentación Raíz",ALTA,vigente
+"Knowledge/Processing/README.md",md,325,2026-07-30,Knowledge/Processing,"Documentación Raíz",ALTA,vigente
+"Knowledge/README.md",md,266,2026-07-30,Knowledge,"Documentación Raíz",ALTA,vigente
+"Knowledge/Sources/README.md",md,379,2026-07-30,Knowledge/Sources,"Documentación Raíz",ALTA,vigente
+"Organizacion Fabric.pdf",pdf,88723,2026-07-30,.,"Documentación Raíz",ALTA,vigente
+"Private_State/README.md",md,372,2026-07-30,Private_State,"Documentación Raíz",ALTA,vigente
+"README.md",md,1706,2026-07-30,.,"Documentación Raíz",ALTA,vigente
+"STRUCTURE_MANIFEST.md",md,760,2026-07-30,.,"Documentación Raíz",ALTA,vigente

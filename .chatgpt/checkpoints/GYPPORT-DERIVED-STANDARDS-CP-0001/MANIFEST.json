@@ -1,0 +1,30 @@
+{
+  "checkpoint_id": "GYPPORT-DERIVED-STANDARDS-CP-0001",
+  "date": "2026-08-01",
+  "timezone": "America/Guayaquil",
+  "track": "GYPPORT-KNOWLEDGE-CORPUS-DERIVED-STANDARDS-01",
+  "status": "PROCESSING_STARTED_BATCH_001_COMPLETE_WITH_FINDINGS",
+  "document_status": "PROPOSED_PROCESSING_RECORD",
+  "batch": {
+    "id": "BATCH-001-BASELINE-GOVERNANCE",
+    "logical_sources_processed": 4,
+    "knowledge_units_first": "KN-000028",
+    "knowledge_units_last": "KN-000052",
+    "knowledge_units_count": 25,
+    "contradictions_open": 6,
+    "matrices_initialized": 10
+  },
+  "six_final_documents_generated": false,
+  "conceptual_review_completed": false,
+  "gystigo_modified": false,
+  "fabric_knowledge_modified": false,
+  "git_actions": {
+    "staging": false,
+    "commit": false,
+    "push": false
+  },
+  "outputs": [
+    "PROCESSING_INITIATION.md",
+    "BATCH_001_BASELINE_GOVERNANCE.md"
+  ]
+}

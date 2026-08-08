@@ -1,0 +1,433 @@
+PEGAR EN: CODEX — REGISTRAR, RECONCILIAR Y PUBLICAR
+
+```text
+TRACK=GM-IA-COLLABORATION-WORKSPACE-01
+SCOPE_VERSION=v0.1
+MODE=CANONICAL_PERSISTENCE_AND_GIT_RECONCILIATION
+STATUS=OWNER_DIRECTIVE_ACTIVE
+
+OWNER_AUTHORIZATION=ALREADY_GRANTED
+OWNER_REAPPROVAL_REQUIRED=NO
+STAGING_AUTHORIZED=YES
+COMMIT_AUTHORIZED=YES
+PUSH_AUTHORIZED=YES
+
+LOCAL_PREVIOUS_HEAD=84feea2f5f4cfd2a6feb446eabc495f9e3a8c33d
+FRESH_REMOTE_HEAD=479c1e87bfeb97820587b408ac4f9b2bc546fe1e
+REMOTE_COMMIT_MESSAGE=Update README.md
+REMOTE_CHANGED_FILE=README.md
+REMOTE_ADDED_LINES=26
+```
+
+# 1. DIRECTIVA CANÓNICA PERMANENTE
+
+A partir de esta orden, absolutamente toda la trazabilidad de cada implementación debe conservarse permanentemente en:
+
+```text
+D:\NZXTG7\GYPPORT\GYPPORT ERP\GYPPORT\Fabric\gm-ai-boxghost
+```
+
+Esta regla aplica a todos los tracks presentes y futuros.
+
+Debe persistirse:
+
+* Solicitud original de Eduardo.
+* Prompts entregados a cada IA.
+* Respuestas completas de cada IA.
+* Intervenciones y revisiones.
+* Alcances, ajustes y consolidaciones.
+* Aprobaciones y rechazos.
+* Comandos relevantes ejecutados.
+* Resultados de pruebas y compilaciones.
+* Estados Git verificados.
+* Diffs y parches relevantes.
+* Manifiestos y hashes.
+* Evidencias.
+* Checkpoints.
+* Bloqueos e intentos fallidos.
+* Reconciliaciones.
+* Decisiones de cierre.
+* Commit y publicación.
+* Contexto requerido para reanudar el proceso sin depender de la conversación.
+
+También deben conservarse los archivos temporales que sean relevantes para reconstruir, verificar o continuar el proceso.
+
+No deben guardarse:
+
+* Contraseñas.
+* Tokens.
+* Cookies.
+* Credenciales.
+* Secretos.
+* Cachés regenerables sin valor probatorio.
+* Contenido sensible accidentalmente capturado.
+
+```text
+PERSISTENT_MEMORY=GM_AI_BOXGHOST
+RETENTION=PERMANENT
+BOXGHOST_CANONICAL=YES
+CONVERSATION_ONLY_STATE_ALLOWED=NO
+```
+
+La instrucción anterior:
+
+```text
+NO_MODIFIQUES_FABRIC
+```
+
+queda reemplazada por:
+
+```text
+DO_NOT_MODIFY_UNRELATED_FABRIC_CONTENT
+GM_AI_BOXGHOST_PROCESS_WRITES=REQUIRED
+```
+
+Esto autoriza guardar la trazabilidad en `Fabric\gm-ai-boxghost`, pero no modificar otros componentes de `Fabric`.
+
+Los archivos de BoxGhost no deben incluirse en el commit de:
+
+```text
+Modules\gm-ai-workspace
+```
+
+Si `Fabric` pertenece a otro repositorio Git, no ejecutes staging, commit ni push de ese repositorio sin autorización separada. La persistencia local en BoxGhost sí está ordenada.
+
+# 2. REGLA OPERATIVA PARA CADA INTERVENCIÓN
+
+Toda intervención futura debe cumplir tres momentos:
+
+## Antes de ejecutar
+
+Persistir:
+
+* Solicitud recibida.
+* Prompt operativo.
+* Agente responsable.
+* Alcance.
+* Autorización vigente.
+* Estado inicial.
+* HEAD y working tree cuando corresponda.
+
+## Durante la ejecución
+
+Persistir:
+
+* Comandos relevantes.
+* Resultados.
+* Evidencia.
+* Hallazgos.
+* Parches o diffs necesarios.
+* Checkpoints y bloqueos.
+
+## Después de ejecutar
+
+Persistir:
+
+* Respuesta final.
+* Resultado técnico.
+* Hashes.
+* Estado actualizado.
+* Evento append-only.
+* Próximo paso único.
+
+Ninguna intervención se considera completada si su evidencia solo existe en una conversación.
+
+Si el agente no puede escribir directamente en BoxGhost:
+
+```text
+PERSISTENCE_STATUS=BLOCKED
+INTERVENTION_STATUS=NOT_CANONICALLY_RECORDED
+NEXT_STEP=PERSIST_INTERVENTION_IN_BOXGHOST_BEFORE_CONTINUING
+```
+
+# 3. REGISTRAR EL BLOQUEO ACTUAL
+
+Antes de reconciliar Git, registra el resultado actual dentro de:
+
+```text
+D:\NZXTG7\GYPPORT\GYPPORT ERP\GYPPORT\Fabric\gm-ai-boxghost\
+tracks\GM-IA-COLLABORATION-WORKSPACE-01\
+```
+
+Respeta primero la estructura definida por los documentos canónicos de BoxGhost.
+
+Como mínimo, conserva:
+
+```text
+publication\
+PUBLICATION_ATTEMPT_02_REMOTE_DIVERGENCE_BLOCKED.md
+```
+
+El registro debe incluir exactamente:
+
+```text
+GH_INSTALLED=YES
+GH_AUTHENTICATED=YES
+BRANCH=master
+PREVIOUS_HEAD=84feea2f5f4cfd2a6feb446eabc495f9e3a8c33d
+FRESH_REMOTE_HEAD=479c1e87bfeb97820587b408ac4f9b2bc546fe1e
+REMOTE_DIVERGENCE=YES
+STAGED_FILES_COUNT=0
+STAGING_SCOPE_VERIFIED=NO
+BACKEND_TESTS=NOT_RUN
+FRONTEND_TESTS=NOT_RUN
+BACKEND_BUILD=NOT_RUN
+FRONTEND_BUILD=NOT_RUN
+NPM_VULNERABILITIES=NOT_RUN
+DIFF_CHECK=NOT_RUN
+COMMIT_CREATED=NO
+COMMIT_SHA=NONE
+COMMIT_MESSAGE=NONE
+PUSH_PERFORMED=NO
+REMOTE_BRANCH=origin/master
+REMOTE_HEAD=479c1e87bfeb97820587b408ac4f9b2bc546fe1e
+WORKTREE_AFTER_PUBLICATION=DIRTY
+VERDICT=BLOCKED
+NEXT_STEP=RECONCILIAR_EL_COMMIT_REMOTO_479c1e87_CON_LA_IMPLEMENTACION_AUDITADA_ANTES_DE_REANUDAR_LA_PUBLICACION
+```
+
+Actualiza coherentemente:
+
+```text
+TRACK_STATE.md
+CONTEXT_PACK.md
+dialog\events.jsonl
+SOURCE_MANIFEST.json
+```
+
+Reglas:
+
+* `events.jsonl` es append-only.
+* No sobrescribas eventos históricos.
+* Conserva fecha, agente, procedencia y hashes.
+* No inventes resultados.
+* No marques la publicación como completada.
+* Sigue registrando `OWNER_REAPPROVAL_REQUIRED=NO`.
+
+# 4. VERIFICAR LA DIVERGENCIA REMOTA
+
+En el repositorio:
+
+```text
+D:\NZXTG7\GYPPORT\GYPPORT ERP\GYPPORT\Modules\gm-ai-workspace
+```
+
+Ejecuta una verificación nueva del remoto y confirma:
+
+1. Rama local `master`.
+2. HEAD local esperado `84feea2f…`.
+3. `origin/master` en `479c1e87…`.
+4. `479c1e87…` es hijo directo de `84feea2f…`.
+5. El commit remoto contiene exclusivamente modificaciones en `README.md`.
+6. El cambio remoto agrega exactamente 26 líneas.
+7. No existen otros commits remotos nuevos.
+8. Fabric no fue modificado por el commit remoto.
+
+Guarda en BoxGhost:
+
+* Metadatos del commit remoto.
+* Lista de archivos modificados.
+* Diff remoto.
+* Hash del diff.
+* Estado local antes de la reconciliación.
+* Diff local auditado.
+* Hashes relevantes.
+
+Antes de persistir diffs o logs, verifica que no contengan secretos.
+
+# 5. RECONCILIAR README.md
+
+Integra el commit remoto como nueva base de la implementación local.
+
+La reconciliación debe cumplir:
+
+```text
+REMOTE_README_CONTENT_PRESERVED=YES
+LOCAL_AUDITED_README_CONTENT_PRESERVED=YES
+FORCE_PUSH_ALLOWED=NO
+REMOTE_COMMIT_REMOVAL_ALLOWED=NO
+DESTRUCTIVE_RESET_ALLOWED=NO
+```
+
+No uses:
+
+```text
+git reset --hard
+git checkout --
+git push --force
+git push --force-with-lease
+```
+
+Usa un procedimiento reversible que:
+
+1. Proteja temporalmente todos los cambios locales, incluidos los no rastreados.
+2. Avance `master` mediante fast-forward hasta `479c1e87…`.
+3. Reaplique la implementación local auditada.
+4. Resuelva `README.md` conservando semánticamente tanto las 26 líneas remotas como el contenido local v0.1.
+5. Confirme que ningún archivo local fue perdido.
+6. Registre el procedimiento y su resultado en BoxGhost.
+
+Si Git puede combinar ambos cambios automáticamente, continúa.
+
+Si existe conflicto y la integración correcta es inequívoca, resuélvelo conservando ambos contenidos.
+
+Si existe una contradicción semántica o no puede determinarse qué versión corresponde, detente sin staging, commit ni push y registra:
+
+```text
+VERDICT=BLOCKED
+BLOCKER=README_SEMANTIC_CONFLICT_REQUIRES_OWNER_DECISION
+```
+
+No solicites una aprobación general nueva. Solicita únicamente la decisión puntual sobre el contenido contradictorio.
+
+# 6. VALIDACIÓN POSTERIOR
+
+Después de reconciliar, verifica que:
+
+```text
+LOCAL_BASE_HEAD=479c1e87bfeb97820587b408ac4f9b2bc546fe1e
+REMOTE_COMMIT_PRESERVED=YES
+LOCAL_IMPLEMENTATION_PRESERVED=YES
+README_RECONCILED=YES
+```
+
+Ejecuta nuevamente:
+
+* Backend tests mediante Maven Wrapper.
+* Backend build.
+* Frontend tests.
+* Frontend build.
+* `npm audit` sin aplicar `audit fix`.
+* `git diff --check`.
+* Inspección completa de `git status`.
+* Inspección del diff contra `origin/master`.
+* Verificación de archivos no rastreados.
+* Verificación de que no se incluyan archivos ajenos al alcance v0.1.
+* Verificación de que no se incorporó el iniciador de tracks v0.2.
+* Verificación de que no se corrigieron los dos hallazgos LOW.
+
+Registra en BoxGhost todos los resultados y sus hashes.
+
+# 7. PUBLICACIÓN AUTORIZADA
+
+Si la reconciliación y todas las validaciones pasan:
+
+1. Ejecuta staging selectivo exclusivamente de la implementación v0.1.
+2. No incluyas archivos de BoxGhost.
+3. Verifica el diff staged completo.
+4. Confirma que el commit se construirá encima de `479c1e87…`.
+5. Crea el commit:
+
+```text
+feat(ai-workspace): implement read-only workspace v0.1
+```
+
+6. Ejecuta un push normal de `master` hacia `origin/master`.
+7. No uses force push.
+8. No solicites nuevamente autorización.
+9. No crees PR salvo que la protección de `master` impida el push directo.
+
+# 8. REGISTRO POSTERIOR
+
+Después del push, registra en BoxGhost:
+
+* Commit creado.
+* Padre del commit.
+* SHA final.
+* Mensaje.
+* Archivos publicados.
+* Resultado del push.
+* Remote HEAD verificado.
+* Pruebas y builds.
+* Estado final del working tree.
+* Fecha y agente.
+* Hashes de evidencias.
+
+Actualiza:
+
+```text
+TRACK_STATE.md
+CONTEXT_PACK.md
+dialog\events.jsonl
+SOURCE_MANIFEST.json
+```
+
+Y crea el registro correspondiente bajo:
+
+```text
+publication\
+```
+
+Solo si el push fue confirmado:
+
+```text
+PUBLICATION_STATUS=PUBLISHED
+TRACK_STATUS=CLOSED_AND_PUBLISHED
+```
+
+Si vuelve a bloquearse:
+
+```text
+PUBLICATION_STATUS=BLOCKED
+TRACK_STATUS=TECHNICALLY_CLOSED_PENDING_PUBLICATION
+```
+
+# 9. SALIDA OBLIGATORIA
+
+Devuelve:
+
+```text
+TRACK=GM-IA-COLLABORATION-WORKSPACE-01
+SCOPE_VERSION=v0.1
+BOXGHOST_CANONICAL=YES
+BOXGHOST_PERSISTENCE_COMPLETED=<YES|NO>
+OWNER_DIRECTIVE_RECORDED=<YES|NO>
+PUBLICATION_ATTEMPT_02_RECORDED=<YES|NO>
+EVENTS_APPENDED=<número>
+MANIFEST_UPDATED=<YES|NO>
+
+GH_INSTALLED=<YES|NO>
+GH_AUTHENTICATED=<YES|NO>
+BRANCH=<rama>
+LOCAL_PREVIOUS_HEAD=<hash>
+FRESH_REMOTE_HEAD=<hash>
+REMOTE_DIRECT_CHILD_VERIFIED=<YES|NO>
+REMOTE_CHANGED_FILES=<lista>
+REMOTE_ADDED_LINES=<número>
+REMOTE_COMMIT_PRESERVED=<YES|NO>
+
+README_RECONCILIATION=<PASS|CONFLICT|NOT_RUN>
+REMOTE_README_CONTENT_PRESERVED=<YES|NO|NOT_VERIFIED>
+LOCAL_AUDITED_README_CONTENT_PRESERVED=<YES|NO|NOT_VERIFIED>
+LOCAL_IMPLEMENTATION_PRESERVED=<YES|NO|NOT_VERIFIED>
+
+BACKEND_TESTS=<resultado>
+FRONTEND_TESTS=<resultado>
+BACKEND_BUILD=<PASS|FAIL|NOT_RUN>
+FRONTEND_BUILD=<PASS|FAIL|NOT_RUN>
+NPM_VULNERABILITIES=<número|NOT_RUN>
+DIFF_CHECK=<PASS|FAIL|NOT_RUN>
+
+STAGED_FILES_COUNT=<número>
+STAGING_SCOPE_VERIFIED=<YES|NO>
+COMMIT_CREATED=<YES|NO>
+COMMIT_SHA=<hash|NONE>
+COMMIT_PARENT=<hash|NONE>
+COMMIT_MESSAGE=<mensaje|NONE>
+PUSH_PERFORMED=<YES|NO>
+FORCE_PUSH_PERFORMED=NO
+REMOTE_BRANCH=<remote/rama>
+REMOTE_HEAD=<hash>
+WORKTREE_AFTER_PUBLICATION=<CLEAN|DIRTY>
+
+PUBLICATION_RECORD_PATH=<ruta|NONE>
+PUBLICATION_RECORD_SHA256=<hash|NONE>
+TRACK_STATUS=<estado>
+VERDICT=<PUBLISHED|BLOCKED>
+NEXT_STEP=<uno solo>
+```
+
+No declares `PUBLISHED` si la persistencia final en BoxGhost no fue completada.
+
+```
+```

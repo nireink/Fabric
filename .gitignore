@@ -1,0 +1,32 @@
+# Credenciales y configuración sensible
+**/.env
+**/.env.*
+**/auth.json
+**/*secret*
+**/*token*
+**/*credential*
+**/*.key
+**/*.pem
+
+# Estado privado
+Private_State/**
+!Private_State/README.md
+
+# Fuentes protegidas o pesadas: inventariar antes de decidir su versionado
+Knowledge/Sources/**
+!Knowledge/Sources/README.md
+
+# Exportaciones de cuenta o conversaciones
+.chatgpt/conversation-exports/**
+!.chatgpt/conversation-exports/README.md
+
+# Memorias generadas localmente por Codex
+.codex/memories/**
+
+# Temporales
+*.tmp
+*.bak
+*.log
+Thumbs.db
+.DS_Store
+

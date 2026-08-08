@@ -1,0 +1,461 @@
+PEGAR EN: CLAUDE CODE — AUDITORÍA DEL BLOQUEO DE BATCH-001
+Track: GM-AI-LOCAL-CONTEXT-CLASSIFICATION-01
+Step: PHASE 1 / BATCH-001 BLOCKER AUDIT
+Mode: READ-ONLY AUDIT / NO SOURCE ACCESS / NO GIT
+Agent: Claude Code
+Status: READY_FOR_INDEPENDENT_AUDIT
+1. OBJETO DE LA AUDITORÍA
+Audita independientemente la intervención:
+
+```text
+INTERVENTION_UNDER_AUDIT=CHATGPT-CODEX-20260802-002
+
+INTERVENTION_PATH=D:\NZXTG7\GYPPORT\GYPPORT ERP\GYPPORT\Fabric\gm-ai-boxghost\tracks\GM-AI-LOCAL-CONTEXT-CLASSIFICATION-01\interventions\chatgpt-codex\CHATGPT-CODEX-20260802-002
+```
+
+ChatGPT Codex declaró:
+
+```text
+CLASSIFICATION_STATUS=NOT_EXECUTED
+PERSISTENCE_STATUS=COMPLETED
+
+BLOCKERS=
+FROZEN_SOURCE_ENUMERATION_NOT_REPRODUCIBLE,
+FROZEN_CLASSIFICATION_TAXONOMY_NOT_RECOVERABLE
+
+VERDICT=PHASE_1_EXECUTION_BLOCKED
+```
+
+La auditoría debe determinar si esos bloqueos están respaldados por los documentos disponibles dentro del track y si Codex respetó la detención fail-closed.
+No audites clasificaciones individuales porque `BATCH-001` no fue ejecutado.
+2. AUTORIZACIÓN Y ESTADO VIGENTE
+
+```text
+OWNER_APPROVAL_ID=OA-GM-AI-LOCAL-CONTEXT-CLASSIFICATION-01-PHASE-1
+OWNER_APPROVAL_STATUS=GRANTED
+OWNER_APPROVAL_REVOKED=NO
+OWNER_APPROVAL_MUST_BE_REPEATED=NO
+
+TEMPORARY_CLASSIFICATION_SUSPENSION=LIFTED
+SUSPENSION_LIFT_REFERENCE=OWNER_EXPLICIT_DIRECTIVE_20260802
+PHASE_1_STATUS=RESUMED_BUT_EXECUTION_BLOCKED
+
+BOXGHOST_IS_INDEPENDENT_GIT_REPOSITORY=NO
+BOXGHOST_INHERITS_GIT_RESOLUTION_FROM=Fabric
+BOXGHOST_TRACKING_RELATION_TO_FABRIC=UNTRACKED
+REPOSITORY_IDENTITY_AUDIT_STATUS=CLOSED
+```
+
+No solicites nuevamente aprobación al propietario.
+La identidad Git de BoxGhost está cerrada y queda fuera del objeto de esta auditoría.
+3. PREGUNTAS OBLIGATORIAS
+Responde con evidencia a estas preguntas:
+
+```text
+Q1_REQUEST_MD_EXISTS_AND_IS_READABLE
+Q2_REPORT_MD_EXISTS_AND_IS_READABLE
+Q3_REQUEST_MD_IS_COMPLETE_AND_FAITHFUL
+Q4_REPORT_MD_MATCHES_THE_EXECUTION_RESULT
+Q5_CODEX_INTERVENTION_IDENTIFIER_IS_VALID
+Q6_PREVIOUS_INTERVENTIONS_REMAIN_UNMODIFIED
+Q7_NO_CLASSIFICATION_RECORDS_WERE_CREATED
+Q8_NO_SOURCE_CONTENT_WAS_PERSISTED
+Q9_FROZEN_ROOT_DEFINITIONS_ARE_RECOVERABLE
+Q10_FROZEN_354_FILE_ENUMERATION_IS_RECOVERABLE
+Q11_FROZEN_CLASSIFICATION_TAXONOMY_IS_RECOVERABLE
+Q12_FAIL_CLOSED_STOP_WAS_REQUIRED
+```
+
+Clasifica cada respuesta como:
+
+```text
+CONFIRMED
+INVALIDATED
+NOT_PROVEN
+NOT_APPLICABLE
+```
+
+4. ALCANCE DE LECTURA AUTORIZADO
+Puedes leer únicamente:
+
+```text
+CURRENT_TRACK_PATH=D:\NZXTG7\GYPPORT\GYPPORT ERP\GYPPORT\Fabric\gm-ai-boxghost\tracks\GM-AI-LOCAL-CONTEXT-CLASSIFICATION-01
+
+INTERVENTION_UNDER_AUDIT_PATH=D:\NZXTG7\GYPPORT\GYPPORT ERP\GYPPORT\Fabric\gm-ai-boxghost\tracks\GM-AI-LOCAL-CONTEXT-CLASSIFICATION-01\interventions\chatgpt-codex\CHATGPT-CODEX-20260802-002
+
+CLAUDE_CODE_INTERVENTIONS_PATH=D:\NZXTG7\GYPPORT\GYPPORT ERP\GYPPORT\Fabric\gm-ai-boxghost\tracks\GM-AI-LOCAL-CONTEXT-CLASSIFICATION-01\interventions\claude-code
+```
+
+Dentro del track actual, puedes revisar exclusivamente documentos necesarios para buscar:
+
+```text
+ROOT-01_DEFINITION
+ROOT-02_DEFINITION
+ROOT-03_DEFINITION
+ROOT-04_DEFINITION
+FROZEN_SOURCE_ENUMERATION
+FROZEN_CLASSIFICATION_TAXONOMY
+FROZEN_BATCH_RULES
+```
+
+No accedas a los directorios fuente representados por `ROOT-01..ROOT-04`.
+No leas ni clasifiques archivos fuente.
+No inspecciones otros tracks, repositorios, módulos, almacenamiento remoto o directorios ajenos.
+5. CRITERIOS PARA LOS DOS BLOQUEOS
+5.1 Enumeración congelada
+Para invalidar:
+
+```text
+FROZEN_SOURCE_ENUMERATION_NOT_REPRODUCIBLE
+```
+
+debe existir dentro del track una definición inequívoca que permita reproducir exactamente:
+
+```text
+FROZEN_EXPECTED_SOURCE_FILES=354
+```
+
+La evidencia debe identificar determinísticamente los 354 archivos y su orden canónico o proporcionar un mecanismo congelado suficiente para obtenerlos sin ampliar el universo.
+No basta con:
+
+```text
+TOTAL_EXPECTED=354
+ROOT_PATHS_EXIST
+CURRENT_DIRECTORY_COUNT_IS_354
+APPROXIMATE_RESCAN_RETURNS_354
+```
+
+No enumeres ahora los directorios fuente para intentar reconstruir el universo.
+5.2 Taxonomía congelada
+Para invalidar:
+
+```text
+FROZEN_CLASSIFICATION_TAXONOMY_NOT_RECOVERABLE
+```
+
+debe existir una taxonomía canónica completa, inequívoca y aprobada dentro del track.
+La lista de categorías incluida como "referencia de validación" en la orden de Codex no debe asumirse automáticamente como el contrato congelado completo si faltan:
+
+```text
+DEFINITIONS
+PRECEDENCE_RULES
+CONFIDENCE_THRESHOLD
+SENSITIVE_FILE_RULES
+DESTINATION_RULES
+AMBIGUITY_RULES
+```
+
+Determina si la información disponible es suficiente para clasificar los 354 archivos de manera reproducible.
+6. RESULTADOS POSIBLES
+Usa uno de estos veredictos:
+
+```text
+CODEX_BLOCK_CONFIRMED
+CODEX_BLOCK_PARTIALLY_CONFIRMED
+CODEX_BLOCK_INVALIDATED
+AUDIT_BLOCKED_INSUFFICIENT_EVIDENCE
+```
+
+Reglas:
+
+* `CODEX_BLOCK_CONFIRMED`: ninguno de los dos contratos congelados puede recuperarse.
+* `CODEX_BLOCK_PARTIALLY_CONFIRMED`: solo uno puede recuperarse.
+* `CODEX_BLOCK_INVALIDATED`: ambos pueden recuperarse inequívocamente.
+* `AUDIT_BLOCKED_INSUFFICIENT_EVIDENCE`: no puedes verificar la intervención o la evidencia necesaria.
+
+Aunque invalides uno o ambos bloqueos:
+
+```text
+DO_NOT_EXECUTE_CLASSIFICATION
+DO_NOT_START_BATCH_001
+DO_NOT_AUTHORIZE_CHATGPT_CODEX
+```
+
+La decisión posterior corresponde a ChatGPT Work.
+7. PROHIBICIONES
+
+```text
+ACCESS_ROOT_01_TO_ROOT_04_CONTENT
+ENUMERATE_SOURCE_FILES
+READ_SOURCE_CONTENT
+CALCULATE_SOURCE_HASHES
+CLASSIFY_SOURCE_FILES
+COPY_SOURCE_FILES
+MODIFY_SOURCE_FILES
+START_BATCH_001
+START_BATCH_002
+
+RUN_GIT_COMMAND
+GIT_INIT
+GIT_STATUS
+GIT_ADD
+GIT_COMMIT
+GIT_PUSH
+GIT_STASH
+GIT_RESTORE
+GIT_CLEAN
+MODIFY_FABRIC
+INCORPORATE_BOXGHOST_INTO_FABRIC
+
+MODIFY_EXISTING_INTERVENTION
+APPEND_TO_EXISTING_REPORT
+OVERWRITE_EXISTING_FILE
+RENAME_EXISTING_INTERVENTION
+REUSE_EXISTING_IDENTIFIER
+CREATE_INTERVENTION_FOR_ANOTHER_AGENT
+REQUEST_OWNER_APPROVAL_AGAIN
+```
+
+8. IDENTIFICADOR CRONOLÓGICO
+Persiste la auditoría exclusivamente en:
+
+```text
+interventions\claude-code\CLAUDE-CODE-20260802-NNN
+```
+
+Calcula `NNN` usando únicamente las carpetas directas que coincidan exactamente con:
+
+```text
+CLAUDE-CODE-20260802-[0-9][0-9][0-9]
+```
+
+Reglas:
+
+1. Toma la secuencia válida más alta y suma uno.
+2. No rellenes huecos.
+3. No reutilices identificadores.
+4. No renombres intervenciones existentes.
+5. No modifiques entradas mal formadas.
+6. Reporta las entradas mal formadas solo como cantidad agregada.
+7. Comprueba la ausencia de colisión inmediatamente antes de persistir.
+8. No asumas que corresponde `002`; calcúlalo físicamente.
+
+Si existe colisión:
+
+```text
+BLOCKER=INTERVENTION_IDENTIFIER_COLLISION
+PERSISTENCE_STATUS=NOT_EXECUTED
+```
+
+No selecciones automáticamente otro identificador.
+9. PERSISTENCIA AUTORIZADA
+La única escritura autorizada es:
+
+```text
+CREATE_ONE_NEW_CLAUDE_CODE_INTERVENTION_DIRECTORY
+CREATE_REQUEST_MD
+CREATE_REPORT_MD
+```
+
+Estructura:
+
+```text
+claude-code\
+└── CLAUDE-CODE-20260802-NNN\
+    ├── request.md
+    └── report.md
+```
+
+Contenido:
+
+* `request.md`: copia íntegra y fiel de esta instrucción.
+* `report.md`: informe final completo.
+* No crees archivos adicionales.
+* No modifiques la intervención auditada.
+* No actualices manifiestos, índices, checkpoints o estados acumulativos.
+* No hagas staging, commit ni push.
+
+La persistencia debe realizarse al final.
+10. SALIDA OBLIGATORIA
+El informe debe comenzar con:
+
+```text
+TRACK=GM-AI-LOCAL-CONTEXT-CLASSIFICATION-01
+STEP=PHASE_1_BATCH_001_BLOCKER_AUDIT
+AGENT=CLAUDE_CODE
+AGENT_DIRECTORY=claude-code
+AUDIT_MODE=READ_ONLY_NO_SOURCE_ACCESS_NO_GIT
+TIMEZONE=America/Guayaquil
+
+AUDIT_SUBJECT=CHATGPT-CODEX-20260802-002
+AUDIT_SUBJECT_STEP=PHASE_1_ROOT_01_TO_ROOT_04_CLASSIFICATION_BATCH_001
+
+OWNER_APPROVAL_STATUS=GRANTED
+TEMPORARY_CLASSIFICATION_SUSPENSION=LIFTED
+PHASE_1_EXECUTION_STATE=BLOCKED_PENDING_AUDIT
+
+INTERVENTION_LOCAL_DATE=20260802
+INTERVENTION_SEQUENCE=<NNN|NOT_ALLOCATED>
+INTERVENTION_ID=<CLAUDE-CODE-20260802-NNN|NOT_ALLOCATED>
+INTERVENTION_PATH=<ruta relativa segura|NOT_CREATED>
+
+VALID_SAME_DAY_CLAUDE_CODE_INTERVENTIONS_COUNT=<cantidad>
+HIGHEST_EXISTING_SEQUENCE=<NNN|NONE>
+NEXT_SEQUENCE=<NNN|NOT_ALLOCATED>
+MALFORMED_ENTRIES_COUNT=<cantidad>
+IDENTIFIER_COLLISION=<YES|NO|NOT_CHECKED>
+
+CODEX_REQUEST_MD_EXISTS=<YES|NO>
+CODEX_REPORT_MD_EXISTS=<YES|NO>
+CODEX_REQUEST_MD_VERIFIED=<YES|NO>
+CODEX_REPORT_MD_VERIFIED=<YES|NO>
+CODEX_REQUEST_FIDELITY=<CONFIRMED|INVALIDATED|NOT_PROVEN>
+CODEX_REPORT_INTERNAL_CONSISTENCY=<CONFIRMED|INVALIDATED|NOT_PROVEN>
+CODEX_PERSISTENCE_BOUNDARIES=<CONFIRMED|INVALIDATED|NOT_PROVEN>
+
+ROOT_DEFINITIONS_RECOVERABLE=<YES|NO|PARTIAL>
+FROZEN_EXPECTED_SOURCE_FILES=354
+FROZEN_ENUMERATION_RECOVERABLE=<YES|NO|PARTIAL>
+FROZEN_TAXONOMY_RECOVERABLE=<YES|NO|PARTIAL>
+
+ENUMERATION_BLOCKER_STATUS=<CONFIRMED|INVALIDATED|NOT_PROVEN>
+TAXONOMY_BLOCKER_STATUS=<CONFIRMED|INVALIDATED|NOT_PROVEN>
+FAIL_CLOSED_STOP_STATUS=<REQUIRED|NOT_REQUIRED|NOT_PROVEN>
+
+SOURCE_DIRECTORIES_ACCESSED=0
+SOURCE_FILES_ENUMERATED=0
+SOURCE_FILES_READ=0
+SOURCE_FILES_CLASSIFIED=0
+SOURCE_FILES_COPIED=0
+SOURCE_FILES_MODIFIED=0
+SOURCE_FILES_DELETED=0
+
+AUDIT_SUBJECT_FILES_MODIFIED=0
+PREVIOUS_INTERVENTIONS_MODIFIED=0
+PREVIOUS_INTERVENTIONS_RENAMED=0
+
+PERSISTENCE_DIRECTORIES_CREATED=<0|1>
+PERSISTENCE_FILES_CREATED=<0|2>
+PERSISTENCE_FILES_MODIFIED=0
+
+REQUEST_MD_CREATED=<YES|NO>
+REPORT_MD_CREATED=<YES|NO>
+REQUEST_MD_VERIFIED=<YES|NO>
+REPORT_MD_VERIFIED=<YES|NO>
+
+GIT_COMMANDS_EXECUTED=0
+GIT_MUTATION_OCCURRED=NO
+FILES_STAGED_BY_THIS_EXECUTION=0
+COMMITS_CREATED_BY_THIS_EXECUTION=0
+PUSHES_EXECUTED_BY_THIS_EXECUTION=0
+GITHUB_AUTHENTICATION_USED=NO
+BOXGHOST_INCORPORATED_INTO_FABRIC=NO
+
+BLOCKERS=<lista|NONE>
+VERDICT=<CODEX_BLOCK_CONFIRMED|CODEX_BLOCK_PARTIALLY_CONFIRMED|CODEX_BLOCK_INVALIDATED|AUDIT_BLOCKED_INSUFFICIENT_EVIDENCE>
+PERSISTENCE_STATUS=<COMPLETED|BLOCKED|NOT_EXECUTED>
+NEXT_STEP=CHATGPT_WORK_CROSSES_CLAUDE_CODE_AUDIT_AND_DETERMINES_FROZEN_CONTRACT_RECOVERY
+```
+
+Incluye después:
+A. Identificación de la auditoría
+Registra el identificador cronológico y la ausencia de colisión.
+B. Integridad de la intervención de Codex
+Verifica por separado:
+
+```text
+REQUEST_MD
+REPORT_MD
+IDENTIFIER
+PERSISTENCE_BOUNDARIES
+INTERNAL_CONSISTENCY
+```
+
+C. Auditoría de la enumeración congelada
+Indica qué evidencia existe dentro del track y si permite reproducir exactamente los 354 archivos sin volver a escanear los orígenes.
+No publiques nombres privados individuales.
+D. Auditoría de la taxonomía congelada
+Indica si existe una definición canónica completa y suficiente para una clasificación reproducible.
+Distingue entre:
+
+```text
+CATEGORY_NAME_LIST
+COMPLETE_CLASSIFICATION_CONTRACT
+```
+
+E. Cruce de bloqueos
+Clasifica individualmente:
+
+```text
+FROZEN_SOURCE_ENUMERATION_NOT_REPRODUCIBLE
+FROZEN_CLASSIFICATION_TAXONOMY_NOT_RECOVERABLE
+```
+
+como:
+
+```text
+CONFIRMED
+INVALIDATED
+NOT_PROVEN
+```
+
+F. Veredicto
+Explica si la detención fail-closed fue obligatoria.
+No autorices la reanudación ni ejecutes clasificación.
+G. Persistencia
+
+```text
+NEW_CLAUDE_CODE_INTERVENTION_CREATED=<YES|NO>
+INTERVENTION_ID=<CLAUDE-CODE-20260802-NNN|NOT_ALLOCATED>
+REQUEST_MD_CREATED=<YES|NO>
+REPORT_MD_CREATED=<YES|NO>
+REQUEST_MD_VERIFIED=<YES|NO>
+REPORT_MD_VERIFIED=<YES|NO>
+EXISTING_INTERVENTIONS_MODIFIED=NO
+EXISTING_INTERVENTIONS_RENAMED=NO
+PERSISTENCE_STATUS=<COMPLETED|BLOCKED|NOT_EXECUTED>
+```
+
+H. Confirmación de límites
+Si la persistencia termina correctamente, declara exactamente:
+
+```text
+NO_ROOT_01_TO_ROOT_04_DIRECTORY_WAS_ACCESSED_OR_ENUMERATED
+NO_SOURCE_CONTEXT_FILE_WAS_READ_CLASSIFIED_COPIED_OR_MODIFIED
+NO_BATCH_001_CLASSIFICATION_WAS_EXECUTED
+NO_BATCH_AFTER_BATCH_001_WAS_STARTED
+NO_EXISTING_REPORT_WAS_APPENDED_MODIFIED_OR_OVERWRITTEN
+NO_EXISTING_INTERVENTION_WAS_RENAMED
+NO_INTERVENTION_IDENTIFIER_WAS_REUSED
+NO_INTERVENTION_WAS_CREATED_FOR_ANOTHER_AGENT
+ONLY_THE_NEW_CLAUDE_CODE_INTERVENTION_DIRECTORY_REQUEST_AND_REPORT_WERE_CREATED
+NO_GIT_COMMAND_WAS_EXECUTED
+NO_GIT_REPOSITORY_WAS_INITIALIZED_OR_REPAIRED
+NO_BOXGHOST_CONTENT_WAS_INCORPORATED_INTO_FABRIC
+NO_FILE_WAS_STAGED_COMMITTED_OR_PUSHED
+NO_GITHUB_AUTHENTICATION_WAS_USED
+OWNER_APPROVAL_WAS_NOT_REQUESTED_AGAIN
+```
+
+11. ORDEN DE EJECUCIÓN
+Ejecuta exactamente:
+
+1. Confirma las rutas autorizadas.
+2. Lee `request.md` y `report.md` de `CHATGPT-CODEX-20260802-002`.
+3. Verifica la fidelidad e integridad de ambos archivos.
+4. Revisa únicamente documentos relevantes del track actual.
+5. Determina si existe la enumeración congelada reproducible.
+6. Determina si existe la taxonomía congelada completa.
+7. Audita la detención fail-closed.
+8. Formula el informe final.
+9. Calcula el identificador cronológico de Claude Code.
+10. Comprueba la ausencia de colisión.
+11. Crea una sola carpeta de intervención.
+12. Crea `request.md`.
+13. Crea `report.md`.
+14. Verifica ambos archivos mediante lectura.
+15. Devuelve exactamente el contenido persistido en `report.md`.
+16. Detente.
+
+12. CIERRE
+No ejecutes `BATCH-001`.
+No accedas a `ROOT-01..ROOT-04`.
+No autorices a ChatGPT Codex.
+No solicites aprobación al propietario.
+No realices operaciones Git.
+Devuelve el informe completo a ChatGPT Work.
+Siguiente paso único:
+
+```text
+NEXT_STEP=CHATGPT_WORK_CROSSES_CLAUDE_CODE_AUDIT_AND_DETERMINES_FROZEN_CONTRACT_RECOVERY
+```

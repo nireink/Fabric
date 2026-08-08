@@ -1,0 +1,230 @@
+TRACK=GM-IA-COLLABORATION-WORKSPACE-01
+STEP=AGENT_LOCAL_CONTEXT_INGESTION
+MODE=BOXGHOST_CANONICAL_PERSISTENCE
+STATUS=OWNER_DIRECTIVE_ACTIVE
+
+CANONICAL_BOXGHOST_ROOT=
+D:\NZXTG7\GYPPORT\GYPPORT ERP\GYPPORT\Fabric\gm-ai-boxghost
+
+# 1. ARCHIVO INMEDIATO
+
+Inspecciona y preserva este archivo:
+
+C:\Users\elbur\.codex\attachments\
+05c4b81b-5673-4f7c-9c57-362ea5515e5a\
+pasted-text.txt
+
+No lo modifiques, normalices ni elimines de su ubicación original.
+
+Antes de copiarlo:
+
+1. Confirma que existe y que es un archivo regular.
+2. Registra tamaño, fecha de modificación y SHA-256.
+3. Inspecciona su contenido para determinar:
+   - track relacionado;
+   - agente de procedencia;
+   - tipo de evidencia;
+   - presencia de secretos o credenciales.
+4. No muestres en pantalla valores sensibles.
+5. Si contiene credenciales, detén únicamente su incorporación y reporta el hallazgo sin revelar los valores.
+6. Si no contiene secretos, conserva el archivo original completo.
+
+Destino legible:
+
+D:\NZXTG7\GYPPORT\GYPPORT ERP\GYPPORT\Fabric\gm-ai-boxghost\
+tracks\GM-IA-COLLABORATION-WORKSPACE-01\
+attachments\codex\
+05c4b81b-5673-4f7c-9c57-362ea5515e5a\
+pasted-text.txt
+
+Registra también el objeto mediante SHA-256 conforme a la estructura canónica:
+
+D:\NZXTG7\GYPPORT\GYPPORT ERP\GYPPORT\Fabric\gm-ai-boxghost\
+objects\sha256\
+
+No sobrescribas silenciosamente un objeto o archivo existente. Si ya está
+registrado con el mismo SHA-256, referencia el objeto existente y registra
+la nueva procedencia.
+
+# 2. PROCEDENCIA OBLIGATORIA
+
+Conserva como metadatos:
+
+SOURCE_AGENT=CODEX
+SOURCE_APPLICATION=CHATGPT_CODEX
+SOURCE_ORIGINAL_PATH=<ruta completa>
+SOURCE_ATTACHMENT_ID=05c4b81b-5673-4f7c-9c57-362ea5515e5a
+ORIGINAL_FILENAME=pasted-text.txt
+CAPTURED_AT=<fecha ISO-8601>
+ORIGINAL_SIZE_BYTES=<número>
+ORIGINAL_LAST_WRITE_TIME=<fecha>
+SHA256=<hash>
+TRACK=GM-IA-COLLABORATION-WORKSPACE-01
+CONTENT_CLASS=<prompt|response|conversation|handoff|evidence|mixed>
+SECRET_SCAN=<PASS|BLOCKED>
+PERSISTENCE_STATUS=<PERSISTED|ALREADY_PRESENT|BLOCKED>
+
+Actualiza coherentemente:
+
+- SOURCE_MANIFEST.json
+- CONTEXT_PACK.md
+- TRACK_STATE.md, únicamente si el contenido cambia el estado del track.
+- dialog\events.jsonl, en modo append-only.
+
+# 3. INVENTARIO COMPLETO DE CODEX
+
+Realiza un inventario read-only de:
+
+C:\Users\elbur\.codex\attachments\
+
+Busca todos los archivos que contengan contexto útil:
+
+- Textos pegados.
+- Adjuntos.
+- Prompts.
+- Respuestas.
+- Handoffs.
+- Informes.
+- Evidencias.
+- Parches.
+- Imágenes o documentos aportados al proceso.
+- Archivos temporales necesarios para reconstruir una intervención.
+
+No copies todavía indiscriminadamente toda la carpeta. Clasifica cada archivo
+por track y conserva los archivos de contexto aplicables dentro de:
+
+tracks\<TRACK-ID>\attachments\codex\
+tracks\<TRACK-ID>\captures\codex\
+
+Cuando no pueda determinarse el track:
+
+imports\unclassified\codex\
+
+Ningún archivo debe perder su:
+
+- ruta de procedencia;
+- nombre original;
+- tamaño;
+- fecha;
+- SHA-256;
+- relación con la sesión o identificador de adjunto.
+
+# 4. CONTEXTO DE CLAUDE
+
+Realiza también un inventario read-only de los directorios locales utilizados
+por Claude Chat y Claude Code dentro del perfil de Windows.
+
+No presupongas una estructura concreta: descubre primero las rutas existentes
+y registra cuáles fueron examinadas.
+
+Conserva los artefactos que aporten continuidad:
+
+- conversaciones exportadas;
+- prompts y respuestas;
+- archivos pegados o adjuntos;
+- planes;
+- reportes de Claude Chat;
+- auditorías de Claude Code;
+- resultados de comandos;
+- diffs y parches;
+- checkpoints;
+- contexto de proyectos;
+- handoffs;
+- evidencia necesaria para reanudar un track.
+
+Clasifícalos en:
+
+tracks\<TRACK-ID>\attachments\claude-chat\
+tracks\<TRACK-ID>\attachments\claude-code\
+tracks\<TRACK-ID>\captures\claude-chat\
+tracks\<TRACK-ID>\captures\claude-code\
+
+Si el track no puede determinarse:
+
+imports\unclassified\claude-chat\
+imports\unclassified\claude-code\
+
+# 5. EXCLUSIONES OBLIGATORIAS
+
+No copies a BoxGhost:
+
+- contraseñas;
+- tokens;
+- cookies;
+- claves API;
+- credenciales GitHub;
+- credenciales de Claude u OpenAI;
+- archivos de autenticación;
+- almacenes de sesión que contengan secretos;
+- cachés regenerables sin valor probatorio;
+- node_modules;
+- builds;
+- bases de datos temporales;
+- telemetría sin valor de continuidad.
+
+No copies completa y ciegamente las carpetas `.codex` o `.claude`.
+Primero inventaría, clasifica, analiza secretos y después preserva solamente
+los archivos relacionados con contexto, trazabilidad y evidencia.
+
+# 6. REGLA PERMANENTE
+
+Actualiza los documentos canónicos de operaciones de BoxGhost para establecer:
+
+CODEX_ATTACHMENTS_CAPTURE=REQUIRED
+CLAUDE_CONTEXT_CAPTURE=REQUIRED
+RAW_CONTEXT_RETENTION=PERMANENT
+RAW_CAPTURES=IMMUTABLE_OR_CONTENT_ADDRESSED
+SOURCE_PROVENANCE=MANDATORY
+SHA256_MANIFEST=MANDATORY
+UNCLASSIFIED_INBOX=REQUIRED
+SECRET_EXCLUSION=MANDATORY
+CONVERSATION_ONLY_CONTEXT_ALLOWED=NO
+
+Toda intervención futura deberá capturar automáticamente los archivos locales
+relevantes de Codex y Claude antes de declarar la intervención completada.
+
+# 7. PROTECCIÓN CONTRA FORMATEO
+
+Verifica y reporta si gm-ai-boxghost tiene una copia independiente del equipo.
+
+Guardar únicamente en el disco local no protege contra:
+
+- formateo;
+- daño físico;
+- eliminación accidental;
+- ransomware;
+- corrupción del disco.
+
+No configures ni ejecutes todavía una sincronización externa sin autorización.
+Solo verifica el estado y reporta:
+
+LOCAL_INCREMENTAL_BACKUP=<CONFIGURED|NOT_CONFIGURED|UNKNOWN>
+LOCAL_FULL_BACKUP=<CONFIGURED|NOT_CONFIGURED|UNKNOWN>
+EXTERNAL_ENCRYPTED_BACKUP=<CONFIGURED|NOT_CONFIGURED|UNKNOWN>
+FORMAT_SURVIVAL_PROTECTION=<YES|NO|UNKNOWN>
+
+# 8. SALIDA OBLIGATORIA
+
+Devuelve:
+
+TRACK=GM-IA-COLLABORATION-WORKSPACE-01
+SOURCE_FILE_FOUND=<YES|NO>
+SOURCE_FILE_SIZE_BYTES=<número|NONE>
+SOURCE_FILE_SHA256=<hash|NONE>
+SECRET_SCAN=<PASS|BLOCKED|NOT_RUN>
+SOURCE_FILE_PERSISTED=<YES|NO>
+BOXGHOST_DESTINATION=<ruta|NONE>
+OBJECT_STORE_RECORDED=<YES|NO>
+MANIFEST_UPDATED=<YES|NO>
+EVENTS_APPENDED=<número>
+CODEX_ATTACHMENTS_DISCOVERED=<número>
+CODEX_FILES_PERSISTED=<número>
+CLAUDE_PATHS_DISCOVERED=<lista|NONE>
+CLAUDE_FILES_DISCOVERED=<número>
+CLAUDE_FILES_PERSISTED=<número>
+UNCLASSIFIED_FILES=<número>
+DUPLICATES_BY_SHA256=<número>
+PERMANENT_RULE_RECORDED=<YES|NO>
+FORMAT_SURVIVAL_PROTECTION=<YES|NO|UNKNOWN>
+VERDICT=<PERSISTED|PARTIALLY_PERSISTED|BLOCKED>
+NEXT_STEP=<uno solo>
