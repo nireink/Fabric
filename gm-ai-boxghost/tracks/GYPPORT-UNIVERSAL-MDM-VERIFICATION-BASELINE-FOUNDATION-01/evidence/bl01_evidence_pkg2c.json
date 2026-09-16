@@ -1,0 +1,60 @@
+{
+  "baselineId": "GYPPORT-PKG2C-VERIFIED-BASELINE-2026-09-15",
+  "step": "GYPPORT_GLOBAL_ACCOUNT_TENANT_MEMBERSHIP_FOUNDATION_15",
+  "phase": "PKG_2C_CONTEXTUAL_ACCESS_AND_FK_RECONCILIATION",
+  "date": "2026-09-15",
+  "migrationHead": "V58",
+  "repositories": [
+    { "name": "gm-entities", "commit": "e6d3cbcc5e004e8fbd11c78dc1817b5a00e6bffb" },
+    { "name": "gm-security", "commit": "1654f271711e96761ae7d5470dce3d161cb4333b" },
+    { "name": "Gystigo", "commit": "a3b7bfeb1b52f06110cd08af185b04f3690b4a43" }
+  ],
+  "verifiedFiles": 52,
+  "status": "OWNER_ACCEPTED_COMMITTED_LOCAL",
+  "verification": {
+    "GM_ENTITIES_TESTS": "217/217",
+    "GM_SECURITY_TESTS": "111/111",
+    "GM_EXPENSES_REAL_DB": "84/84",
+    "NORMAL_HOST_TESTS": "675 run, 0 failures, 0 errors, 251 skipped",
+    "STUDIO_CONTRACTS": "581/581",
+    "STUDIO_BUILD": "PASS",
+    "FULL_RUNTIME_MATRIX": "39/39_EXECUTED",
+    "NEW_FAILURES": 0,
+    "KNOWN_PREEXISTING_FAILURES": 3,
+    "HOST_POST_COMMIT_COMPILE": "PASS",
+    "PKG_2C_HOST_UNIT_TESTS": "113/113"
+  },
+  "invariants": {
+    "IDENTITY": "GLOBAL",
+    "BUSINESS_PARTICIPATION": "TENANT_CONTEXTUAL",
+    "ACCESS": "SECURITY",
+    "EMPLOYMENT": "HR",
+    "AUDIT_ACTOR": "GLOBAL_ACCOUNT",
+    "ACTIVE_MEMBERSHIP_REQUIRES_PARTY": "NO",
+    "PARTY_PROJECTION_POLICY": "LAZY_EXPLICIT",
+    "CONTEXTUAL_PARTY_READ_IS_READ_ONLY": "YES",
+    "LOGIN_CREATES_PARTY": "NO",
+    "AUTH_ME_CREATES_PARTY": "NO",
+    "AUTHORIZATION_READ_CREATES_PARTY": "NO",
+    "ACTOR_FKS": "GLOBAL_USER_ACCOUNT",
+    "ACTOR_FIELDS_MOVED_TO_MEMBERSHIP": 0,
+    "ACCESS_SUBJECTS": "USER_TENANT_MEMBERSHIP",
+    "EVC_PRC_ACCOUNT_FK_RESHAPE": "DEFER"
+  },
+  "knownDebts": [
+    "TeamEmployeeRealDatabaseAcceptanceTest:90 expected 2, actual 0 (line 84 before PKG-2C)",
+    "TeamEmployeeControllerScopeBoundaryRealDatabaseAcceptanceTest createRole:194 expected 201, actual 403",
+    "PersonIdentityReconciliationHttpTest:222 expected 200, actual 403"
+  ],
+  "invalidationTriggers": [
+    "MdmParty / Party identity-participation relationship",
+    "tenant_id + mdm_party_id contextual Party resolution",
+    "Global UserAccount identity relationship",
+    "UserTenantMembership semantics",
+    "user_roles, organization_access, tenant user_sessions, user_branches or user_establishments subject ownership",
+    "historical actor FK ownership",
+    "V57 or V58 migration semantics",
+    "login/auth/me/authorization Party provisioning behavior",
+    "Platform Admin tenantless actor behavior"
+  ]
+}

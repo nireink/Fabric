@@ -1,0 +1,20 @@
+COMMIT gm-entities e6d3cbcc5e004e8fbd11c78dc1817b5a00e6bffb PARENT=7b2c56fc5141f38f2bb1e14f11c6d32e3eecca2e
+EXACT|worktree_equals_accepted=True|blob_equals_hash_object=True|src/main/java/com/gypport/business/entities/application/ReviewOrganizationControlClaimUseCase.java
+EXACT|worktree_equals_accepted=True|blob_equals_hash_object=True|src/main/java/com/gypport/business/entities/party/domain/PartyRelationshipVerification.java
+EXACT|worktree_equals_accepted=True|blob_equals_hash_object=True|src/main/java/com/gypport/business/entities/party/domain/PartyRelationshipVerificationEvidence.java
+EXACT|worktree_equals_accepted=True|blob_equals_hash_object=True|src/main/java/com/gypport/business/entities/party/domain/TenantPartyRepository.java
+EXACT|worktree_equals_accepted=True|blob_equals_hash_object=True|src/main/java/com/gypport/business/entities/party/infrastructure/persistence/jdbc/JdbcPartyRelationshipVerificationEvidenceRepository.java
+EXACT|worktree_equals_accepted=True|blob_equals_hash_object=True|src/main/java/com/gypport/business/entities/party/infrastructure/persistence/jdbc/JdbcPartyRelationshipVerificationRepository.java
+EXACT|worktree_equals_accepted=True|blob_equals_hash_object=True|src/main/java/com/gypport/business/entities/party/infrastructure/persistence/jdbc/JdbcTenantPartyRepository.java
+EOL_NORMALIZED_ONLY|worktree_equals_accepted=True|blob_equals_hash_object=True|src/test/java/com/gypport/business/entities/application/AddPartyIdentifierUseCaseTest.java
+EXACT|worktree_equals_accepted=True|blob_equals_hash_object=True|src/test/java/com/gypport/business/entities/application/CreateOrganizationPartyUseCaseTest.java
+EXACT|worktree_equals_accepted=True|blob_equals_hash_object=True|src/test/java/com/gypport/business/entities/application/CreatePersonPartyUseCaseTest.java
+EOL_NORMALIZED_ONLY|worktree_equals_accepted=True|blob_equals_hash_object=True|src/test/java/com/gypport/business/entities/application/GetPartyProfileUseCaseTest.java
+EXACT|worktree_equals_accepted=True|blob_equals_hash_object=True|src/test/java/com/gypport/business/entities/application/ReviewOrganizationControlClaimUseCaseTest.java
+EXACT|worktree_equals_accepted=True|blob_equals_hash_object=True|src/test/java/com/gypport/business/entities/identity/application/IdentityClaimServiceTest.java
+EXACT|worktree_equals_accepted=True|blob_equals_hash_object=True|src/test/java/com/gypport/business/entities/intake/application/SubmitIdentityIntakeUseCaseTest.java
+EXACT|worktree_equals_accepted=True|blob_equals_hash_object=True|src/test/java/com/gypport/business/entities/party/domain/PartyRelationshipVerificationEvidenceTest.java
+EXACT|worktree_equals_accepted=True|blob_equals_hash_object=True|src/test/java/com/gypport/business/entities/party/domain/PartyRelationshipVerificationTest.java
+EXACT|worktree_equals_accepted=True|blob_equals_hash_object=True|src/test/java/com/gypport/business/entities/party/infrastructure/persistence/jdbc/JdbcTenantPartyRepositoryTest.java
+COMMIT_FILES=17 EXPECTED=17 COMMIT_FILES_EXACTLY_EXPECTED=YES UNRELATED_FILES_COMMIT=0 MISSING=0
+BYTES EXACT=15 EOL_NORMALIZED_ONLY=2 DIFFERENT=0 WORKTREE_EQUALS_ACCEPTED=17/17 BLOB_EQUALS_GIT_HASH_OBJECT=17/17 COMMIT_BYTES_MATCH_ACCEPTED_BYTES=YES

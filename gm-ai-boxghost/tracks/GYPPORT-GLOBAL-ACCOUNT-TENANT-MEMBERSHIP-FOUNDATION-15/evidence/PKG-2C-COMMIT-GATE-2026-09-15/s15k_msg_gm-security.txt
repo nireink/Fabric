@@ -1,0 +1,26 @@
+refactor(security): align tenant access with memberships
+
+STEP GYPPORT_GLOBAL_ACCOUNT_TENANT_MEMBERSHIP_FOUNDATION_15, PKG-2C
+(Owner accepted).
+
+- UserAccountRepository.findActiveByParty resolves a Person's account
+  through the Party's Golden Record and the account's membership in the
+  Party's tenant, so a global account that originated in another tenant
+  is found. The membership only has to exist: ACTIVE stays the caller's
+  decision. An origin account without a membership row still resolves in
+  its own tenant, and user_accounts.party_id is never the key.
+- findActiveById looks an account up by its own key, for what an account
+  does on itself. UserAccountProfileRecord carries mdm_party_id, so
+  callers derive the Party of their tenant.
+- JdbcPartyAccessQueryAdapter uses the same derivation for the Team and
+  console read models.
+- grantOrganizationScopedOwnerRoleByPlatformAdmin records the Platform
+  Admin's global account in assigned_by_user_id and created_by_user_id,
+  next to granted_by_platform_admin_id; actor keys are global since
+  Gystigo V58. Nothing is invented when the grant names no account.
+
+Verified: gm-security 111/111. The final PKG-2C regression executed the
+39-entry disposable-MySQL matrix with only the three known pre-existing
+failures.
+
+Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>

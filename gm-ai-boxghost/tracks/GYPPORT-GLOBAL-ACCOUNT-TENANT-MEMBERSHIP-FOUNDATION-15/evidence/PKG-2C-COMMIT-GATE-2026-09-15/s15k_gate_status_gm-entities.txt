@@ -1,0 +1,17 @@
+ M src/main/java/com/gypport/business/entities/application/ReviewOrganizationControlClaimUseCase.java
+ M src/main/java/com/gypport/business/entities/party/domain/PartyRelationshipVerification.java
+ M src/main/java/com/gypport/business/entities/party/domain/PartyRelationshipVerificationEvidence.java
+ M src/main/java/com/gypport/business/entities/party/domain/TenantPartyRepository.java
+ M src/main/java/com/gypport/business/entities/party/infrastructure/persistence/jdbc/JdbcPartyRelationshipVerificationEvidenceRepository.java
+ M src/main/java/com/gypport/business/entities/party/infrastructure/persistence/jdbc/JdbcPartyRelationshipVerificationRepository.java
+ M src/main/java/com/gypport/business/entities/party/infrastructure/persistence/jdbc/JdbcTenantPartyRepository.java
+ M src/test/java/com/gypport/business/entities/application/AddPartyIdentifierUseCaseTest.java
+ M src/test/java/com/gypport/business/entities/application/CreateOrganizationPartyUseCaseTest.java
+ M src/test/java/com/gypport/business/entities/application/CreatePersonPartyUseCaseTest.java
+ M src/test/java/com/gypport/business/entities/application/GetPartyProfileUseCaseTest.java
+ M src/test/java/com/gypport/business/entities/application/ReviewOrganizationControlClaimUseCaseTest.java
+ M src/test/java/com/gypport/business/entities/identity/application/IdentityClaimServiceTest.java
+ M src/test/java/com/gypport/business/entities/intake/application/SubmitIdentityIntakeUseCaseTest.java
+ M src/test/java/com/gypport/business/entities/party/domain/PartyRelationshipVerificationEvidenceTest.java
+ M src/test/java/com/gypport/business/entities/party/domain/PartyRelationshipVerificationTest.java
+ M src/test/java/com/gypport/business/entities/party/infrastructure/persistence/jdbc/JdbcTenantPartyRepositoryTest.java

@@ -1,0 +1,78 @@
+ M AGENTS.md
+ M CHATGPT.md
+ M CLAUDE.md
+ D README.md
+ M Reglas.md
+ M docs/testing/TEST_DATABASE_ISOLATION.md
+ M platform_os/server/src/main/java/com/gypport/server/module/expenses/AdvanceSettlementController.java
+ M platform_os/server/src/main/java/com/gypport/server/module/expenses/ExpenseController.java
+ M platform_os/server/src/main/java/com/gypport/server/module/expenses/ExpenseReportController.java
+ M platform_os/server/src/main/java/com/gypport/server/module/expenses/ExpensesResponseFormatting.java
+ M platform_os/server/src/main/java/com/gypport/server/module/expenses/VehicleReferenceController.java
+ M platform_os/server/src/main/java/com/gypport/server/module/humanresources/EmployeeAccessGrantService.java
+ M platform_os/server/src/main/java/com/gypport/server/module/onboarding/application/RegisterPersonAccountUseCase.java
+ M platform_os/server/src/main/java/com/gypport/server/module/organizations/ClaimOrganizationControlUseCase.java
+ M platform_os/server/src/main/java/com/gypport/server/module/organizations/ConfirmOrganizationControlUseCase.java
+ M platform_os/server/src/main/java/com/gypport/server/module/organizations/ReviewOrganizationControlUseCase.java
+ M platform_os/server/src/main/java/com/gypport/server/shared/config/GmExpensesConfig.java
+ M platform_os/server/src/main/java/com/gypport/server/shared/config/GmOrganizationsConfig.java
+ M platform_os/server/src/test/java/com/gypport/server/module/entities/GmEntitiesHostIntegrationTest.java
+ M platform_os/server/src/test/java/com/gypport/server/module/expenses/ExpenseCaseHttpApiTest.java
+ M platform_os/server/src/test/java/com/gypport/server/module/expenses/GmExpensesHostIntegrationTest.java
+ M platform_os/server/src/test/java/com/gypport/server/module/humanresources/EmployeeAccessRevocationRealDatabaseAcceptanceTest.java
+ M platform_os/server/src/test/java/com/gypport/server/module/humanresources/EmployeeEmploymentUpdateRealDatabaseAcceptanceTest.java
+ M platform_os/server/src/test/java/com/gypport/server/module/humanresources/TeamEmployeeRealDatabaseAcceptanceTest.java
+ M platform_os/server/src/test/java/com/gypport/server/module/onboarding/application/RegisterPersonAccountUseCaseTest.java
+ M platform_os/server/src/test/java/com/gypport/server/module/organizations/ClaimOrganizationControlUseCaseTest.java
+ M platform_os/server/src/test/java/com/gypport/server/module/organizations/ConfirmOrganizationControlUseCaseTest.java
+ M platform_os/server/src/test/java/com/gypport/server/module/organizations/GmOrganizationsRealDatabaseAcceptanceTest.java
+ M platform_os/server/src/test/java/com/gypport/server/module/organizations/OrganizationControlActivationRealDatabaseAcceptanceTest.java
+ M platform_os/server/src/test/java/com/gypport/server/module/organizations/ReviewOrganizationControlUseCaseTest.java
+ M platform_os/server/src/test/java/com/gypport/server/module/platform/PlatformAdminRealDatabaseAcceptanceTest.java
+ M platform_os/server/src/test/java/com/gypport/server/module/profile/application/MyProfileServiceTest.java
+ M platform_os/server/src/test/java/com/gypport/server/module/profile/application/ProfileIdentityServiceTest.java
+ M platform_os/studio/channel/browser/shell/src/application/AuthPage.css
+ M platform_os/studio/channel/browser/shell/src/application/expenses/AdvanceDetailPage.jsx
+ M platform_os/studio/channel/browser/shell/src/application/expenses/ExpenseDetailPage.css
+ M platform_os/studio/channel/browser/shell/src/application/expenses/ExpenseDetailPage.jsx
+ M platform_os/studio/channel/browser/shell/src/application/expenses/ExpenseReportsPage.jsx
+ M platform_os/studio/channel/browser/shell/src/application/expenses/cases/ExpenseCaseCard.jsx
+ M platform_os/studio/channel/browser/shell/src/application/expenses/cases/ExpenseCaseDetailPage.jsx
+ M platform_os/studio/channel/browser/shell/src/application/expenses/cases/ExpenseCaseListPage.jsx
+ M platform_os/studio/channel/browser/shell/src/application/expenses/cases/ExpenseCases.css
+ M platform_os/studio/channel/browser/shell/src/application/expenses/cases/NewCaseExpensePage.jsx
+ M platform_os/studio/channel/browser/shell/src/application/expenses/cases/NewExpenseCasePage.jsx
+ M platform_os/studio/channel/browser/shell/src/application/expenses/cases/caseRules.js
+ M platform_os/studio/channel/browser/shell/src/application/expenses/expenseService.js
+ M platform_os/studio/channel/browser/shell/src/application/onboarding/ShortRegisterPage.jsx
+ M platform_os/studio/verification/contracts/browser/ExpenseCaseCard.contract.mjs
+ M platform_os/studio/verification/contracts/browser/ExpenseOperationIdBoundary.contract.mjs
+ M platform_os/studio/verification/contracts/browser/ExpensesUixCompliance.contract.mjs
+ M platform_os/studio/verification/integration/browser/expenses-uix/fixture.jsx
+?? CODEX.md
+?? database/core/migration/V57__tenant_access_subject_membership_fks.sql
+?? database/core/migration/V58__global_user_account_actor_fks.sql
+?? docs/ai/decisions/OWNER_ACCEPTANCE_AND_FREEZE_GM_EXPENSES_MVP_19.md
+?? docs/ai/handoffs/codex-to-review/STUDIO_LEFT_NAVIGATION_MODULE_INTEGRATION_01.md
+?? docs/ai/handoffs/codex-to-review/STUDIO_PERSONAL_DASHBOARD_USER_MENU_AND_ICON_REFINEMENT_01.md
+?? docs/ai/handoffs/codex-to-review/STUDIO_PRESTASHOP_INSPIRED_PRIMARY_UI_REBASELINE_01.md
+?? docs/ai/handoffs/codex-to-review/STUDIO_TOP_HEADER_BRANDING_AND_ACCOUNT_REBASELINE_02.md
+?? docs/ai/handoffs/codex-to-review/STUDIO_TOP_RIGHT_ACCOUNT_ICON_REFINEMENT_03.md
+?? docs/ai/shared/README_UIX_AGENT_UPDATE.md
+?? platform_os/server/src/test/java/com/gypport/server/module/entities/ContextualPartyReadRealDatabaseAcceptanceTest.java
+?? platform_os/server/src/test/java/com/gypport/server/module/security/GlobalUserAccountActorRealDatabaseAcceptanceTest.java
+?? platform_os/server/src/test/java/com/gypport/server/shared/persistence/GlobalUserAccountActorFkMigrationRealDatabaseAcceptanceTest.java
+?? platform_os/server/src/test/java/com/gypport/server/shared/persistence/TenantAccessSubjectMembershipFkMigrationRealDatabaseAcceptanceTest.java
+?? platform_os/server/src/test/java/com/gypport/server/shared/persistence/TenantAccessSubjectMembershipFkMigrationStopRealDatabaseAcceptanceTest.java
+?? platform_os/studio/channel/browser/shell/fixtures/HeaderBrandingFixture.jsx
+?? platform_os/studio/channel/browser/shell/fixtures/header-branding.html
+?? platform_os/studio/channel/browser/shell/src/application/expenses/cases/ResourceAssignmentFields.jsx
+?? platform_os/studio/channel/browser/shell/src/application/expenses/components/ComboBox.css
+?? platform_os/studio/channel/browser/shell/src/application/expenses/components/ComboBox.jsx
+?? platform_os/studio/channel/browser/shell/src/application/expenses/components/comboboxModel.js
+?? platform_os/studio/channel/browser/shell/src/application/expenses/resourceTypes.js
+?? platform_os/studio/channel/browser/shell/src/application/expenses/reviewReasons.js
+?? platform_os/studio/verification/contracts/browser/ExpenseCategorySelect.contract.mjs
+?? platform_os/studio/verification/contracts/browser/ExpenseComboBox.contract.mjs
+?? platform_os/studio/verification/contracts/browser/ExpenseResourceAssignmentFlow.contract.mjs
+?? platform_os/studio/verification/contracts/browser/ExpenseReviewWorkflow.contract.mjs

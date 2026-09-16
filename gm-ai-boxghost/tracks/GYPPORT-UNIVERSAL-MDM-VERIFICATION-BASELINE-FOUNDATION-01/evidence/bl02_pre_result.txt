@@ -1,0 +1,54 @@
+ROOT=C:\Users\elbur\AppData\Local\Temp\claude\D--NZXTG7-GYPPORT-GYPPORT-ERP\8142c294-1815-45b4-90ee-94d1198faa7d\scratchpad\bl02_gen_pre_20260915_160111
+PASS|PRE|the real canonical log is still the pre-reconciliation Fabric copy
+PASS|PRE|Gystigo/Reglas.md still holds the complete history
+PASS|T1|exit=0 status=VERIFIED_BASELINE_GENERATED_PENDING_OWNER_REVIEW reason=None
+PASS|T1|expected path produced: C:\Users\elbur\AppData\Local\Temp\claude\D--NZXTG7-GYPPORT-GYPPORT-ERP\8142c294-1815-45b4-90ee-94d1198faa7d\scratchpad\bl02_gen_pre_20260915_160111\t1_fresh\verification-baselines\GYPPORT_PKG2C_VERIFIED_BASELINE_2026-09-15.md
+PASS|T1|BASELINE_PATH=Fabric/Knowledge/00-GYPPORT-UNIVERSE/verification-baselines/GYPPORT_PKG2C_VERIFIED_BASELINE_2026-09-15.md
+PASS|T1|document=WRITTEN registration=APPENDED
+PASS|T1|commits=3/3 files=52
+PASS|T1|append-only: existing Reglas bytes are an exact prefix
+PASS|T1|appended bytes == LF + the PKG-2C registration fragment
+PASS|T1|one registration line
+PASS|T1|document is UTF-8 without BOM, LF only
+PASS|T1|PowerShell 5.1-safe encoding: em dash correct, no mojibake
+PASS|T1|52 manifest file lines
+PASS|T1|document line BASELINE_ID=GYPPORT-PKG2C-VERIFIED-BASELINE-2026-09-15
+PASS|T1|document line MIGRATION_HEAD=V58
+PASS|T1|document line VERIFIED_FILE_COUNT=52
+PASS|T1|document line BASELINE_REUSE_ALLOWED=YES
+PASS|T1|document line gm-entities=7b2c56fc5141f38f2bb1e14f11c6d32e3eecca2e
+PASS|T1|document line KNOWN_PREEXISTING_FAILURES=3
+PASS|T1|document line OWNER_REVIEW_REQUIRED=YES
+PASS|T1|document line GENERATOR_APPROVAL=NONE
+PASS|T2|exit=0 document=UNCHANGED_ALREADY_PRESENT registration=ALREADY_PRESENT_SKIPPED
+PASS|T2|duplicate run: no byte changed, still one registration
+PASS|T4|exit=1 reason=A different baseline document already exists and is never overwritten: C:\Users\elbur\AppData\Local\Temp\claude\D--NZXTG7-GYPPORT-GYPPORT-ERP\8142c294-1815-45b4-90ee-94d1198faa7d\scratchpad\bl02_gen_pre_20260915_160111\t4_overwrite\verification-baselines\GYPPORT_PKG2C_VERIFIED_BASELINE_2026-09-15.md. A superseding baseline needs its own baselineId.
+PASS|T4|curated document copy and Reglas copy unchanged
+PASS|T5_status|exit=1 reason=The evidence status must be OWNER_ACCEPTED_COMMITTED_LOCAL. Actual: IMPLEMENTED_PENDING_OWNER_REVIEW
+PASS|T5_status|nothing written
+PASS|T6_missing_field|exit=1 reason=Missing required evidence field: migrationHead
+PASS|T6_missing_field|nothing written
+PASS|T7_unknown_commit|exit=1 reason=Commit 0123456789abcdef0123456789abcdef01234567 of Gystigo does not exist in D:\NZXTG7\GYPPORT\GYPPORT ERP\GYPPORT\Gystigo.
+PASS|T7_unknown_commit|nothing written
+PASS|T8_file_count|exit=1 reason=verifiedFiles is 51 but the accepted commits change 52 files.
+PASS|T8_file_count|nothing written
+PASS|T9_reglas_name|exit=1 reason=The registration target must be a file named Reglas.md: C:\Users\elbur\AppData\Local\Temp\claude\D--NZXTG7-GYPPORT-GYPPORT-ERP\8142c294-1815-45b4-90ee-94d1198faa7d\scratchpad\bl02_gen_pre_20260915_160111\T9_reglas_name\Rules.md
+PASS|T9_reglas_name|nothing written
+PASS|T10_output_name|exit=1 reason=The output directory must be named verification-baselines: C:\Users\elbur\AppData\Local\Temp\claude\D--NZXTG7-GYPPORT-GYPPORT-ERP\8142c294-1815-45b4-90ee-94d1198faa7d\scratchpad\bl02_gen_pre_20260915_160111\T10_output_name\baselines
+PASS|T10_output_name|nothing written
+PASS|T11_unknown_field|exit=1 reason=Unknown evidence field: verifedFiles
+PASS|T11_unknown_field|nothing written
+PASS|T12|CRLF log: prefix kept, entry appended with CRLF (exit=0)
+PASS|T13|exit=0 reglas_canonical=YES output_canonical=YES reason=None
+PASS|T13|default REGLAS_FILE=C:\Users\elbur\AppData\Local\Temp\claude\D--NZXTG7-GYPPORT-GYPPORT-ERP\8142c294-1815-45b4-90ee-94d1198faa7d\scratchpad\bl02_gen_pre_20260915_160111\t13_default_target\ws\Fabric\Knowledge\00-GYPPORT-UNIVERSE\Reglas.md
+PASS|T13|without -ReglasPath the registration goes to Fabric/Knowledge/00-GYPPORT-UNIVERSE/Reglas.md
+PASS|T13|the Gystigo pointer copy is untouched
+PASS|T13|document written to the canonical directory by default
+PASS|T13|the copy runs the real generator bytes
+PASS|T14_pointer_refused|exit=1 reason=This Reglas.md is a compatibility pointer, not the rules log; register in the canonical log instead: C:\Users\elbur\AppData\Local\Temp\claude\D--NZXTG7-GYPPORT-GYPPORT-ERP\8142c294-1815-45b4-90ee-94d1198faa7d\scratchpad\bl02_gen_pre_20260915_160111\T14_pointer_refused\Reglas.md
+PASS|T14_pointer_refused|nothing written
+PASS|T15|near-miss lines are not a registration (exit=0 registration=APPENDED)
+PASS|T15|prefix kept, exactly one exact registration line
+PASS|T15|rerun: the exact line is found, nothing appended
+PASS|REAL_FILES_UNTOUCHED_BY_TESTS|the real canonical log, Gystigo/Reglas.md, the real verification-baselines files and the generator are byte-identical before and after this phase
+TOTAL=52 PASS=52 FAIL=0

@@ -1,0 +1,7 @@
+architecture/data/DATA_OWNERSHIP_CATALOG.md
+architecture/taxonomy/GYPPORT_ARCHITECTURAL_TAXONOMY.md
+decisions/adr/ADR-0001-gypport-ecosystem-structure.md
+governance/retention/ENGINEERING_ARTIFACT_RETENTION_POLICY.md
+standards/DATABASE_MIGRATION_STANDARD.md
+standards/MODULE_CONTRACT_STANDARD.md
+standards/REPOSITORY_NAMING_STANDARD.md

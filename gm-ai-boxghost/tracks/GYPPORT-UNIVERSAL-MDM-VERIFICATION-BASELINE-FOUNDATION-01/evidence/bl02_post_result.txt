@@ -1,0 +1,17 @@
+ROOT=C:\Users\elbur\AppData\Local\Temp\claude\D--NZXTG7-GYPPORT-GYPPORT-ERP\8142c294-1815-45b4-90ee-94d1198faa7d\scratchpad\bl02_gen_post_20260915_160307
+PASS|REAL|the pre-reconciliation Fabric log is an exact prefix of the canonical log
+PASS|REAL|canonical log == the complete pre-pointer Gystigo/Reglas.md (history loss 0)
+PASS|REAL|canonical log == history + rule entry + registration
+PASS|REAL|canonical log == the generator's T1 result
+PASS|REAL|16 dated entries, no duplicate heading
+PASS|REAL|VERIFIED_BASELINE_REUSE once, PKG-2C registration once
+PASS|REAL|Gystigo/Reglas.md is the prepared compatibility pointer
+PASS|T3|exit=0 registration=ALREADY_PRESENT_SKIPPED
+PASS|T3|copy of the real canonical log unchanged
+PASS|T3|deterministic: same document bytes as T1
+PASS|T3|second run on the registered copy: unchanged
+PASS|T14b_real_pointer|exit=1 reason=This Reglas.md is a compatibility pointer, not the rules log; register in the canonical log instead: C:\Users\elbur\AppData\Local\Temp\claude\D--NZXTG7-GYPPORT-GYPPORT-ERP\8142c294-1815-45b4-90ee-94d1198faa7d\scratchpad\bl02_gen_post_20260915_160307\T14b_real_pointer\Reglas.md
+PASS|T14b_real_pointer|nothing written
+PASS|DOC|curated Appendix A == generated manifest (55 lines)
+PASS|REAL_FILES_UNTOUCHED_BY_TESTS|the real canonical log, Gystigo/Reglas.md, the real verification-baselines files and the generator are byte-identical before and after this phase
+TOTAL=15 PASS=15 FAIL=0

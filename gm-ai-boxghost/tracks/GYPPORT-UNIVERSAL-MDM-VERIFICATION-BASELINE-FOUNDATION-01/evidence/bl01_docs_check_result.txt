@@ -1,0 +1,95 @@
+PASS|GYPPORT_PKG2C_VERIFIED_BASELINE_2026-09-15.md: no BOM
+PASS|GYPPORT_PKG2C_VERIFIED_BASELINE_2026-09-15.md: LF only
+PASS|GYPPORT_PKG2C_VERIFIED_BASELINE_2026-09-15.md: ends with exactly one line feed
+PASS|GYPPORT_PKG2C_VERIFIED_BASELINE_2026-09-15.md: valid UTF-8
+PASS|GYPPORT_PKG2C_VERIFIED_BASELINE_2026-09-15.md: starts with its heading, no stray character
+PASS|GYPPORT_PKG2C_VERIFIED_BASELINE_2026-09-15.md: cited path exists: Fabric/Knowledge/00-GYPPORT-UNIVERSE/GYPPORT_MDM_UNIVERSAL_GLOBAL_ACCOUNT_PKG2C_2026-09-15.md
+PASS|GYPPORT_PKG2C_VERIFIED_BASELINE_2026-09-15.md: cited path exists: Fabric/Knowledge/00-GYPPORT-UNIVERSE/verification-baselines/VERIFIED_BASELINE_REUSE.md
+PASS|GYPPORT_PKG2C_VERIFIED_BASELINE_2026-09-15.md: cited path exists: Gystigo/Reglas.md
+PASS|GYPPORT_PKG2C_VERIFIED_BASELINE_2026-09-15.md: cited path exists: Gystigo/database/core/migration/V57__tenant_access_subject_membership_fks.sql
+PASS|GYPPORT_PKG2C_VERIFIED_BASELINE_2026-09-15.md: cited path exists: Gystigo/database/core/migration/V58__global_user_account_actor_fks.sql
+PASS|GYPPORT_PKG2C_VERIFIED_BASELINE_2026-09-15.md: cited path exists: Gystigo/docs/architecture/decisions/ADR-0018-GLOBAL-USER-ACCOUNT-AND-TENANT-MEMBERSHIP.md
+PASS|GYPPORT_PKG2C_VERIFIED_BASELINE_2026-09-15.md: cited path exists: Gystigo/docs/testing/TEST_DATABASE_ISOLATION.md
+PASS|GYPPORT_PKG2C_VERIFIED_BASELINE_2026-09-15.md: cited path exists: Gystigo/platform_os/server/scripts/run-host-isolated-db-tests.ps1
+PASS|VERIFIED_BASELINE_REUSE.md: no BOM
+PASS|VERIFIED_BASELINE_REUSE.md: LF only
+PASS|VERIFIED_BASELINE_REUSE.md: ends with exactly one line feed
+PASS|VERIFIED_BASELINE_REUSE.md: valid UTF-8
+PASS|VERIFIED_BASELINE_REUSE.md: starts with its heading, no stray character
+PASS|VERIFIED_BASELINE_REUSE.md: cited path exists: Fabric/tools/verification/New-GypportVerifiedBaseline.ps1
+PASS|VERIFIED_BASELINE_REUSE.md: cited path exists: Gystigo/Reglas.md
+PASS|GYPPORT_VERIFIED_BASELINE_AUTOMATION.md: no BOM
+PASS|GYPPORT_VERIFIED_BASELINE_AUTOMATION.md: LF only
+PASS|GYPPORT_VERIFIED_BASELINE_AUTOMATION.md: ends with exactly one line feed
+PASS|GYPPORT_VERIFIED_BASELINE_AUTOMATION.md: valid UTF-8
+PASS|GYPPORT_VERIFIED_BASELINE_AUTOMATION.md: starts with its heading, no stray character
+PASS|GYPPORT_VERIFIED_BASELINE_AUTOMATION.md: cited path exists: Fabric/tools/verification/New-GypportVerifiedBaseline.ps1
+PASS|GYPPORT_VERIFIED_BASELINE_AUTOMATION.md: cited path exists: Gystigo/Reglas.md
+PASS|New-GypportVerifiedBaseline.ps1: no BOM
+PASS|New-GypportVerifiedBaseline.ps1: LF only
+PASS|New-GypportVerifiedBaseline.ps1: ends with exactly one line feed
+PASS|New-GypportVerifiedBaseline.ps1: valid UTF-8
+PASS|New-GypportVerifiedBaseline.ps1: starts with its heading, no stray character
+PASS|New-GypportVerifiedBaseline.ps1: ASCII only
+PASS|New-GypportVerifiedBaseline.ps1: cited path exists: Fabric/Knowledge/00-GYPPORT-UNIVERSE/verification-baselines/GYPPORT_VERIFIED_BASELINE_AUTOMATION.md
+PASS|New-GypportVerifiedBaseline.ps1: cited path exists: Fabric/tools/verification/New-GypportVerifiedBaseline.ps1
+PASS|Appendix A: 52 of 52 blob ids equal git rev-parse <commit>:<path>
+PASS|Appendix B: 39 matrix rows
+PASS|Appendix B: 36 PASS rows
+PASS|Appendix B: 3 KNOWN DEBT rows
+PASS|PKG-2C baseline contains BASELINE_ID=GYPPORT-PKG2C-VERIFIED-BASELINE-2026-09-15
+PASS|PKG-2C baseline contains STATUS=OWNER_ACCEPTED_COMMITTED_LOCAL
+PASS|PKG-2C baseline contains STEP=GYPPORT_GLOBAL_ACCOUNT_TENANT_MEMBERSHIP_FOUNDATION_15
+PASS|PKG-2C baseline contains PHASE=PKG_2C_CONTEXTUAL_ACCESS_AND_FK_RECONCILIATION
+PASS|PKG-2C baseline contains e6d3cbcc5e004e8fbd11c78dc1817b5a00e6bffb
+PASS|PKG-2C baseline contains 1654f271711e96761ae7d5470dce3d161cb4333b
+PASS|PKG-2C baseline contains a3b7bfeb1b52f06110cd08af185b04f3690b4a43
+PASS|PKG-2C baseline contains MIGRATION_HEAD=V58
+PASS|PKG-2C baseline contains VERIFIED_FILE_COUNT=52
+PASS|PKG-2C baseline contains GM_ENTITIES_TESTS=217/217
+PASS|PKG-2C baseline contains GM_SECURITY_TESTS=111/111
+PASS|PKG-2C baseline contains GM_EXPENSES_REAL_DB=84/84
+PASS|PKG-2C baseline contains NORMAL_HOST_TESTS=675 run, 0 failures, 0 errors, 251 skipped
+PASS|PKG-2C baseline contains STUDIO_CONTRACTS=581/581
+PASS|PKG-2C baseline contains STUDIO_BUILD=PASS
+PASS|PKG-2C baseline contains FULL_RUNTIME_MATRIX=39/39_EXECUTED
+PASS|PKG-2C baseline contains NEW_FAILURES=0
+PASS|PKG-2C baseline contains KNOWN_PREEXISTING_FAILURES=3
+PASS|PKG-2C baseline contains 1. TeamEmployeeRealDatabaseAcceptanceTest
+PASS|PKG-2C baseline contains 2. TeamEmployeeControllerScopeBoundaryRealDatabaseAcceptanceTest
+PASS|PKG-2C baseline contains 3. PersonIdentityReconciliationHttpTest:222
+PASS|PKG-2C baseline contains IDENTITY=GLOBAL
+PASS|PKG-2C baseline contains BUSINESS_PARTICIPATION=TENANT_CONTEXTUAL
+PASS|PKG-2C baseline contains ACCESS=SECURITY
+PASS|PKG-2C baseline contains EMPLOYMENT=HR
+PASS|PKG-2C baseline contains AUDIT_ACTOR=GLOBAL_ACCOUNT
+PASS|PKG-2C baseline contains ACTIVE_MEMBERSHIP_REQUIRES_PARTY=NO
+PASS|PKG-2C baseline contains PARTY_PROJECTION_POLICY=LAZY_EXPLICIT
+PASS|PKG-2C baseline contains CONTEXTUAL_PARTY_READ_IS_READ_ONLY=YES
+PASS|PKG-2C baseline contains LOGIN_CREATES_PARTY=NO
+PASS|PKG-2C baseline contains AUTH_ME_CREATES_PARTY=NO
+PASS|PKG-2C baseline contains AUTHORIZATION_READ_CREATES_PARTY=NO
+PASS|PKG-2C baseline contains ACTOR_FKS=GLOBAL_USER_ACCOUNT
+PASS|PKG-2C baseline contains ACTOR_FIELDS_MOVED_TO_MEMBERSHIP=0
+PASS|PKG-2C baseline contains ACCESS_SUBJECTS=USER_TENANT_MEMBERSHIP
+PASS|PKG-2C baseline contains EVC_PRC_ACCOUNT_FK_RESHAPE=DEFER
+PASS|PKG-2C baseline contains BASELINE_REUSE_ALLOWED=YES
+PASS|policy contains MUST NOT automatically rerun its complete
+PASS|policy contains BASELINE_FOUND=YES|NO
+PASS|policy contains BASELINE_ID=<id or NONE>
+PASS|policy contains BASELINE_REUSE_DECISION=REUSE|PARTIAL_INVALIDATION|FULL_INVALIDATION
+PASS|policy contains BASELINE_REUSE_REASON=
+PASS|policy contains FULL_HISTORICAL_REGRESSION_RERUN=NO
+PASS|policy contains "Run everything / again to be safe" is NOT sufficient
+PASS|policy contains Git commit SHA(s)
+PASS|policy contains NOT canonical baseline storage
+PASS|policy contains IMPLEMENT / → VERIFY / → OWNER REVIEW / → CONTROLLED COMMIT / → POST-COMMIT SMOKE / → GENERATE VERIFIED BASELINE / → REGISTER BASELINE IN Reglas.md / → OWNER REVIEW / → NEXT STEP
+PASS|automation contains GENERATE_ONLY
+PASS|automation contains REGISTER BASELINE IN Reglas.md
+PASS|automation contains MODIFIES_IMPLEMENTATION_REPOSITORIES=NO
+PASS|automation contains EXECUTES_TESTS=NO
+PASS|automation contains APPROVES_BASELINE=NO
+PASS|automation contains STARTS_NEXT_STEP=NO
+PASS|automation contains COMMITS=NO
+PASS|automation contains PUSHES=NO
+TOTAL=94 PASS=94 FAIL=0

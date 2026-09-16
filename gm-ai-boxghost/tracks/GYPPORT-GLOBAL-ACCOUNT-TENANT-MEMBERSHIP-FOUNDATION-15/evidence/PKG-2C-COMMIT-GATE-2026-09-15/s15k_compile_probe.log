@@ -1,0 +1,28 @@
+﻿[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< com.gypport:gystigo-host-runtime >------------------
+[INFO] Building  0.1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ gystigo-host-runtime ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 36 resources from ..\..\database\core\migration to target\classes\db\migration
+[INFO] Copying 14 resources from ..\..\database\modules\gm-expenses\migration to target\classes\db\migration
+[INFO] Copying 4 resources from ..\..\database\modules\gm-fleets\migration to target\classes\db\migration
+[INFO] Copying 5 resources from ..\..\database\modules\gm-fuel-stations\migration to target\classes\db\migration
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ gystigo-host-runtime ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ gystigo-host-runtime ---
+[INFO] Copying 3 resources from src\test\resources to target\test-classes
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ gystigo-host-runtime ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.453 s
+[INFO] Finished at: 2026-09-15T11:34:53-05:00
+[INFO] ------------------------------------------------------------------------

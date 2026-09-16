@@ -1,0 +1,32 @@
+{
+ "DATOS EXTERNOS": {
+  "moved": true,
+  "how": "rename",
+  "dst": "D:\\NZXTG7\\GYPPORT\\GYPPORT ERP\\GYPPORT-Storage\\External\\DATOS EXTERNOS"
+ },
+ "Documentacion Externa Ejemplos": {
+  "moved": true,
+  "how": "rename",
+  "dst": "D:\\NZXTG7\\GYPPORT\\GYPPORT ERP\\GYPPORT-Storage\\External\\Documentacion Externa Ejemplos"
+ },
+ "Archivos GIt": {
+  "moved": true,
+  "how": "rename",
+  "dst": "D:\\NZXTG7\\GYPPORT\\GYPPORT ERP\\GYPPORT-Storage\\External\\Archivos GIt"
+ },
+ "GestMechanical": {
+  "moved": true,
+  "how": "rename",
+  "dst": "D:\\NZXTG7\\GYPPORT\\GYPPORT ERP\\GYPPORT-Storage\\External\\GestMechanical"
+ },
+ "estructura.txt": {
+  "moved": true,
+  "how": "rename",
+  "dst": "D:\\NZXTG7\\GYPPORT\\GYPPORT ERP\\GYPPORT-Storage\\External\\estructura.txt"
+ },
+ "Transfer": {
+  "moved": true,
+  "how": "rename",
+  "dst": "D:\\NZXTG7\\GYPPORT\\GYPPORT ERP\\GYPPORT-Storage\\Restricted\\Gystigo\\Gystigo_migrated_2026-07-28.zip"
+ }
+}

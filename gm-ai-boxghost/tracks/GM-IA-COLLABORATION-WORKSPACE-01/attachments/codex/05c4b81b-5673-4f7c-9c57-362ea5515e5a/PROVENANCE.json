@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "source_agent": "CODEX",
+  "source_application": "CHATGPT_CODEX",
+  "source_original_path": "C:\\Users\\elbur\\.codex\\attachments\\05c4b81b-5673-4f7c-9c57-362ea5515e5a\\pasted-text.txt",
+  "source_attachment_id": "05c4b81b-5673-4f7c-9c57-362ea5515e5a",
+  "original_filename": "pasted-text.txt",
+  "captured_at": "2026-08-02T09:58:27-05:00",
+  "original_size_bytes": 11039,
+  "original_last_write_time": "2026-08-02T09:35:16.6342070-05:00",
+  "sha256": "dc02c64332c9a2b6225ddcd5f482a9b21745ae0356a9fb104c3b96c263b438f8",
+  "object_ref": "objects/sha256/dc/dc02c64332c9a2b6225ddcd5f482a9b21745ae0356a9fb104c3b96c263b438f8",
+  "track": "GM-IA-COLLABORATION-WORKSPACE-01",
+  "content_class": "mixed",
+  "evidence_type": "owner-directive-and-operational-prompt",
+  "secret_scan": "PASS",
+  "persistence_status": "PERSISTED",
+  "sensitivity": "INTERNAL"
+}

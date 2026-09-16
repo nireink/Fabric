@@ -1,0 +1,8 @@
+src/main/java/com/gypport/business/security/application/RoleProvisioningPort.java
+src/main/java/com/gypport/business/security/application/UserAccountProfileRecord.java
+src/main/java/com/gypport/business/security/application/UserAccountRepository.java
+src/main/java/com/gypport/business/security/infrastructure/persistence/jdbc/JdbcPartyAccessQueryAdapter.java
+src/main/java/com/gypport/business/security/infrastructure/persistence/jdbc/JdbcRoleProvisioningAdapter.java
+src/main/java/com/gypport/business/security/infrastructure/persistence/jdbc/JdbcUserAccountRepository.java
+src/test/java/com/gypport/business/security/infrastructure/persistence/jdbc/JdbcPartyAccessQueryAdapterTest.java
+src/test/java/com/gypport/business/security/infrastructure/persistence/jdbc/JdbcUserAccountRepositoryTest.java

@@ -1,0 +1,11 @@
+COMMIT gm-security 1654f271711e96761ae7d5470dce3d161cb4333b PARENT=ee3c2a95efb4efa61b3eaf6405df4e3822b56e4b
+EXACT|worktree_equals_accepted=True|blob_equals_hash_object=True|src/main/java/com/gypport/business/security/application/RoleProvisioningPort.java
+EXACT|worktree_equals_accepted=True|blob_equals_hash_object=True|src/main/java/com/gypport/business/security/application/UserAccountProfileRecord.java
+EXACT|worktree_equals_accepted=True|blob_equals_hash_object=True|src/main/java/com/gypport/business/security/application/UserAccountRepository.java
+EXACT|worktree_equals_accepted=True|blob_equals_hash_object=True|src/main/java/com/gypport/business/security/infrastructure/persistence/jdbc/JdbcPartyAccessQueryAdapter.java
+EXACT|worktree_equals_accepted=True|blob_equals_hash_object=True|src/main/java/com/gypport/business/security/infrastructure/persistence/jdbc/JdbcRoleProvisioningAdapter.java
+EXACT|worktree_equals_accepted=True|blob_equals_hash_object=True|src/main/java/com/gypport/business/security/infrastructure/persistence/jdbc/JdbcUserAccountRepository.java
+EXACT|worktree_equals_accepted=True|blob_equals_hash_object=True|src/test/java/com/gypport/business/security/infrastructure/persistence/jdbc/JdbcPartyAccessQueryAdapterTest.java
+EXACT|worktree_equals_accepted=True|blob_equals_hash_object=True|src/test/java/com/gypport/business/security/infrastructure/persistence/jdbc/JdbcUserAccountRepositoryTest.java
+COMMIT_FILES=8 EXPECTED=8 COMMIT_FILES_EXACTLY_EXPECTED=YES UNRELATED_FILES_COMMIT=0 MISSING=0
+BYTES EXACT=8 EOL_NORMALIZED_ONLY=0 DIFFERENT=0 WORKTREE_EQUALS_ACCEPTED=8/8 BLOB_EQUALS_GIT_HASH_OBJECT=8/8 COMMIT_BYTES_MATCH_ACCEPTED_BYTES=YES

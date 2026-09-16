@@ -1,0 +1,189 @@
+PEGAR EN: CODEX — DECISIÓN PUNTUAL DE REACTIVACIÓN Y PUBLICACIÓN
+
+TRACK=GM-IA-COLLABORATION-WORKSPACE-01
+SCOPE_VERSION=v0.1
+STEP=RESOLVE_README_SEMANTIC_CONFLICT
+MODE=OWNER_DECISION_EXECUTION
+STATUS=AUTHORIZED_TO_CONTINUE
+
+OWNER_DECISION=REACTIVATE_EXISTING_REPOSITORY
+OWNER_REAPPROVAL_REQUIRED=NO
+
+CANONICAL_LOCAL_REPOSITORY=
+D:\NZXTG7\GYPPORT\GYPPORT ERP\GYPPORT\Modules\gm-ai-workspace
+
+CANONICAL_REMOTE_REPOSITORY=ORIGIN_CURRENTLY_CONFIGURED
+CURRENT_REMOTE_HEAD=479c1e87bfeb97820587b408ac4f9b2bc546fe1e
+NEW_REPOSITORY_REQUIRED=NO
+
+# 1. DECISIÓN SEMÁNTICA
+
+La implementación funcional v0.1 reactiva el repositorio existente
+gm-ai-workspace como repositorio canónico del producto.
+
+Las declaraciones remotas:
+
+- ARCHIVED / SUPERSEDED
+- Prohibición general de nuevas funcionalidades
+- Sin implementación funcional
+
+describen un estado histórico anterior y quedan formalmente superadas por la
+implementación v0.1 auditada y aceptada.
+
+No deben conservarse como afirmaciones vigentes en el README final.
+
+# 2. PRESERVACIÓN HISTÓRICA
+
+Conserva íntegramente el commit remoto 479c1e87 en el historial Git.
+
+Antes de modificar el README, registra en BoxGhost:
+
+- README remoto original.
+- Diff del commit 479c1e87.
+- SHA-256 de ambos.
+- Metadatos y mensaje del commit.
+- Conflicto semántico detectado.
+- Esta decisión de Eduardo.
+- Relación entre el estado histórico archivado y la reactivación v0.1.
+
+Destino canónico:
+
+D:\NZXTG7\GYPPORT\GYPPORT ERP\GYPPORT\Fabric\gm-ai-boxghost\
+tracks\GM-IA-COLLABORATION-WORKSPACE-01\
+
+Crea, respetando la estructura existente:
+
+decisions\
+OWNER_REPOSITORY_REACTIVATION_DECISION_v0.1.md
+
+Actualiza coherentemente:
+
+- TRACK_STATE.md
+- CONTEXT_PACK.md
+- SOURCE_MANIFEST.json
+- dialog\events.jsonl, exclusivamente mediante append
+
+Registra:
+
+OWNER_DECISION=REACTIVATE_EXISTING_REPOSITORY
+CANONICAL_REPOSITORY=Modules/gm-ai-workspace
+ARCHIVED_DECLARATION_STATUS=SUPERSEDED
+REMOTE_COMMIT_PRESERVED=YES
+NEW_REPOSITORY_REQUIRED=NO
+OWNER_REAPPROVAL_REQUIRED=NO
+
+# 3. RECONCILIACIÓN DEL README
+
+Integra el commit remoto como base sin eliminarlo, reescribirlo ni realizar
+force push.
+
+El README resultante debe:
+
+1. Presentar gm-ai-workspace como repositorio activo y canónico.
+2. Describir la implementación funcional read-only v0.1 auditada.
+3. Explicar su relación con gm-ai-boxghost.
+4. Indicar el alcance y las limitaciones reales de v0.1.
+5. Eliminar o reemplazar las afirmaciones vigentes de archivo, supersesión y
+   ausencia de implementación funcional.
+6. Evitar afirmar capacidades que no existan en el código auditado.
+7. No incorporar funcionalidades v0.2.
+8. No corregir los dos hallazgos LOW excluidos del alcance.
+
+Puede incluir una nota histórica breve indicando que el repositorio estuvo
+archivado anteriormente y fue reactivado para v0.1. El contenido remoto exacto
+ya estará preservado mediante Git y BoxGhost; no debe reproducirse como regla
+operativa vigente.
+
+# 4. REVALIDACIÓN
+
+Después de resolver el README:
+
+- Confirma que la implementación local auditada permanece completa.
+- Ejecuta backend tests y build mediante Maven Wrapper.
+- Ejecuta frontend tests y build.
+- Ejecuta npm audit sin audit fix.
+- Ejecuta git diff --check.
+- Inspecciona git status y archivos no rastreados.
+- Verifica el diff completo contra origin/master.
+- Excluye BoxGhost, Fabric, v0.2 y cualquier archivo ajeno.
+- Registra resultados, comandos relevantes, evidencias y hashes en BoxGhost.
+
+# 5. PUBLICACIÓN YA AUTORIZADA
+
+Si todas las validaciones pasan:
+
+1. Realiza staging selectivo exclusivamente de v0.1.
+2. Inspecciona el diff staged completo.
+3. Crea el commit encima de 479c1e87 con el mensaje exacto:
+
+feat(ai-workspace): implement read-only workspace v0.1
+
+4. Ejecuta push normal de master hacia origin/master.
+5. No uses force push.
+6. No crees otro repositorio.
+7. No solicites nuevamente autorización.
+8. Si GitHub CLI ya no está autenticado, detente únicamente por autenticación;
+   no interpretes esto como revocación de la autorización de publicación.
+
+# 6. REGISTRO FINAL
+
+Solo después de confirmar el push, actualiza BoxGhost con:
+
+PUBLICATION_STATUS=PUBLISHED
+TRACK_STATUS=CLOSED_AND_PUBLISHED
+REPOSITORY_STATUS=ACTIVE
+CANONICAL_REPOSITORY=Modules/gm-ai-workspace
+README_RECONCILIATION=PASS
+REMOTE_COMMIT_PRESERVED=YES
+OWNER_REAPPROVAL_REQUIRED=NO
+
+Si aparece un bloqueo técnico nuevo, persístelo antes de detenerte y devuelve
+un único siguiente paso.
+
+# 7. ARCHIVOS NO CLASIFICADOS
+
+Los 354 archivos no asignados permanecen inventariados y preservados como
+pendientes de clasificación.
+
+No deben importarse indiscriminadamente ni bloquear esta publicación.
+
+Registra:
+
+UNCLASSIFIED_FILES=354
+UNCLASSIFIED_IMPORT_STATUS=PENDING_TRACK_CLASSIFICATION
+PUBLICATION_BLOCKER=NO
+
+# 8. SALIDA OBLIGATORIA
+
+Devuelve:
+
+TRACK=GM-IA-COLLABORATION-WORKSPACE-01
+SCOPE_VERSION=v0.1
+OWNER_DECISION_RECORDED=<YES|NO>
+BOXGHOST_PERSISTENCE_COMPLETED=<YES|NO>
+CANONICAL_REPOSITORY=<ruta>
+REPOSITORY_REACTIVATED=<YES|NO>
+NEW_REPOSITORY_CREATED=NO
+REMOTE_COMMIT_PRESERVED=<YES|NO>
+README_RECONCILIATION=<PASS|FAIL|BLOCKED>
+ARCHIVED_DECLARATION_REMOVED_OR_HISTORICIZED=<YES|NO>
+LOCAL_IMPLEMENTATION_PRESERVED=<YES|NO>
+BACKEND_TESTS=<resultado>
+FRONTEND_TESTS=<resultado>
+BACKEND_BUILD=<PASS|FAIL|NOT_RUN>
+FRONTEND_BUILD=<PASS|FAIL|NOT_RUN>
+NPM_VULNERABILITIES=<número|NOT_RUN>
+DIFF_CHECK=<PASS|FAIL|NOT_RUN>
+STAGED_FILES_COUNT=<número>
+STAGING_SCOPE_VERIFIED=<YES|NO>
+COMMIT_CREATED=<YES|NO>
+COMMIT_SHA=<hash|NONE>
+COMMIT_PARENT=<hash|NONE>
+PUSH_PERFORMED=<YES|NO>
+FORCE_PUSH_PERFORMED=NO
+REMOTE_HEAD=<hash>
+WORKTREE_AFTER_PUBLICATION=<CLEAN|DIRTY>
+UNCLASSIFIED_FILES=354
+TRACK_STATUS=<estado>
+VERDICT=<PUBLISHED|BLOCKED>
+NEXT_STEP=<uno solo>

@@ -1,0 +1,321 @@
+WIP entries: pre=152 after=437 ADDED=296 REMOVED=11 CONTENT_CHANGED=7
+CONTENT_CHANGED by category: {'OWNER_WIP': 4, 'OTHER_UNRELATED_WIP': 3}
+   ~ OWNER_WIP            Gystigo|AGENTS.md
+   ~ OWNER_WIP            Gystigo|CHATGPT.md
+   ~ OWNER_WIP            Gystigo|CLAUDE.md
+   ~ OWNER_WIP            Gystigo|Reglas.md
+   ~ OTHER_UNRELATED_WIP  Fabric|Knowledge/00-GYPPORT-UNIVERSE/Reglas.md
+   ~ OTHER_UNRELATED_WIP  Fabric|Knowledge/00-GYPPORT-UNIVERSE/verification-baselines/GYPPORT_VERIFIED_BASELINE_AUTOMATION.md
+   ~ OTHER_UNRELATED_WIP  Fabric|Knowledge/00-GYPPORT-UNIVERSE/verification-baselines/VERIFIED_BASELINE_REUSE.md
+ADDED by category: {'OTHER_UNRELATED_WIP': 278, 'GM_EXPENSES_WIP': 18}
+   + OTHER_UNRELATED_WIP  ?? Fabric|"gm-ai-boxghost/imports/GYPPORT-CANONICAL-MEMORY-FOUNDATION-01/gypport-storage/IAs Agents/GYPPORT Lineamientos Desarrollo ERP/AIs_Dialog.md"
+   + OTHER_UNRELATED_WIP  ?? Fabric|"gm-ai-boxghost/imports/GYPPORT-CANONICAL-MEMORY-FOUNDATION-01/gypport-storage/IAs Agents/GYPPORT Lineamientos Desarrollo ERP/AIs_Dialog_v2.md"
+   + OTHER_UNRELATED_WIP  ?? Fabric|"gm-ai-boxghost/imports/GYPPORT-CANONICAL-MEMORY-FOUNDATION-01/gypport-storage/IAs Agents/GYPPORT Lineamientos Desarrollo ERP/Claude/Decisiones.md"
+   + OTHER_UNRELATED_WIP  ?? Fabric|"gm-ai-boxghost/imports/GYPPORT-CANONICAL-MEMORY-FOUNDATION-01/gypport-storage/IAs Agents/GYPPORT Lineamientos Desarrollo ERP/Codex/Respuestas.md"
+   + OTHER_UNRELATED_WIP  ?? Fabric|"gm-ai-boxghost/imports/GYPPORT-CANONICAL-MEMORY-FOUNDATION-01/gypport-storage/IAs Agents/GYPPORT Lineamientos Desarrollo ERP/DONDE_GUARDAR_APORTACIONES.md"
+   + OTHER_UNRELATED_WIP  ?? Fabric|"gm-ai-boxghost/imports/GYPPORT-CANONICAL-MEMORY-FOUNDATION-01/gypport-storage/IAs Agents/GYPPORT Lineamientos Desarrollo ERP/MENSAJE_INICIO_CHATGPT.md"
+   + OTHER_UNRELATED_WIP  ?? Fabric|"gm-ai-boxghost/imports/GYPPORT-CANONICAL-MEMORY-FOUNDATION-01/gypport-storage/IAs Agents/GYPPORT Lineamientos Desarrollo ERP/MENSAJE_INICIO_CLAUDE_CHAT.md"
+   + OTHER_UNRELATED_WIP  ?? Fabric|"gm-ai-boxghost/imports/GYPPORT-CANONICAL-MEMORY-FOUNDATION-01/gypport-storage/IAs Agents/GYPPORT Lineamientos Desarrollo ERP/MENSAJE_INICIO_CLAUDE_CODE.md"
+   + OTHER_UNRELATED_WIP  ?? Fabric|"gm-ai-boxghost/imports/GYPPORT-CANONICAL-MEMORY-FOUNDATION-01/gypport-storage/IAs Agents/GYPPORT Lineamientos Desarrollo ERP/MENSAJE_INICIO_CODEX.md"
+   + OTHER_UNRELATED_WIP  ?? Fabric|"gm-ai-boxghost/imports/GYPPORT-CANONICAL-MEMORY-FOUNDATION-01/gypport-storage/IAs Agents/GYPPORT Lineamientos Desarrollo ERP/PROMPT_DESARROLLO_ERP.md"
+   + OTHER_UNRELATED_WIP  ?? Fabric|"gm-ai-boxghost/imports/GYPPORT-CANONICAL-MEMORY-FOUNDATION-01/gypport-storage/IAs Agents/GYPPORT Lineamientos Desarrollo ERP/PROMPT_INICIO_ERP.md"
+   + OTHER_UNRELATED_WIP  ?? Fabric|"gm-ai-boxghost/imports/GYPPORT-CANONICAL-MEMORY-FOUNDATION-01/gypport-storage/IAs Agents/GYPPORT Lineamientos Desarrollo ERP/README.md"
+   + OTHER_UNRELATED_WIP  ?? Fabric|"gm-ai-boxghost/imports/GYPPORT-CANONICAL-MEMORY-FOUNDATION-01/gystigo/docs/guide/chats_importantes/Especificacion de desarrollo de DASHBOARD.md"
+   + OTHER_UNRELATED_WIP  ?? Fabric|"gm-ai-boxghost/imports/GYPPORT-CANONICAL-MEMORY-FOUNDATION-01/gystigo/docs/guide/chats_importantes/Organizacion de repositorio.md"
+   + OTHER_UNRELATED_WIP  ?? Fabric|Knowledge/00-GYPPORT-UNIVERSE/GYPPORT_MEMORY_ARCHITECTURE.md
+   + OTHER_UNRELATED_WIP  ?? Fabric|Knowledge/00-GYPPORT-UNIVERSE/agents/AGENTS.md
+   + OTHER_UNRELATED_WIP  ?? Fabric|Knowledge/00-GYPPORT-UNIVERSE/agents/CHATGPT.md
+   + OTHER_UNRELATED_WIP  ?? Fabric|Knowledge/00-GYPPORT-UNIVERSE/agents/CLAUDE.md
+   + OTHER_UNRELATED_WIP  ?? Fabric|Knowledge/00-GYPPORT-UNIVERSE/agents/CODEX.md
+   + OTHER_UNRELATED_WIP  ?? Fabric|Knowledge/00-GYPPORT-UNIVERSE/ai-collaboration/AI_COLLABORATION.md
+   + OTHER_UNRELATED_WIP  ?? Fabric|Knowledge/00-GYPPORT-UNIVERSE/ai-collaboration/GYPPORT_AI_COLLABORATION_EXECUTION_ORDER_v1.0.md
+   + OTHER_UNRELATED_WIP  ?? Fabric|Knowledge/Architecture/ENGINEERING_ARTIFACT_RETENTION_POLICY.md
+   + OTHER_UNRELATED_WIP  ?? Fabric|Knowledge/Architecture/GYPPORT_SAAS_DEPLOYMENT_DISTRIBUTION_AND_DEPENDENCY_GOVERNANCE_STANDARD_v1.0.md
+   + OTHER_UNRELATED_WIP  M Fabric|README.md
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/BOXGHOST_STRUCTURE.md
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/imports/GYPPORT-CANONICAL-MEMORY-FOUNDATION-01/gystigo/docs/ai/README.md
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/imports/GYPPORT-CANONICAL-MEMORY-FOUNDATION-01/gystigo/docs/ai/shared/README_UIX_AGENT_UPDATE.md
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/AUTHENTICATION-JOURNEY/interventions/codex/CODEX-AUTH-01.md
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/AUTHENTICATION-JOURNEY/interventions/codex/CODEX-AUTH-02.md
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/AUTHENTICATION-JOURNEY/interventions/codex/CODEX-AUTH-02A.md
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/AUTHENTICATION-JOURNEY/interventions/codex/CODEX-AUTH-03.md
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/BACKEND-CAPABILITY-INVENTORY-01/audits/accepted/BACKEND_BOUNDARY_OWNERSHIP_01_3_CLAUDE_VERIFICATION_2026-07-26.md
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/BACKEND-CAPABILITY-INVENTORY-01/handoffs/codex-to-review/BACKEND_BOUNDARY_OWNERSHIP_01_3_2026-07-26_CORRECTED.md
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/BROWSER-BOOTSTRAP-RECOVERY/interventions/codex/CODEX-BOOTSTRAP-01.md
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/BROWSER-BOOTSTRAP-RECOVERY/interventions/codex/CODEX-BOOTSTRAP-02.md
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/BROWSER-SHELL-UI-MIGRATION/interventions/codex/CODEX-BROWSER-UI-01.md
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/BROWSER-SHELL-UI-MIGRATION/interventions/codex/CODEX-BROWSER-UI-02.md
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/BROWSER-SHELL-UI-MIGRATION/interventions/codex/CODEX-BROWSER-UI-03.md
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/DASHBOARD-ENGINE/interventions/codex/CODEX-DASHBOARD-01.md
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/DASHBOARD-ENGINE/interventions/codex/CODEX-DASHBOARD-02.md
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/DASHBOARD-ENGINE/interventions/codex/CODEX-DASHBOARD-03.md
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/DASHBOARD-ENGINE/interventions/codex/CODEX-DASHBOARD-04.md
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/DASHBOARD-ENGINE/interventions/codex/CODEX-DASHBOARD-05.md
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/DASHBOARD-ENGINE/interventions/codex/CODEX-DASHBOARD-06.md
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/DASHBOARD-ENGINE/interventions/codex/CODEX-DASHBOARD-07.md
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/DASHBOARD-ENGINE/interventions/codex/CODEX-DASHBOARD-08.md
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/DASHBOARD-ENGINE/interventions/codex/CODEX-DASHBOARD-09.md
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/DASHBOARD-ENGINE/interventions/codex/CODEX-DASHBOARD-09A.md
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/DASHBOARD-ENGINE/interventions/codex/CODEX-DASHBOARD-09B.md
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/DASHBOARD-ENGINE/interventions/codex/CODEX-DASHBOARD-10.md
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/DASHBOARD-ENGINE/interventions/codex/CODEX-DASHBOARD-11.md
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/DASHBOARD-ENGINE/interventions/codex/CODEX-DASHBOARD-12.md
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/DASHBOARD-ENGINE/interventions/codex/CODEX-DASHBOARD-13.md
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/DASHBOARD-ENGINE/interventions/codex/CODEX-DASHBOARD-14.md
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/DASHBOARD-ENGINE/interventions/codex/CODEX-DASHBOARD-15.md
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/DASHBOARD-ENGINE/interventions/codex/CODEX-DASHBOARD-16.md
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/DATABASE-EXTRACTION-SCOPE-AUDIT-02/audits/accepted/DATABASE_EXTRACTION_SCOPE_AUDIT_02_1_RUNTIME_VERIFICATION_2026-07-26.md
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/DATABASE-EXTRACTION-SCOPE-AUDIT-02/audits/accepted/DATABASE_EXTRACTION_SCOPE_AUDIT_2026-07-26.md
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/FOUNDATION-GOVERNANCE/interventions/claude/CLAUDE-FOUNDATION-01.md
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/FOUNDATION-GOVERNANCE/interventions/claude/CLAUDE-FOUNDATION-02.md
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/FOUNDATION-GOVERNANCE/interventions/codex/CODEX-DOCS-01.md
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/FOUNDATION-GOVERNANCE/interventions/codex/CODEX-FOUNDATION-01.md
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/FRONTEND-DESIGN-SYSTEM/audits/accepted/GYPPORT_FRONTEND_STYLES_CONSOLIDATION_01_3_CLAUDE_2026-08-08.md
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/FRONTEND-DESIGN-SYSTEM/handoffs/codex-to-review/GYPPORT_FRONTEND_STYLES_CONSOLIDATION_01_2_CODEX_2026-08-08.md
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-CANONICAL-MEMORY-FOUNDATION-01/artifacts/retired/README_INSTALLACION.md
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-CANONICAL-MEMORY-FOUNDATION-01/evidence/MIGRATION_MANIFEST.json
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-CANONICAL-MEMORY-FOUNDATION-01/evidence/MIGRATION_MANIFEST.md
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-CANONICAL-MEMORY-FOUNDATION-01/evidence/cm01_fingerprint_before.txt
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-CANONICAL-MEMORY-FOUNDATION-01/evidence/cm02_fingerprint_premigration.txt
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-CANONICAL-MEMORY-FOUNDATION-01/evidence/cm02_pkg2c_premigration.txt
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-CANONICAL-MEMORY-FOUNDATION-01/evidence/cm04_refsearch_full.txt
+   + GM_EXPENSES_WIP      ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-EXPENSES-UIX-COMPLIANCE/handoffs/codex-to-review/GYPPORT_EXPENSES_UIX_COMPLIANCE_01_VERIFICATION.md
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_artifacts.py
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_commit_proof.py
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_compare.py
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_compile_probe.log
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_dev_after.txt
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_dev_before.txt
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_dev_commit_gate.txt
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_fingerprint_after_gm-entities.txt
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_fingerprint_after_gm-security.txt
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_fingerprint_after_gystigo.txt
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_fingerprint_after_matrix.txt
+   + GM_EXPENSES_WIP      ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_fingerprint_expenses.txt
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_fingerprint_gate_start.txt
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_fingerprint_host_normal.txt
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_fingerprint_modules.txt
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_fingerprint_resume.txt
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_fingerprint_snapshot.txt
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_fingerprint_studio.txt
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_g27.txt
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_gate_status_Fabric.txt
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_gate_status_Gystigo.txt
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_gate_status_gm-entities.txt
+   + GM_EXPENSES_WIP      ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_gate_status_gm-expenses.txt
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_gate_status_gm-security.txt
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_make_matrix.py
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_manifest_Gystigo.txt
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_manifest_gm-entities.txt
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_manifest_gm-security.txt
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_matrix.ps1
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_matrix_m_collation.log
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_matrix_m_collation_stop.log
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_matrix_m_context_all.log
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_matrix_m_contextual_party.log
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_matrix_m_establishment_stop.log
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_matrix_m_fleets.log
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_matrix_m_fuel_stations.log
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_matrix_m_gm_organizations.log
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_matrix_m_group_a.log
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_matrix_m_identity_intake.log
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_matrix_m_identity_reconciliation.log
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_matrix_m_membership_runtime.log
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_matrix_m_membership_v53_stop.log
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_matrix_m_membership_v53_v54.log
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_matrix_m_membership_v54_stop.log
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_matrix_m_membership_v55.log
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_matrix_m_membership_v55_stop.log
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_matrix_m_membership_v56.log
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_matrix_m_organization_control.log
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_matrix_m_organization_rbac.log
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_matrix_m_pending_acceptance.log
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_matrix_m_pending_migration.log
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_matrix_m_pending_migration_stop.log
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_matrix_m_platform_admin.log
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_matrix_m_platform_session.log
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_matrix_m_rbac_scope.log
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_matrix_m_route_boundary.log
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_matrix_m_signin_gate.log
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_matrix_m_tax_subject.log
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_matrix_m_team.log
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_matrix_m_team_access.log
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_matrix_m_team_employment.log
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_matrix_m_team_revocation.log
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_matrix_m_tenant_safe_fk.log
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_matrix_m_tenant_safe_stop.log
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_matrix_m_v57.log
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_matrix_m_v57_stop.log
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_matrix_m_v58.log
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_matrix_m_v58_actor.log
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_matrix_summary.txt
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_msg_Gystigo.txt
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_msg_gm-entities.txt
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_msg_gm-security.txt
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_pkg2c_end.txt
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_pkg2c_gate.txt
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_pkg2c_hashes.py
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_pkg2c_resume.txt
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_pkg2c_start.txt
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_post_commit.ps1
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_post_commit_gm-entities_install.log
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_post_commit_gm-security_install.log
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_post_commit_host_summary.txt
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_post_commit_host_test_compile.log
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_post_commit_host_units.log
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_post_commit_modules_summary.txt
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_proof_commit_Gystigo.txt
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_proof_commit_gm-entities.txt
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_proof_commit_gm-security.txt
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_r_r01_gm_entities_install.log
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_r_r02_gm_security_install.log
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_r_r03_host_test_compile.log
+   + GM_EXPENSES_WIP      ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_r_r04_gm_expenses.log
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_r_r05_studio_contracts.log
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_r_r06_studio_build.log
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_r_r07_host_normal.log
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_r_r08_matrix_driver.log
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_regression.ps1
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_regression_summary.txt
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_wip_after_gm-entities.txt
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_wip_after_gm-security.txt
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-GLOBAL-ACCOUNT-TENANT-MEMBERSHIP-FOUNDATION-15/evidence/PKG-2C-COMMIT-GATE-2026-09-15/s15k_wip_check.py
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-KNOWLEDGE-CORPUS-DERIVED-STANDARDS-01/approvals/ACTA_APROBACION_FASE1_Y_DOCUMENTOS_GYPPORT.md
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-KNOWLEDGE-CORPUS-DERIVED-STANDARDS-01/artifacts/DOCUMENTO_MAESTRO_FASE1_BASE_CONOCIMIENTO_GYPPORT_v1.1_INCREMENTAL.md
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-KNOWLEDGE-CORPUS-DERIVED-STANDARDS-01/artifacts/DOCUMENTO_MAESTRO_FASE1_BASE_DE_CONOCIMIENTO_GYPPORT.md
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-KNOWLEDGE-CORPUS-DERIVED-STANDARDS-01/artifacts/ESPECIFICACION_RECEPCION_CORPUS_GYPPORT.md
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-KNOWLEDGE-CORPUS-DERIVED-STANDARDS-01/artifacts/INDICE_MAESTRO_Y_GUIA_RAPIDA_GYPPORT.md
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-KNOWLEDGE-CORPUS-DERIVED-STANDARDS-01/artifacts/PROTOCOLO_FASE2_MODELADO_DOMINIO_GYPPORT.md
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-KNOWLEDGE-CORPUS-DERIVED-STANDARDS-01/artifacts/PROTOCOLO_FASE3_DOCUMENTACION_ESPECIALIZADA_GYPPORT.md
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-KNOWLEDGE-CORPUS-DERIVED-STANDARDS-01/decisions/DECISION_SUPPORT_BLOQUEADORES_UNR_GYPPORT.md
+   + GM_EXPENSES_WIP      ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-MVP-GENERAL-01/decisions/OWNER_ACCEPTANCE_AND_FREEZE_GM_EXPENSES_MVP_19.md
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-MVP-GENERAL-01/handoffs/codex-to-review/GM_ENTITIES_MVP_PERSON_DIRECTORY_ADMIN_02.md
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-MVP-GENERAL-01/handoffs/codex-to-review/GM_ENTITIES_MVP_PERSON_IDENTITY_AND_LEGACY_RECONCILIATION_01.md
+   + GM_EXPENSES_WIP      ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-MVP-GENERAL-01/handoffs/codex-to-review/GM_EXPENSES_CASE_LIST_EXECUTIVE_CARD_UX_REFINEMENT_20_REVISED.md
+   + GM_EXPENSES_WIP      ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-MVP-GENERAL-01/handoffs/codex-to-review/GM_EXPENSES_CASE_PARTICIPANTS_ADVANCE_NAVIGATION_AND_MOBILE_UX_02.md
+   + GM_EXPENSES_WIP      ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-MVP-GENERAL-01/handoffs/codex-to-review/GM_EXPENSES_CONSUME_GM_FLEETS_VEHICLE_REFERENCE_01.md
+   + GM_EXPENSES_WIP      ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-MVP-GENERAL-01/handoffs/codex-to-review/GM_EXPENSES_EXPENSE_CASE_FOUNDATION_01.md
+   + GM_EXPENSES_WIP      ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-MVP-GENERAL-01/handoffs/codex-to-review/GM_EXPENSES_REAL_DB_TEST_ISOLATION_17.md
+   + GM_EXPENSES_WIP      ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-MVP-GENERAL-01/handoffs/codex-to-review/GM_EXPENSES_VEHICLE_HTTP_CONTRACT_RECONCILIATION_18.md
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-MVP-GENERAL-01/handoffs/codex-to-review/GM_FLEETS_MINIMUM_VEHICLE_MASTER_01.md
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-MVP-GENERAL-01/handoffs/codex-to-review/GM_ORGANIZATIONS_MVP_OPERATIONAL_FOUNDATION_REMEDIATION_02.md
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-MVP-GENERAL-01/handoffs/codex-to-review/GM_ORGANIZATIONS_MVP_OPERATIONAL_ORGANIZATION_FOUNDATION_01.md
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-MVP-GENERAL-01/handoffs/codex-to-review/GM_WORKFORCE_MVP_EMPLOYEE_CORE_FOUNDATION_01.md
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-MVP-GENERAL-01/handoffs/codex-to-review/STUDIO_LEFT_NAVIGATION_MODULE_INTEGRATION_01.md
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-MVP-GENERAL-01/handoffs/codex-to-review/STUDIO_PERSONAL_DASHBOARD_USER_MENU_AND_ICON_REFINEMENT_01.md
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-MVP-GENERAL-01/handoffs/codex-to-review/STUDIO_PRESTASHOP_INSPIRED_PRIMARY_UI_REBASELINE_01.md
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-MVP-GENERAL-01/handoffs/codex-to-review/STUDIO_TOP_HEADER_BRANDING_AND_ACCOUNT_REBASELINE_02.md
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-MVP-GENERAL-01/handoffs/codex-to-review/STUDIO_TOP_RIGHT_ACCOUNT_ICON_REFINEMENT_03.md
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-UNIVERSAL-MDM-VERIFICATION-BASELINE-FOUNDATION-01/evidence/bl01_docs_check.py
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-UNIVERSAL-MDM-VERIFICATION-BASELINE-FOUNDATION-01/evidence/bl01_docs_check_result.txt
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-UNIVERSAL-MDM-VERIFICATION-BASELINE-FOUNDATION-01/evidence/bl01_evidence_pkg2c.json
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-UNIVERSAL-MDM-VERIFICATION-BASELINE-FOUNDATION-01/evidence/bl01_fingerprint_after.txt
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-UNIVERSAL-MDM-VERIFICATION-BASELINE-FOUNDATION-01/evidence/bl01_fingerprint_before.txt
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-UNIVERSAL-MDM-VERIFICATION-BASELINE-FOUNDATION-01/evidence/bl01_fingerprint_final.txt
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-UNIVERSAL-MDM-VERIFICATION-BASELINE-FOUNDATION-01/evidence/bl01_generator_tests.py
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-UNIVERSAL-MDM-VERIFICATION-BASELINE-FOUNDATION-01/evidence/bl02_docs_check.py
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-UNIVERSAL-MDM-VERIFICATION-BASELINE-FOUNDATION-01/evidence/bl02_docs_check_result.txt
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-UNIVERSAL-MDM-VERIFICATION-BASELINE-FOUNDATION-01/evidence/bl02_fingerprint_after.txt
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-UNIVERSAL-MDM-VERIFICATION-BASELINE-FOUNDATION-01/evidence/bl02_fingerprint_before.txt
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-UNIVERSAL-MDM-VERIFICATION-BASELINE-FOUNDATION-01/evidence/bl02_generator_tests.py
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-UNIVERSAL-MDM-VERIFICATION-BASELINE-FOUNDATION-01/evidence/bl02_post_result.txt
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-UNIVERSAL-MDM-VERIFICATION-BASELINE-FOUNDATION-01/evidence/bl02_pre_result.txt
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/GYPPORT-UNIVERSAL-MDM-VERIFICATION-BASELINE-FOUNDATION-01/evidence/bl02_real_writes.py
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/REPOSITORY-RECOVERY/interventions/claude/CLAUDE-RECOVERY-02.md
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/REPOSITORY-RECOVERY/interventions/claude/CLAUDE-ROLLBACK-01.md
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/REPOSITORY-RECOVERY/interventions/codex/CODEX-ROLLBACK-01.md
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/SHARED-DESIGN-SYSTEM-DIRECT-AUDIT-02/audits/accepted/SHARED_DESIGN_SYSTEM_DIRECT_AUDIT_02_1_CLAUDE_2026-07-28.md
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/SHARED-DESIGN-SYSTEM-DIRECT-AUDIT-02/audits/accepted/SHARED_DESIGN_SYSTEM_DIRECT_AUDIT_02_2_CLAUDE_2026-07-28.md
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/SHARED-DESIGN-SYSTEM-HARDENING-03/audits/accepted/SHARED_DESIGN_SYSTEM_HARDENING_03_2_CLAUDE_2026-07-28.md
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/SHARED-DESIGN-SYSTEM-HARDENING-03/audits/accepted/SHARED_DESIGN_SYSTEM_HARDENING_03_3_CLAUDE_2026-07-28.md
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/SHARED-DESIGN-SYSTEM-HARDENING-03/handoffs/codex-to-review/SHARED_DESIGN_SYSTEM_HARDENING_03_1_CODEX_2026-07-28.md
+   + OTHER_UNRELATED_WIP  ?? Fabric|gm-ai-boxghost/tracks/SHARED-DESIGN-SYSTEM-RECONCILIATION-01/handoffs/codex-to-review/SHARED_DESIGN_SYSTEM_RECONCILIATION_01_1_CODEX_2026-07-28.md
+   + OTHER_UNRELATED_WIP  M Gystigo|"docs/Reglas carpetas.md"
+   + OTHER_UNRELATED_WIP  D Gystigo|"docs/guide/chats_importantes/Especificacion de desarrollo de DASHBOARD.md"
+   + OTHER_UNRELATED_WIP  D Gystigo|"docs/guide/chats_importantes/Organizacion de repositorio.md"
+   + OTHER_UNRELATED_WIP  D Gystigo|docs/ai/README.md
+   + OTHER_UNRELATED_WIP  D Gystigo|docs/ai/claude/CLAUDE-FOUNDATION-01.md
+   + OTHER_UNRELATED_WIP  D Gystigo|docs/ai/claude/CLAUDE-FOUNDATION-02.md
+   + OTHER_UNRELATED_WIP  D Gystigo|docs/ai/claude/CLAUDE-RECOVERY-02.md
+   + OTHER_UNRELATED_WIP  D Gystigo|docs/ai/claude/CLAUDE-ROLLBACK-01.md
+   + OTHER_UNRELATED_WIP  D Gystigo|docs/ai/codex/CODEX-AUTH-01.md
+   + OTHER_UNRELATED_WIP  D Gystigo|docs/ai/codex/CODEX-AUTH-02.md
+   + OTHER_UNRELATED_WIP  D Gystigo|docs/ai/codex/CODEX-AUTH-02A.md
+   + OTHER_UNRELATED_WIP  D Gystigo|docs/ai/codex/CODEX-AUTH-03.md
+   + OTHER_UNRELATED_WIP  D Gystigo|docs/ai/codex/CODEX-BOOTSTRAP-01.md
+   + OTHER_UNRELATED_WIP  D Gystigo|docs/ai/codex/CODEX-BOOTSTRAP-02.md
+   + OTHER_UNRELATED_WIP  D Gystigo|docs/ai/codex/CODEX-BROWSER-UI-01.md
+   + OTHER_UNRELATED_WIP  D Gystigo|docs/ai/codex/CODEX-BROWSER-UI-02.md
+   + OTHER_UNRELATED_WIP  D Gystigo|docs/ai/codex/CODEX-BROWSER-UI-03.md
+   + OTHER_UNRELATED_WIP  D Gystigo|docs/ai/codex/CODEX-DASHBOARD-01.md
+   + OTHER_UNRELATED_WIP  D Gystigo|docs/ai/codex/CODEX-DASHBOARD-02.md
+   + OTHER_UNRELATED_WIP  D Gystigo|docs/ai/codex/CODEX-DASHBOARD-03.md
+   + OTHER_UNRELATED_WIP  D Gystigo|docs/ai/codex/CODEX-DASHBOARD-04.md
+   + OTHER_UNRELATED_WIP  D Gystigo|docs/ai/codex/CODEX-DASHBOARD-05.md
+   + OTHER_UNRELATED_WIP  D Gystigo|docs/ai/codex/CODEX-DASHBOARD-06.md
+   + OTHER_UNRELATED_WIP  D Gystigo|docs/ai/codex/CODEX-DASHBOARD-07.md
+   + OTHER_UNRELATED_WIP  D Gystigo|docs/ai/codex/CODEX-DASHBOARD-08.md
+   + OTHER_UNRELATED_WIP  D Gystigo|docs/ai/codex/CODEX-DASHBOARD-09.md
+   + OTHER_UNRELATED_WIP  D Gystigo|docs/ai/codex/CODEX-DASHBOARD-09A.md
+   + OTHER_UNRELATED_WIP  D Gystigo|docs/ai/codex/CODEX-DASHBOARD-09B.md
+   + OTHER_UNRELATED_WIP  D Gystigo|docs/ai/codex/CODEX-DASHBOARD-10.md
+   + OTHER_UNRELATED_WIP  D Gystigo|docs/ai/codex/CODEX-DASHBOARD-11.md
+   + OTHER_UNRELATED_WIP  D Gystigo|docs/ai/codex/CODEX-DASHBOARD-12.md
+   + OTHER_UNRELATED_WIP  D Gystigo|docs/ai/codex/CODEX-DASHBOARD-13.md
+   + OTHER_UNRELATED_WIP  D Gystigo|docs/ai/codex/CODEX-DASHBOARD-14.md
+   + OTHER_UNRELATED_WIP  D Gystigo|docs/ai/codex/CODEX-DASHBOARD-15.md
+   + OTHER_UNRELATED_WIP  D Gystigo|docs/ai/codex/CODEX-DASHBOARD-16.md
+   + OTHER_UNRELATED_WIP  D Gystigo|docs/ai/codex/CODEX-DOCS-01.md
+   + OTHER_UNRELATED_WIP  D Gystigo|docs/ai/codex/CODEX-FOUNDATION-01.md
+   + OTHER_UNRELATED_WIP  D Gystigo|docs/ai/codex/CODEX-ROLLBACK-01.md
+   + OTHER_UNRELATED_WIP  D Gystigo|docs/ai/handoffs/codex-to-review/BACKEND_BOUNDARY_OWNERSHIP_01_3_2026-07-26_CORRECTED.md
+   + OTHER_UNRELATED_WIP  D Gystigo|docs/ai/handoffs/codex-to-review/GM_ENTITIES_MVP_PERSON_DIRECTORY_ADMIN_02.md
+   + OTHER_UNRELATED_WIP  D Gystigo|docs/ai/handoffs/codex-to-review/GM_ENTITIES_MVP_PERSON_IDENTITY_AND_LEGACY_RECONCILIATION_01.md
+   + GM_EXPENSES_WIP      D Gystigo|docs/ai/handoffs/codex-to-review/GM_EXPENSES_CASE_LIST_EXECUTIVE_CARD_UX_REFINEMENT_20_REVISED.md
+   + GM_EXPENSES_WIP      D Gystigo|docs/ai/handoffs/codex-to-review/GM_EXPENSES_CASE_PARTICIPANTS_ADVANCE_NAVIGATION_AND_MOBILE_UX_02.md
+   + GM_EXPENSES_WIP      D Gystigo|docs/ai/handoffs/codex-to-review/GM_EXPENSES_CONSUME_GM_FLEETS_VEHICLE_REFERENCE_01.md
+   + GM_EXPENSES_WIP      D Gystigo|docs/ai/handoffs/codex-to-review/GM_EXPENSES_EXPENSE_CASE_FOUNDATION_01.md
+   + GM_EXPENSES_WIP      D Gystigo|docs/ai/handoffs/codex-to-review/GM_EXPENSES_REAL_DB_TEST_ISOLATION_17.md
+   + GM_EXPENSES_WIP      D Gystigo|docs/ai/handoffs/codex-to-review/GM_EXPENSES_VEHICLE_HTTP_CONTRACT_RECONCILIATION_18.md
+   + OTHER_UNRELATED_WIP  D Gystigo|docs/ai/handoffs/codex-to-review/GM_FLEETS_MINIMUM_VEHICLE_MASTER_01.md
+   + OTHER_UNRELATED_WIP  D Gystigo|docs/ai/handoffs/codex-to-review/GM_ORGANIZATIONS_MVP_OPERATIONAL_FOUNDATION_REMEDIATION_02.md
+   + OTHER_UNRELATED_WIP  D Gystigo|docs/ai/handoffs/codex-to-review/GM_ORGANIZATIONS_MVP_OPERATIONAL_ORGANIZATION_FOUNDATION_01.md
+   + OTHER_UNRELATED_WIP  D Gystigo|docs/ai/handoffs/codex-to-review/GM_WORKFORCE_MVP_EMPLOYEE_CORE_FOUNDATION_01.md
+   + GM_EXPENSES_WIP      D Gystigo|docs/ai/handoffs/codex-to-review/GYPPORT_EXPENSES_UIX_COMPLIANCE_01_VERIFICATION.md
+   + OTHER_UNRELATED_WIP  D Gystigo|docs/ai/handoffs/codex-to-review/GYPPORT_FRONTEND_STYLES_CONSOLIDATION_01_2_CODEX_2026-08-08.md
+   + OTHER_UNRELATED_WIP  D Gystigo|docs/ai/handoffs/codex-to-review/SHARED_DESIGN_SYSTEM_HARDENING_03_1_CODEX_2026-07-28.md
+   + OTHER_UNRELATED_WIP  D Gystigo|docs/ai/handoffs/codex-to-review/SHARED_DESIGN_SYSTEM_RECONCILIATION_01_1_CODEX_2026-07-28.md
+   + OTHER_UNRELATED_WIP  D Gystigo|docs/ai/reviews/accepted/BACKEND_BOUNDARY_OWNERSHIP_01_3_CLAUDE_VERIFICATION_2026-07-26.md
+   + OTHER_UNRELATED_WIP  D Gystigo|docs/ai/reviews/accepted/DATABASE_EXTRACTION_SCOPE_AUDIT_02_1_RUNTIME_VERIFICATION_2026-07-26.md
+   + OTHER_UNRELATED_WIP  D Gystigo|docs/ai/reviews/accepted/DATABASE_EXTRACTION_SCOPE_AUDIT_2026-07-26.md
+   + OTHER_UNRELATED_WIP  D Gystigo|docs/ai/reviews/accepted/GYPPORT_FRONTEND_STYLES_CONSOLIDATION_01_3_CLAUDE_2026-08-08.md
+   + OTHER_UNRELATED_WIP  D Gystigo|docs/ai/reviews/accepted/SHARED_DESIGN_SYSTEM_DIRECT_AUDIT_02_1_CLAUDE_2026-07-28.md
+   + OTHER_UNRELATED_WIP  D Gystigo|docs/ai/reviews/accepted/SHARED_DESIGN_SYSTEM_DIRECT_AUDIT_02_2_CLAUDE_2026-07-28.md
+   + OTHER_UNRELATED_WIP  D Gystigo|docs/ai/reviews/accepted/SHARED_DESIGN_SYSTEM_HARDENING_03_2_CLAUDE_2026-07-28.md
+   + OTHER_UNRELATED_WIP  D Gystigo|docs/ai/reviews/accepted/SHARED_DESIGN_SYSTEM_HARDENING_03_3_CLAUDE_2026-07-28.md
+   + OTHER_UNRELATED_WIP  D Gystigo|docs/ai/shared/AI_COLLABORATION.md
+   + OTHER_UNRELATED_WIP  M Gystigo|docs/architecture/DOCUMENTATION_GOVERNANCE.md
+   + OTHER_UNRELATED_WIP  D Gystigo|docs/architecture/GYPPORT_AI_COLLABORATION_EXECUTION_ORDER_v1.0.md
+   + OTHER_UNRELATED_WIP  M Gystigo|docs/architecture/decisions/ADR-0005-SINGLE-KERNEL-OWNERSHIP.md
+   + OTHER_UNRELATED_WIP  M Gystigo|docs/governance/backend/rebuild/GYSTIGO-BACKEND-CANONICAL-REBUILD-01/01-classification/GYSTIGO_BACKEND_CANONICAL_CLASSIFICATION_v1.0.md
+   + OTHER_UNRELATED_WIP  M Gystigo|docs/governance/backend/rebuild/GYSTIGO-BACKEND-CANONICAL-REBUILD-01/03-reconciliation/GYSTIGO_BACKEND_CANONICAL_CLASSIFICATION_v1.1.md
+   + OTHER_UNRELATED_WIP  M Gystigo|docs/governance/backend/rebuild/GYSTIGO-BACKEND-CANONICAL-REBUILD-01/13-phase-03-canonical-charter/GYSTIGO_PHASE_03_CANONICAL_CHARTER_v0.1_CHATGPT_WORK_RESULT.md
+   + OTHER_UNRELATED_WIP  M Gystigo|docs/governance/engineering/standards/GYPPORT_AI_DEVELOPER_ENGINEERING_STANDARD_v1.1.md
+   + OTHER_UNRELATED_WIP  M Gystigo|docs/governance/standards/BLOQUE-3-RESUMEN-EJECUTIVO.md
+   + OTHER_UNRELATED_WIP  M Gystigo|docs/governance/standards/ENTREGA-FINAL-LOTES-1-5-BLOQUE-3-BLOQUE-4.md
+   + OTHER_UNRELATED_WIP  M Gystigo|docs/governance/standards/README.md
+REMOVED by category: {'OWNER_WIP': 11}
+   - OWNER_WIP            Fabric|Governance/policies/GYPPORT_SAAS_DEPLOYMENT_DISTRIBUTION_AND_DEPENDENCY_GOVERNANCE_STANDARD_v1.0.md
+   - OWNER_WIP            Fabric|Knowledge/00-GYPPORT-UNIVERSE/GYPPORT_MDM_FOUNDATION_MEMORY_2026-09-11_Backup.md
+   - OWNER_WIP            Fabric|Knowledge/00-GYPPORT-UNIVERSE/README_INSTALLACION.md
+   - OWNER_WIP            Gystigo|CODEX.md
+   - OWNER_WIP            Gystigo|docs/ai/decisions/OWNER_ACCEPTANCE_AND_FREEZE_GM_EXPENSES_MVP_19.md
+   - OWNER_WIP            Gystigo|docs/ai/handoffs/codex-to-review/STUDIO_LEFT_NAVIGATION_MODULE_INTEGRATION_01.md
+   - OWNER_WIP            Gystigo|docs/ai/handoffs/codex-to-review/STUDIO_PERSONAL_DASHBOARD_USER_MENU_AND_ICON_REFINEMENT_01.md
+   - OWNER_WIP            Gystigo|docs/ai/handoffs/codex-to-review/STUDIO_PRESTASHOP_INSPIRED_PRIMARY_UI_REBASELINE_01.md
+   - OWNER_WIP            Gystigo|docs/ai/handoffs/codex-to-review/STUDIO_TOP_HEADER_BRANDING_AND_ACCOUNT_REBASELINE_02.md
+   - OWNER_WIP            Gystigo|docs/ai/handoffs/codex-to-review/STUDIO_TOP_RIGHT_ACCOUNT_ICON_REFINEMENT_03.md
+   - OWNER_WIP            Gystigo|docs/ai/shared/README_UIX_AGENT_UPDATE.md
+
+PKG-2C byte identity (recomputed now against the accepted commit gate):
+PKG2C_FILES_UNCHANGED=52/52 CHANGED=0 MISSING=0

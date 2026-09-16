@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0",
+  "id": "apr-7c613757-a5d5-4e16-90c6-a0c17cd90907",
+  "track_id": "GM-IA-COLLABORATION-WORKSPACE-01",
+  "scope_type": "SCOPE_VERSION",
+  "scope_ref": "interventions/chatgpt-work/05-handoff-verifiable/GM_AI_WORKSPACE_IMPLEMENTATION_SCOPE_v0.1.md",
+  "scope_sha256": "993c23ef7bb0a86615645c71fcf83ff3855ac710b961b6d6ea23412306171630",
+  "decision": "APPROVED",
+  "conditions": [
+    "Implementar exclusivamente el alcance v0.1 documentado y auditado",
+    "No ejecutar staging, commit, push ni despliegue"
+  ],
+  "granted_by": "eduardo",
+  "granted_at": "2026-08-01T21:38:15-05:00",
+  "effective_from": "2026-08-01T21:38:15-05:00",
+  "expires_at": null,
+  "revocable": true,
+  "revoked_by": null,
+  "revoked_at": null,
+  "revocation_reason": null,
+  "evidence_refs": [
+    "interventions/claude-code/06-read-only-audit/FINAL_POST_DEPLOYMENT_VERIFICATION.md",
+    "interventions/chatgpt-work/05-handoff-verifiable/GM_AI_WORKSPACE_IMPLEMENTATION_SCOPE_v0.1.md",
+    "dialog/events.jsonl"
+  ],
+  "source_capture_ref": "dialog/events.jsonl",
+  "approval_text_sha256": "89771cad8b6a2b5b8509e114430197499d540105c4f4450cf7e54e1269e29ff9",
+  "sensitivity": "INTERNAL"
+}

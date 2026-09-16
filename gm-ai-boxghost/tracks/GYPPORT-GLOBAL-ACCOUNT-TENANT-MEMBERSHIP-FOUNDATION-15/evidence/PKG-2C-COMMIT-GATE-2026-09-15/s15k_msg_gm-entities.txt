@@ -1,0 +1,23 @@
+feat(mdm): add contextual party read foundation
+
+STEP GYPPORT_GLOBAL_ACCOUNT_TENANT_MEMBERSHIP_FOUNDATION_15, PKG-2C
+(Owner accepted).
+
+- TenantPartyRepository.findByMdmParty(tenant, mdmParty): the tenant
+  projection of a Golden Record, read over uk_party_tenant_mdm. It is a
+  read only: a missing projection is Optional.empty, and nothing is
+  ensured, saved or created (Owner decision LAZY_EXPLICIT).
+- PartyRelationshipVerification and PartyRelationshipVerificationEvidence
+  may carry the reviewer's global UserAccount next to the Platform Admin
+  provenance, which stays mandatory. The overloads are additive and the
+  account is never inferred. The review commands carry it as an optional
+  reviewerUserAccountId, and the JDBC repositories write it to
+  verified_by_user_id and created_by_user_id, global actor keys since
+  Gystigo V58.
+- Test fakes implement findByMdmParty.
+
+Verified: gm-entities 217/217. The final PKG-2C regression executed the
+39-entry disposable-MySQL matrix with only the three known pre-existing
+failures.
+
+Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>

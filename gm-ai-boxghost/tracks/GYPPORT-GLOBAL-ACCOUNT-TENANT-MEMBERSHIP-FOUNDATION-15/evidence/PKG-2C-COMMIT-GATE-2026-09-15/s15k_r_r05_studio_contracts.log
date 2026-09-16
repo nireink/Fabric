@@ -1,0 +1,13 @@
+
+> @gypport/platform-os-browser-shell@0.0.0 contracts
+> vitest run --config vitest.config.js
+
+
+ RUN  v4.1.10 D:/NZXTG7/GYPPORT/GYPPORT ERP/GYPPORT/Gystigo/platform_os/studio/channel/browser/shell
+
+
+ Test Files  52 passed (52)
+      Tests  581 passed (581)
+   Start at  11:40:52
+   Duration  10.34s (transform 18.35s, setup 0ms, import 35.53s, tests 2.83s, environment 23ms)
+

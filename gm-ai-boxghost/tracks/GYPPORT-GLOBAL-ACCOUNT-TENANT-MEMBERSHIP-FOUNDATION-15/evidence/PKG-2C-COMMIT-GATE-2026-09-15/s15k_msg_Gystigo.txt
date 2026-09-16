@@ -1,0 +1,34 @@
+refactor(platform): reconcile tenant access and global actor fks
+
+STEP GYPPORT_GLOBAL_ACCOUNT_TENANT_MEMBERSHIP_FOUNDATION_15, PKG-2C
+(Owner accepted). Owner decisions: OPTION_A for actor keys, all five
+access subjects in V57, LAZY_EXPLICIT Party projection, and the
+email-verification and password-recovery key reshape deferred.
+
+- V57: the access-subject keys of user_roles, organization_access,
+  tenant user_sessions, user_branches and user_establishments reference
+  user_tenant_memberships (tenant_id, user_account_id). A precondition
+  stops before any change when a subject row has no membership. No row
+  changes; the global account keys, unique keys and the V56 CHECK stay.
+- V58: the 22 composite actor keys are replaced by global keys to
+  user_accounts (user_account_id): 20 new keys, each with a supporting
+  index, while audit_logs and security_logs keep the global keys they
+  already had. tenant_id stays as context, the Platform Admin provenance
+  columns stay, and the challenge tables are untouched. No row changes.
+- Organization control: Claim and Confirm derive the actor's Party in
+  the request's tenant from its Golden Record. Only the declaration
+  projects a missing Party; confirming is a read. The Platform Admin
+  review records the reviewer's global account as the actor.
+- Registration activates the membership before provisioning roles, in
+  the same transaction, because V57 needs the subject first.
+- Wiring and test fakes follow the new constructors and records.
+- Tests: contextual Party read, V57 and V57 STOP, V58 and global actor
+  suites. Hand-made fixtures record memberships before subject rows.
+  TEST_DATABASE_ISOLATION.md lists the new suites.
+
+Verified on one stable snapshot: 39/39 disposable-MySQL matrix entries
+executed, 36 passing and the three known pre-existing failures
+unchanged; normal Host suite 675 run, 0 failures; gm-expenses real-DB
+84/84; Studio contracts 581/581 and build. Shared DEV untouched at V43.
+
+Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
