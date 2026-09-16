@@ -10,10 +10,25 @@
     Mode:
         GENERATE_ONLY   the only accepted value
 
+    Canonical schema:
+        The canonical CURRENT_STEP representation is the contract. Two of its fields are
+        step-specific, so they are explicit inputs instead of hard-coded prose:
+        -RegressionRerunKey  the regression reuse key name, for example
+                             FULL_PKG2C_REGRESSION_RERUN when a STEP reuses an accepted PKG-2C
+                             baseline. Default: FULL_HISTORICAL_REGRESSION_RERUN.
+        -RegressionRerun     its value, YES or NO. Default: NO.
+        -NextAction          the explicit next action, one array entry per output line. Omitted,
+                             a neutral next action is written.
+        Given the canonical inputs of a STEP, the generated file is byte-identical to the
+        canonical CURRENT_STEP.md. The tool is reconciled with the canonical file, never the
+        other way round.
+
     Validation before writing:
         - the prompt source exists under the workspace root;
         - every required baseline id is registered in verification-baselines;
         - the track, step id and phase are non-empty;
+        - the regression key is an uppercase KEY name and its value is YES or NO;
+        - every next action entry is a single line without a Markdown code fence;
         - the output file is named CURRENT_STEP.md.
 
     Output: KEY=VALUE lines. A successful run ends with
@@ -32,6 +47,9 @@ param(
     [string]$Status = 'READY_TO_START',
     [Parameter(Mandatory = $true)][string]$PromptSource,
     [string[]]$RequiredBaselines = @(),
+    [string]$RegressionRerunKey = 'FULL_HISTORICAL_REGRESSION_RERUN',
+    [string]$RegressionRerun = 'NO',
+    [string[]]$NextAction = @(),
     [string]$Mode = 'GENERATE_ONLY',
     [string]$FabricRoot = '',
     [string]$WorkspaceRoot = '',
@@ -79,6 +97,19 @@ foreach ($pair in @(@('Track', $Track), @('StepId', $StepId), @('Status', $Statu
 }
 if ([string]::IsNullOrWhiteSpace($Phase)) { $Phase = $StepId }
 
+if ($RegressionRerunKey -notmatch '^[A-Z][A-Z0-9_]*$') {
+    Stop-Tool ('RegressionRerunKey must be an uppercase KEY name: ' + $RegressionRerunKey)
+}
+if ($RegressionRerun -notmatch '^(YES|NO)$') {
+    Stop-Tool ('RegressionRerun must be YES or NO: ' + $RegressionRerun)
+}
+foreach ($entry in $NextAction) {
+    if ($null -eq $entry) { Stop-Tool 'a NextAction entry must not be null' }
+    if ($entry -match '[
+]') { Stop-Tool 'each NextAction entry must be a single line' }
+    if ($entry.Contains('```')) { Stop-Tool 'NextAction must not contain a Markdown code fence' }
+}
+
 # --- the prompt source must exist, resolved from the workspace root ------------------------------
 $promptFull = $PromptSource
 if (-not [System.IO.Path]::IsPathRooted($promptFull)) {
@@ -120,12 +151,20 @@ if ($RequiredBaselines.Count -gt 0) { $baselineValue = ($RequiredBaselines -join
 $reuseRequired = 'NO'
 if ($RequiredBaselines.Count -gt 0) { $reuseRequired = 'YES' }
 
+$nextActionLines = $NextAction
+if ($nextActionLines.Count -eq 0) {
+    $nextActionLines = @(
+        'Wait for explicit Owner authorization. Once authorized, read `PROMPT_SOURCE` completely and execute',
+        'this STEP in its declared mode, reusing the required verified baselines instead of rerunning',
+        'accepted verification.')
+}
+
 $nl = "`n"
 $sb = New-Object System.Text.StringBuilder
 [void]$sb.Append('# CURRENT STEP' + $nl + $nl)
-[void]$sb.Append('The single global pointer to the GYPPORT work that is active now. It is a continuity pointer:' + $nl)
-[void]$sb.Append('not canonical knowledge, not a copy of the prompt, not a transcript, not a replacement for' + $nl)
-[void]$sb.Append('BoxGhost, not an Owner approval and not an execution trigger.' + $nl + $nl)
+[void]$sb.Append('The single global pointer to the GYPPORT work that is active now. It is a continuity pointer: not' + $nl)
+[void]$sb.Append('canonical knowledge, not a copy of the prompt, not a transcript, not a replacement for BoxGhost,' + $nl)
+[void]$sb.Append('not an Owner approval and not an execution trigger.' + $nl + $nl)
 [void]$sb.Append('```text' + $nl)
 [void]$sb.Append('CURRENT_TRACK=' + $Track + $nl)
 [void]$sb.Append('CURRENT_STEP_ID=' + $StepId + $nl)
@@ -135,27 +174,27 @@ $sb = New-Object System.Text.StringBuilder
 [void]$sb.Append('PROMPT_SOURCE=' + $PromptSource + $nl)
 [void]$sb.Append('REQUIRED_BASELINES=' + $baselineValue + $nl)
 [void]$sb.Append('BASELINE_REUSE_REQUIRED=' + $reuseRequired + $nl)
-[void]$sb.Append('FULL_HISTORICAL_REGRESSION_RERUN=NO' + $nl + $nl)
+[void]$sb.Append($RegressionRerunKey + '=' + $RegressionRerun + $nl + $nl)
 [void]$sb.Append('OWNER_EXECUTION_AUTHORIZED=NO' + $nl)
 [void]$sb.Append('AUTO_IMPLEMENT_NEXT_STEP=NO' + $nl)
 [void]$sb.Append('AUTO_PUSH=NO' + $nl)
 [void]$sb.Append('```' + $nl + $nl)
 [void]$sb.Append('## Next action' + $nl + $nl)
-[void]$sb.Append('Wait for explicit Owner authorization. Once authorized, read PROMPT_SOURCE completely and' + $nl)
-[void]$sb.Append('execute this STEP in its declared mode, reusing the required verified baselines instead of' + $nl)
-[void]$sb.Append('rerunning accepted verification.' + $nl + $nl)
+foreach ($entry in $nextActionLines) { [void]$sb.Append($entry + $nl) }
+[void]$sb.Append($nl)
 [void]$sb.Append('## How to use this file' + $nl + $nl)
 [void]$sb.Append('- Every agent reads this file at startup, before deciding what to work on.' + $nl)
-[void]$sb.Append('- PROMPT_SOURCE resolves from the GYPPORT workspace root and must be read in full before acting.' + $nl)
-[void]$sb.Append('- REQUIRED_BASELINES resolves by BASELINE_ID against verification-baselines/; apply' + $nl)
-[void]$sb.Append('  VERIFIED_BASELINE_REUSE.md before running any historical regression.' + $nl)
-[void]$sb.Append('- STATUS=READY_TO_START is not permission. Execution requires OWNER_EXECUTION_AUTHORIZED=YES or a' + $nl)
+[void]$sb.Append('- `PROMPT_SOURCE` resolves from the GYPPORT workspace root and must be read in full before acting.' + $nl)
+[void]$sb.Append('- `REQUIRED_BASELINES` resolves by BASELINE_ID against' + $nl)
+[void]$sb.Append('  `Fabric/Knowledge/00-GYPPORT-UNIVERSE/verification-baselines/`; apply `VERIFIED_BASELINE_REUSE.md`' + $nl)
+[void]$sb.Append('  before running any historical regression.' + $nl)
+[void]$sb.Append('- `STATUS=READY_TO_START` is not permission. Execution requires `OWNER_EXECUTION_AUTHORIZED=YES` or a' + $nl)
 [void]$sb.Append('  current explicit Owner instruction authorizing this STEP.' + $nl)
 [void]$sb.Append('- Repository and schema evidence outrank this file. If they disagree, stop and report; never guess.' + $nl)
 [void]$sb.Append('- One global CURRENT_STEP exists for the MVP period. Do not create per-module variants without an' + $nl)
 [void]$sb.Append('  explicit Owner decision.' + $nl)
-[void]$sb.Append('- This file is prepared by the closeout workflow, which never approves, never executes and never' + $nl)
-[void]$sb.Append('  commits.' + $nl)
+[void]$sb.Append('- This file is prepared by the closeout workflow (`Fabric/tools/continuity/`), which never approves,' + $nl)
+[void]$sb.Append('  never executes and never commits.' + $nl)
 
 $outDir = Split-Path -Parent $OutputPath
 if (-not (Test-Path -LiteralPath $outDir -PathType Container)) {
@@ -168,6 +207,9 @@ Write-Output ('MODE=' + $Mode)
 Write-Output ('CURRENT_STEP_PATH=' + $OutputPath)
 Write-Output ('CURRENT_TRACK=' + $Track)
 Write-Output ('CURRENT_STEP_ID=' + $StepId)
+Write-Output ('REGRESSION_RERUN_KEY=' + $RegressionRerunKey)
+Write-Output ('REGRESSION_RERUN=' + $RegressionRerun)
+Write-Output ('NEXT_ACTION_SOURCE=' + $(if ($NextAction.Count -gt 0) { 'EXPLICIT' } else { 'DEFAULT' }))
 Write-Output ('PROMPT_SOURCE_RESOLVED=' + $promptFull)
 foreach ($r in $resolved) { Write-Output ('REQUIRED_BASELINE_RESOLVED=' + $r) }
 Write-Output 'OWNER_EXECUTION_AUTHORIZED=NO'
