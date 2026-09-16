@@ -5,8 +5,8 @@ TRACK=GYPPORT_GLOBAL_ACCOUNT_TENANT_MEMBERSHIP_FOUNDATION_15
 STEP=PKG_2D_COMPLETE_CROSS_TENANT_GLOBAL_ACCOUNT_ADOPTION
 PHASE=PKG_2D_COMPLETE_CROSS_TENANT_GLOBAL_ACCOUNT_REUSE_AND_ADOPTION
 DATE=2026-09-16
-STATUS=COMPLETE_VERIFIED_NO_KNOWN_FAILURES_READY_FOR_OWNER_REVIEW
-COMMIT_STATUS=NOT_COMMITTED (nothing staged in any repository)
+STATUS=OWNER_ACCEPTED_COMMITTED_LOCAL
+COMMIT_STATUS=COMMITTED_LOCAL (gm-security d3fa0b4, Gystigo d9f3dde, Fabric cc194e4 + the closeout commit)
 PUSH_STATUS=NOT_PUSHED
 SHARED_DEV_STATUS=UNTOUCHED (V43; no database read or write outside disposable containers)
 ```
@@ -98,3 +98,31 @@ KNOWN_REPRODUCIBLE_TEST_FAILURES_REMAINING=0
 - The HR grant now writes `organization_access` on a successful adoption, so the counts those suites assert moved
   from 1 to 2 where two adoptions happen.
 - `git diff --check` is clean for everything this STEP authored.
+
+## Commit gate (2026-09-16, Owner authorized)
+
+Read-only audit first: every uncommitted path of every repository was classified against the post-PKG-2C WIP
+fingerprint, the PKG-2D content markers and the PKG-2D time window. UNEXPLAINED_PATHS=0. Two files were shared
+with the gm-expenses Host WIP: `ExpenseController.java` carries only an adaptation of WIP code to the new
+`MyProfileService.getProfile(tenantId, userAccountId)` signature and stays with that WIP;
+`ExpenseCaseHttpApiTest.java` was committed as HEAD plus its two PKG-2D lines only. Before any commit the exact
+Gystigo commit tree was compiled, main and test, in a temporary worktree against the committed gm-entities,
+gm-security and gm-expenses modules. The gate also registered the two new real-database suites in
+`TEST_DATABASE_ISOLATION.md`, which the implementation had left out.
+
+```text
+GM_SECURITY_COMMIT=d3fa0b470cb117fb5c1620b6860ecc34ad73a50d   parent 1654f271711e96761ae7d5470dce3d161cb4333b   18 files
+GYSTIGO_COMMIT=d9f3ddecc76d81993168de7536f756c7c4d0a3ac       parent 0544e2ec9dcf7bc883e8f57c498e7ac5fb23cbeb   77 files
+FABRIC_PKG2D_COMMIT=cc194e4d3d63bed4369fbc934ca0695d8fc6a990  parent 026959b6a5d24a8bd57808cf4c2f68a50a5ad3dd    6 files
+FINAL_SCOPE_FILE_COUNT=101
+STAGED_SCOPE_EXACT=YES in every commit   UNRELATED_STAGED_PATHS=0   WHITESPACE_CHECK=PASS
+FINAL_MIGRATION_HEAD=V61   PKG2D_MIGRATION_COUNT=3   MIGRATION_NUMBER_CONFLICT=NO
+ACTIVE_LEGACY_ACCOUNT_COLUMN_REFERENCES=0   ORIGIN_TENANT_AUTHORIZATION_READERS=0   ORIGIN_PARTY_CONTEXTUAL_READERS=0
+STALE_ACTIVE_KNOWN_DEBT_REFERENCES=0
+POST_COMMIT_SMOKE=PASS (gm-security 122/122 from the committed HEAD; TeamEmployee 1/1, ScopeBoundary 1/1,
+                        PersonIdentityReconciliation 10/10 from the committed Gystigo bytes)
+PKG2C_BASELINE_IMPACT=PARTIAL_INVALIDATION (21 of 52 files changed; the untouched slice stays reusable)
+PKG2D_BASELINE_ID=GYPPORT-PKG2D-CROSS-TENANT-GLOBAL-ACCOUNT-VERIFIED-BASELINE-2026-09-16
+GM_EXPENSES_WIP_PRESERVED=YES   OTHER_OWNER_WIP_PRESERVED=YES   GM_OPERATIONAL_RESOURCES_TOUCHED=NO
+SHARED_DEV_CHANGED=NO   PUSH_PERFORMED=NO
+```
