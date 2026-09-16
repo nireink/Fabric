@@ -808,3 +808,22 @@ sensible de migracion) vive ahora dentro de GYPPORT_STORAGE; el archivo con cred
 area restringida, sin ingestion automatica de contexto ni sincronizacion externa. La memoria
 operativa unica de BoxGhost recupero, byte a byte, la historia que solo existia en la rama Fabric
 docs/gm-ai-workspace-canonical-unification-01 (d43b4fd), sin fusionarla y sin borrarla.
+
+
+2026-09-15 — GYPPORT® Universe / Registro de Verified Baseline CANONICAL-MEMORY-FOUNDATION
+
+Verified Baseline de un STEP aceptado por el Owner y committed localmente.
+Se reutiliza según VERIFIED_BASELINE_REUSE.
+
+```text
+BASELINE_ID=GYPPORT-CANONICAL-MEMORY-FOUNDATION-VERIFIED-BASELINE-2026-09-15
+BASELINE_PATH=Fabric/Knowledge/00-GYPPORT-UNIVERSE/verification-baselines/GYPPORT_CANONICAL_MEMORY_FOUNDATION_VERIFIED_BASELINE_2026-09-15.md
+STEP=GYPPORT_CANONICAL_MEMORY_FOUNDATION_01
+PHASE=FINAL_CANONICAL_MEMORY_FOUNDATION
+STATUS=OWNER_ACCEPTED_COMMITTED_LOCAL
+ACCEPTED_COMMITS=Fabric=fcb79cd23e0210731f83eda4697aea2a3e90e6f6; Gystigo=0544e2ec9dcf7bc883e8f57c498e7ac5fb23cbeb; GYPPORT_Governance_Architecture=2844695d670e6a276b01abde4073f07f7bcb029f
+MIGRATION_HEAD=V58
+VERIFIED_FILE_COUNT=434
+BASELINE_REUSE_ALLOWED=YES
+```
+
