@@ -19,6 +19,9 @@
         -RegressionRerun     its value, YES or NO. Default: NO.
         -NextAction          the explicit next action, one array entry per output line. Omitted,
                              a neutral next action is written.
+        -OwnerExecutionAuthorized  YES only when the Owner has authorized this STEP in the
+                             current instruction. The default is NO, and NO is what a closeout
+                             prepares; the tool still never authorizes anything by itself.
         Given the canonical inputs of a STEP, the generated file is byte-identical to the
         canonical CURRENT_STEP.md. The tool is reconciled with the canonical file, never the
         other way round.
@@ -50,6 +53,7 @@ param(
     [string]$RegressionRerunKey = 'FULL_HISTORICAL_REGRESSION_RERUN',
     [string]$RegressionRerun = 'NO',
     [string[]]$NextAction = @(),
+    [ValidateSet('YES', 'NO')][string]$OwnerExecutionAuthorized = 'NO',
     [string]$Mode = 'GENERATE_ONLY',
     [string]$FabricRoot = '',
     [string]$WorkspaceRoot = '',
@@ -175,7 +179,7 @@ $sb = New-Object System.Text.StringBuilder
 [void]$sb.Append('REQUIRED_BASELINES=' + $baselineValue + $nl)
 [void]$sb.Append('BASELINE_REUSE_REQUIRED=' + $reuseRequired + $nl)
 [void]$sb.Append($RegressionRerunKey + '=' + $RegressionRerun + $nl + $nl)
-[void]$sb.Append('OWNER_EXECUTION_AUTHORIZED=NO' + $nl)
+[void]$sb.Append('OWNER_EXECUTION_AUTHORIZED=' + $OwnerExecutionAuthorized + $nl)
 [void]$sb.Append('AUTO_IMPLEMENT_NEXT_STEP=NO' + $nl)
 [void]$sb.Append('AUTO_PUSH=NO' + $nl)
 [void]$sb.Append('```' + $nl + $nl)
@@ -212,7 +216,7 @@ Write-Output ('REGRESSION_RERUN=' + $RegressionRerun)
 Write-Output ('NEXT_ACTION_SOURCE=' + $(if ($NextAction.Count -gt 0) { 'EXPLICIT' } else { 'DEFAULT' }))
 Write-Output ('PROMPT_SOURCE_RESOLVED=' + $promptFull)
 foreach ($r in $resolved) { Write-Output ('REQUIRED_BASELINE_RESOLVED=' + $r) }
-Write-Output 'OWNER_EXECUTION_AUTHORIZED=NO'
+Write-Output ('OWNER_EXECUTION_AUTHORIZED=' + $OwnerExecutionAuthorized)
 Write-Output 'AUTO_IMPLEMENT_NEXT_STEP=NO'
 Write-Output 'AUTO_PUSH=NO'
 Write-Output 'COMMITS=NONE'

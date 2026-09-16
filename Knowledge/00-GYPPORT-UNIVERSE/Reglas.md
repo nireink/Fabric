@@ -846,3 +846,52 @@ BASELINE_REUSE_ALLOWED=YES
 SUPERSEDES_BASELINE_ID=GYPPORT-CANONICAL-MEMORY-FOUNDATION-VERIFIED-BASELINE-2026-09-15
 ```
 
+
+2026-09-15 — GYPPORT® Universe / Reglas de reutilización de la cuenta global entre tenants (PKG-2D)
+
+Una cuenta global GYPPORT no pertenece a un tenant. Puede participar en varios, y la pertenencia la
+prueba siempre `user_tenant_memberships`, nunca el tenant de origen de la cuenta. El Owner cierra con
+estas decisiones la ambigüedad heredada de `user_accounts.tenant_id` y `user_accounts.party_id`, y
+prohibe dejar como deuda futura cualquier problema ya conocido de PKG-2D.
+
+La adopción de una cuenta existente en otro tenant crea acceso, no identidad: solo la membresía y su
+evento. La proyección de Party sigue siendo perezosa y explícita, y la realiza el flujo de negocio que
+la necesita, nunca seguridad y nunca una lectura.
+
+El inicio de sesión deja de elegir el tenant de origen. Los tenants candidatos son las membresías
+ACTIVE: ninguna, el comportamiento actual sin acceso; una, entra directo; varias, el servidor responde
+TENANT_SELECTION_REQUIRED y el cliente envía una selección explícita que el servidor verifica contra la
+membresía. Un tenant enviado por el cliente nunca se acepta sin esa verificación. El Platform Admin
+conserva su sesión PLATFORM sin tenant y sin membresía de cliente.
+
+```text
+ADOPTED_MEMBERSHIP_INITIAL_STATUS=ACTIVE
+PKG2D_INTRODUCES_INVITATION_WORKFLOW=NO
+MULTIPLE_ACTIVE_MEMBERSHIPS_BEHAVIOR=EXPLICIT_TENANT_SELECTION
+TENANT_SELECTION_CHOOSER_SESSION=NO
+MY_PROFILE_MODEL=GLOBAL_IDENTITY_PLUS_CURRENT_TENANT_CONTEXT
+CONTEXTUAL_PARTY_MAY_BE_ABSENT=YES
+MEMBERSHIP_ADOPTION_CREATES_PARTY=NO
+ADOPTION_CREATES_ACCOUNT=NO
+ADOPTION_CREATES_MDM_PARTY=NO
+ADOPTION_CREATES_CREDENTIAL=NO
+GLOBAL_USER_ACCOUNT_TENANT_OWNED=NO
+USER_ACCOUNTS_ORIGIN_COLUMNS=origin_tenant_id,origin_party_id
+CURRENT_TENANT_FROM_ORIGIN_TENANT=NO
+CURRENT_PARTY_FROM_ORIGIN_PARTY=NO
+MVP_USERNAME_MODEL=EMAIL_ALIAS
+USERNAME_EQUALS_NORMALIZED_EMAIL=YES
+CUSTOM_USERNAME_SUPPORT=NO
+GLOBAL_USERNAME_LOOKUP_MATCHES_GLOBAL_UNIQUENESS=YES
+EVC_ACCOUNT_REFERENCE_GLOBAL=YES
+PRC_ACCOUNT_REFERENCE_GLOBAL=YES
+IDENTITY_LINK_ACCOUNT_LOOKUP_GLOBAL=YES
+PLATFORM_ADMIN_REQUIRES_CLIENT_MEMBERSHIP=NO
+PARTY_PROJECTION_POLICY=LAZY_EXPLICIT
+LOGIN_CREATES_PARTY=NO
+AUTH_ME_CREATES_PARTY=NO
+AUTHORIZATION_READ_CREATES_PARTY=NO
+NO_DEFERRED_PKG2D_CLEANUP=YES
+KNOWN_ARCHITECTURAL_PROBLEM_IN_CURRENT_SCOPE=FIX_NOW
+```
+
