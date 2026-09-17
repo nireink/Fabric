@@ -1,0 +1,47 @@
+--- expense audit columns (local 3310, V63)
+expense_id bigint NOT NULL auto_increment
+expense_uuid binary(16) NOT NULL
+tenant_id bigint NOT NULL
+organization_id bigint
+organization_scope bigint STORED GENERATED
+lifecycle_status varchar(30) NOT NULL DEFAULT REGISTRADO
+version int NOT NULL DEFAULT 0
+created_by_user_account_id bigint NOT NULL
+created_at datetime(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3) DEFAULT_GENERATED
+updated_at datetime(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3) DEFAULT_GENERATED on update CURRENT_TIMESTAMP(3)
+--- expense_review_event columns
+expense_review_event_id bigint NOT NULL auto_increment
+tenant_id bigint NOT NULL
+organization_id bigint
+organization_scope bigint STORED GENERATED
+expense_id bigint NOT NULL
+settlement_id bigint
+event_type varchar(40) NOT NULL
+amends_review_event_id bigint
+reason varchar(500)
+notes varchar(1000)
+performed_by_user_account_id bigint NOT NULL
+occurred_at datetime(3) NOT NULL
+--- expense_review_event foreign keys
+fk_review_event_amends: (tenant_id,organization_scope,expense_id,amends_review_event_id) -> expense_review_event(tenant_id,organization_scope,expense_id,expense_review_event_id)
+fk_review_event_expense: (tenant_id,organization_scope,expense_id) -> expense(tenant_id,organization_scope,expense_id)
+fk_review_event_settlement: (tenant_id,organization_scope,settlement_id) -> advance_settlement(tenant_id,organization_scope,settlement_id)
+--- expense_review_event checks
+chk_review_event_amendment: (((`event_type` = _utf8mb4\\'EXCLUSION_REASON_AMENDED\\') and (`amends_review_event_id` is not null)) or ((`event_type` <> _utf8mb4\\'EXCLUSION_REASON_AMENDED\\') and (`amends_review_event_id` is null)))
+chk_review_event_reason: ((`event_type` not in (_utf8mb4\\'OBSERVED\\',_utf8mb4\\'REJECTED\\',_utf8mb4\\'REMOVED_FROM_REVIEW\\',_utf8mb4\\'EXCLUDED_FROM_SETTLEMENT\\',_utf8mb4\\'REINSTATED_TO_REVIEW\\',_utf8mb4\\'EXCLUSION_REASON_AMENDED\\')) or (nullif(trim(`reason`),_utf8mb4\\'\\') is not null))
+chk_review_event_set_context: ((`event_type` not in (_utf8mb4\\'REMOVED_FROM_REVIEW\\',_utf8mb4\\'EXCLUDED_FROM_SETTLEMENT\\',_utf8mb4\\'REINSTATED_TO_REVIEW\\',_utf8mb4\\'EXCLUSION_REASON_AMENDED\\')) or (`settlement_id` is not null))
+chk_review_event_type: (`event_type` in (_utf8mb4\\'SUBMITTED\\',_utf8mb4\\'ACCEPTED\\',_utf8mb4\\'OBSERVED\\',_utf8mb4\\'REJECTED\\',_utf8mb4\\'CORRECTION_SUBMITTED\\',_utf8mb4\\'REACCEPTED\\',_utf8mb4\\'REMOVED_FROM_REVIEW\\',_utf8mb4\\'EXCLUDED_FROM_SETTLEMENT\\',_utf8mb4\\'REINSTATED_TO_REVIEW\\',_utf8mb4\\'EXCLUSION_REASON_AMENDED\\'))
+--- triggers on expense and expense_review_event
+trg_expense_advance_ref_frozen_monotonic BEFORE UPDATE ON expense
+trg_expense_no_delete BEFORE DELETE ON expense
+trg_review_event_no_update BEFORE UPDATE ON expense_review_event
+trg_review_event_no_delete BEFORE DELETE ON expense_review_event
+--- actor FKs from expense tables to user_accounts (gm-expenses MVP schema: none by design, ADR-0014 no retrofit)
+expense_tables_with_user_accounts_fk=0
+--- review events by type (local copy, after the cleanup)
+ACCEPTED=42
+CORRECTION_SUBMITTED=19
+OBSERVED=17
+REJECTED=15
+SUBMITTED=65
+OBSERVADO_WITHOUT_OBSERVED_EVENT=0

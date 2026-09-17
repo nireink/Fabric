@@ -1,0 +1,213 @@
+﻿[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------< com.gypport:gm-expenses >-----------------------
+[INFO] Building gm-expenses 0.1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.4.0:resources (default-resources) @ gm-expenses ---
+[INFO] skip non existing resourceDirectory D:\NZXTG7\GYPPORT\GYPPORT ERP\GYPPORT\Modules\gm-expenses\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ gm-expenses ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 217 source files with javac [debug release 25] to target\classes
+[INFO] 
+[INFO] --- resources:3.4.0:testResources (default-testResources) @ gm-expenses ---
+[INFO] skip non existing resourceDirectory D:\NZXTG7\GYPPORT\GYPPORT ERP\GYPPORT\Modules\gm-expenses\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ gm-expenses ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 94 source files with javac [debug release 25] to target\test-classes
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ gm-expenses ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.gypport.business.expenses.adjustment.domain.ExpenseAdjustmentTest
+[INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.218 s -- in com.gypport.business.expenses.adjustment.domain.ExpenseAdjustmentTest
+[INFO] Running com.gypport.business.expenses.advance.domain.ActivityContextTest
+[INFO] Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.042 s -- in com.gypport.business.expenses.advance.domain.ActivityContextTest
+[INFO] Running com.gypport.business.expenses.advance.domain.AdvanceDeliveryMethodCodeTest
+[INFO] Tests run: 21, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.058 s -- in com.gypport.business.expenses.advance.domain.AdvanceDeliveryMethodCodeTest
+[INFO] Running com.gypport.business.expenses.advance.domain.AdvanceDeliveryPlanTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.016 s -- in com.gypport.business.expenses.advance.domain.AdvanceDeliveryPlanTest
+[INFO] Running com.gypport.business.expenses.advance.domain.AdvanceDeliverySnapshotTest
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.027 s -- in com.gypport.business.expenses.advance.domain.AdvanceDeliverySnapshotTest
+[INFO] Running com.gypport.business.expenses.advance.domain.AdvancePublicIdTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s -- in com.gypport.business.expenses.advance.domain.AdvancePublicIdTest
+[INFO] Running com.gypport.business.expenses.advance.domain.AdvanceStatusTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s -- in com.gypport.business.expenses.advance.domain.AdvanceStatusTest
+[INFO] Running com.gypport.business.expenses.advance.domain.ExpenseAdvanceCreationTest
+[INFO] Tests run: 24, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.073 s -- in com.gypport.business.expenses.advance.domain.ExpenseAdvanceCreationTest
+[INFO] Running com.gypport.business.expenses.advance.domain.ExpenseAdvanceDeliveryTest
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.023 s -- in com.gypport.business.expenses.advance.domain.ExpenseAdvanceDeliveryTest
+[INFO] Running com.gypport.business.expenses.advance.domain.ExpenseAdvanceDraftEditTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 s -- in com.gypport.business.expenses.advance.domain.ExpenseAdvanceDraftEditTest
+[INFO] Running com.gypport.business.expenses.advance.domain.ExpenseAdvanceOverdueTest
+[INFO] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.024 s -- in com.gypport.business.expenses.advance.domain.ExpenseAdvanceOverdueTest
+[INFO] Running com.gypport.business.expenses.advance.domain.ExpenseAdvanceStatusTransitionTest
+[INFO] Tests run: 20, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.048 s -- in com.gypport.business.expenses.advance.domain.ExpenseAdvanceStatusTransitionTest
+[INFO] Running com.gypport.business.expenses.advance.domain.ResponsibleSnapshotTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.029 s -- in com.gypport.business.expenses.advance.domain.ResponsibleSnapshotTest
+[INFO] Running com.gypport.business.expenses.advance.domain.VehicleSnapshotTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 s -- in com.gypport.business.expenses.advance.domain.VehicleSnapshotTest
+[INFO] Running com.gypport.business.expenses.allocation.domain.AllocationTargetReferenceTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 s -- in com.gypport.business.expenses.allocation.domain.AllocationTargetReferenceTest
+[INFO] Running com.gypport.business.expenses.allocation.domain.AllocationTargetTypeTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 s -- in com.gypport.business.expenses.allocation.domain.AllocationTargetTypeTest
+[INFO] Running com.gypport.business.expenses.allocation.domain.ExpenseAllocationEntryTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 s -- in com.gypport.business.expenses.allocation.domain.ExpenseAllocationEntryTest
+[INFO] Running com.gypport.business.expenses.allocation.domain.ExpenseAllocationTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 s -- in com.gypport.business.expenses.allocation.domain.ExpenseAllocationTest
+[INFO] Running com.gypport.business.expenses.application.CloseSettlementAdvanceProgressionTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.039 s -- in com.gypport.business.expenses.application.CloseSettlementAdvanceProgressionTest
+[INFO] Running com.gypport.business.expenses.application.CorrectExpenseReviewUseCaseTest
+[INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.088 s -- in com.gypport.business.expenses.application.CorrectExpenseReviewUseCaseTest
+[INFO] Running com.gypport.business.expenses.application.EditRegisteredExpenseUseCaseTest
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.034 s -- in com.gypport.business.expenses.application.EditRegisteredExpenseUseCaseTest
+[INFO] Running com.gypport.business.expenses.application.ExpenseDocumentMutationLockTest
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.054 s -- in com.gypport.business.expenses.application.ExpenseDocumentMutationLockTest
+[INFO] Running com.gypport.business.expenses.application.IdempotencyGuardTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.016 s -- in com.gypport.business.expenses.application.IdempotencyGuardTest
+[INFO] Running com.gypport.business.expenses.application.RegisterExpenseUseCaseTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.031 s -- in com.gypport.business.expenses.application.RegisterExpenseUseCaseTest
+[INFO] Running com.gypport.business.expenses.application.SettlementJustifiedTotalRefreshTest
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.033 s -- in com.gypport.business.expenses.application.SettlementJustifiedTotalRefreshTest
+[INFO] Running com.gypport.business.expenses.casefile.application.CaseAdvanceDeliveryServiceTest
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.040 s -- in com.gypport.business.expenses.casefile.application.CaseAdvanceDeliveryServiceTest
+[INFO] Running com.gypport.business.expenses.casefile.application.CaseRenditionServiceTest
+[INFO] Tests run: 19, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.175 s -- in com.gypport.business.expenses.casefile.application.CaseRenditionServiceTest
+[INFO] Running com.gypport.business.expenses.casefile.application.ExpenseCaseCloseMessageTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s -- in com.gypport.business.expenses.casefile.application.ExpenseCaseCloseMessageTest
+[INFO] Running com.gypport.business.expenses.casefile.ExpenseCaseTest
+[INFO] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.105 s -- in com.gypport.business.expenses.casefile.ExpenseCaseTest
+[INFO] Running com.gypport.business.expenses.catalog.domain.CategoryCodeTest
+[INFO] Tests run: 18, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.025 s -- in com.gypport.business.expenses.catalog.domain.CategoryCodeTest
+[INFO] Running com.gypport.business.expenses.catalog.domain.CategoryScopeTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s -- in com.gypport.business.expenses.catalog.domain.CategoryScopeTest
+[INFO] Running com.gypport.business.expenses.catalog.domain.CategorySelectorTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s -- in com.gypport.business.expenses.catalog.domain.CategorySelectorTest
+[INFO] Running com.gypport.business.expenses.catalog.domain.ExpenseCategoryCreationTest
+[INFO] Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.020 s -- in com.gypport.business.expenses.catalog.domain.ExpenseCategoryCreationTest
+[INFO] Running com.gypport.business.expenses.catalog.domain.ExpenseCategoryMutationTest
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s -- in com.gypport.business.expenses.catalog.domain.ExpenseCategoryMutationTest
+[INFO] Running com.gypport.business.expenses.catalog.domain.ExpenseCategoryReconstructionTest
+[INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 s -- in com.gypport.business.expenses.catalog.domain.ExpenseCategoryReconstructionTest
+[INFO] Running com.gypport.business.expenses.catalog.domain.ExpenseCategoryRepositoryContractTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s -- in com.gypport.business.expenses.catalog.domain.ExpenseCategoryRepositoryContractTest
+[INFO] Running com.gypport.business.expenses.common.domain.CurrencyCodeTest
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 s -- in com.gypport.business.expenses.common.domain.CurrencyCodeTest
+[INFO] Running com.gypport.business.expenses.common.domain.ExpenseOwnershipContextTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s -- in com.gypport.business.expenses.common.domain.ExpenseOwnershipContextTest
+[INFO] Running com.gypport.business.expenses.common.domain.MoneyTest
+[INFO] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 s -- in com.gypport.business.expenses.common.domain.MoneyTest
+[INFO] Running com.gypport.business.expenses.common.domain.OrganizationIdTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s -- in com.gypport.business.expenses.common.domain.OrganizationIdTest
+[INFO] Running com.gypport.business.expenses.common.domain.TenantIdTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s -- in com.gypport.business.expenses.common.domain.TenantIdTest
+[INFO] Running com.gypport.business.expenses.common.domain.UserAccountIdTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s -- in com.gypport.business.expenses.common.domain.UserAccountIdTest
+[INFO] Running com.gypport.business.expenses.common.domain.VersionTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s -- in com.gypport.business.expenses.common.domain.VersionTest
+[INFO] Running com.gypport.business.expenses.document.domain.DocumentEvidenceTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s -- in com.gypport.business.expenses.document.domain.DocumentEvidenceTest
+[INFO] Running com.gypport.business.expenses.document.domain.ExpenseDocumentControlTest
+[INFO] Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.022 s -- in com.gypport.business.expenses.document.domain.ExpenseDocumentControlTest
+[INFO] Running com.gypport.business.expenses.document.domain.ExpenseDocumentCreationTest
+[INFO] Tests run: 27, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.033 s -- in com.gypport.business.expenses.document.domain.ExpenseDocumentCreationTest
+[INFO] Running com.gypport.business.expenses.document.domain.ExpenseDocumentPublicIdTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s -- in com.gypport.business.expenses.document.domain.ExpenseDocumentPublicIdTest
+[INFO] Running com.gypport.business.expenses.document.domain.ExpenseDocumentReconstructionTest
+[INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.019 s -- in com.gypport.business.expenses.document.domain.ExpenseDocumentReconstructionTest
+[INFO] Running com.gypport.business.expenses.document.domain.ExpenseDocumentRepositoryContractTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s -- in com.gypport.business.expenses.document.domain.ExpenseDocumentRepositoryContractTest
+[INFO] Running com.gypport.business.expenses.document.domain.ExpenseDocumentTypeTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s -- in com.gypport.business.expenses.document.domain.ExpenseDocumentTypeTest
+[INFO] Running com.gypport.business.expenses.document.domain.InvoiceMetadataTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s -- in com.gypport.business.expenses.document.domain.InvoiceMetadataTest
+[INFO] Running com.gypport.business.expenses.document.domain.StorageReferenceTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 s -- in com.gypport.business.expenses.document.domain.StorageReferenceTest
+[INFO] Running com.gypport.business.expenses.expense.application.ExpenseReportPortTest
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.016 s -- in com.gypport.business.expenses.expense.application.ExpenseReportPortTest
+[INFO] Running com.gypport.business.expenses.expense.domain.ExpenseAdvanceAssignmentTest
+[INFO] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.019 s -- in com.gypport.business.expenses.expense.domain.ExpenseAdvanceAssignmentTest
+[INFO] Running com.gypport.business.expenses.expense.domain.ExpenseAllocationCorrectionTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 s -- in com.gypport.business.expenses.expense.domain.ExpenseAllocationCorrectionTest
+[INFO] Running com.gypport.business.expenses.expense.domain.ExpenseAllocationScopeTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 s -- in com.gypport.business.expenses.expense.domain.ExpenseAllocationScopeTest
+[INFO] Running com.gypport.business.expenses.expense.domain.ExpenseCategoryPolicySnapshotTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s -- in com.gypport.business.expenses.expense.domain.ExpenseCategoryPolicySnapshotTest
+[INFO] Running com.gypport.business.expenses.expense.domain.ExpenseCreationTest
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 s -- in com.gypport.business.expenses.expense.domain.ExpenseCreationTest
+[INFO] Running com.gypport.business.expenses.expense.domain.ExpenseDetailsTest
+[INFO] Tests run: 19, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.031 s -- in com.gypport.business.expenses.expense.domain.ExpenseDetailsTest
+[INFO] Running com.gypport.business.expenses.expense.domain.ExpensePublicIdTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s -- in com.gypport.business.expenses.expense.domain.ExpensePublicIdTest
+[INFO] Running com.gypport.business.expenses.expense.domain.ExpenseReconstructionTest
+[INFO] Tests run: 18, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.022 s -- in com.gypport.business.expenses.expense.domain.ExpenseReconstructionTest
+[INFO] Running com.gypport.business.expenses.expense.domain.ExpenseRepositoryContractTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s -- in com.gypport.business.expenses.expense.domain.ExpenseRepositoryContractTest
+[INFO] Running com.gypport.business.expenses.expense.domain.ExpenseResponsibleSnapshotTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s -- in com.gypport.business.expenses.expense.domain.ExpenseResponsibleSnapshotTest
+[INFO] Running com.gypport.business.expenses.expense.domain.ExpenseReviewTransitionTest
+[INFO] Tests run: 27, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.043 s -- in com.gypport.business.expenses.expense.domain.ExpenseReviewTransitionTest
+[INFO] Running com.gypport.business.expenses.expense.domain.ExpenseRevisionTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 s -- in com.gypport.business.expenses.expense.domain.ExpenseRevisionTest
+[INFO] Running com.gypport.business.expenses.expense.domain.ExpenseStatusTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s -- in com.gypport.business.expenses.expense.domain.ExpenseStatusTest
+[INFO] Running com.gypport.business.expenses.expense.domain.ExpenseVehicleSnapshotTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s -- in com.gypport.business.expenses.expense.domain.ExpenseVehicleSnapshotTest
+[INFO] Running com.gypport.business.expenses.expense.infrastructure.persistence.jdbc.JdbcExpenseReportPortFundingTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 s -- in com.gypport.business.expenses.expense.infrastructure.persistence.jdbc.JdbcExpenseReportPortFundingTest
+[INFO] Running com.gypport.business.expenses.GmExpensesModuleFoundationTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s -- in com.gypport.business.expenses.GmExpensesModuleFoundationTest
+[INFO] Running com.gypport.business.expenses.reference.domain.CanonicalFleetVehicleReferenceTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s -- in com.gypport.business.expenses.reference.domain.CanonicalFleetVehicleReferenceTest
+[INFO] Running com.gypport.business.expenses.reference.domain.CanonicalPartyReferenceTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s -- in com.gypport.business.expenses.reference.domain.CanonicalPartyReferenceTest
+[INFO] Running com.gypport.business.expenses.reference.domain.PlateTest
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 s -- in com.gypport.business.expenses.reference.domain.PlateTest
+[INFO] Running com.gypport.business.expenses.reference.domain.ResponsiblePublicIdTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s -- in com.gypport.business.expenses.reference.domain.ResponsiblePublicIdTest
+[INFO] Running com.gypport.business.expenses.reference.domain.ResponsibleReferenceCreationTest
+[INFO] Tests run: 18, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.022 s -- in com.gypport.business.expenses.reference.domain.ResponsibleReferenceCreationTest
+[INFO] Running com.gypport.business.expenses.reference.domain.ResponsibleReferenceMutationTest
+[INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 s -- in com.gypport.business.expenses.reference.domain.ResponsibleReferenceMutationTest
+[INFO] Running com.gypport.business.expenses.reference.domain.ResponsibleReferenceReconstructionTest
+[INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 s -- in com.gypport.business.expenses.reference.domain.ResponsibleReferenceReconstructionTest
+[INFO] Running com.gypport.business.expenses.reference.domain.ResponsibleReferenceRepositoryContractTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s -- in com.gypport.business.expenses.reference.domain.ResponsibleReferenceRepositoryContractTest
+[INFO] Running com.gypport.business.expenses.reference.domain.VehiclePublicIdTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s -- in com.gypport.business.expenses.reference.domain.VehiclePublicIdTest
+[INFO] Running com.gypport.business.expenses.reference.domain.VehicleReferenceCreationTest
+[INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 s -- in com.gypport.business.expenses.reference.domain.VehicleReferenceCreationTest
+[INFO] Running com.gypport.business.expenses.reference.domain.VehicleReferenceMutationTest
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 s -- in com.gypport.business.expenses.reference.domain.VehicleReferenceMutationTest
+[INFO] Running com.gypport.business.expenses.reference.domain.VehicleReferenceReconstructionTest
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 s -- in com.gypport.business.expenses.reference.domain.VehicleReferenceReconstructionTest
+[INFO] Running com.gypport.business.expenses.reference.domain.VehicleReferenceRepositoryContractTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s -- in com.gypport.business.expenses.reference.domain.VehicleReferenceRepositoryContractTest
+[INFO] Running com.gypport.business.expenses.settlement.domain.AdvanceSettlementTest
+[INFO] Tests run: 32, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.047 s -- in com.gypport.business.expenses.settlement.domain.AdvanceSettlementTest
+[INFO] Running com.gypport.business.expenses.settlement.domain.SettlementBalanceTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s -- in com.gypport.business.expenses.settlement.domain.SettlementBalanceTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 748, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jar:3.5.0:jar (default-jar) @ gm-expenses ---
+[INFO] Building jar: D:\NZXTG7\GYPPORT\GYPPORT ERP\GYPPORT\Modules\gm-expenses\target\gm-expenses-0.1.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- install:3.1.4:install (default-install) @ gm-expenses ---
+[INFO] Installing D:\NZXTG7\GYPPORT\GYPPORT ERP\GYPPORT\Modules\gm-expenses\pom.xml to C:\Users\elbur\.m2\repository\com\gypport\gm-expenses\0.1.0-SNAPSHOT\gm-expenses-0.1.0-SNAPSHOT.pom
+[INFO] Installing D:\NZXTG7\GYPPORT\GYPPORT ERP\GYPPORT\Modules\gm-expenses\target\gm-expenses-0.1.0-SNAPSHOT.jar to C:\Users\elbur\.m2\repository\com\gypport\gm-expenses\0.1.0-SNAPSHOT\gm-expenses-0.1.0-SNAPSHOT.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  16.450 s
+[INFO] Finished at: 2026-09-16T22:55:20-05:00
+[INFO] ------------------------------------------------------------------------

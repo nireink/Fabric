@@ -1,0 +1,36 @@
+GYPPORT_PRE_COMMIT_ENV_UI_AUDIT_HARDENING_13 - Part A, environment verification after the correction
+
+User-scope removal (2026-09-17T12:50:28Z): SPRING_DATASOURCE_URL, SPRING_DATASOURCE_USERNAME, SPRING_DATASOURCE_PASSWORD
+  USER_SCOPE=ABSENT REGISTRY_HKCU=ABSENT MACHINE_SCOPE=ABSENT (all three)
+Plain process (WMI-created, environment from the registry):
+  before removal 12:50:08Z: URL/USERNAME/PASSWORD=PRESENT, PLAIN_SHELL_INHERITS_SHARED_DEV=YES
+  after removal  12:50:59Z: URL/USERNAME/PASSWORD=ABSENT,  PLAIN_SHELL_INHERITS_SHARED_DEV=NO
+  Already-running processes keep the environment they started with until restarted (the Claude desktop app and its tool shells
+  still showed PRESENT at 12:50:59Z).
+
+Backend restart with the hardened launcher:
+  stop-runtime-local.ps1 -> STOPPED_PID=48592; port 8080 free
+  control run (Java start neutralized) -> only ENV / DB_HOST / DB_PORT / DB_NAME before Java, all guards passed
+  WMI start 12:53:30Z -> port 8080 listening after 7 s on 127.0.0.1, PID 47236
+  launcher output: ENV=LOCAL_EDUARDO, DB_HOST=127.0.0.1, DB_PORT=3310, DB_NAME=gypport_runtime_local, then BACKEND_PID=47236,
+                   BACKEND_LOG=logs\backend-20260917-075332.out.log, RUNTIME_JAR=gystigo-host-runtime-ecd17c12f8af.jar
+
+Java process 47236 command line: datasource 127.0.0.1:3310/gypport_runtime_local=True, 3308=False, core_business_dev=False,
+  gypport-mysql-dev=False, password on command line=False, bind 127.0.0.1=True, port 8080=True
+TCP: BACKEND_CONNECTIONS_3310=10 (established), BACKEND_CONNECTIONS_3308=0, remote endpoints [127.0.0.1:3310], listen [127.0.0.1:8080]
+Log (secret-bearing lines never read out):
+  Database: jdbc:mysql://127.0.0.1:3310/gypport_runtime_local?allowPublicKeyRetrieval=true&useSSL=false (MySQL 8.4)
+  Successfully validated 64 migrations; Current version of schema `gypport_runtime_local`: 63; up to date, no migration necessary
+  Tomcat started on port 8080; Started ServerApplication in 5.207 seconds
+  ERROR lines=0; lines mentioning 3308 / core_business_dev / gypport-mysql-dev=0; stderr log 0 bytes
+
+HTTP (no credentials):
+  GET  http://localhost:8080/auth/me -> 401 (via 127.0.0.1:8080)
+  POST http://localhost:8080/auth/login with {} -> 401 (endpoint reachable)
+  OPTIONS /auth/login from Origin http://localhost:5173 -> 200, Access-Control-Allow-Origin http://localhost:5173, credentials true
+
+Databases (read-only transactions; credentials from each container's own configuration):
+  LOCAL_3310 db=gypport_runtime_local flyway_max=V63 rows=47 failed=0
+  SHARED_DEV_3308 db=core_business_dev flyway_max=V43 rows=27 failed=0 last_installed_on=2026-09-10 02:59:04 (unchanged)
+  SHARED_DEV known test expense 5E63494AA2564C1E847CD54A6ED67A51: status=OBSERVADO version=2 (untouched)
+  gypport-backend-dev: Exited (143), still stopped

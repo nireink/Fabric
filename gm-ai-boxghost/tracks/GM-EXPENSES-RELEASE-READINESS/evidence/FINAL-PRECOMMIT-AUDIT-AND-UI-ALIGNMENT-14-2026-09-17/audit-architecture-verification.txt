@@ -1,0 +1,79 @@
+GYPPORT_FINAL_PRECOMMIT_AUDIT_AND_UI_ALIGNMENT_14 - audit architecture verification (local 3310 after the cleanup audit record; Shared DEV read-only counts)
+
+--- audit-like tables (name, rows estimate by COUNT below)
+audit_action_types
+audit_logs
+security_logs
+audit_logs rows=1 audit_action_types rows=1 security_logs rows=0
+--- audit_logs columns
+audit_log_id bigint NOT NULL auto_increment key=PRI
+audit_log_uuid binary(16) NOT NULL key=UNI
+tenant_id bigint key=MUL
+user_account_id bigint key=MUL
+audit_action_type_id bigint NOT NULL key=MUL
+entity_name varchar(100) NOT NULL key=MUL
+entity_id bigint
+entity_uuid binary(16)
+entity_version bigint
+request_id varchar(100) key=MUL
+correlation_id varchar(100)
+old_values json
+new_values json
+ip_address varchar(45)
+user_agent varchar(500)
+created_at datetime NOT NULL DEFAULT CURRENT_TIMESTAMP DEFAULT_GENERATED key=MUL
+--- audit_logs constraints (PK/UNIQUE/FK/CHECK)
+FOREIGN KEY fk_audit_log_action
+FOREIGN KEY fk_audit_log_tenant
+FOREIGN KEY fk_audit_log_user
+PRIMARY KEY PRIMARY
+UNIQUE uk_audit_log_uuid
+fk_audit_log_action: (audit_action_type_id) -> audit_action_types(audit_action_type_id)
+fk_audit_log_tenant: (tenant_id) -> tenants(tenant_id)
+fk_audit_log_user: (user_account_id) -> user_accounts(user_account_id)
+--- audit_logs indexes
+fk_audit_log_action (audit_action_type_id)
+fk_audit_logs_tenant_user (tenant_id,user_account_id)
+idx_audit_created_at (created_at)
+idx_audit_entity (entity_name,entity_id)
+idx_audit_request (request_id)
+idx_audit_tenant (tenant_id)
+idx_audit_user (user_account_id)
+PRIMARY UNIQUE (audit_log_id)
+uk_audit_log_uuid UNIQUE (audit_log_uuid)
+--- triggers on audit tables
+triggers writing audit_logs=0
+--- audit_action_types columns
+audit_action_type_id bigint NOT NULL auto_increment
+audit_action_code varchar(50) NOT NULL
+audit_action_name varchar(100) NOT NULL
+description varchar(500)
+is_active tinyint(1) NOT NULL DEFAULT 1
+--- audit_action_types rows (if any)
+1	LEGACY_DEV_TEST_DATA_REGULARIZATION	Regularización de dato de prueba heredado (DEV)	Operación administrativa controlada sobre datos de prueba de DEV. No es un flujo del producto.	1
+--- migrations that mention audit (flyway descriptions)
+V17 gypport current schema baseline
+V58 global user account actor fks
+
+--- append-only triggers on the semantic history tables (local 3310)
+expense_advance_assignment_event: trg_assign_event_no_delete BEFORE DELETE, trg_assign_event_no_update BEFORE UPDATE
+expense_advance_participant_event: trg_advance_participant_event_no_delete BEFORE DELETE, trg_advance_participant_event_no_update BEFORE UPDATE
+expense_command_receipt: trg_command_receipt_no_delete BEFORE DELETE, trg_command_receipt_no_update BEFORE UPDATE
+expense_document_review_event: trg_exp_doc_review_event_no_delete BEFORE DELETE, trg_exp_doc_review_event_no_update BEFORE UPDATE
+expense_review_event: trg_review_event_no_delete BEFORE DELETE, trg_review_event_no_update BEFORE UPDATE
+expense_revision_event: trg_revision_event_no_delete BEFORE DELETE, trg_revision_event_no_update BEFORE UPDATE
+settlement_adjustment_event: trg_set_adj_event_no_delete BEFORE DELETE, trg_set_adj_event_no_update BEFORE UPDATE
+settlement_balance_event: trg_set_balance_event_no_delete BEFORE DELETE, trg_set_balance_event_no_update BEFORE UPDATE
+expense_revision_event columns: expense_revision_event_id,tenant_id,organization_id,organization_scope,expense_id,revision_number,revision_type,reason,previous_snapshot,new_snapshot,triggering_review_event_id,resulting_review_event_id,performed_by_user_account_id,occurred_at
+
+--- Shared DEV 3308 (read only)
+audit_logs rows=0 audit_action_types rows=0 flyway_max=V43
+
+--- code and document search (repository state 2026-09-17)
+ExpenseAuditTrailPort: files in Gystigo, Modules, Fabric/Knowledge = 0 (only this STEP's stored prompt); git log -S in gm-expenses, Gystigo, Fabric = 0 commits
+audit_logs writers in main code (Gystigo/platform_os/server/src/main, Modules/*/src/main): 0 (references only in migrations V1/B17/V3/V58, docs and two V58 acceptance tests)
+audit_logs definition: Gystigo/database/core/migration/V1__core_business_baseline.sql (and B17 baseline); V3 added fk_audit_logs_tenant_user; V58 dropped it and kept fk_audit_log_user -> user_accounts(user_account_id)
+Design: Gystigo/docs/governance/standards/ADR-0010-AUDIT-LOG-ARCHITECTURE.md (Status: PROPOSED)
+Actor semantics: Gystigo/docs/governance/foundation/GYPPORT_FINAL_CANONICAL_FOUNDATION_REGISTER_v1.0.md 6.4 (nullable tenant_id and actor = system/global events)
+Granularity intent: Fabric/Knowledge/00-GYPPORT-UNIVERSE/GYPPORT_BUSINESS_PLATFORM_UNIVERSAL_DATA_DOMAIN_CONTEXT_2026-09-13.md section 13
+Expense writers (ExpenseRepository.save): Register, Submit, Accept, Observe, Reject, EditRegistered (+EDITED_BEFORE_REVIEW revision), CorrectObserved (+CORRECTION_SUBMITTED review + CORRECTED_AFTER_OBSERVATION revision); Expense.linkAdvance/unlinkAdvance/reassignAdvance/freezeAdvanceReference/reopenApproved have no production caller

@@ -913,3 +913,391 @@ VERIFIED_FILE_COUNT=101
 BASELINE_REUSE_ALLOWED=YES
 ```
 
+
+2026-09-16 — gm-expenses / Reglas de rendición unificada, anticipo activo único y presentación financiera
+
+Decisiones del Owner aceptadas en GM_EXPENSES_FINAL_ADJUSTMENT_V62_04, GM_EXPENSES_UNIFIED_RECONCILIATION_V63_05,
+GM_EXPENSES_ONE_ACTIVE_ADVANCE_PER_CASE_CURRENCY_06 y GM_EXPENSES_MVP_FINAL_RELEASE_CONSOLIDATION_07. Completan la
+Regla de anticipos, rendición y total justificado del 2026-09-13, que sigue vigente. El detalle canónico vive en
+Fabric/Knowledge/gm-expenses/01-domain/GYPPORT_GM_EXPENSES_DOMAIN_BASELINE_v1.0.md.
+
+```text
+PLAN_DE_ENTREGA=método de entrega y días para rendir se registran con el anticipo (V62)
+PLAN_INMUTABLE_TRAS_CREACION=YES (para cambiarlo se cancela el BORRADOR y se crea otro anticipo)
+BORRADOR_ANTERIOR_A_V62=pide método y días en Confirmar entrega, sin valores inventados y sin reescribir filas históricas
+RN001=anticipo + reembolsado = justificado + devuelto + ajustes autorizados (V63)
+DEVOLUCION_Y_REEMBOLSO_COEXISTEN=YES
+REVERSION_AUTOMATICA_DE_DEVOLUCION=NO
+UN_ANTICIPO_FINANCIERAMENTE_ACTIVO_POR_EXPEDIENTE_Y_MONEDA=YES
+ESTADOS_ACTIVOS=BORRADOR,ENTREGADO,EN_RENDICION,OBSERVADO,RENDIDO
+ESTADOS_NO_ACTIVOS=CANCELADO,CERRADO
+REGLA_PROSPECTIVA=YES
+DATOS_HEREDADOS_MULTI_ANTICIPO=PRESERVAR_Y_SOPORTAR
+RESTRICCION_DE_UNICIDAD_EN_BASE_DE_DATOS=NO
+FIFO=SOLO_COMPATIBILIDAD_NO_CANONICO
+CIERRE_MVP=centrado en el expediente; sin comandos "Cerrar anticipo", "Cerrar rendición" ni "Finalizar anticipo"
+```
+
+Mensajes de rechazo del anticipo activo único:
+
+```text
+Este expediente ya tiene un anticipo activo en USD. Resuelve el anticipo actual antes de registrar otro.
+Este expediente ya tiene otro anticipo activo en USD. Resuelve ese anticipo antes de confirmar esta entrega.
+```
+
+La tarjeta del expediente, su detalle y los reportes usan un solo vocabulario financiero. Toda superficie que
+muestra una dirección muestra también los movimientos que la explican:
+Entregado + Reembolsado = Justificado + Devuelto (+ Ajuste autorizado) + la posición. La dirección es siempre el
+saldo del backend: nunca se calcula como Entregado − Usado, y Usado y Justificado no se fusionan.
+
+```text
+Entregado · Usado · Justificado · Devuelto · Reembolsado
+Por justificar o devolver   saldo mayor que 0
+Por reembolsar              saldo menor que 0
+Pendiente de conciliar      saldo igual a 0 (USD 0.00); sin anticipo entregado: No aplica
+```
+
+Esta regla sustituye la etiqueta "Diferencia USD 0.00" aceptada en GM_EXPENSES_UNIFIED_RECONCILIATION_V63_05. No
+se usa "Diferencia" sin contexto, ni "Saldo", ni "Exceso gastado" como obligación de rendición. En un expediente
+heredado con varios anticipos, la tarjeta y el resumen muestran la posición neta del expediente y cada anticipo
+conserva su propia dirección.
+
+
+2026-09-16 — GYPPORT® Universe / Regla de migración controlada de Shared DEV y datos heredados
+
+Decisión del Owner en GM_EXPENSES_RUNTIME_REHEARSAL_03 y GM_EXPENSES_MVP_FINAL_RELEASE_CONSOLIDATION_07. Shared
+DEV es compartido: se ensaya primero sobre una copia desechable, nunca en su puerto, y la migración real solo se
+ejecuta en un STEP que el Owner autoriza expresamente, en este orden.
+
+```text
+1  commits controlados de los bytes exactos ensayados y finales
+2  respaldo fresco de Shared DEV inmediatamente antes de migrar
+3  nueva verificación de la versión Flyway y de los conteos de Shared DEV
+4  comparación con la huella de origen del ensayo
+5  backend construido DESDE el commit aceptado
+6  verificación de los hashes empaquetados
+7  migración de Shared DEV
+8  reconstrucción o recreación del backend oficial de DEV
+9  smoke del Owner con inicio de sesión real
+10 solo entonces Shared DEV se declara alineado
+```
+
+Los datos heredados de Shared DEV no se reparan en silencio: no se completa historial de revisión, no se cambian
+estados de anticipos, no se cancelan borradores y no se borran registros. Su limpieza es un STEP separado
+controlado por el Owner. Un tenant sin evidencia del Owner queda UNKNOWN: no se clasifica como prueba ni como real y
+sus registros no se limpian.
+
+```text
+DATOS_HEREDADOS_SE_REPARAN_EN_SILENCIO=NO
+LIMPIEZA_DE_DATOS_HEREDADOS=STEP_SEPARADO_CONTROLADO_POR_EL_OWNER
+TENANT_SIN_EVIDENCIA_DEL_OWNER=UNKNOWN
+```
+
+
+2026-09-16 — gm-expenses / Regla de varios anticipos por expediente y barra del expediente cerrado
+
+Decisión del Owner en GM_EXPENSES_CLOSED_PROGRESS_AND_MULTIPLE_ADVANCES_FIX_10. Sustituye, de la entrada
+"2026-09-16 — gm-expenses / Reglas de rendición unificada, anticipo activo único y presentación financiera", las
+claves del anticipo activo único, sus dos mensajes de rechazo y la clave FIFO. El resto de esa entrada sigue vigente.
+
+```text
+VARIOS_ANTICIPOS_POR_EXPEDIENTE=VALIDOS en cualquier número y moneda
+EXPEDIENTE=centro de financiamiento y de rendición
+ANTICIPOS=tramos de financiamiento del expediente
+GASTOS=pertenecen al expediente, nunca a un anticipo
+REGISTRO_O_ENTREGA_BLOQUEADOS_POR_OTRO_ANTICIPO=NO
+BORRADOR_BLOQUEA=solo el cierre del expediente
+REPARTO_POR_ORDEN_DE_ENTREGA=mecanismo para conciliar cada rendición, no política de negocio
+```
+
+Lo que esta entrada sustituye de forma explícita:
+
+```text
+UN_ANTICIPO_FINANCIERAMENTE_ACTIVO_POR_EXPEDIENTE_Y_MONEDA=YES -> NO
+ESTADOS_ACTIVOS, ESTADOS_NO_ACTIVOS, REGLA_PROSPECTIVA, DATOS_HEREDADOS_MULTI_ANTICIPO -> sin efecto
+FIFO=SOLO_COMPATIBILIDAD_NO_CANONICO -> REPARTO_POR_ORDEN_DE_ENTREGA (arriba)
+"Este expediente ya tiene un anticipo activo en USD. Resuelve el anticipo actual antes de registrar otro." -> retirado
+"Este expediente ya tiene otro anticipo activo en USD. Resuelve ese anticipo antes de confirmar esta entrega." -> retirado
+```
+
+La tarjeta del expediente tiene una sola barra de avance. Mientras el expediente está abierto, la barra es Uso
+(Usado / Entregado). Cuando está cerrado, su ciclo financiero ya se resolvió: la barra es Conciliado, 100 % si no
+queda nada por justificar, devolver o reembolsar, y Uso se muestra como una cifra más.
+
+```text
+BARRA_EXPEDIENTE_ABIERTO=Uso
+BARRA_EXPEDIENTE_CERRADO=Conciliado (100 % sin montos pendientes)
+USO_EN_EXPEDIENTE_CERRADO=cifra sin barra
+OTRO_AVANCE_NO_MODELADO=no se muestra
+```
+
+
+2026-09-16 — gm-expenses / Regla de rendición a nivel del expediente
+
+Decisión del Owner en GM_EXPENSES_CASE_LEVEL_RENDITION_CANONICALIZATION_11. El expediente es el centro de
+financiamiento y de rendición: sus anticipos son tramos de financiamiento, sus gastos le pertenecen y su rendición es
+una sola por moneda. El detalle canónico vive en
+Fabric/Knowledge/gm-expenses/01-domain/GYPPORT_GM_EXPENSES_DOMAIN_BASELINE_v1.0.md (§5, Case-level rendition).
+
+```text
+EXPEDIENTE=centro de financiamiento y de rendición
+ANTICIPOS=tramos de financiamiento del expediente (varios, también en la misma moneda)
+GASTOS=pertenecen al expediente
+RENDICION=del expediente, una por moneda
+SALDO_DEL_EXPEDIENTE=entregado + reembolsado - justificado - devuelto - ajustes autorizados
+TOTAL_ENTREGADO=suma de los anticipos entregados del expediente
+TOTAL_JUSTIFICADO=suma de los gastos APROBADO del expediente (0 mientras no hay anticipo entregado)
+FIFO=NO_CANONICO, sin código de compatibilidad
+JUSTIFICADO_POR_ANTICIPO=no es verdad de negocio y no se muestra
+DEVOLUCION_REEMBOLSO_CONCILIAR=comandos del expediente por moneda; ninguno nombra un anticipo
+CONCILIAR=solo con el saldo del expediente igual a 0
+V63=se evalúa a nivel del expediente; cada fila técnica conciliada sigue cumpliendo la restricción
+FILAS_ADVANCE_SETTLEMENT=portadoras técnicas, invisibles y no autoritativas
+API_POR_ANTICIPO_PARA_UN_ANTICIPO_DE_EXPEDIENTE=rechazada, lecturas incluidas
+CIERRE=gastos -> comprobantes -> borradores -> observados -> expediente cuadrado -> Conciliar -> Cerrar expediente
+CERRAR_EXPEDIENTE_CIERRA=cada fila conciliada y cada anticipo del expediente, en la misma transacción
+ANTICIPO_ADICIONAL=solo suma a lo entregado; no reasigna gastos
+REPORTES=dirección de cada expediente antes de sumar (+30 y -20 nunca netean a 10)
+MIGRACION=NO (V62 y V63 sin cambios)
+```
+
+Mensajes:
+
+```text
+Hay 1 anticipo en borrador por USD X.XX. Confirma su entrega o cancélalo antes de cerrar el expediente.
+Hay N anticipos en borrador por un total de USD X.XX. Confirma su entrega o cancélalos antes de cerrar el expediente.
+La rendición del expediente tiene saldo pendiente; registra la devolución o el reembolso y vuelve a conciliar.
+Concilia la rendición del expediente antes de cerrarlo.
+La rendición de este anticipo se gestiona desde su expediente.
+Rendición: Se gestiona desde el expediente
+```
+
+Sin anticipo entregado (opción B), la tarjeta y el detalle del expediente muestran ceros (Entregado USD 0.00,
+Justificado USD 0.00, Devuelto USD 0.00, Reembolsado USD 0.00, Pendiente de conciliar USD 0.00) y Uso 0 % con la
+barra vacía y su riel visible. Uso puede superar 100 %: el texto conserva el porcentaje y solo el relleno se detiene.
+Los reportes conservan No aplica.
+
+```text
+USO_SIN_ANTICIPO_ENTREGADO=0 % con barra vacía y riel visible
+USO_MAYOR_A_100=permitido (texto 110 %, relleno máximo 100 %)
+MONTOS_SIN_ANTICIPO_ENTREGADO=ceros en la tarjeta y el detalle; No aplica en los reportes
+```
+
+Lo que esta entrada sustituye de forma explícita:
+
+```text
+REPARTO_POR_ORDEN_DE_ENTREGA=mecanismo para conciliar cada rendición (2026-09-16, FIX_10) -> sin efecto
+FIFO=SOLO_COMPATIBILIDAD_NO_CANONICO (2026-09-16, V63_05) -> FIFO=NO_CANONICO, sin código de compatibilidad
+"cada anticipo conserva su propia dirección" (2026-09-16, V63_05 y MVP_07) -> ningún anticipo muestra dirección propia
+"Pendiente de conciliar ... sin anticipo entregado: No aplica" en la tarjeta y el detalle -> USD 0.00 (opción B)
+"El expediente tiene anticipos en borrador; confirma su entrega o cancélalos." -> mensajes con cantidad y monto
+"El Anticipo puede mostrar un resumen informativo de su rendición" (2026-09-13) -> Rendición: Se gestiona desde el expediente
+```
+
+Sigue vigente de la regla del 2026-09-13: el Anticipo gestiona su creación, autorización y entrega; el Expediente es el
+único lugar de la devolución, el reembolso, la conciliación y el cierre; no existe una acción "Recalcular".
+
+
+2026-09-17 — gm-expenses / Regla de valores en cero en los reportes
+
+Decisión del Owner en GM_EXPENSES_RUNTIME_REHEARSAL_FINAL_12. Los reportes usan el mismo vocabulario numérico que la
+tarjeta y el detalle del expediente. Sin anticipo entregado, los campos de financiamiento se muestran en cero y nunca
+como "No aplica" ni "—". Usado conserva el monto real de los gastos. Es una normalización de presentación: el cálculo
+y las escrituras financieras no cambian.
+
+```text
+REPORTES_SIN_ANTICIPO_ENTREGADO=Entregado USD 0.00 · Usado (monto real) · Justificado USD 0.00 · Devuelto USD 0.00 · Reembolsado USD 0.00 · Pendiente de conciliar USD 0.00
+REPORTES_NO_APLICA=NO
+REPORTES_GUION=NO
+USADO_SIN_ANTICIPO=monto real de los gastos no rechazados ni excluidos
+CAMBIO_DE_ESCRITURA_FINANCIERA=NO
+```
+
+Lo que esta entrada sustituye de forma explícita:
+
+```text
+"Los reportes conservan No aplica." (2026-09-16, CASE_LEVEL_RENDITION_CANONICALIZATION_11) -> ceros numéricos
+MONTOS_SIN_ANTICIPO_ENTREGADO=ceros en la tarjeta y el detalle; No aplica en los reportes -> ceros en la tarjeta, el detalle y los reportes
+```
+
+
+2026-09-17 — GYPPORT® Universe / Regla de entorno local sin herencia de Shared DEV
+
+Decisión del Owner en GYPPORT_PRE_COMMIT_ENV_UI_AUDIT_HARDENING_13. Ninguna variable global de Windows, de Usuario o de
+Máquina, puede dejar a Shared DEV como datasource por defecto del desarrollo normal: todo lanzador, IDE o
+`mvn spring-boot:run` la heredaría sin que nadie lo decida. Las variables de Usuario `SPRING_DATASOURCE_URL`,
+`SPRING_DATASOURCE_USERNAME` y `SPRING_DATASOURCE_PASSWORD`, que apuntaban a Shared DEV, se retiraron el 2026-09-17; las
+credenciales de Shared DEV siguen solo en el `.env` del compose de DEV, ignorado por git, y en sus contenedores.
+
+```text
+DATASOURCE_GLOBAL_DE_WINDOWS_HACIA_SHARED_DEV=PROHIBIDO (Usuario y Máquina)
+PROCESO_NUEVO_HEREDA_SHARED_DEV=NO
+RUNTIME_LOCAL=configuración explícita del propio proceso
+ENV=LOCAL_EDUARDO
+DB_HOST=127.0.0.1
+DB_PORT=3310
+DB_NAME=gypport_runtime_local
+CREDENCIALES_DEL_RUNTIME_LOCAL=se leen del contenedor gypport-runtime-local-mysql al iniciar; nunca variables de Windows
+EL_LANZADOR_MUESTRA_ANTES_DE_JAVA=ENV, DB_HOST, DB_PORT, DB_NAME (nunca contraseñas)
+GUARDIA_OBLIGATORIA=rechaza un datasource con :3308, gypport-mysql-dev o core_business_dev
+MENSAJE_DE_RECHAZO=Local runtime refused to start because the datasource points to Shared DEV.
+SHARED_DEV=solo en un proceso explícito autorizado por el Owner
+```
+
+
+2026-09-17 — gm-expenses / Regla de indicadores independientes Conciliado y Uso
+
+Decisión del Owner en GYPPORT_PRE_COMMIT_ENV_UI_AUDIT_HARDENING_13. La tarjeta del expediente muestra, por moneda, dos
+indicadores independientes con su propio riel compacto, Conciliado y Uso, tanto si el expediente está abierto como
+cerrado. Conciliado no inventa un porcentaje intermedio: solo un expediente cerrado sin montos pendientes está conciliado.
+
+```text
+INDICADORES_DE_LA_TARJETA=Conciliado y Uso, independientes, cada uno con su barra
+CONCILIADO_EXPEDIENTE_CERRADO_SIN_PENDIENTES=100 % con la barra llena
+CONCILIADO_EXPEDIENTE_ABIERTO=Pendiente con la barra vacía (sin porcentaje intermedio, nunca un 100 % falso)
+CONCILIADO_EXPEDIENTE_CERRADO_CON_MONTO_PENDIENTE=Pendiente con la barra vacía (solo datos heredados)
+USO=Usado / Entregado con su valor real (29 %, 87 %, 110 %)
+USO_MAYOR_A_100=el texto conserva el porcentaje; el relleno se detiene en 100 %
+USO_SIN_ANTICIPO_ENTREGADO=0 % con la barra vacía
+PANTALLAS_ANGOSTAS=los dos indicadores lado a lado bajo los montos, sin desborde horizontal
+```
+
+Lo que esta entrada sustituye de forma explícita:
+
+```text
+"La tarjeta del expediente tiene una sola barra de avance." (2026-09-16, FIX_10) -> dos indicadores independientes
+BARRA_EXPEDIENTE_ABIERTO=Uso (2026-09-16, FIX_10) -> Conciliado Pendiente y Uso, cada uno con su barra
+BARRA_EXPEDIENTE_CERRADO=Conciliado (100 % sin montos pendientes) (2026-09-16, FIX_10) -> Conciliado 100 % y Uso, cada uno con su barra
+USO_EN_EXPEDIENTE_CERRADO=cifra sin barra (2026-09-16, FIX_10) -> Uso con su propia barra
+```
+
+
+2026-09-17 — gm-expenses / Regla de integridad del historial de revisión
+
+Decisión del Owner en GYPPORT_PRE_COMMIT_ENV_UI_AUDIT_HARDENING_13. Un gasto OBSERVADO moderno siempre tiene su evento
+OBSERVED inmutable, escrito en la misma transacción que el cambio de estado. El detalle canónico vive en
+Fabric/Knowledge/gm-expenses/01-domain/GYPPORT_GM_EXPENSES_DOMAIN_BASELINE_v1.0.md (§4, Review history integrity).
+
+```text
+OBSERVADO_REQUIERE_EVENTO_OBSERVED=SI, en la misma transacción
+FALLA_AL_ESCRIBIR_EL_HISTORIAL=revierte toda la decisión (mismo estado, misma versión, sin recibo de idempotencia)
+ACTOR_DEL_EVENTO=UserAccount global autenticada de la sesión, nunca el responsable ni una Persona
+MOMENTO_DEL_EVENTO=reloj del servidor en la solicitud, nunca un valor del cliente
+HISTORIAL_DE_REVISION=solo se agrega (los triggers rechazan UPDATE y DELETE)
+OBSERVADO_A_RECHAZADO=no existe; el gasto observado se corrige y luego se decide
+RECHAZADO=final
+OBSERVADO_SIN_EVENTO=solo datos heredados anteriores al historial (antes del 2026-09-03); nunca se fabrica historial
+LIMPIEZA_DE_ESOS_DATOS=operación controlada de datos DEV autorizada por el Owner y registrada como evidencia; no es regla del producto
+```
+
+Evidencia de limpieza de datos DEV, no regla del producto: el gasto de prueba 5E63494AA2564C1E847CD54A6ED67A51 (tenant 1),
+OBSERVADO sin historial desde 2026-08-30, pasó a RECHAZADO solo en la base local aislada 127.0.0.1:3310, el 2026-09-17 a
+las 12:55:25 UTC, con una actualización guardada: sin evento de revisión y sin revisor, motivo ni fecha histórica
+fabricados. El detalle está en
+gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/PRE-COMMIT-ENV-UI-AUDIT-HARDENING-13-2026-09-17/. Shared DEV
+conserva ese registro sin cambios hasta un STEP explícito de limpieza.
+
+
+2026-09-17 — GYPPORT® Universe / Regla de reutilización de la auditoría existente
+
+Decisión del Owner en GYPPORT_FINAL_PRECOMMIT_AUDIT_AND_UI_ALIGNMENT_14. GYPPORT ya tiene su arquitectura de auditoría y
+se reutiliza: la historia semántica de cada dominio más la auditoría global. No se crea una arquitectura paralela, ni
+una tabla nueva, ni columnas genéricas como updated_by, ni una V64, solo porque falte un campo. Un vacío bloquea solo si
+existe una pregunta real de negocio o de auditoría que la arquitectura actual no responde. El detalle vive en
+Fabric/Knowledge/gm-expenses/02-persistence/GYPPORT_GM_EXPENSES_PERSISTENCE_BASELINE_v1.0.md (§10.1) y en el baseline de
+dominio (§4).
+
+```text
+HISTORIA_DE_DOMINIO=tablas semánticas append-only del módulo (en gm-expenses: expense_review_event, expense_revision_event, expense_advance_assignment_event, settlement_adjustment_event, settlement_balance_event, expense_command_receipt)
+AUDITORIA_GLOBAL=audit_logs con el catálogo audit_action_types (V1; clave de actor global desde V58)
+AUDITORIA_GLOBAL_REGISTRA=operaciones administrativas o de sistema: contexto de tenant, actor, acción, entidad, antes y después, correlación, momento
+EVENTOS_DE_DOMINIO_DUPLICADOS_EN_AUDIT_LOGS=NO
+ACTOR_DE_AUDITORIA=UserAccount global del contexto de ejecución, nunca un participante del negocio (responsable, supervisor, empleado, receptor)
+ACTOR_NULL_EN_AUDIT_LOGS=evento de sistema (Foundation Register §6.4); nunca se fabrica una cuenta para llenar el campo
+REVISION_DE_GASTO=ExpenseRevisionChange con snapshots anterior y nuevo en expense_revision_event, en la misma transacción
+OBSERVADO_Y_OBSERVED=atómicos (regla del 2026-09-17, integridad del historial de revisión)
+ARQUITECTURA_DE_AUDITORIA_PARALELA=NO
+V64_O_COLUMNAS_DE_AUDITORIA_NUEVAS=NO sin un vacío bloqueante probado y aprobación separada del Owner
+VACIOS_DE_AUDITORIA_BLOQUEANTES_MVP=NINGUNO
+```
+
+Estado verificado el 2026-09-17, sin bloquear el MVP: ningún puerto, servicio o adaptador de la aplicación escribe aún
+audit_logs (ADR-0010 sigue PROPOSED) y la tabla no tiene triggers append-only. El primer registro es la auditoría de la
+limpieza de datos DEV de GYPPORT_PRE_COMMIT_ENV_UI_AUDIT_HARDENING_13, solo en la copia local 3310: acción
+LEGACY_DEV_TEST_DATA_REGULARIZATION, actor NULL y la hora real de la limpieza en new_values.
+
+
+2026-09-17 — GYPPORT® Universe / Lanzador local canónico versionado
+
+Decisión del Owner en GYPPORT_FINAL_PRECOMMIT_AUDIT_AND_UI_ALIGNMENT_14. Complementa la "Regla de entorno local sin
+herencia de Shared DEV" del 2026-09-17: el control de seguridad no puede vivir solo en target/, que `mvn clean` borra.
+
+```text
+LANZADOR_LOCAL_CANONICO=Gystigo/platform_os/server/scripts/start-runtime-local.ps1
+DETENCION=Gystigo/platform_os/server/scripts/stop-runtime-local.ps1
+LANZADORES_LOCALES=uno solo (las copias de target/runtime-local se retiraron)
+ESTADO_EN_TARGET=target/runtime-local: jar preparado en app/, logs, access-logs, backend.pid y documentos locales
+MVN_CLEAN_BORRA_EL_LANZADOR=NO
+SECRETOS_EN_EL_REPOSITORIO=NO (la contraseña se lee del contenedor gypport-runtime-local-mysql al iniciar)
+GUARDIA_SHARED_DEV=la misma regla y el mismo mensaje, antes de iniciar Java
+```
+
+
+2026-09-17 — gm-expenses / Regla de ubicación de Conciliado y Uso en la tarjeta
+
+Decisión del Owner en GYPPORT_FINAL_PRECOMMIT_AUDIT_AND_UI_ALIGNMENT_14. Los dos indicadores independientes siguen
+siendo correctos; cambia su lugar. Cada uno vive en su región semántica y nunca forman un bloque combinado que cruce el
+divisor de Finanzas.
+
+```text
+CONCILIADO=indicador del ciclo de vida del expediente, uno por expediente
+UBICACION_DE_CONCILIADO=cabecera de la tarjeta, junto al estado Abierto / Cerrado, sobre el divisor
+UBICACION_DE_USO=Finanzas, uno por moneda, junto a Entregado, Usado y Justificado, bajo el divisor
+CONCILIADO_EXPEDIENTE_CERRADO_SIN_PENDIENTES=100 % con la barra llena (sin pendientes en ninguna moneda)
+CONCILIADO_EXPEDIENTE_ABIERTO=Pendiente con la barra vacía
+USO_MAYOR_A_100=el texto conserva el porcentaje; el relleno se detiene en 100 %
+PANTALLAS_ANGOSTAS=Conciliado sigue bajo el estado en la cabecera; Uso sigue en Finanzas; sin desborde horizontal
+```
+
+Lo que esta entrada sustituye de forma explícita:
+
+```text
+"La tarjeta del expediente muestra, por moneda, dos indicadores independientes con su propio riel compacto" (2026-09-17, HARDENING_13) -> Conciliado uno por expediente en la cabecera; Uso uno por moneda en Finanzas
+PANTALLAS_ANGOSTAS=los dos indicadores lado a lado bajo los montos, sin desborde horizontal (2026-09-17, HARDENING_13) -> Conciliado bajo el estado y Uso en Finanzas
+```
+
+
+2026-09-17 — GYPPORT® Universe / Regla de fin de línea en commits controlados
+
+Decisión del Owner en GM_EXPENSES_MVP_CONTROLLED_COMMIT_GATE_17. Un commit controlado acepta la conversión a LF que
+Git aplica según los atributos del repositorio y no agrega una política -text solo para conservar hashes antiguos del
+árbol de trabajo con CRLF. El Verified Baseline registra los hashes de los blobs preparados o commiteados.
+
+```text
+CONVERSION_GIT_A_LF=ACEPTADA
+POLITICA_TEXT_ESPECIAL_PARA_CONSERVAR_CRLF=NO
+ARCHIVO_CONVERTIDO=se registra PRE_STAGE_WORKTREE_SHA256, STAGED_BLOB_SHA256 y NORMALIZATION=CRLF_TO_LF
+HASHES_DEL_VERIFIED_BASELINE=blobs preparados o commiteados, nunca hashes anteriores del árbol de trabajo
+HASHES_DE_EVIDENCIA_HISTORICA=siguen válidos como evidencia anterior a la conversión
+REESCRIBIR_EVIDENCIA_PARA_OCULTAR_LA_CONVERSION=NO
+EVIDENCIA_BINARIA=se commitea con sus bytes existentes, sin recodificar
+```
+
+
+2026-09-17 — GYPPORT® Universe / Registro de Verified Baseline GM-EXPENSES-MVP-RELEASE
+
+Verified Baseline de un STEP aceptado por el Owner y committed localmente.
+Se reutiliza según VERIFIED_BASELINE_REUSE.
+
+```text
+BASELINE_ID=GYPPORT-GM-EXPENSES-MVP-RELEASE-VERIFIED-BASELINE-2026-09-17
+BASELINE_PATH=Fabric/Knowledge/00-GYPPORT-UNIVERSE/verification-baselines/GYPPORT_GM_EXPENSES_MVP_RELEASE_VERIFIED_BASELINE_2026-09-17.md
+STEP=GM_EXPENSES_MVP_CONTROLLED_COMMIT_GATE_17
+PHASE=GM_EXPENSES_RELEASE_READINESS_MVP
+STATUS=OWNER_ACCEPTED_COMMITTED_LOCAL
+ACCEPTED_COMMITS=gm-expenses=545eae0fb287f8e04f7f1b4ac73780304ec53f22; Gystigo=bcb959158b781e3fcd876bacc6fcf0f1f1c79b9f
+MIGRATION_HEAD=V63
+VERIFIED_FILE_COUNT=132
+BASELINE_REUSE_ALLOWED=YES
+```
+

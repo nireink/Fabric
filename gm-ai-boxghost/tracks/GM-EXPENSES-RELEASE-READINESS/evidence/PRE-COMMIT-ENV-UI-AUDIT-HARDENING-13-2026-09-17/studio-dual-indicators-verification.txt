@@ -1,0 +1,30 @@
+GYPPORT_PRE_COMMIT_ENV_UI_AUDIT_HARDENING_13 - Part B, two independent Case card indicators (Studio only)
+
+Contracts (npx vitest run --config vitest.config.js, Gystigo/platform_os/studio/channel/browser/shell)
+  ExpenseCaseCard.contract.mjs + ExpenseCases.contract.mjs: 2 files, 61 tests passed
+  Full Studio suite: 53 files, 629 tests passed (628 before: FIX_10's three single-bar tests became four dual-indicator tests)
+ESLint (shell config): ExpenseCaseCard.jsx, caseRules.js, fixtures/ExpenseCaseCardsFixture.jsx -> exit 0
+
+Browser (fixture gypport-expense-case-cards-fixture, http://localhost:5189/fixtures/expense-case-cards.html; synthetic data,
+no backend). Positions are relative to each card; fill = fill px / track px.
+
+1280 px (desktop): document overflow 0 px, cards overflowing 0; indicators in their own column, Conciliado above Uso
+  A Compra Teléfono (closed 300/260/260, returned 40)   Conciliado=100% fill 35/35 at (868,181) | Uso=87% fill 30/35 at (868,234)
+  B Viaje Loja (closed 679/200/200, ret 499, reimb 20)  Conciliado=100% fill 35/35              | Uso=29% fill 10/35
+  C open overuse (1000 delivered, 1100 used)            Conciliado=Pendiente fill 0/35          | Uso=110% fill 35/35 (text kept, fill clamped)
+  D no delivered advance                                Conciliado=Pendiente fill 0/35          | Uso=0% fill 0/35
+  adjustment card (open)                                Conciliado=Pendiente fill 0/35          | Uso=96% fill 34/35
+  two currencies (open)                                 USD: Pendiente 0/35 + Uso 75% 26/35; EUR: Pendiente 0/35 + Uso 25% 9/35
+768 px (tablet): document overflow 0 px, cards overflowing 0, 42 indicators, 0 hidden; same column layout at x=572
+  A 100% 35/35 + 87% 30/35 | B 100% 35/35 + 29% 10/35 | C Pendiente 0/35 + 110% 35/35 | D Pendiente 0/35 + 0% 0/35
+375 px (mobile): document overflow 0 px, cards overflowing 0, 42 indicators, 0 hidden; indicators side by side (x=17 and x=182, 153 px each)
+  A 100% 35/35 + 87% 30/35 | B 100% 35/35 + 29% 10/35 | C Pendiente 0/35 + 110% 35/35 | D Pendiente 0/35 + 0% 0/35
+320 px: document overflow 0 px, cards overflowing 0, widest card content 294 px = card client width 294 px, header scroll width 320 px,
+  42 indicators, 0 hidden; side by side (x=17 and x=154, 125 px each)
+  A 100% 35/35 + 87% 30/35 | B 100% 35/35 + 29% 10/35 | C Pendiente 0/35 + 110% 35/35 | D Pendiente 0/35 + 0% 0/35
+
+Visual check (screenshots seen during the STEP, not stored): 800 px shows Compra Teléfono with Conciliado 100% and Uso 87% on two
+tracks, an open 1000/1000 card with Conciliado Pendiente (empty track) and Uso 100% (full), and Compra Camaras with Pendiente and
+Uso 0% (both empty). 375 px shows the open overuse card: amounts in two columns, the position row full width, then Conciliado
+Pendiente and Uso 110% side by side.
+Console: one "Failed to load resource: 401" from the fixture shell (no backend session); unrelated to the card, which fetches nothing.

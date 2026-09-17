@@ -1,0 +1,25 @@
+2026-09-17T08:42:40.209Z INFO org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://127.0.0.1:3314/gypport_rehearsal_final12?allowPublicKeyRetrieval=true&useSSL=false (MySQL 8.4)
+2026-09-17T08:42:40.425Z INFO o.f.core.internal.command.DbValidate     : Successfully validated 64 migrations (execution time 00:00.107s)
+2026-09-17T08:42:40.463Z INFO o.f.core.internal.command.DbMigrate      : Current version of schema `gypport_rehearsal_final12`: 43
+2026-09-17T08:42:40.487Z INFO o.f.core.internal.command.DbMigrate      : Migrating schema `gypport_rehearsal_final12` to version "44 - human resources permission namespace"
+2026-09-17T08:42:40.567Z INFO o.f.core.internal.command.DbMigrate      : Migrating schema `gypport_rehearsal_final12` to version "45 - gm fleets tenant safe vehicle references"
+2026-09-17T08:42:40.829Z INFO o.f.core.internal.command.DbMigrate      : Migrating schema `gypport_rehearsal_final12` to version "46 - gm fuel stations tenant safe references"
+2026-09-17T08:42:41.611Z INFO o.f.core.internal.command.DbMigrate      : Migrating schema `gypport_rehearsal_final12` to version "47 - gm fuel stations tenant safe product scope"
+2026-09-17T08:42:42.024Z INFO o.f.core.internal.command.DbMigrate      : Migrating schema `gypport_rehearsal_final12` to version "48 - fiscal tax subject foundation"
+2026-09-17T08:42:42.980Z INFO o.f.core.internal.command.DbMigrate      : Migrating schema `gypport_rehearsal_final12` to version "49 - user establishment tax subject access"
+2026-09-17T08:42:43.456Z INFO o.f.core.internal.command.DbMigrate      : Migrating schema `gypport_rehearsal_final12` to version "50 - identity identifier collation reconciliation"
+2026-09-17T08:42:43.921Z INFO o.f.core.internal.command.DbMigrate      : Migrating schema `gypport_rehearsal_final12` to version "51 - universal identity intake"
+2026-09-17T08:42:44.086Z INFO o.f.core.internal.command.DbMigrate      : Migrating schema `gypport_rehearsal_final12` to version "52 - pending account identity reconciliation"
+2026-09-17T08:42:44.492Z INFO o.f.core.internal.command.DbMigrate      : Migrating schema `gypport_rehearsal_final12` to version "53 - user tenant membership foundation"
+2026-09-17T08:42:44.708Z INFO o.f.core.internal.command.DbMigrate      : Migrating schema `gypport_rehearsal_final12` to version "54 - one active account per golden record"
+2026-09-17T08:42:44.963Z INFO o.f.core.internal.command.DbMigrate      : Migrating schema `gypport_rehearsal_final12` to version "55 - user tenant membership catch up"
+2026-09-17T08:42:45.035Z INFO o.f.core.internal.command.DbMigrate      : Migrating schema `gypport_rehearsal_final12` to version "56 - tenantless platform sessions"
+2026-09-17T08:42:45.170Z INFO o.f.core.internal.command.DbMigrate      : Migrating schema `gypport_rehearsal_final12` to version "57 - tenant access subject membership fks"
+2026-09-17T08:42:45.832Z INFO o.f.core.internal.command.DbMigrate      : Migrating schema `gypport_rehearsal_final12` to version "58 - global user account actor fks"
+2026-09-17T08:42:47.615Z INFO o.f.core.internal.command.DbMigrate      : Migrating schema `gypport_rehearsal_final12` to version "59 - global account challenge references"
+2026-09-17T08:42:47.860Z INFO o.f.core.internal.command.DbMigrate      : Migrating schema `gypport_rehearsal_final12` to version "60 - global username uniqueness"
+2026-09-17T08:42:48.018Z INFO o.f.core.internal.command.DbMigrate      : Migrating schema `gypport_rehearsal_final12` to version "61 - user account origin columns"
+2026-09-17T08:42:48.608Z INFO o.f.core.internal.command.DbMigrate      : Migrating schema `gypport_rehearsal_final12` to version "62 - gm expenses advance planned delivery"
+2026-09-17T08:42:48.817Z INFO o.f.core.internal.command.DbMigrate      : Migrating schema `gypport_rehearsal_final12` to version "63 - gm expenses unified settlement reconciliation"
+2026-09-17T08:42:48.978Z INFO o.f.core.internal.command.DbMigrate      : Successfully applied 20 migrations to schema `gypport_rehearsal_final12`, now at version v63 (execution time 00:07.700s)
+2026-09-17T08:42:50.641Z INFO c.g.server.module.ServerApplication      : Started ServerApplication in 13.505 seconds (process running for 14.197)

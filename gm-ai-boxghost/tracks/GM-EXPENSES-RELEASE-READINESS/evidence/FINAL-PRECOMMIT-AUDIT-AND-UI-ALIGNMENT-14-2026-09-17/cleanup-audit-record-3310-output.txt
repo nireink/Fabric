@@ -1,0 +1,5 @@
+TARGET database=gypport_runtime_local now_utc=2026-09-17 13:36:19.252
+ACTION_TYPES_INSERTED=1
+AUDIT_ROWS_INSERTED=1
+AUDIT_LOG uuid=c24094e6-60c2-480a-88d8-c6cadbdeaba4 tenant=1 actor=NULL action=LEGACY_DEV_TEST_DATA_REGULARIZATION entity=Expense#2 entity_uuid=5E63494AA2564C1E847CD54A6ED67A51 entity_version=3 correlation=GYPPORT_PRE_COMMIT_ENV_UI_AUDIT_HARDENING_13 created_at=2026-09-17 13:36:19 old_status=OBSERVADO old_version=2 new_status=RECHAZADO new_version=3 performed_at_utc=2026-09-17T12:55:25.123Z reason=Test record created before canonical review-history persistence.
+TOTALS audit_logs=1 audit_action_types=1 expense_review_event_for_row=0

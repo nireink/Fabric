@@ -1,0 +1,42 @@
+﻿## flyway
+max=63 rows=47 failed=0 applied_44_63=20 beyond_63=0
+## row counts: every table present before (copy = Shared DEV V43) vs after (copy V63)
+tables_before=102 tables_after=107 rows_before=3192 rows_after=3234
+tables_missing_after=[]
+tables_with_changed_counts=[flyway_schema_history 27->47]
+tables_added_by_migrations=[mdm_identity_intake_identifiers(0), mdm_identity_intakes(0), tax_subjects(0), user_tenant_membership_events(11), user_tenant_memberships(11)]
+business_tables_with_fewer_rows=[]
+## content of every gm-expenses table: CRC over all columns shared by Shared DEV (V43) and the copy (V63)
+responsible_reference                rows:crc dev=13:33499136728 copy=13:33499136728 same=True shared_columns=14 columns_added=-
+vehicle_reference                    rows:crc dev=28:51652535006 copy=28:51652535006 same=True shared_columns=13 columns_added=-
+expense_category                     rows:crc dev=15:26811461622 copy=15:26811461622 same=True shared_columns=11 columns_added=-
+expense_advance                      rows:crc dev=30:65674337299 copy=30:65674337299 same=True shared_columns=34 columns_added=planned_delivery_method_code,planned_rendition_days
+expense                              rows:crc dev=54:96500809607 copy=54:96500809607 same=True shared_columns=27 columns_added=-
+advance_settlement                   rows:crc dev=13:30735898215 copy=13:30735898215 same=True shared_columns=19 columns_added=-
+expense_advance_assignment_event     rows:crc dev=0:0 copy=0:0 same=True shared_columns=12 columns_added=-
+expense_review_event                 rows:crc dev=75:163441637360 copy=75:163441637360 same=True shared_columns=12 columns_added=-
+expense_revision_event               rows:crc dev=21:41153451218 copy=21:41153451218 same=True shared_columns=14 columns_added=-
+settlement_adjustment_event          rows:crc dev=0:0 copy=0:0 same=True shared_columns=13 columns_added=-
+settlement_balance_event             rows:crc dev=3:8556796930 copy=3:8556796930 same=True shared_columns=13 columns_added=-
+expense_adjustment                   rows:crc dev=0:0 copy=0:0 same=True shared_columns=13 columns_added=-
+expense_document                     rows:crc dev=11:28520654467 copy=11:28520654467 same=True shared_columns=27 columns_added=-
+expense_command_receipt              rows:crc dev=351:803404234708 copy=351:803404234708 same=True shared_columns=13 columns_added=-
+expense_allocation                   rows:crc dev=0:0 copy=0:0 same=True shared_columns=14 columns_added=-
+expense_document_review_event        rows:crc dev=0:0 copy=0:0 same=True shared_columns=10 columns_added=-
+expense_advance_participant_event    rows:crc dev=30:73320038469 copy=30:73320038469 same=True shared_columns=14 columns_added=-
+expense_case                         rows:crc dev=17:34181121633 copy=17:34181121633 same=True shared_columns=17 columns_added=-
+expense_case_resource                rows:crc dev=11:26418872348 copy=11:26418872348 same=True shared_columns=13 columns_added=-
+EXPENSES_CONTENT_MISMATCHES=0
+## triggers after migration vs before
+triggers_before=29 triggers_after=32 changed_or_removed=[] new_or_changed=[trg_user_tenant_membership_event_no_delete, trg_user_tenant_membership_event_no_update, trg_user_tenant_membership_no_delete]
+routines_left_by_migrations=0
+## protections, catalog, V61, V62, V63
+expenses_delete_guards=17
+canonical_categories=8
+V61 origin_columns=2 old_columns=0 origin_fks=3 old_fks=0 identity_pair_check=1 retired_unique_key=0 accounts=11 accounts_without_membership=0
+V62 planned_columns=2 planned_checks=3 existing_rows_with_plan=0
+V63 return_reimburse_check=0 reconciled_equation_check=1 adjustment_shortfall_check=1 settlement_checks=10 unified_clause=1 reconciled_rows_violating=0
+## legacy link ambiguity (expense_case.advance_id pointing at an advance attached to another Case)
+ambiguous_legacy_links=0
+## Shared DEV untouched
+shared_dev_flyway_max=43 history_rows=27 failed=0

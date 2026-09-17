@@ -1,0 +1,16 @@
+﻿PASS synthetic session (tenant A) :: login=200
+PASS ExpenseCase created and offered to Nuevo anticipo window 1 (open Cases) :: status=201 open=1
+PASS window 2 registers the draft with its plan; BORRADOR summary reads names :: status=201 advance=BORRADOR registeredBy=Rehearsal Smokea
+PASS one financially active advance per Case and currency (S06 copy) :: status=400 message=Este expediente ya tiene un anticipo activo en USD. Resuelve el anticipo actual antes de registrar otro.
+PASS B Confirmar entrega refuses deliveredByPersonReference and delivers without it :: legacyBody=400 deliver=200 status=ENTREGADO confirmedBy=
+PASS A BORRADOR -> CANCELADO :: cancel=200 status=CANCELADO
+PASS C /cancel is a mapped route (business 400 on a delivered advance; an unmapped route answers 401) :: cancelDelivered=400 message=Solo se cancela un anticipo en borrador; uno entregado se rinde en su expediente. unmapped=401
+PASS review: APROBADO, OBSERVADO -> corrected -> APROBADO, RECHAZADO with history :: e2=APROBADO/4 e3=RECHAZADO/2 events=SUBMITTED,OBSERVED,CORRECTION_SUBMITTED,ACCEPTED
+PASS justified total = approved expenses only (80 + 35) :: justified=115.0000 pendingReturn=35.0000
+PASS return -> Conciliar -> Cerrar expediente closes the rendition and the advance :: return=200 reconcile=200 close=200 case=CERRADO
+PASS V63: return 20 + later approval -> Por reembolsar 20 -> reimbursement -> reconciled and closed :: owed=20.0000 reimburse=200 close=200 final=CERRADO
+PASS reports: period summary on justified amounts (per-Case directions), totals, query, vehicles, categories :: period=200 delivered=350.0000 used=315.0000 justified=315.0000 returned=55.0000 reimbursed=20.0000 query_lines=4
+PASS E no raw actor ids rendered (API numeric actor fields found are listed; Studio renders none) :: numeric_actor_fields=[case.closedBy=592] studio_renders_closedBy=False
+PASS F tenant B never reaches tenant A (case, advance, expense, rendition, list, reports) :: case=404 advance=404 expense=404 movement=404 list=0 period=0 query=0
+R1=941ed2fd-63cf-45ac-b576-5854b591dfe9 R2=e1ba11da-0a83-4a34-b96f-0e41455fd9f0 R3=5a62e261-7065-48db-8a7e-7a8170e5c3bd
+R03_RUNTIME_CHECKS=14 FAILURES=0

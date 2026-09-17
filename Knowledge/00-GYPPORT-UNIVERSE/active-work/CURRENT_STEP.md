@@ -5,27 +5,29 @@ canonical knowledge, not a copy of the prompt, not a transcript, not a replaceme
 not an Owner approval and not an execution trigger.
 
 ```text
-CURRENT_TRACK=GYPPORT_GLOBAL_ACCOUNT_TENANT_MEMBERSHIP_FOUNDATION_15
-CURRENT_STEP_ID=PKG_2D_COMPLETE_CROSS_TENANT_GLOBAL_ACCOUNT_ADOPTION
-CURRENT_PHASE=PKG_2D_COMPLETE_CROSS_TENANT_GLOBAL_ACCOUNT_REUSE_AND_ADOPTION
-MODE=IMPLEMENT_AND_VERIFY
-STATUS=COMPLETE
+CURRENT_TRACK=GM_EXPENSES_RELEASE_READINESS
+CURRENT_STEP_ID=GM_EXPENSES_MVP_CONTROLLED_COMMIT_GATE_17
+CURRENT_PHASE=FINAL_PRECOMMIT_PROOF_AND_CONTROLLED_COMMITS
+MODE=FINAL_PRECOMMIT_PROOF_AND_CONTROLLED_COMMITS
+STATUS=GM_EXPENSES_MVP_COMMITTED_LOCAL_READY_FOR_SHARED_DEV
 
-PROMPT_SOURCE=Fabric/Knowledge/00-GYPPORT-UNIVERSE/steps/PKG-2D/PKG_2D_COMPLETE_CROSS_TENANT_GLOBAL_ACCOUNT_ADOPTION.md
-REQUIRED_BASELINES=GYPPORT-PKG2D-CROSS-TENANT-GLOBAL-ACCOUNT-VERIFIED-BASELINE-2026-09-16
+PROMPT_SOURCE=Fabric/Knowledge/00-GYPPORT-UNIVERSE/steps/GM-EXPENSES-RELEASE-READINESS/GM_EXPENSES_MVP_CONTROLLED_COMMIT_GATE_17.md
+REQUIRED_BASELINES=GYPPORT-PKG2D-CROSS-TENANT-GLOBAL-ACCOUNT-VERIFIED-BASELINE-2026-09-16,GYPPORT-GM-EXPENSES-MVP-RELEASE-VERIFIED-BASELINE-2026-09-17
 BASELINE_REUSE_REQUIRED=YES
-FULL_PKG2C_REGRESSION_RERUN=NO
+FULL_HISTORICAL_REGRESSION_RERUN=NO
 
-OWNER_EXECUTION_AUTHORIZED=NO
+OWNER_EXECUTION_AUTHORIZED=YES
 AUTO_IMPLEMENT_NEXT_STEP=NO
 AUTO_PUSH=NO
 ```
 
 ## Next action
 
-PKG-2D is complete: Owner-accepted and committed locally (gm-security d3fa0b4, Gystigo d9f3dde, Fabric cc194e4),
-with its Verified Baseline registered in Reglas.md. No next STEP is selected: a canonical next STEP needs an
-explicit Owner prompt. Nothing is pushed.
+STOP: GM_EXPENSES_MVP_CONTROLLED_COMMIT_GATE_17 committed the accepted gm-expenses MVP locally and waits for Owner review; nothing was pushed.
+Commits: gm-expenses 545eae0 (master), Gystigo bcb9591 (feature/gm-fleets-minimum-vehicle-master-01), Fabric = the commit that adds this file; migration head V63.
+Verified baseline: GYPPORT-GM-EXPENSES-MVP-RELEASE-VERIFIED-BASELINE-2026-09-17 (release COMMITTED_LOCAL, READY_FOR_SHARED_DEV_MIGRATION). Shared DEV is still V43 and the official DEV backend is not rebuilt.
+Next gate, only after Owner acceptance: fresh Shared DEV backup, migrate V43 to V63 per gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/handoffs/SHARED_DEV_MIGRATION_V43_V63_PLAN_2026-09-16.md, rebuild the DEV backend from the accepted commits, Owner real-login smoke.
+Not authorized now: push, Shared DEV migration, official DEV backend rebuild or restart, Shared DEV legacy data cleanup, Gystigo branch normalization.
 
 ## How to use this file
 

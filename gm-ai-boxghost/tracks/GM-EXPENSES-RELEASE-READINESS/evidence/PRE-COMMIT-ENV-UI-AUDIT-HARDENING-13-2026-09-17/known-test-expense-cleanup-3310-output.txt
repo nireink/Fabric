@@ -1,0 +1,5 @@
+TARGET database=gypport_runtime_local server_now_utc=2026-09-17 12:55:25.114
+BEFORE expense=5E63494AA2564C1E847CD54A6ED67A51 tenant=1 organization_scope=0 scope=PERSONAL case_id=NULL advance_id=NULL status=OBSERVADO version=2 amount=20.0000 USD expense_date=2026-08-30 created_by=1 created_at=2026-08-30 21:08:18.073 updated_at=2026-08-30 21:08:29.952 review_events=0 command_receipts=3
+ROWS_CHANGED=1 cleanup_at_utc=2026-09-17 12:55:25.123
+AFTER expense=5E63494AA2564C1E847CD54A6ED67A51 tenant=1 status=RECHAZADO version=3 amount=20.0000 USD updated_at=2026-09-17 12:55:25.122 review_events=0
+OBSERVADO_WITHOUT_OBSERVED_EVENT_REMAINING=0

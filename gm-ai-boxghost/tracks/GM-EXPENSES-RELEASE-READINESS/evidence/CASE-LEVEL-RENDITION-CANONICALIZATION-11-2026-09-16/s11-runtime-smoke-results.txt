@@ -1,0 +1,18 @@
+﻿PASS synthetic session A :: login=200
+PASS §13 tranches delivered and expenses approved on the Case :: deliver=200,200,200,200 approvals=200/200,200/200
+PASS §13 one Case rendition: delivered 37300, justified 35000, 2300 to return, Conciliar not yet offered :: status=SIN_INICIAR delivered=37300.0000 justified=35000.0000 pendingReturn=2300.0000 canReconcile=False
+PASS §18 C no advance carries a rendition, a settlement or a Resumen per advance :: case detail JSON scanned
+PASS §10 an unbalanced Case does not close :: close=400 message=La rendición del expediente tiene saldo pendiente; registra la devolución o el reembolso y vuelve a conciliar.
+PASS §13 the return of 2300 balances the Case and offers Conciliar :: return=200 status=ABIERTO canReconcile=True
+PASS §10 a balanced Case still needs Conciliar before closing :: close=400 message=Concilia la rendición del expediente antes de cerrarlo.
+PASS §8 the per-advance settlement API refuses a Case advance, reads included :: get=400 open=400
+PASS §13 Conciliar reconciles the Case :: reconcile=200 status=CONCILIADO
+PASS §11/§13 Cerrar expediente closes the Case and every funding advance :: close=200 case=CERRADO advances=CERRADO,CERRADO,CERRADO,CERRADO rendition=CERRADO
+PASS §7 the Advance page says its rendition is managed by the Case, with no rendition of its own :: advance=200 managedByCase=True
+PASS §11 a draft blocks the close with its count and amount :: close=400 message=Hay 1 anticipo en borrador por USD 2000.00. Confirma su entrega o cancélalo antes de cerrar el expediente.
+PASS §14 delivered 30000 -> 32000, justified 29500, 500 -> 2500 to return; nothing reassigned, older views stale :: before=30000.0000/500.0000 draft=30000.0000 after=32000.0000/29500.0000/2500.0000 stale=409
+PASS §15 Case A is +30 and Case B is -20 on their own renditions :: A=30.0000 B=20.0000
+PASS §15 the report adds per-Case directions apart: 2500 + 30 to return and 20 to reimburse :: report=200 delivered=69500.0000 justified=64670.0000 pendingReturn=2530.0000 pendingReimbursement=20.0000
+PASS §17.12 tenant isolation of the Case rendition :: read=404 return=404 reconcile=404 version=1
+CASES=648aa334-ed20-4d51-a61a-2ad2ae8940de,d7e46cb5-4053-4fe8-b336-af3ea59682e4,6dbb4402-aaaa-4f26-880f-b386cd6fe85d,31b95ae3-97cc-4058-8efd-5343ab81d549
+S11_RUNTIME_CHECKS=16 FAILURES=0

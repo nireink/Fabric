@@ -1,0 +1,9 @@
+﻿
+ RUN  v4.1.10 D:/NZXTG7/GYPPORT/GYPPORT ERP/GYPPORT/Gystigo/platform_os/studio/channel/browser/shell
+
+
+ Test Files  53 passed (53)
+      Tests  628 passed (628)
+   Start at  23:05:09
+   Duration  10.30s (transform 18.49s, setup 0ms, import 34.57s, tests 3.32s, environment 10ms)
+

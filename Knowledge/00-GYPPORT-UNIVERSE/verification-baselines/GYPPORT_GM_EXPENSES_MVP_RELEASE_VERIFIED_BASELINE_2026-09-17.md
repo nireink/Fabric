@@ -1,0 +1,654 @@
+# GYPPORT — GM-EXPENSES-MVP-RELEASE Verified Baseline
+
+**Baseline ID:** `GYPPORT-GM-EXPENSES-MVP-RELEASE-VERIFIED-BASELINE-2026-09-17`  
+**Status:** `OWNER_ACCEPTED_COMMITTED_LOCAL`  
+**Date:** 2026-09-17  
+**Step:** `GM_EXPENSES_MVP_CONTROLLED_COMMIT_GATE_17`  
+**Phase:** `GM_EXPENSES_RELEASE_READINESS_MVP`
+
+## Purpose
+
+This is the canonical reusable verification baseline of an Owner-accepted, locally committed STEP.
+
+Future STEPs MUST NOT rerun its complete historical regression while this baseline remains valid. They first
+classify it as REUSE, PARTIAL_INVALIDATION or FULL_INVALIDATION under the policy:
+
+```text
+Fabric/Knowledge/00-GYPPORT-UNIVERSE/verification-baselines/VERIFIED_BASELINE_REUSE.md
+```
+
+## Baseline record
+
+```text
+BASELINE_ID=GYPPORT-GM-EXPENSES-MVP-RELEASE-VERIFIED-BASELINE-2026-09-17
+STATUS=OWNER_ACCEPTED_COMMITTED_LOCAL
+STEP=GM_EXPENSES_MVP_CONTROLLED_COMMIT_GATE_17
+PHASE=GM_EXPENSES_RELEASE_READINESS_MVP
+DATE=2026-09-17
+MIGRATION_HEAD=V63
+VERIFIED_FILE_COUNT=132
+BASELINE_REUSE_ALLOWED=YES
+```
+
+## Accepted commits
+
+```text
+gm-expenses=545eae0fb287f8e04f7f1b4ac73780304ec53f22
+Gystigo=bcb959158b781e3fcd876bacc6fcf0f1f1c79b9f
+```
+
+Parent commits:
+
+```text
+gm-expenses=ab74610094dcdbdbb93564fc7b9fe05b51c7b8c2
+Gystigo=d9f3ddecc76d81993168de7536f756c7c4d0a3ac
+```
+
+## Accepted commit manifest
+
+Secondary evidence read from the accepted commits, one line per file: `<status> <abbreviated blob id> <path>`,
+with paths relative to the repository.
+
+```text
+gm-expenses 545eae0fb287f8e04f7f1b4ac73780304ec53f22 files=64
+A bfb609810d24 src/main/java/com/gypport/business/expenses/advance/domain/AdvanceDeliveryPlan.java
+M 91fa16dfc9ad src/main/java/com/gypport/business/expenses/advance/domain/ExpenseAdvance.java
+M 83db68f2f4de src/main/java/com/gypport/business/expenses/advance/infrastructure/persistence/jdbc/JdbcExpenseAdvanceRepository.java
+M efc5a7034946 src/main/java/com/gypport/business/expenses/application/AcceptExpenseReviewUseCase.java
+M 34b3fb971b70 src/main/java/com/gypport/business/expenses/application/BeginSettlementReconciliationUseCase.java
+M a1a9e4b4e37f src/main/java/com/gypport/business/expenses/application/CloseSettlementUseCase.java
+M 6c3d751324ca src/main/java/com/gypport/business/expenses/application/CorrectObservedExpenseUseCase.java
+D 000000000000 src/main/java/com/gypport/business/expenses/application/CorrectRejectedExpenseCommand.java
+D 000000000000 src/main/java/com/gypport/business/expenses/application/CorrectRejectedExpenseUseCase.java
+M c70d21d599e5 src/main/java/com/gypport/business/expenses/application/DocumentMutationChecks.java
+M d204da71507b src/main/java/com/gypport/business/expenses/application/EditRegisteredExpenseCommand.java
+A 2d7f30c55667 src/main/java/com/gypport/business/expenses/application/GetExpenseReviewHistoryUseCase.java
+M b66cbfc1971e src/main/java/com/gypport/business/expenses/application/ObserveExpenseReviewCommand.java
+M 33c14c848055 src/main/java/com/gypport/business/expenses/application/ObserveExpenseReviewUseCase.java
+M 39aa39efbe12 src/main/java/com/gypport/business/expenses/application/OpenSettlementUseCase.java
+D 000000000000 src/main/java/com/gypport/business/expenses/application/RecalculateSettlementJustifiedTotalCommand.java
+D 000000000000 src/main/java/com/gypport/business/expenses/application/RecalculateSettlementJustifiedTotalUseCase.java
+M fcf6f541d30f src/main/java/com/gypport/business/expenses/application/ReconcileSettlementUseCase.java
+M d46212c27e80 src/main/java/com/gypport/business/expenses/application/RegisterSettlementReimbursementUseCase.java
+M 14c7e3fd1d8a src/main/java/com/gypport/business/expenses/application/RegisterSettlementReturnUseCase.java
+M 3d2c069bd7ba src/main/java/com/gypport/business/expenses/application/RejectExpenseReviewCommand.java
+M fc0f8674351e src/main/java/com/gypport/business/expenses/application/RejectExpenseReviewUseCase.java
+A a7a55077578c src/main/java/com/gypport/business/expenses/application/ReviewDecisionDetail.java
+A d3e315227ab9 src/main/java/com/gypport/business/expenses/application/SettlementJustifiedTotals.java
+M f2cdb7069702 src/main/java/com/gypport/business/expenses/casefile/application/CaseAdvanceDeliveryService.java
+A 5c38a2ef9838 src/main/java/com/gypport/business/expenses/casefile/application/CaseRenditionLedger.java
+A 4d77dffeb15a src/main/java/com/gypport/business/expenses/casefile/application/CaseRenditionService.java
+M dacbdb0ceacd src/main/java/com/gypport/business/expenses/casefile/application/ExpenseCaseService.java
+M 14d351f5e6cc src/main/java/com/gypport/business/expenses/casefile/domain/ExpenseCaseFinancialSummary.java
+M 32f8b2de3274 src/main/java/com/gypport/business/expenses/casefile/domain/ExpenseCaseRepository.java
+M ec4990c7578a src/main/java/com/gypport/business/expenses/casefile/infrastructure/persistence/jdbc/JdbcExpenseCaseRepository.java
+M 1cc868342a25 src/main/java/com/gypport/business/expenses/expense/application/ApprovedExpenseTotalQueryPort.java
+M f580da192cbb src/main/java/com/gypport/business/expenses/expense/application/ExpenseReportPort.java
+M 101835e388ca src/main/java/com/gypport/business/expenses/expense/application/ExpenseReportService.java
+M 3bad922be1d5 src/main/java/com/gypport/business/expenses/expense/domain/Expense.java
+A a8dd33cd51f6 src/main/java/com/gypport/business/expenses/expense/domain/ExpenseObservationReason.java
+A e552dffd65e2 src/main/java/com/gypport/business/expenses/expense/domain/ExpenseRejectionReason.java
+A ccefaac37397 src/main/java/com/gypport/business/expenses/expense/domain/ExpenseReviewEvent.java
+M 17120546cc1f src/main/java/com/gypport/business/expenses/expense/domain/ExpenseReviewEventRepository.java
+M 167a9f40d65e src/main/java/com/gypport/business/expenses/expense/domain/ExpenseRevisionType.java
+M 82ec4b0e0921 src/main/java/com/gypport/business/expenses/expense/infrastructure/persistence/jdbc/JdbcApprovedExpenseTotalQueryPort.java
+M efb5939641bf src/main/java/com/gypport/business/expenses/expense/infrastructure/persistence/jdbc/JdbcExpenseReportPort.java
+M 0e3c7d69e36f src/main/java/com/gypport/business/expenses/expense/infrastructure/persistence/jdbc/JdbcExpenseReviewEventRepository.java
+M c81de5e2026a src/main/java/com/gypport/business/expenses/settlement/domain/AdvanceSettlement.java
+A c030c9c7d811 src/main/java/com/gypport/business/expenses/settlement/domain/SettlementBalance.java
+A 1a41121e20fb src/test/java/com/gypport/business/expenses/advance/domain/AdvanceDeliveryPlanTest.java
+A e01ef5c27e3c src/test/java/com/gypport/business/expenses/application/CloseSettlementAdvanceProgressionTest.java
+M b62b854da82e src/test/java/com/gypport/business/expenses/application/CorrectExpenseReviewUseCaseTest.java
+M 77f3ddbc65cf src/test/java/com/gypport/business/expenses/application/EditRegisteredExpenseUseCaseTest.java
+A f6ccb890df0f src/test/java/com/gypport/business/expenses/application/SettlementJustifiedTotalRefreshTest.java
+A f7b915bb5ff7 src/test/java/com/gypport/business/expenses/application/testsupport/InMemoryAdvanceSettlementRepository.java
+A f61be110aa00 src/test/java/com/gypport/business/expenses/application/testsupport/InMemoryApprovedExpenseTotals.java
+M 0cda994ae081 src/test/java/com/gypport/business/expenses/application/testsupport/InMemoryExpenseRepository.java
+M 2ec4fca4f40d src/test/java/com/gypport/business/expenses/application/testsupport/InMemoryExpenseReviewEventRepository.java
+M 83e559bed9d4 src/test/java/com/gypport/business/expenses/casefile/application/CaseAdvanceDeliveryServiceTest.java
+A 2a2e19c2dee1 src/test/java/com/gypport/business/expenses/casefile/application/CaseRenditionServiceTest.java
+A 4f5f040af107 src/test/java/com/gypport/business/expenses/casefile/application/ExpenseCaseCloseMessageTest.java
+M 84af30467bb2 src/test/java/com/gypport/business/expenses/expense/application/ExpenseReportPortTest.java
+M 055a3edc4039 src/test/java/com/gypport/business/expenses/expense/domain/ExpenseAllocationCorrectionTest.java
+M 8ae605d0305a src/test/java/com/gypport/business/expenses/expense/domain/ExpenseReviewTransitionTest.java
+M fdd3d11773b8 src/test/java/com/gypport/business/expenses/expense/domain/ExpenseRevisionTest.java
+A 54ae502bd2c7 src/test/java/com/gypport/business/expenses/expense/infrastructure/persistence/jdbc/JdbcExpenseReportPortFundingTest.java
+M f5e8fc94753f src/test/java/com/gypport/business/expenses/settlement/domain/AdvanceSettlementTest.java
+A 4c43e31be550 src/test/java/com/gypport/business/expenses/settlement/domain/SettlementBalanceTest.java
+```
+
+```text
+Gystigo bcb959158b781e3fcd876bacc6fcf0f1f1c79b9f files=68
+A fb7452e982d4 database/modules/gm-expenses/migration/V62__gm_expenses_advance_planned_delivery.sql
+A 355eaaa5dc41 database/modules/gm-expenses/migration/V63__gm_expenses_unified_settlement_reconciliation.sql
+M 6ea1eb5676cb docker/README.md
+M d8c0fd072669 docs/testing/GM_EXPENSES_REAL_DB_TESTS.md
+M d82be8cd30a7 docs/testing/TEST_DATABASE_ISOLATION.md
+M cbd7d01cf2c1 platform_os/server/scripts/run-expenses-real-db-tests.ps1
+A a1ba6a064765 platform_os/server/scripts/start-runtime-local.ps1
+A 743c1a4b7d0e platform_os/server/scripts/stop-runtime-local.ps1
+M cb5c11093693 platform_os/server/src/main/java/com/gypport/server/module/expenses/AdvanceSettlementController.java
+A 30fe7fa50ac1 platform_os/server/src/main/java/com/gypport/server/module/expenses/ExpenseActorNames.java
+M 00716088c3a8 platform_os/server/src/main/java/com/gypport/server/module/expenses/ExpenseAdvanceController.java
+M e3ec99f82928 platform_os/server/src/main/java/com/gypport/server/module/expenses/ExpenseCaseController.java
+M 0c6782bbbe40 platform_os/server/src/main/java/com/gypport/server/module/expenses/ExpenseController.java
+M ffd81a5691e2 platform_os/server/src/main/java/com/gypport/server/module/expenses/ExpenseReportController.java
+M b8ca204b5c38 platform_os/server/src/main/java/com/gypport/server/module/expenses/ExpensesResponseFormatting.java
+M aeb9fb08cba3 platform_os/server/src/main/java/com/gypport/server/module/expenses/VehicleReferenceController.java
+M 21069c3c9b2a platform_os/server/src/main/java/com/gypport/server/shared/config/ExpenseCaseConfig.java
+M ef8d7713da45 platform_os/server/src/main/java/com/gypport/server/shared/config/GmExpensesConfig.java
+M 447b0cc4fe07 platform_os/server/src/test/java/com/gypport/server/module/expenses/ExpenseCaseHttpApiTest.java
+M 7aa938750938 platform_os/server/src/test/java/com/gypport/server/module/expenses/ExpenseCasePermissionTest.java
+A a5776fdc9dbe platform_os/server/src/test/java/com/gypport/server/module/expenses/ExpenseReviewHistoryIntegrityHttpApiTest.java
+M a637d450aea7 platform_os/server/src/test/java/com/gypport/server/module/expenses/GmExpensesHostIntegrationTest.java
+M 71b6517c3b19 platform_os/server/src/test/java/com/gypport/server/module/expenses/GmExpensesHttpApiTest.java
+M 2fd342ea8e9d platform_os/server/src/test/java/com/gypport/server/module/profile/PersonIdentityReconciliationHttpTest.java
+M 5e260ce04983 platform_os/studio/channel/browser/shell/fixtures/ExpenseCaseCardsFixture.jsx
+M f3a01a9b24f5 platform_os/studio/channel/browser/shell/src/application/expenses/AdvanceDetailPage.css
+M 2bbe352276a1 platform_os/studio/channel/browser/shell/src/application/expenses/AdvanceDetailPage.jsx
+M fa3b1e10f92b platform_os/studio/channel/browser/shell/src/application/expenses/AdvanceListPage.jsx
+M c0f4267e86c8 platform_os/studio/channel/browser/shell/src/application/expenses/ExpenseCategoryReportPage.jsx
+M 4e00266cb91f platform_os/studio/channel/browser/shell/src/application/expenses/ExpenseDetailPage.css
+M d2d215c26b61 platform_os/studio/channel/browser/shell/src/application/expenses/ExpenseDetailPage.jsx
+M a88618e89421 platform_os/studio/channel/browser/shell/src/application/expenses/ExpenseReportsPage.jsx
+M 3763a74d0032 platform_os/studio/channel/browser/shell/src/application/expenses/ExpenseVehicleReportPage.jsx
+M 9acf58fc1bea platform_os/studio/channel/browser/shell/src/application/expenses/NewAdvancePage.jsx
+M 0855882678b5 platform_os/studio/channel/browser/shell/src/application/expenses/NewExpensePage.css
+A 8104c74290fb platform_os/studio/channel/browser/shell/src/application/expenses/advanceOptions.js
+M 874e28383622 platform_os/studio/channel/browser/shell/src/application/expenses/cases/ChooseCaseForAdvancePage.jsx
+M 1096b2e4feac platform_os/studio/channel/browser/shell/src/application/expenses/cases/ExpenseCaseCard.jsx
+M 0ad121ca2703 platform_os/studio/channel/browser/shell/src/application/expenses/cases/ExpenseCaseDetailPage.jsx
+M 0667c51bd554 platform_os/studio/channel/browser/shell/src/application/expenses/cases/ExpenseCaseListPage.jsx
+M 20a6152ab905 platform_os/studio/channel/browser/shell/src/application/expenses/cases/ExpenseCases.css
+M ae284620d451 platform_os/studio/channel/browser/shell/src/application/expenses/cases/NewCaseExpensePage.jsx
+M 1fe0047b3553 platform_os/studio/channel/browser/shell/src/application/expenses/cases/NewExpenseCasePage.jsx
+A 6dfd2e0b9c32 platform_os/studio/channel/browser/shell/src/application/expenses/cases/ResourceAssignmentFields.jsx
+A dcf82982f4ba platform_os/studio/channel/browser/shell/src/application/expenses/cases/caseClosureRules.js
+M 1c3420d38b2e platform_os/studio/channel/browser/shell/src/application/expenses/cases/caseRules.js
+A c42d045c8bee platform_os/studio/channel/browser/shell/src/application/expenses/cases/renditionRules.js
+A 4828a2bb7851 platform_os/studio/channel/browser/shell/src/application/expenses/components/ComboBox.css
+A 56686dcad88b platform_os/studio/channel/browser/shell/src/application/expenses/components/ComboBox.jsx
+A bae68432e8b1 platform_os/studio/channel/browser/shell/src/application/expenses/components/comboboxModel.js
+M dd3c53886cbc platform_os/studio/channel/browser/shell/src/application/expenses/expenseService.js
+M bafebac63c43 platform_os/studio/channel/browser/shell/src/application/expenses/reportRules.js
+A b4d91995be84 platform_os/studio/channel/browser/shell/src/application/expenses/resourceTypes.js
+A ecdb71f2f0e9 platform_os/studio/channel/browser/shell/src/application/expenses/reviewReasons.js
+M d75dbe498b46 platform_os/studio/verification/contracts/browser/AdvanceOperationIdempotency.contract.mjs
+A 03bf95a38caf platform_os/studio/verification/contracts/browser/AdvanceRenditionFlow.contract.mjs
+M ec4ce3f54e48 platform_os/studio/verification/contracts/browser/ExpenseCaseCard.contract.mjs
+M 1d4c5eb5b2c9 platform_os/studio/verification/contracts/browser/ExpenseCases.contract.mjs
+A 93b933c32fef platform_os/studio/verification/contracts/browser/ExpenseCategorySelect.contract.mjs
+A 5557b82f9c60 platform_os/studio/verification/contracts/browser/ExpenseComboBox.contract.mjs
+M ee1f38a436f8 platform_os/studio/verification/contracts/browser/ExpenseOperationIdBoundary.contract.mjs
+M 802ac23a2f58 platform_os/studio/verification/contracts/browser/ExpenseReportHome.contract.mjs
+A 2de820bed1d4 platform_os/studio/verification/contracts/browser/ExpenseResourceAssignmentFlow.contract.mjs
+A 0679875ce06b platform_os/studio/verification/contracts/browser/ExpenseReviewWorkflow.contract.mjs
+M 37b01a821411 platform_os/studio/verification/contracts/browser/ExpenseStateFilters.contract.mjs
+M 5ccbb7b491e4 platform_os/studio/verification/contracts/browser/ExpensesUixCompliance.contract.mjs
+M 10997e7454d8 platform_os/studio/verification/contracts/browser/ResponsibleCanonicalPerson.contract.mjs
+M 5662c32da15c platform_os/studio/verification/integration/browser/expenses-uix/fixture.jsx
+```
+
+## Verification evidence
+
+```text
+OWNER_ACCEPTANCE=GM_EXPENSES_FINAL_DEBT_AND_COMMIT_READINESS_AUDIT_16 accepted in GM_EXPENSES_MVP_CONTROLLED_COMMIT_GATE_17; manifest 236 paths (gm-expenses 64, Gystigo 68, Fabric 104); unknown 0, missing 0, drifted 0
+RELEASE_STATUS=COMMITTED_LOCAL
+READY_FOR_SHARED_DEV_MIGRATION=YES
+SHARED_DEV_VERSION=V43
+SHARED_DEV_MIGRATED=NO
+SHARED_DEV_VALIDATED=NO
+OFFICIAL_DEV_BACKEND_REBUILT=NO (gypport-backend-dev stays stopped on image gystigo-backend:4.1.0-java25, built 2026-09-09)
+PUSH_PERFORMED=NO
+GM_EXPENSES_COMMIT=545eae0fb287f8e04f7f1b4ac73780304ec53f22 (parent ab74610094dcdbdbb93564fc7b9fe05b51c7b8c2, branch master)
+GYSTIGO_COMMIT=bcb959158b781e3fcd876bacc6fcf0f1f1c79b9f (parent d9f3ddecc76d81993168de7536f756c7c4d0a3ac, branch feature/gm-fleets-minimum-vehicle-master-01)
+FABRIC_COMMIT=the Fabric commit that adds this document: git -C Fabric log --diff-filter=A --format=%H -- Knowledge/00-GYPPORT-UNIVERSE/verification-baselines/GYPPORT_GM_EXPENSES_MVP_RELEASE_VERIFIED_BASELINE_2026-09-17.md
+FABRIC_COMMIT_PATHS=107: the 104 accepted release-readiness paths, the STEP 16 prompt, the STEP 17 prompt and this baseline; Reglas.md and CURRENT_STEP.md carry the gate closeout
+FULL_HISTORICAL_REGRESSION_RERUN=NO
+PKG2D_BASELINE_IMPACT=PARTIAL_INVALIDATION
+PKG2D_BASELINE_IMPACT_REASON=the Gystigo commit changes 5 of the 101 PKG-2D files (docs/testing/TEST_DATABASE_ISOLATION.md, ExpenseAdvanceController, ExpenseCaseHttpApiTest, GmExpensesHttpApiTest, PersonIdentityReconciliationHttpTest), re-verified by Host real-DB 103/103 and PersonIdentityReconciliationHttpTest 10/10; the other 96 files are untouched and the gm-expenses Host adaptation to MyProfileService.getProfile(tenantId, userAccountId) is committed (ExpenseActorNames)
+UNTOUCHED_PKG2D_SLICE_REUSABLE=YES
+GM_EXPENSES_MODULE_SUITE=748/748 (GYPPORT_PRE_COMMIT_ENV_UI_AUDIT_HARDENING_13, 2026-09-17T12:49Z; module jar SHA-256 1C6FEF03720249E9FBA6D4B8F7D89FA46E4F7671D81FE9750E7B10B57330AB8D, 217 classes for 217 sources)
+HOST_REAL_DB_EXPENSES_SUITE=103/103 (GYPPORT_FINAL_PRECOMMIT_AUDIT_AND_UI_ALIGNMENT_14, 2026-09-17T13:40:54Z, runId 6eec07f2-8ed4-460c-877f-e14f246cecbb, fresh MySQL 8.4.10, Flyway 63)
+STUDIO_CONTRACTS=631/631 with ESLint clean (GM_EXPENSES_CASE_CARD_FINAL_HEADER_ALIGNMENT_15, 2026-09-17T14:27:50Z)
+RUNTIME_SMOKE=33/33 (GM_EXPENSES_RUNTIME_REHEARSAL_FINAL_12; Host jar SHA-256 F4A5509405EAC47F38017C75C38FC0D1D2735CC3E2DC9B07E0BE0795177C2996, entry-identical to the deployed jar ecd17c12f8af)
+MIGRATION_V43_TO_V63=PASS (FINAL_12: current Shared DEV bytes on a disposable MySQL 8.4.10 migrated as root with default flags; 20 migrations, 0 failed; gm-expenses tables content-identical)
+TENANT_ISOLATION=PASS (FINAL_12 section 19: 404 on 11 foreign-tenant operations; STEP 14 review-history test G)
+HTTP_5XX=0 of 279 requests (FINAL_12 access log)
+PRE_GATE_PERSON_IDENTITY_RECONCILIATION_HTTP=PASS 10/10 (run-host-isolated-db-tests.ps1, disposable core_business_fleets_test on 127.0.0.1:3310 while the local runtime was paused, Flyway 63, runId 5974695b-be4f-4859-a60c-7839cdde5753, 2026-09-17T15:40Z, container disposed)
+PRE_GATE_HOST_EXPENSES_UNIT_TESTS=PASS 19/19 (ExpenseParticipantPermissionTest 2, FleetExpenseCaseResourceResolverTest 2, FleetExpenseVehicleResolverTest 4, ResponsibleReferenceControllerTest 3, TenantUserPermissionInvariantTest 8; 2026-09-17T15:38Z)
+TESTED_BYTES_EQUAL_COMMITTED_BYTES=YES: no accepted file changed after its validating run; the only committed byte difference is the CRLF to LF conversion of JdbcExpenseAdvanceRepository.java
+MIGRATION_HEAD=V63 (V1..V63 plus the B17 baseline; no gaps, no duplicates, no V64; no committed migration modified)
+MIGRATION_BYTES_MATCH_FINAL12=YES (V62 and V63 byte-identical in the FINAL_12 Host jar F4A55094, the deployed jar ECD17C12 and the REHEARSAL_03 jar CC028B88)
+FLYWAY_CHECKSUMS_MATCH_CURRENT_BYTES=Shared DEV 27/27 (B17, V18-V43); local runtime 47/47 (B17, V18-V63)
+V62_SHA256=d805797cc90a448962425986074d1b0e82ac48813eb43e4eb6da621dd818c1bd
+V63_SHA256=6db2eacc9842d9481b9ae34823365c48bc118bad882a5bab90fb97f95ec4e7bb
+MIGRATION_SHA256=22a774475b7180856b0706ca2357b788ae9807efaffca159250cd15f91c6f0f6 database/core/migration/B17__gypport_current_schema_baseline.sql
+MIGRATION_SHA256=7c48fad3b5a702a97ab90e9cd9150642074a5eaf22d9605562d01639e0366ba1 database/core/migration/V1__core_business_baseline.sql
+MIGRATION_SHA256=35e85e3f9c7a55b91b13e1d1b670f4fedac1d5ec9024540afa2f0a8d6aa65a71 database/core/migration/V2__core_reference_seed_data.sql
+MIGRATION_SHA256=ceaf7fa0d7040f582085655fb0e56242daf7a0d2409f6dcc73cc4012b50b14db database/core/migration/V3__foundation_security_rbac_parent.sql
+MIGRATION_SHA256=70a49e58ee504a86a151ab140ef3fbe7238a63f7ae2c340d10801323fc491963 database/core/migration/V4__foundation_party.sql
+MIGRATION_SHA256=092b5a4e76b6d9515eb6f379b77191c184a9acd77f8073e3a7e2946c2e0c7e95 database/core/migration/V5__foundation_fiscal_membership.sql
+MIGRATION_SHA256=5fb3508afd22cc5c03acc8c532385ae2fe5bbd3c62d347f1e1b56aee505a499a database/core/migration/V6__foundation_organization_structural.sql
+MIGRATION_SHA256=29df11f49e774f1320b863a5af7093f5883d69b35a2d12d65a54965d389db173 database/core/migration/V7__foundation_employee_operational.sql
+MIGRATION_SHA256=4c991aaa9f34f6b996ddcac15418646556bd30f81d8402ffba733d6717fe02ba database/core/migration/V8__foundation_organization_access_role_scopes.sql
+MIGRATION_SHA256=51eef154d5069c25eadb967a211b8a508c205b49601e87b2b0452848fbc2bef0 database/core/migration/V9__foundation_legal_verification_evidence.sql
+MIGRATION_SHA256=96ed37d19681c7ffbef17143766ad90ecbd691d2e2f0b7aa6c25f2b8874d95a1 database/core/migration/V10__foundation_legacy_role_scopes_transition.sql
+MIGRATION_SHA256=b599ff3a016a3986cec2295c1ea9dfea6ae3cd7411acc68ce0566c765624c1b4 database/modules/gm-expenses/migration/V11__gm_expenses_initial_schema.sql
+MIGRATION_SHA256=1b112ed082b737b776bdaa7a230dd27b46f8d7258a99f37da54b8310b2a8d5fc database/modules/gm-expenses/migration/V12__gm_expenses_add_advance_delivery_method.sql
+MIGRATION_SHA256=f316acfb780f13c08f9b1879fd0c0904a10e334efabd952287708e4a2641679e database/core/migration/V13__foundation_authenticated_sessions.sql
+MIGRATION_SHA256=32a5290730fa3567f2935a3c71d12af80b43d15648140b1ceec4c9c083590c3b database/core/migration/V14__foundation_email_verification.sql
+MIGRATION_SHA256=9c249809176e2702fd7ce79b378b7d599888ae8cd74d4d6ee4670825a2d02cc4 database/modules/gm-expenses/migration/V15__gm_expenses_generic_allocation.sql
+MIGRATION_SHA256=b82397d832a256e2138628acd0ed5729cc1de4b5483ba8bff87fd95fbf755339 database/modules/gm-expenses/migration/V16__gm_expenses_command_receipt_target_types.sql
+MIGRATION_SHA256=8d6f77a6ba2e64cdc4df0f45806ba25d3e8f82e602cc732e8124fab975e3128f database/modules/gm-expenses/migration/V17__gm_expenses_permission_catalog.sql
+MIGRATION_SHA256=e08dbfc8d044b83056c3f79cf26337f4b1804984b12df9625665a820406bc77a database/modules/gm-expenses/migration/V18__gm_expenses_default_category_catalog.sql
+MIGRATION_SHA256=b5728d63724d9c5fc8b333f7fd26f71bd86a276ecd0f4af585b59920d729ba8c database/modules/gm-expenses/migration/V19__gm_expenses_category_vehicle_requirement_correction.sql
+MIGRATION_SHA256=9bddef7ca4881d950e50d04d320c85660002d3ce2503d6e163ac5609b889c4f7 database/modules/gm-expenses/migration/V20__gm_expenses_deactivate_noncanonical_global_categories.sql
+MIGRATION_SHA256=f7d5a024a5e5b6ee82347bed911b2dbfcb11d7dbe88265814c680135b6161483 database/core/migration/V21__foundation_password_recovery.sql
+MIGRATION_SHA256=9cf68fbd687ce359138bafcb87c77ea807316bffd0c2ace376ca34cc24659be9 database/modules/gm-fleets/migration/V22__gm_fleets_minimum_vehicle_master.sql
+MIGRATION_SHA256=cd7daf3a28d35dc67deef21bbac2a71a97fdb271ba6bd5706545e7e8e29c3a51 database/modules/gm-expenses/migration/V23__gm_expenses_fleet_vehicle_snapshots.sql
+MIGRATION_SHA256=91020fc3cc89bcbc0d155a40d4d275ba15a21d51702cc70553b023d9eab5f32c database/modules/gm-expenses/migration/V24__gm_expenses_case_foundation.sql
+MIGRATION_SHA256=d9e8a3b9146b9fb6944fd7e41b7b7ccf9bc8e8a86139c56c9ae0de9d08bcfa44 database/modules/gm-expenses/migration/V25__gm_expenses_canonical_participants.sql
+MIGRATION_SHA256=0be1cfd92ca1111ddfa8565cb9aaaf972888f9566b26eb6ce66726346b19d78a database/core/migration/V26__canonical_person_identity_claims.sql
+MIGRATION_SHA256=2f51f9d3564bd18eacd58af7ac0f3b9a50ea607880fe38e3ff9dcf2cae92b8e4 database/core/migration/V27__reuse_canonical_identity_claims.sql
+MIGRATION_SHA256=bdc1c4249a0a2d8fbef481553346287203a14d13221c9d43933f979c70e060d4 database/core/migration/V28__person_directory_permissions.sql
+MIGRATION_SHA256=124c69ab26781abe4c48c4a0d9cdd2d6b53f2e59a2bb1383457d375c726b2ae1 database/core/migration/V29__workforce_current_employee_uniqueness.sql
+MIGRATION_SHA256=0208130f5f74cf3eac9e28ebe30d1eca44f445da2b94afce29dd07a46b4ac23b database/core/migration/V30__organization_operational_permissions.sql
+MIGRATION_SHA256=700020a639804821abadfac84c93da9402a3b040d6f1011dcbbddfdfad230fca database/core/migration/V31__workforce_team_permissions.sql
+MIGRATION_SHA256=eec2ba6442994b240c674c832f648d544ca14a7df9feb81b072fd907c066eecf database/modules/gm-fleets/migration/V32__gm_fleets_vehicle_ownership_and_driver_foundation.sql
+MIGRATION_SHA256=fa9e240913dd250a2cd451f424d4920390f288411ee3428d23e209e68ee4036a database/modules/gm-expenses/migration/V33__gm_expenses_operational_completion.sql
+MIGRATION_SHA256=2163eabf2e4735fe3c1cece7bfde7f9ef09eec63f780a5f9eb1d9ba7ef176a59 database/modules/gm-expenses/migration/V34__gm_expenses_canonical_document_review_state.sql
+MIGRATION_SHA256=d33b3e3a023aefc37684bd1ef01bf77e05b89d161a116b473817f6708d8bf080 database/modules/gm-expenses/migration/V35__gm_expenses_case_closure.sql
+MIGRATION_SHA256=cc2b82754be6ae140b2c5a2b78bf0aa6895e3e7b51da894601367e1e67b1b902 database/modules/gm-fuel-stations/migration/V36__gm_fuel_stations_receiving_site_tank_and_product_catalog.sql
+MIGRATION_SHA256=2df347f80b17052e5ed40deda0b0a35b23bb455a8752d193a68a22ccba9c6b91 database/modules/gm-fuel-stations/migration/V37__gm_fuel_stations_transport_tank_and_compartments.sql
+MIGRATION_SHA256=15baf9a78abbae5c6e71fec9781b7f0e6242f199a4a2f8007f2bc1ec0a72225f database/core/migration/V38__foundation_platform_administration.sql
+MIGRATION_SHA256=3b0804b4c600370fa0feb89607a1d8cbe74ccebb08bae41ab31ed41fbbdf1047 database/core/migration/V39__organization_rbac_administration_permissions.sql
+MIGRATION_SHA256=dfa341f8be6b62b8d4377cce3ac99bb23ffd94a91e02b9b4a601359f7d466fe7 database/core/migration/V40__organization_control_claim_foundation.sql
+MIGRATION_SHA256=eaa9c83d5f1c24353f5bd9cff8359adb4333b3466b90ed9e6c5dc41bf0d845b6 database/core/migration/V41__platform_admin_review_provenance.sql
+MIGRATION_SHA256=76df4789ca7b7359552e222134bb068ea9047c8ce1e0ef19e04e66622e221caf database/modules/gm-fuel-stations/migration/V42__gm_fuel_stations_discharge_meter_master_and_metrology_foundation.sql
+MIGRATION_SHA256=31e9e0254dc75658a3da6bfd2aead07a6f532593d0bdb99513e17fe8dc44a2b3 database/modules/gm-fleets/migration/V43__gm_fleets_vehicle_identity_details_and_registration.sql
+MIGRATION_SHA256=edc3275d8a5bf037235cc4ba343542b6181959a853ce3d20959f73ba93b4feb9 database/core/migration/V44__human_resources_permission_namespace.sql
+MIGRATION_SHA256=14a390943082eca4bf1a702a1cea650a3872f93979e1769faf5d866666f92035 database/modules/gm-fleets/migration/V45__gm_fleets_tenant_safe_vehicle_references.sql
+MIGRATION_SHA256=ae504517a412d59df61a25eb4029c79f4858425b1b5de84fc9fc99016cd5156b database/modules/gm-fuel-stations/migration/V46__gm_fuel_stations_tenant_safe_references.sql
+MIGRATION_SHA256=fea3b84070bc4aba1aa00597f875d03cb32f2bf7bc3569f4541454d6b755def9 database/modules/gm-fuel-stations/migration/V47__gm_fuel_stations_tenant_safe_product_scope.sql
+MIGRATION_SHA256=a37759ea5f2f40f2ee55c144f9e2882add8b0063a7204a2d463a2270de285248 database/core/migration/V48__fiscal_tax_subject_foundation.sql
+MIGRATION_SHA256=8a6d2564028500ec8931f4ed0509cc518730b32ec46c7ea7c5fa4f46453f07e8 database/core/migration/V49__user_establishment_tax_subject_access.sql
+MIGRATION_SHA256=2f2eda7978f3e7fea72a7c68a7b85ffdaf04d09a51a5dcf850b5b55a46232af6 database/core/migration/V50__identity_identifier_collation_reconciliation.sql
+MIGRATION_SHA256=6b17f89d73be610e05d946c4dae214e52f5db47acffffeeaeb82be09a01ba348 database/core/migration/V51__universal_identity_intake.sql
+MIGRATION_SHA256=20e9eb72b42bdbe0dbcfa3f1b0e421fce3d1fef69d3efb2ba283c1221d9e4efd database/core/migration/V52__pending_account_identity_reconciliation.sql
+MIGRATION_SHA256=51e591decac5c2d06f1cf003f6cb0658d00a03f5297c83d7ec183fd7d8c7da49 database/core/migration/V53__user_tenant_membership_foundation.sql
+MIGRATION_SHA256=d16cfb8eadbb2f9be7263da9b708f6c7ea685d91375ec30e8052ecfcb1f55f73 database/core/migration/V54__one_active_account_per_golden_record.sql
+MIGRATION_SHA256=e0926700d2960fd07d69dbdd9c9a9bb6ab1101382c90ebceb1b56484d276c3ad database/core/migration/V55__user_tenant_membership_catch_up.sql
+MIGRATION_SHA256=d37fb9dfd72a34124dc6283b921d62de716353fc4dcf86af92b9331c604c2163 database/core/migration/V56__tenantless_platform_sessions.sql
+MIGRATION_SHA256=8b67d2cfd225d3caaad669fc7495cafd0dd274ecf32866a7d4b1bf764ab3ec4f database/core/migration/V57__tenant_access_subject_membership_fks.sql
+MIGRATION_SHA256=df2afdf88a513cd87a64677e33ad4b5dd4f2798893c64fef8296e6deeab61ddc database/core/migration/V58__global_user_account_actor_fks.sql
+MIGRATION_SHA256=896f58f6acb54a5d285b80f4cce98903c22b85a9ca3b08fa7efc7fea4f2e7389 database/core/migration/V59__global_account_challenge_references.sql
+MIGRATION_SHA256=e09f294a1c8477a61900a162b194ad1dd5d4b3e0233ab9db10142a7bf0fb63b5 database/core/migration/V60__global_username_uniqueness.sql
+MIGRATION_SHA256=b76ec7872cc506b52f7eaf347e761f8f360b7fd8eb26b9039ef64bfa383e70ec database/core/migration/V61__user_account_origin_columns.sql
+MIGRATION_SHA256=d805797cc90a448962425986074d1b0e82ac48813eb43e4eb6da621dd818c1bd database/modules/gm-expenses/migration/V62__gm_expenses_advance_planned_delivery.sql
+MIGRATION_SHA256=6db2eacc9842d9481b9ae34823365c48bc118bad882a5bab90fb97f95ec4e7bb database/modules/gm-expenses/migration/V63__gm_expenses_unified_settlement_reconciliation.sql
+HASH_POLICY=committed or staged blob SHA-256 (Owner decision of GM_EXPENSES_MVP_CONTROLLED_COMMIT_GATE_17, Reglas.md 2026-09-17); historical evidence hashes stay valid as pre-conversion evidence
+LINE_ENDING_NORMALIZATIONS=33 (gm-expenses 1, Gystigo 0, Fabric 32)
+LINE_ENDING_NORMALIZATION=gm-expenses src/main/java/com/gypport/business/expenses/advance/infrastructure/persistence/jdbc/JdbcExpenseAdvanceRepository.java PRE_STAGE_WORKTREE_SHA256=abf35f5092af4873a0078c2749e5e7af784e617e39aaa21a36bd9d38febc2392 STAGED_BLOB_SHA256=a4a6d3c36cce3dc01b8811d088df94de34d6996f8b28ae329a8d435a12459643 NORMALIZATION=CRLF_TO_LF
+LINE_ENDING_NORMALIZATION=Fabric gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/CASE-LEVEL-RENDITION-CANONICALIZATION-11-2026-09-16/s11-host-package.log PRE_STAGE_WORKTREE_SHA256=b3217e631fb54eb4768df203121119a7dfce840634f877e415197d53e11564dc STAGED_BLOB_SHA256=4450b4781b485fe265196ce866b0b16c79359b5b4926e9f462883d3e3228b621 NORMALIZATION=CRLF_TO_LF
+LINE_ENDING_NORMALIZATION=Fabric gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/CASE-LEVEL-RENDITION-CANONICALIZATION-11-2026-09-16/s11-host-permission-unit.log PRE_STAGE_WORKTREE_SHA256=7025601451091ee6c8ba6c2b8dccd2ca6de62feada2ae27fb6b248ed2e3d22c4 STAGED_BLOB_SHA256=f602ab415ec8a3b54ab7102849c2d51c35b234dc116c47c6967f4cc8a643334c NORMALIZATION=CRLF_TO_LF
+LINE_ENDING_NORMALIZATION=Fabric gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/CASE-LEVEL-RENDITION-CANONICALIZATION-11-2026-09-16/s11-host-realdb-result.json PRE_STAGE_WORKTREE_SHA256=f7421304d8a935e28995b5b88d283d5a0b4fb2e7f252482073fc805c8a80a64d STAGED_BLOB_SHA256=099ea457b6093d4f88112bebacb4b718315372acf2ad186fb782cc366af7f603 NORMALIZATION=CRLF_TO_LF
+LINE_ENDING_NORMALIZATION=Fabric gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/CASE-LEVEL-RENDITION-CANONICALIZATION-11-2026-09-16/s11-module-install.log PRE_STAGE_WORKTREE_SHA256=aef8ee53a05fd136dfe49e2c7bcf8d2ffe4841acfdaf8cdffa9790e4b4c06a2e STAGED_BLOB_SHA256=e0d35ce0d12916c07ca8b3ee84705027b095167d278a2c76751b285ae7380296 NORMALIZATION=CRLF_TO_LF
+LINE_ENDING_NORMALIZATION=Fabric gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/CASE-LEVEL-RENDITION-CANONICALIZATION-11-2026-09-16/s11-runtime-smoke-results.txt PRE_STAGE_WORKTREE_SHA256=145ef1c5cf822b9c7a451a18d516b65a208add8836be3c900f99dda837a35194 STAGED_BLOB_SHA256=8aebf2b3f9c199c6e99ba74fa308cd750413fc1f9c72b34515022090e07f18f4 NORMALIZATION=CRLF_TO_LF
+LINE_ENDING_NORMALIZATION=Fabric gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/CASE-LEVEL-RENDITION-CANONICALIZATION-11-2026-09-16/s11-studio-contracts.log PRE_STAGE_WORKTREE_SHA256=591e1d668d14fe81e1c8058e222c4155696aadd0d07c5d9bd50046532280c750 STAGED_BLOB_SHA256=4e20a7452c9b9f1af3c95c5328f4cb7eda9efc1142f32338003fe9b90bae82a1 NORMALIZATION=CRLF_TO_LF
+LINE_ENDING_NORMALIZATION=Fabric gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/CLOSED-PROGRESS-AND-MULTIPLE-ADVANCES-FIX-10-2026-09-16/s10-host-package.log PRE_STAGE_WORKTREE_SHA256=613f6cfb655e4761f58e5231e6b184da4ae1bacbdb58d143cd89f20d928aec05 STAGED_BLOB_SHA256=624d4f0ce1f6806aa990c176520fb52d600881756a4e3b7fe7a3b2763d2c1e4f NORMALIZATION=CRLF_TO_LF
+LINE_ENDING_NORMALIZATION=Fabric gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/CLOSED-PROGRESS-AND-MULTIPLE-ADVANCES-FIX-10-2026-09-16/s10-host-realdb-result.json PRE_STAGE_WORKTREE_SHA256=a7bd06a7d3dc28537a5d173030dc4d65cc18786939a47870fa80b7cb294eefcb STAGED_BLOB_SHA256=555f548b34133a50746bab265680b7edd73da1362c1b287f34dd3cd5be77827e NORMALIZATION=CRLF_TO_LF
+LINE_ENDING_NORMALIZATION=Fabric gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/CLOSED-PROGRESS-AND-MULTIPLE-ADVANCES-FIX-10-2026-09-16/s10-module-install.log PRE_STAGE_WORKTREE_SHA256=d05b95563854aaaf8bdb39c3f07d6236cde7c16280eb9e12214da78484038c5a STAGED_BLOB_SHA256=bdeea2f5f61702da85b7730b92c1c0964bd5ff6de485e0ed96c35c9f33d337fc NORMALIZATION=CRLF_TO_LF
+LINE_ENDING_NORMALIZATION=Fabric gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/CLOSED-PROGRESS-AND-MULTIPLE-ADVANCES-FIX-10-2026-09-16/s10-runtime-smoke-results.txt PRE_STAGE_WORKTREE_SHA256=b439d50c220fe4c2166a6eaf9031185e032692dae953ed76cbdc6835c04c43f8 STAGED_BLOB_SHA256=61f12016ed5fb065eb7e0e7b59b464d5190ee1c805598f689a251785835fc3b3 NORMALIZATION=CRLF_TO_LF
+LINE_ENDING_NORMALIZATION=Fabric gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/FINAL-PRECOMMIT-AUDIT-AND-UI-ALIGNMENT-14-2026-09-17/host-realdb-result.json PRE_STAGE_WORKTREE_SHA256=dc9aedf2a669388d5eece93305300cc4b41f9a888450906ce2e054b4aebdb0ac STAGED_BLOB_SHA256=11a05b93d7cb883abf8409bbf33e7dcb46f1013a75676143396cb9bddab3b892 NORMALIZATION=CRLF_TO_LF
+LINE_ENDING_NORMALIZATION=Fabric gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/PRE-COMMIT-ENV-UI-AUDIT-HARDENING-13-2026-09-17/env-scope-audit-before-removal.txt PRE_STAGE_WORKTREE_SHA256=ac15d2e1029c737c25f092515552c0f7b11fb708f026d8102c9a29aed6832ca4 STAGED_BLOB_SHA256=954ca2daef709cc15d493e38e0da3c3c81c7e411f05dc1e88522b3ce4a82c142 NORMALIZATION=CRLF_TO_LF
+LINE_ENDING_NORMALIZATION=Fabric gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/PRE-COMMIT-ENV-UI-AUDIT-HARDENING-13-2026-09-17/host-realdb-result.json PRE_STAGE_WORKTREE_SHA256=7b104146d621f4cbd0f914e7ec4b2cca0a319ce06c1361d52d6c24761b5bf3ea STAGED_BLOB_SHA256=7b0ca7730711cfea7e17552e796177c28c2360e233e5f08aa5d8599c1e36778f NORMALIZATION=CRLF_TO_LF
+LINE_ENDING_NORMALIZATION=Fabric gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/PRE-COMMIT-ENV-UI-AUDIT-HARDENING-13-2026-09-17/plain-process-env-probe-after-removal.txt PRE_STAGE_WORKTREE_SHA256=ac4bfbc21d7378f86531aa69b50e928e6e9ae167aa4f08eaddb4f49841133f0b STAGED_BLOB_SHA256=3f5a4290d671fc12de4e2e90ba8e519a41550ced7b56d60d89553d101b8b2857 NORMALIZATION=CRLF_TO_LF
+LINE_ENDING_NORMALIZATION=Fabric gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/PRE-COMMIT-ENV-UI-AUDIT-HARDENING-13-2026-09-17/plain-process-env-probe-before-removal.txt PRE_STAGE_WORKTREE_SHA256=c9fbd744930a3cfb4fb04cbe6291b7f7650855047bdebf65324ba890ee249a6a STAGED_BLOB_SHA256=ca5a869a3853415a3dd5168c4f92510983a83b9e31d565df6abc81846259263b NORMALIZATION=CRLF_TO_LF
+LINE_ENDING_NORMALIZATION=Fabric gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/RUNTIME-REHEARSAL-03-2026-09-16/r03-container-name.txt PRE_STAGE_WORKTREE_SHA256=a712d66290345a684358123a44c55753a8f79173ddf5213bb0be863995179d84 STAGED_BLOB_SHA256=2ab522eefad2b76dac04c11532c5b1f3a4bf4888b309c42a1c364eb1fe3f1307 NORMALIZATION=CRLF_TO_LF
+LINE_ENDING_NORMALIZATION=Fabric gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/RUNTIME-REHEARSAL-03-2026-09-16/r03-copy-counts-before.txt PRE_STAGE_WORKTREE_SHA256=0bfec7e9acf929721192cb68cef12d8808143607fc20e5d5c516b918877fb555 STAGED_BLOB_SHA256=46912e2af68ba5ef65f49895333a18be6037e3fe1e7cbfe466d58233cd4fae7f NORMALIZATION=CRLF_TO_LF
+LINE_ENDING_NORMALIZATION=Fabric gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/RUNTIME-REHEARSAL-03-2026-09-16/r03-dev-counts.txt PRE_STAGE_WORKTREE_SHA256=0bfec7e9acf929721192cb68cef12d8808143607fc20e5d5c516b918877fb555 STAGED_BLOB_SHA256=46912e2af68ba5ef65f49895333a18be6037e3fe1e7cbfe466d58233cd4fae7f NORMALIZATION=CRLF_TO_LF
+LINE_ENDING_NORMALIZATION=Fabric gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/RUNTIME-REHEARSAL-03-2026-09-16/r03-host-package.log PRE_STAGE_WORKTREE_SHA256=c305904c64dee7e473833ce19d78f94662e78e2268f378d82bc62797052a9b0e STAGED_BLOB_SHA256=71f8a06c2c1f23dafb785ffe69cf39d1a4f75f3f1e1a9c287238bb587d88c167 NORMALIZATION=CRLF_TO_LF
+LINE_ENDING_NORMALIZATION=Fabric gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/RUNTIME-REHEARSAL-03-2026-09-16/r03-module-install.log PRE_STAGE_WORKTREE_SHA256=dfce5f9e78694d22784bee048409c3dd583047b12f4c44909e97f4567c6bcf44 STAGED_BLOB_SHA256=6ea438894834235b77658fbde76a86420ba9239840bbe1d9bb56b2ec3f8a7cf1 NORMALIZATION=CRLF_TO_LF
+LINE_ENDING_NORMALIZATION=Fabric gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/RUNTIME-REHEARSAL-03-2026-09-16/r03-module-test.log PRE_STAGE_WORKTREE_SHA256=db364c8f11e72e3178d8a6563a36c5fdedc57adf7cb07b36bbc4e91e55988491 STAGED_BLOB_SHA256=91ff3d4be9fc62bb37026f88817e75458a22d5c64f78ae66337a716303b0910f NORMALIZATION=CRLF_TO_LF
+LINE_ENDING_NORMALIZATION=Fabric gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/RUNTIME-REHEARSAL-03-2026-09-16/r03-postmigration-results.txt PRE_STAGE_WORKTREE_SHA256=d7c9bc674cc9cf9f8a54a8324d882c4b7e59e7af2ea944e09074c8470a26092a STAGED_BLOB_SHA256=1098a60d987fc936de5f58a568ec2f20475e49e02672e7f97a5fe78d7f80af5d NORMALIZATION=CRLF_TO_LF
+LINE_ENDING_NORMALIZATION=Fabric gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/RUNTIME-REHEARSAL-03-2026-09-16/r03-premigration-records.txt PRE_STAGE_WORKTREE_SHA256=c5a103b4ca0cbef7c54c19ffcd37472d9ee14bd4ab89857914e3442f3c4c70be STAGED_BLOB_SHA256=89349a9fca082bf0f01ba487b3984a122d27c32497ea4e20b647b71d96a9637c NORMALIZATION=CRLF_TO_LF
+LINE_ENDING_NORMALIZATION=Fabric gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/RUNTIME-REHEARSAL-03-2026-09-16/r03-runtime-smoke-results.txt PRE_STAGE_WORKTREE_SHA256=4143981410544bdea2c86c2c69d83247b31d5f9183df5464d7c1e1aab2ba32df STAGED_BLOB_SHA256=313785869b925509ff1854d03c0a1bedbfb805d02d3e6bfb63d06801077e8a25 NORMALIZATION=CRLF_TO_LF
+LINE_ENDING_NORMALIZATION=Fabric gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/RUNTIME-REHEARSAL-03-2026-09-16/r03-studio-contracts.log PRE_STAGE_WORKTREE_SHA256=c8279a6575fa4158c9ea0a9c0301ebc5169d2e3e503e6570efe9d90a237a4c81 STAGED_BLOB_SHA256=4a6c77113fe57f85401988fe11b5b9696f1f5ce2b77d01d209918272bc57a6d0 NORMALIZATION=CRLF_TO_LF
+LINE_ENDING_NORMALIZATION=Fabric gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/RUNTIME-REHEARSAL-FINAL-12-2026-09-17/f12-host-package.log PRE_STAGE_WORKTREE_SHA256=1c285cfbcf3ab13db84796b5121fad99c04e2acad667d701762462ef9465f175 STAGED_BLOB_SHA256=d24bb79b190883901fc674aa41de7edf081529587ea50ea3a14441608a1b65cd NORMALIZATION=CRLF_TO_LF
+LINE_ENDING_NORMALIZATION=Fabric gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/RUNTIME-REHEARSAL-FINAL-12-2026-09-17/f12-jar-proof.txt PRE_STAGE_WORKTREE_SHA256=46765f682bcffc27acc87fd72a535a0aedf0c1431f2b8fbf2682c9099aa18cab STAGED_BLOB_SHA256=b9c7d5ba821c1e78b0b3950c1809053859a3100b08c7616de7cc5899c1812b87 NORMALIZATION=CRLF_TO_LF
+LINE_ENDING_NORMALIZATION=Fabric gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/RUNTIME-REHEARSAL-FINAL-12-2026-09-17/f12-module-install.log PRE_STAGE_WORKTREE_SHA256=43cfe5baf4513364f86406f084479579e4e9e7b1e925539cc2cacbfeb84cba10 STAGED_BLOB_SHA256=7ba8aef89b6e56c3f09b14530388c5c8325b434ab6e346e6afa0f12e8bec8d31 NORMALIZATION=CRLF_TO_LF
+LINE_ENDING_NORMALIZATION=Fabric gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/RUNTIME-REHEARSAL-FINAL-12-2026-09-17/f12-postmigration-results.txt PRE_STAGE_WORKTREE_SHA256=7451ab9886e52d0d01d4dd8ce58934f4dabec865a2dec926d158022002738e40 STAGED_BLOB_SHA256=32d15b8e8329d371a733686293b3d19746331fb6fdd5a4d47d45463f6c052711 NORMALIZATION=CRLF_TO_LF
+LINE_ENDING_NORMALIZATION=Fabric gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/RUNTIME-REHEARSAL-FINAL-12-2026-09-17/f12-runtime-smoke-results.txt PRE_STAGE_WORKTREE_SHA256=64e099d7c443f653059f2282fe452ed628ea6886d9a5cef5373e3a0abaa4626b STAGED_BLOB_SHA256=d84adc1b9a14ece446ebcbe4aa9f185c7920c1466164620125cfb2f5b9f74a8d NORMALIZATION=CRLF_TO_LF
+LINE_ENDING_NORMALIZATION=Fabric gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/RUNTIME-REHEARSAL-FINAL-12-2026-09-17/f12-studio-contracts-full.log PRE_STAGE_WORKTREE_SHA256=cd87589c38f399af8a4c24f922e08bf12e7b15623700e23b94d5853b4df1c39d STAGED_BLOB_SHA256=09c2890b090f451671277b2b0ffdf984a5869ff8c01cdc343531e437c05c7d1d NORMALIZATION=CRLF_TO_LF
+LINE_ENDING_NORMALIZATION=Fabric gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/RUNTIME-REHEARSAL-FINAL-12-2026-09-17/f12-zero-tenant-period-summary.json PRE_STAGE_WORKTREE_SHA256=6e6cc8df5e202a9e7f3c28b01366b088dbe7ea553c49fe4073506a9f50e5cde2 STAGED_BLOB_SHA256=36ad5ec712bcf8fc98112ce5a6d3a1789e33ea75e72ddd74b2a7e71493134253 NORMALIZATION=CRLF_TO_LF
+BINARY_EVIDENCE_FILE=Fabric gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/PRE-COMMIT-ENV-UI-AUDIT-HARDENING-13-2026-09-17/launcher-output-2026-09-17T125330Z.txt SHA256=0d9da4b264cf399385b7e70028205758a3df641c4ea3fd9c6a165d12db2b568c (UTF-16LE with BOM, committed byte-exact; STEP 13 launcher output: ENV, DB_HOST, DB_PORT, DB_NAME, BACKEND_PID, BACKEND_LOG, RUNTIME_JAR; no secret)
+DIFF_CACHED_CHECK=gm-expenses clean; Gystigo clean; Fabric 103 trailing-whitespace and 3 blank-line-at-EOF findings in 14 raw evidence logs, committed unchanged, no conflict markers
+COMMITTED_BLOB_SHA256=gm-expenses b90a34501144fe76a17cda9f1473ca02fe51a72e9355b058025baafe4cd9c46e src/main/java/com/gypport/business/expenses/advance/domain/AdvanceDeliveryPlan.java
+COMMITTED_BLOB_SHA256=gm-expenses 0bbc0a539a497dd1fd5061b0b377856c0caf518b013f709e69df5bb11aaa95f4 src/main/java/com/gypport/business/expenses/advance/domain/ExpenseAdvance.java
+COMMITTED_BLOB_SHA256=gm-expenses a4a6d3c36cce3dc01b8811d088df94de34d6996f8b28ae329a8d435a12459643 src/main/java/com/gypport/business/expenses/advance/infrastructure/persistence/jdbc/JdbcExpenseAdvanceRepository.java
+COMMITTED_BLOB_SHA256=gm-expenses 88e426d528367174a493a2e5e1a72d629b69afe51647febe93943c0939e9263b src/main/java/com/gypport/business/expenses/application/AcceptExpenseReviewUseCase.java
+COMMITTED_BLOB_SHA256=gm-expenses 0cc7731c92f336bca0d3779be3be7f712b45bdb72dfc2f71241693417b7c123a src/main/java/com/gypport/business/expenses/application/BeginSettlementReconciliationUseCase.java
+COMMITTED_BLOB_SHA256=gm-expenses 5ec528a00f374f9ed6b800e91d97a5508fdd76c6a740a615b1a1ff52224fa3c5 src/main/java/com/gypport/business/expenses/application/CloseSettlementUseCase.java
+COMMITTED_BLOB_SHA256=gm-expenses 6fbdbee86a9d544e343b54d3bb1425b1628b80e2e7b92e98ad22b18054ad38b4 src/main/java/com/gypport/business/expenses/application/CorrectObservedExpenseUseCase.java
+COMMITTED_BLOB_SHA256=gm-expenses DELETED src/main/java/com/gypport/business/expenses/application/CorrectRejectedExpenseCommand.java
+COMMITTED_BLOB_SHA256=gm-expenses DELETED src/main/java/com/gypport/business/expenses/application/CorrectRejectedExpenseUseCase.java
+COMMITTED_BLOB_SHA256=gm-expenses fb3e2e097e512bdce488199e8d412938dd14ab361e3926fe644bd2943815ce50 src/main/java/com/gypport/business/expenses/application/DocumentMutationChecks.java
+COMMITTED_BLOB_SHA256=gm-expenses 8af9dae145a98787895069f7a1a348c70b11c570d9417451694d8dddf6d5d4f7 src/main/java/com/gypport/business/expenses/application/EditRegisteredExpenseCommand.java
+COMMITTED_BLOB_SHA256=gm-expenses 13b7023e520f173dd075286bb778f3f04ff297f6e829436a45393c7dd62c2edf src/main/java/com/gypport/business/expenses/application/GetExpenseReviewHistoryUseCase.java
+COMMITTED_BLOB_SHA256=gm-expenses 85789606284373e2e0d134d777506bf2604e36f6e9cd33e21e73bd27c048ac5f src/main/java/com/gypport/business/expenses/application/ObserveExpenseReviewCommand.java
+COMMITTED_BLOB_SHA256=gm-expenses ee5fbdb9c771356b468b8a0cfb061931ba42b9b0f95e4cb7472a05c647266dbb src/main/java/com/gypport/business/expenses/application/ObserveExpenseReviewUseCase.java
+COMMITTED_BLOB_SHA256=gm-expenses e6e67635727d357f52d2aacbd667ca51fd85ec412aca792bbdd7c6bb0d600fb7 src/main/java/com/gypport/business/expenses/application/OpenSettlementUseCase.java
+COMMITTED_BLOB_SHA256=gm-expenses DELETED src/main/java/com/gypport/business/expenses/application/RecalculateSettlementJustifiedTotalCommand.java
+COMMITTED_BLOB_SHA256=gm-expenses DELETED src/main/java/com/gypport/business/expenses/application/RecalculateSettlementJustifiedTotalUseCase.java
+COMMITTED_BLOB_SHA256=gm-expenses 91f534c74fbfedbd051a41f070f43f20cdd8fe01b55e6f2994e1874b223eedff src/main/java/com/gypport/business/expenses/application/ReconcileSettlementUseCase.java
+COMMITTED_BLOB_SHA256=gm-expenses 62f7bf8bcbc9c491c2dc854c63833fe573946e7e1f68dd48e172a2d49d74efba src/main/java/com/gypport/business/expenses/application/RegisterSettlementReimbursementUseCase.java
+COMMITTED_BLOB_SHA256=gm-expenses ecee7751c894588a6810499e730ee337908a91e304b2dc0f5df57c833a49b605 src/main/java/com/gypport/business/expenses/application/RegisterSettlementReturnUseCase.java
+COMMITTED_BLOB_SHA256=gm-expenses 003bdd2caa9aa7ae7192cd7ff5e7a967a8b2dfccfe2791be62fc834f98a93901 src/main/java/com/gypport/business/expenses/application/RejectExpenseReviewCommand.java
+COMMITTED_BLOB_SHA256=gm-expenses 1f9db9c885bf3cfdd52f9c2a1c1e2fb339d4cd4b23c104ac50fe17932eed569c src/main/java/com/gypport/business/expenses/application/RejectExpenseReviewUseCase.java
+COMMITTED_BLOB_SHA256=gm-expenses 722ad5ea2879a2cf58422ed946083aea9d6a2cc7270bf22876e491f49c493958 src/main/java/com/gypport/business/expenses/application/ReviewDecisionDetail.java
+COMMITTED_BLOB_SHA256=gm-expenses 3c5dde60d055e584d9a3c57c83876a8a5c777f59e16531e0a833c47597054a52 src/main/java/com/gypport/business/expenses/application/SettlementJustifiedTotals.java
+COMMITTED_BLOB_SHA256=gm-expenses ff0abe3a0eb8ae3b2fba18f25f70f4c34fddcad4f9bd2b6df5ce2e507fa5256b src/main/java/com/gypport/business/expenses/casefile/application/CaseAdvanceDeliveryService.java
+COMMITTED_BLOB_SHA256=gm-expenses 17cba68fc0ac9a819df5cb4746c9cdf5b6224a08c37cfec40a140cdb938f94cc src/main/java/com/gypport/business/expenses/casefile/application/CaseRenditionLedger.java
+COMMITTED_BLOB_SHA256=gm-expenses 2c7ca49621306c8d01541cd9edbf877d653d5a83f9216445ded5b6a01a6c0135 src/main/java/com/gypport/business/expenses/casefile/application/CaseRenditionService.java
+COMMITTED_BLOB_SHA256=gm-expenses 93e704d267b0c1878d65d9d7fd65c88c1de347ba00e88303f2e6e5421ec0bedd src/main/java/com/gypport/business/expenses/casefile/application/ExpenseCaseService.java
+COMMITTED_BLOB_SHA256=gm-expenses 88811f84d127daae69015f87189751a690cfdbbf352f89e463edef2f65394685 src/main/java/com/gypport/business/expenses/casefile/domain/ExpenseCaseFinancialSummary.java
+COMMITTED_BLOB_SHA256=gm-expenses 108fe34273ec1abc7e4f1152c9e79aaf7106f1c7b7cbd3192d10612c16b6eb1c src/main/java/com/gypport/business/expenses/casefile/domain/ExpenseCaseRepository.java
+COMMITTED_BLOB_SHA256=gm-expenses 3f52b42148ff7c420f874f715e15ad5ae1224cf690bec902391966938f52a7bd src/main/java/com/gypport/business/expenses/casefile/infrastructure/persistence/jdbc/JdbcExpenseCaseRepository.java
+COMMITTED_BLOB_SHA256=gm-expenses afaddc3687e8acc75df63f4de21cf4e2e72fa80bc838f82b22fe2319e90aa728 src/main/java/com/gypport/business/expenses/expense/application/ApprovedExpenseTotalQueryPort.java
+COMMITTED_BLOB_SHA256=gm-expenses a3bfdaea6654d9b35ab4bb46c409d5d2a13b14da283b8bdd06b3d5a297fd8b3a src/main/java/com/gypport/business/expenses/expense/application/ExpenseReportPort.java
+COMMITTED_BLOB_SHA256=gm-expenses 8098730e21275bc6ed3f7c7efe43218bffc593c7cd4b972a498d69edf70f5838 src/main/java/com/gypport/business/expenses/expense/application/ExpenseReportService.java
+COMMITTED_BLOB_SHA256=gm-expenses 8753dd65533f6bf4c675608b7a6efeee604a17db35640db1d1b1d2b43601788a src/main/java/com/gypport/business/expenses/expense/domain/Expense.java
+COMMITTED_BLOB_SHA256=gm-expenses 966118ba0118dfb802c8163ff966766264ea8d79c7d7d28c5fdfe57ed1457367 src/main/java/com/gypport/business/expenses/expense/domain/ExpenseObservationReason.java
+COMMITTED_BLOB_SHA256=gm-expenses f38dd097c93009a88d2216cc0ee12e086c7822f6cd6fe03ec14fcb8cd8785736 src/main/java/com/gypport/business/expenses/expense/domain/ExpenseRejectionReason.java
+COMMITTED_BLOB_SHA256=gm-expenses 784cad1e81a55253a85e42978f8360098dbe59300be97a12e38aa1878abba368 src/main/java/com/gypport/business/expenses/expense/domain/ExpenseReviewEvent.java
+COMMITTED_BLOB_SHA256=gm-expenses 246d4c1590215441b24c8fd46ae5cfe336d0a879092b42980597c4bae1dbbc22 src/main/java/com/gypport/business/expenses/expense/domain/ExpenseReviewEventRepository.java
+COMMITTED_BLOB_SHA256=gm-expenses cd3072460779862a1b8fa3dab227eff12250046f7315ee7590b40b1e739aff9a src/main/java/com/gypport/business/expenses/expense/domain/ExpenseRevisionType.java
+COMMITTED_BLOB_SHA256=gm-expenses 6daed9eb3fe59b9a6cc7d0ca613524a6f0ebfc659425a5e31bfc97236be178df src/main/java/com/gypport/business/expenses/expense/infrastructure/persistence/jdbc/JdbcApprovedExpenseTotalQueryPort.java
+COMMITTED_BLOB_SHA256=gm-expenses 4cc5fa2bd0dff2b1365acfff07303d6877923e6cf5e0a0d6460fe2e06c34ff30 src/main/java/com/gypport/business/expenses/expense/infrastructure/persistence/jdbc/JdbcExpenseReportPort.java
+COMMITTED_BLOB_SHA256=gm-expenses 53432029d982dfa046c7951cc26bacd60dc71c88299f3e105f60bcd820dd854d src/main/java/com/gypport/business/expenses/expense/infrastructure/persistence/jdbc/JdbcExpenseReviewEventRepository.java
+COMMITTED_BLOB_SHA256=gm-expenses 2d60ed05e9f7582184013867c4c6ce818080c7040a5b12c24c7bcf8407e05c0d src/main/java/com/gypport/business/expenses/settlement/domain/AdvanceSettlement.java
+COMMITTED_BLOB_SHA256=gm-expenses fba888ce8cce851dc0aef3e5f440bd762838dc406e52edfe5286384b4185c55e src/main/java/com/gypport/business/expenses/settlement/domain/SettlementBalance.java
+COMMITTED_BLOB_SHA256=gm-expenses c4f7078e99d22ec701f5f773685c6b2f06fd917b7fd092067621a2d5a77c01a5 src/test/java/com/gypport/business/expenses/advance/domain/AdvanceDeliveryPlanTest.java
+COMMITTED_BLOB_SHA256=gm-expenses 16bdaa03655b2c468ed85098801d7412ed545f46743d718e685cc42a40457884 src/test/java/com/gypport/business/expenses/application/CloseSettlementAdvanceProgressionTest.java
+COMMITTED_BLOB_SHA256=gm-expenses 6dfde4104bf1d7bee2e8f5a646194b8768131a63130c1e7a5fbbfc7051b64e34 src/test/java/com/gypport/business/expenses/application/CorrectExpenseReviewUseCaseTest.java
+COMMITTED_BLOB_SHA256=gm-expenses 13de944fd0687798ce041395451ea2690b36b56dc5feddf171c0d69f21dd6cf0 src/test/java/com/gypport/business/expenses/application/EditRegisteredExpenseUseCaseTest.java
+COMMITTED_BLOB_SHA256=gm-expenses 7070e6f357f7aff9f01fd5567c3ecf25368a1b507ddedeaecc9c77e51eacce36 src/test/java/com/gypport/business/expenses/application/SettlementJustifiedTotalRefreshTest.java
+COMMITTED_BLOB_SHA256=gm-expenses f7cf0aee369ff124fc406d8f0566bda3b493266d5fdc63d8483cfc89e33b1ab8 src/test/java/com/gypport/business/expenses/application/testsupport/InMemoryAdvanceSettlementRepository.java
+COMMITTED_BLOB_SHA256=gm-expenses 8baa1d5aedc89aac0f57681de2d60d21bd702b7ae0c10ecc1210a146183509db src/test/java/com/gypport/business/expenses/application/testsupport/InMemoryApprovedExpenseTotals.java
+COMMITTED_BLOB_SHA256=gm-expenses ad38bfb9d65590ab41d3e7383c50729fc3a34f8138a63324d8ce04a2f450e3d6 src/test/java/com/gypport/business/expenses/application/testsupport/InMemoryExpenseRepository.java
+COMMITTED_BLOB_SHA256=gm-expenses 14ecc0cff25ac56d6082dbb3970dca5ec2b06a4db09c95c74d5d7a2b40c30077 src/test/java/com/gypport/business/expenses/application/testsupport/InMemoryExpenseReviewEventRepository.java
+COMMITTED_BLOB_SHA256=gm-expenses 15351377b7d4d4d38f25774185571215a0c0b322c030d2d3c442808db1dffe4a src/test/java/com/gypport/business/expenses/casefile/application/CaseAdvanceDeliveryServiceTest.java
+COMMITTED_BLOB_SHA256=gm-expenses a5cd44c11e2c9fc42e61e9336263d52c315b35918e2eceb5802645e3384c3e2d src/test/java/com/gypport/business/expenses/casefile/application/CaseRenditionServiceTest.java
+COMMITTED_BLOB_SHA256=gm-expenses f6f8acaebd5cb5e6a682f25020051a429ed31156aae21ba73a883f0e7344d321 src/test/java/com/gypport/business/expenses/casefile/application/ExpenseCaseCloseMessageTest.java
+COMMITTED_BLOB_SHA256=gm-expenses f08e3fe53a760a2c8d961402a93be5ebec1d6d7c2c21997abd466a579cd9688b src/test/java/com/gypport/business/expenses/expense/application/ExpenseReportPortTest.java
+COMMITTED_BLOB_SHA256=gm-expenses b17da71700b67c66912a43f047d41096feb74761c0c0a83ee42b17ea9210d48a src/test/java/com/gypport/business/expenses/expense/domain/ExpenseAllocationCorrectionTest.java
+COMMITTED_BLOB_SHA256=gm-expenses 523231836508426a43a9476ad050ceb1432b1b8272d3e0c08cb7a1e9a339f7a9 src/test/java/com/gypport/business/expenses/expense/domain/ExpenseReviewTransitionTest.java
+COMMITTED_BLOB_SHA256=gm-expenses 66cf9881c70d3e39463666b55280b4b71671e995092e9f50a26db73da106aeae src/test/java/com/gypport/business/expenses/expense/domain/ExpenseRevisionTest.java
+COMMITTED_BLOB_SHA256=gm-expenses f1b01c329fd383a4ae5ffa15b5e0e28586fdec067c2f92aaf2f9cbde49af8af2 src/test/java/com/gypport/business/expenses/expense/infrastructure/persistence/jdbc/JdbcExpenseReportPortFundingTest.java
+COMMITTED_BLOB_SHA256=gm-expenses 6c208e0e82f28e5be1fa6992d03dc0a315fb4be3969b1fa01484cf1bed89cc0c src/test/java/com/gypport/business/expenses/settlement/domain/AdvanceSettlementTest.java
+COMMITTED_BLOB_SHA256=gm-expenses 05cd6a441fa13c827977f7d6f7b5767a57b4394b524095abf362bd9718396f37 src/test/java/com/gypport/business/expenses/settlement/domain/SettlementBalanceTest.java
+COMMITTED_BLOB_SHA256=Gystigo d805797cc90a448962425986074d1b0e82ac48813eb43e4eb6da621dd818c1bd database/modules/gm-expenses/migration/V62__gm_expenses_advance_planned_delivery.sql
+COMMITTED_BLOB_SHA256=Gystigo 6db2eacc9842d9481b9ae34823365c48bc118bad882a5bab90fb97f95ec4e7bb database/modules/gm-expenses/migration/V63__gm_expenses_unified_settlement_reconciliation.sql
+COMMITTED_BLOB_SHA256=Gystigo ef9a2fde3511fd6c49200391d1c4bc3b317ce74db441c4cae87d7a5782efdc8a docker/README.md
+COMMITTED_BLOB_SHA256=Gystigo c2fd190adbc99db42ae148a4e183f95c126abaaeacd858aacf6554b3759bc05c docs/testing/GM_EXPENSES_REAL_DB_TESTS.md
+COMMITTED_BLOB_SHA256=Gystigo 62ba661908ca3ef9ab56fd43c09fe7bec407086c9429c3db0ea96abf45903722 docs/testing/TEST_DATABASE_ISOLATION.md
+COMMITTED_BLOB_SHA256=Gystigo 73e629da0292599ec5a80a779ae01996d1d51cd1c9e3383694f9c385ead314d5 platform_os/server/scripts/run-expenses-real-db-tests.ps1
+COMMITTED_BLOB_SHA256=Gystigo 20f37f0e6d618215b6215776156029448061b100fecbe360863e241b58641e81 platform_os/server/scripts/start-runtime-local.ps1
+COMMITTED_BLOB_SHA256=Gystigo c13bb2488924c93cc2ba983747c6a7e7dfef8729d3a9896effdfc7033e4eaeec platform_os/server/scripts/stop-runtime-local.ps1
+COMMITTED_BLOB_SHA256=Gystigo aa12a7b0db34147c2a3b400852775124140cbc96f7275cc540528f4be99b827f platform_os/server/src/main/java/com/gypport/server/module/expenses/AdvanceSettlementController.java
+COMMITTED_BLOB_SHA256=Gystigo 15b274932f388fbcbcf8055d8ac80075ae7a2fdcf9fbf41b93d776f34c12802a platform_os/server/src/main/java/com/gypport/server/module/expenses/ExpenseActorNames.java
+COMMITTED_BLOB_SHA256=Gystigo 6d5053d1c34e7fffd8d76094eadb8c4f70db9ff7e414845549bb96174ee52ea3 platform_os/server/src/main/java/com/gypport/server/module/expenses/ExpenseAdvanceController.java
+COMMITTED_BLOB_SHA256=Gystigo c7b57a245ab82a77c222e48bd59e1abe9b33024dba8e4e94bf3ff98f38be7c02 platform_os/server/src/main/java/com/gypport/server/module/expenses/ExpenseCaseController.java
+COMMITTED_BLOB_SHA256=Gystigo 48a101fcdc88599600008169e93f00a46eea9f78abb91f723a74c0f905906171 platform_os/server/src/main/java/com/gypport/server/module/expenses/ExpenseController.java
+COMMITTED_BLOB_SHA256=Gystigo f7a096ac312f99b7ac5f28f0d5910a7b03c225427a5d413f6d5e0c9abd990f74 platform_os/server/src/main/java/com/gypport/server/module/expenses/ExpenseReportController.java
+COMMITTED_BLOB_SHA256=Gystigo cb5d2a343c76be946f04095bc82f837652ff412ad1f34322f405c9f2c282144a platform_os/server/src/main/java/com/gypport/server/module/expenses/ExpensesResponseFormatting.java
+COMMITTED_BLOB_SHA256=Gystigo 0a12d4a8d30036d8b92812749f9f3984dc0ff857c204e2349080e71ffca53e09 platform_os/server/src/main/java/com/gypport/server/module/expenses/VehicleReferenceController.java
+COMMITTED_BLOB_SHA256=Gystigo e247b3c19952e4100fd411bcccdc90489cef4e0d611b8d54cb6c1f2b83ec6619 platform_os/server/src/main/java/com/gypport/server/shared/config/ExpenseCaseConfig.java
+COMMITTED_BLOB_SHA256=Gystigo 324185d4640e60aa75cf4d69f17b43a66524b98601b514c3d6b7b70dd6dcf851 platform_os/server/src/main/java/com/gypport/server/shared/config/GmExpensesConfig.java
+COMMITTED_BLOB_SHA256=Gystigo c1dac54c3dbf9644149102d479539f9136b43acee5cd76d1e6372767173242e2 platform_os/server/src/test/java/com/gypport/server/module/expenses/ExpenseCaseHttpApiTest.java
+COMMITTED_BLOB_SHA256=Gystigo 24c9cecf0f9d5edfed83899a441de79a2b44df0a202d5838ff8cc871c98ff637 platform_os/server/src/test/java/com/gypport/server/module/expenses/ExpenseCasePermissionTest.java
+COMMITTED_BLOB_SHA256=Gystigo 55ab75f863125d275f7d7c58bad816a081737220cc620b7707776bf89181b33e platform_os/server/src/test/java/com/gypport/server/module/expenses/ExpenseReviewHistoryIntegrityHttpApiTest.java
+COMMITTED_BLOB_SHA256=Gystigo 2f13f4bc500e56dc2fabce9ee359cbca811cad8787ab1ea8858aa7515f23568b platform_os/server/src/test/java/com/gypport/server/module/expenses/GmExpensesHostIntegrationTest.java
+COMMITTED_BLOB_SHA256=Gystigo 471818ce4f1091ff51fab61a1d79cae199a7d2f3e106a28c33d54ecf17b51947 platform_os/server/src/test/java/com/gypport/server/module/expenses/GmExpensesHttpApiTest.java
+COMMITTED_BLOB_SHA256=Gystigo 16dda2c08f9c3bb1cfb0094288266798ef5dc038d64409a260c85e19919f723f platform_os/server/src/test/java/com/gypport/server/module/profile/PersonIdentityReconciliationHttpTest.java
+COMMITTED_BLOB_SHA256=Gystigo 9d6f2ca2cad69c2d4d0cdbc9fb1f81f48e7640649f14779d1d059eb20ea0bded platform_os/studio/channel/browser/shell/fixtures/ExpenseCaseCardsFixture.jsx
+COMMITTED_BLOB_SHA256=Gystigo d7e5cab6d3eca72807560f71686b47f8337796eec3dcc51658c078cc07a6d97a platform_os/studio/channel/browser/shell/src/application/expenses/AdvanceDetailPage.css
+COMMITTED_BLOB_SHA256=Gystigo 51c94b1c58f1e3eaf8f14e6d0db184e47024ac925b53c9b1b8c3765e4da5e67d platform_os/studio/channel/browser/shell/src/application/expenses/AdvanceDetailPage.jsx
+COMMITTED_BLOB_SHA256=Gystigo 469b286ecf2de67363a16a16432a08555dfe12766c349ed71ce9c13fcc286c93 platform_os/studio/channel/browser/shell/src/application/expenses/AdvanceListPage.jsx
+COMMITTED_BLOB_SHA256=Gystigo 8d437f57ccc14ce455ef79d3b3aaef2f7fb23f145846a2ee5aff2baebf0ac9bd platform_os/studio/channel/browser/shell/src/application/expenses/ExpenseCategoryReportPage.jsx
+COMMITTED_BLOB_SHA256=Gystigo cd02c9fddd1b99be967590057fca976ad8633c9787e275ee5233309ab0d88fbb platform_os/studio/channel/browser/shell/src/application/expenses/ExpenseDetailPage.css
+COMMITTED_BLOB_SHA256=Gystigo 99aba579370d1ee67677cc8af047d0622adff4523901e4c3f99205b7d07e0216 platform_os/studio/channel/browser/shell/src/application/expenses/ExpenseDetailPage.jsx
+COMMITTED_BLOB_SHA256=Gystigo 0df4effb88dc625a9b6f7a92daf78f141c19d4e5d52d8894a147f40a321a01d7 platform_os/studio/channel/browser/shell/src/application/expenses/ExpenseReportsPage.jsx
+COMMITTED_BLOB_SHA256=Gystigo c6f4d668556d52f2252014495e2bc9ea1f3c02aeb2a4657017ed9f4d8fffb06e platform_os/studio/channel/browser/shell/src/application/expenses/ExpenseVehicleReportPage.jsx
+COMMITTED_BLOB_SHA256=Gystigo b281128a4b2494631425cefef6dd7a666d421393c5691572c460151445ff65cd platform_os/studio/channel/browser/shell/src/application/expenses/NewAdvancePage.jsx
+COMMITTED_BLOB_SHA256=Gystigo 42eb7ef8ef3fd97268a210896214d6fcf4d558c2bab2133b455a0559a63544af platform_os/studio/channel/browser/shell/src/application/expenses/NewExpensePage.css
+COMMITTED_BLOB_SHA256=Gystigo 366397e0e48137b296ffd8da248b061a0af9d8cd0e182d0d92478efd61738a2d platform_os/studio/channel/browser/shell/src/application/expenses/advanceOptions.js
+COMMITTED_BLOB_SHA256=Gystigo edc0ce591deb8a7d0606f4d8f9705b228b96955f0a4dbcf20a3227a235952558 platform_os/studio/channel/browser/shell/src/application/expenses/cases/ChooseCaseForAdvancePage.jsx
+COMMITTED_BLOB_SHA256=Gystigo 9e733820bbed1e5536f31c6156054c703dd60b82e59bc549663b6a3c7fadff35 platform_os/studio/channel/browser/shell/src/application/expenses/cases/ExpenseCaseCard.jsx
+COMMITTED_BLOB_SHA256=Gystigo d13e725b04ef95b6885496f534f99b0695e1ce5257eb8eb16ecc2a8d2b7e7431 platform_os/studio/channel/browser/shell/src/application/expenses/cases/ExpenseCaseDetailPage.jsx
+COMMITTED_BLOB_SHA256=Gystigo a591a13ed07d195df78fbbb3edea26b08aa1fce8de6d31b6314b3cd7cc107d2e platform_os/studio/channel/browser/shell/src/application/expenses/cases/ExpenseCaseListPage.jsx
+COMMITTED_BLOB_SHA256=Gystigo 3b50647733274e6a2d583ca1f1539865ee606f6310e36049068d73d9b29a6b2c platform_os/studio/channel/browser/shell/src/application/expenses/cases/ExpenseCases.css
+COMMITTED_BLOB_SHA256=Gystigo 2d4b12c51faa37a2d5e0e53d312ff1a1889c1d6f954cc173e6f44db93f740e26 platform_os/studio/channel/browser/shell/src/application/expenses/cases/NewCaseExpensePage.jsx
+COMMITTED_BLOB_SHA256=Gystigo f3b71627c9e52e85c829633871c39820ead291293761ef49bf6fcd5238af00e8 platform_os/studio/channel/browser/shell/src/application/expenses/cases/NewExpenseCasePage.jsx
+COMMITTED_BLOB_SHA256=Gystigo d4f791fe11c01ac01e64ea908c098d825cb6348198c0cf418f2c819e1213daae platform_os/studio/channel/browser/shell/src/application/expenses/cases/ResourceAssignmentFields.jsx
+COMMITTED_BLOB_SHA256=Gystigo 8ab1f86ec81cf25755265cb35508a14d7c442cb48fcfcd5b8245de237f90e511 platform_os/studio/channel/browser/shell/src/application/expenses/cases/caseClosureRules.js
+COMMITTED_BLOB_SHA256=Gystigo c2158cabd4c2ddf324d61960b7a95120632b92ee6abbd19b8651391be7d04504 platform_os/studio/channel/browser/shell/src/application/expenses/cases/caseRules.js
+COMMITTED_BLOB_SHA256=Gystigo 457064d03e7c91d1b1fa155e16d4e7a3d9d5575d05f5cdf4fd007f3edbaf749f platform_os/studio/channel/browser/shell/src/application/expenses/cases/renditionRules.js
+COMMITTED_BLOB_SHA256=Gystigo a2d9738c542f29ee7c1394415cf1aa4f77b31f1674fbfb12749f1fe76a4e22db platform_os/studio/channel/browser/shell/src/application/expenses/components/ComboBox.css
+COMMITTED_BLOB_SHA256=Gystigo d70112db14d8eb2c910f5fe663f0dea32c0aa1785cc07a74ea89548ce6c9dbb6 platform_os/studio/channel/browser/shell/src/application/expenses/components/ComboBox.jsx
+COMMITTED_BLOB_SHA256=Gystigo 5828eb42e5cfc9a0a75aaeeb2f36eb4a31f921f4a79d9f10519441d09fdeaa14 platform_os/studio/channel/browser/shell/src/application/expenses/components/comboboxModel.js
+COMMITTED_BLOB_SHA256=Gystigo 2a3e72906cc6cff1c434c08f605c3e034c04989d4c898924e4baa2009e7e875a platform_os/studio/channel/browser/shell/src/application/expenses/expenseService.js
+COMMITTED_BLOB_SHA256=Gystigo cd1f760ffec803e2f3be855679bba16f8406ef6d74a72506e19ee2c61a36c4d2 platform_os/studio/channel/browser/shell/src/application/expenses/reportRules.js
+COMMITTED_BLOB_SHA256=Gystigo e7b6943eedfc3c19e02699299da89c72f2fc2db0a5b86a4cf7446ab9b6737136 platform_os/studio/channel/browser/shell/src/application/expenses/resourceTypes.js
+COMMITTED_BLOB_SHA256=Gystigo c173494e044dad96a708c6b12eca9fe4ae4c3e481e9fe93de617db9d0b5dbd07 platform_os/studio/channel/browser/shell/src/application/expenses/reviewReasons.js
+COMMITTED_BLOB_SHA256=Gystigo 5db133c5ee3f66601fe1667f9476738d63fb4bb4f7a0f5c32e04d1119af7d440 platform_os/studio/verification/contracts/browser/AdvanceOperationIdempotency.contract.mjs
+COMMITTED_BLOB_SHA256=Gystigo 88f62a72b59c0d125cdd7974bd63830eed208278753749ea91fe5be26aac815f platform_os/studio/verification/contracts/browser/AdvanceRenditionFlow.contract.mjs
+COMMITTED_BLOB_SHA256=Gystigo e3260c2f559061f270df76aed26c6d39e47ad8958fa080a8c9ea496604004404 platform_os/studio/verification/contracts/browser/ExpenseCaseCard.contract.mjs
+COMMITTED_BLOB_SHA256=Gystigo 3f7e2d81d3139962e3064ea4f90df3e512696579a13319e070c16002d0b8f02d platform_os/studio/verification/contracts/browser/ExpenseCases.contract.mjs
+COMMITTED_BLOB_SHA256=Gystigo 06e9e93a47641561da2748e920e7ea03f8b78d5f48729b0a5b89c24f79e89043 platform_os/studio/verification/contracts/browser/ExpenseCategorySelect.contract.mjs
+COMMITTED_BLOB_SHA256=Gystigo c2347f922a5f4a469182091aa91f9e56136d636fc3bf28565ff550ae7e5c14af platform_os/studio/verification/contracts/browser/ExpenseComboBox.contract.mjs
+COMMITTED_BLOB_SHA256=Gystigo 2d5f739091af7d00e0b6426e38282263a824d0f41916cbc8a08f96604ee003e5 platform_os/studio/verification/contracts/browser/ExpenseOperationIdBoundary.contract.mjs
+COMMITTED_BLOB_SHA256=Gystigo c09189c68a2e7a9a5bbb3b8303d072a0c2565c2c29f78f6a01dc272cd4b471f0 platform_os/studio/verification/contracts/browser/ExpenseReportHome.contract.mjs
+COMMITTED_BLOB_SHA256=Gystigo 144f46740995cdbd449ec3bee1608d3da9cfdd32dd2e987c01a5a12f77f5f2f7 platform_os/studio/verification/contracts/browser/ExpenseResourceAssignmentFlow.contract.mjs
+COMMITTED_BLOB_SHA256=Gystigo 40ad24e03fa56a1d611d0400c26db46a2c86c6de4fd377f6160b9f986e3c63b9 platform_os/studio/verification/contracts/browser/ExpenseReviewWorkflow.contract.mjs
+COMMITTED_BLOB_SHA256=Gystigo 170ffd06b39927e81c397fd233074c76f35bdaeb75369dfdf3849e03c7a80dfe platform_os/studio/verification/contracts/browser/ExpenseStateFilters.contract.mjs
+COMMITTED_BLOB_SHA256=Gystigo 8afde3910f17f6ce7c939749e10b979cd4561a4130b0d35b8a63e55413ad065e platform_os/studio/verification/contracts/browser/ExpensesUixCompliance.contract.mjs
+COMMITTED_BLOB_SHA256=Gystigo 6a019400edd0f3577273de267826caec5165f4aeabc599caf756c4b91272d4a0 platform_os/studio/verification/contracts/browser/ResponsibleCanonicalPerson.contract.mjs
+COMMITTED_BLOB_SHA256=Gystigo ca885c5756b816b154649a7f9e67cc8aa8f0ba6bc3cfc84f743d842b36919bd9 platform_os/studio/verification/integration/browser/expenses-uix/fixture.jsx
+FABRIC_STAGED_BLOB_SHA256=Fabric 6b2efe4f73eaafe30ee03ba1c0d2ac29ca196489fb30053afc96b25aab846592 Knowledge/00-GYPPORT-UNIVERSE/steps/GM-EXPENSES-RELEASE-READINESS/GM_EXPENSES_CASE_CARD_FINAL_HEADER_ALIGNMENT_15.md
+FABRIC_STAGED_BLOB_SHA256=Fabric fa55327178162bebd7fd921ae2ae28df2a18977ceffbc77eae396ac778275242 Knowledge/00-GYPPORT-UNIVERSE/steps/GM-EXPENSES-RELEASE-READINESS/GM_EXPENSES_CASE_LEVEL_RENDITION_CANONICALIZATION_11.md
+FABRIC_STAGED_BLOB_SHA256=Fabric 7d86f42a59fa611ac81bb6b5e83bf60148e0ace4930e60618900884570736fa0 Knowledge/00-GYPPORT-UNIVERSE/steps/GM-EXPENSES-RELEASE-READINESS/GM_EXPENSES_CLOSED_PROGRESS_AND_MULTIPLE_ADVANCES_FIX_10.md
+FABRIC_STAGED_BLOB_SHA256=Fabric 01e1c7536c5b61590038d6784a186007704f179efc5c159d45f45fd836c1feda Knowledge/00-GYPPORT-UNIVERSE/steps/GM-EXPENSES-RELEASE-READINESS/GM_EXPENSES_FINAL_DEBT_AND_COMMIT_READINESS_AUDIT_16.md
+FABRIC_STAGED_BLOB_SHA256=Fabric f4f73a8ddce714fd08bdc87f162db81c6658ec13703b06bd8559f847753723a4 Knowledge/00-GYPPORT-UNIVERSE/steps/GM-EXPENSES-RELEASE-READINESS/GM_EXPENSES_MVP_CONTROLLED_COMMIT_GATE_17.md
+FABRIC_STAGED_BLOB_SHA256=Fabric 69b883cc853041e824673adc060bc1c90c6cf1c998b0d700428fe40a94f419cc Knowledge/00-GYPPORT-UNIVERSE/steps/GM-EXPENSES-RELEASE-READINESS/GM_EXPENSES_MVP_FINAL_RELEASE_CONSOLIDATION_07.md
+FABRIC_STAGED_BLOB_SHA256=Fabric 6b7701f1a309ff58453f992b6d5588ef00c7fe513299be250e9e364daf9790a7 Knowledge/00-GYPPORT-UNIVERSE/steps/GM-EXPENSES-RELEASE-READINESS/GM_EXPENSES_RUNTIME_REHEARSAL_FINAL_12.md
+FABRIC_STAGED_BLOB_SHA256=Fabric 02165337dffc33fcc33f5529ff5406552fa3545dc3b814b01f2f208bd7e66881 Knowledge/00-GYPPORT-UNIVERSE/steps/GM-EXPENSES-RELEASE-READINESS/GYPPORT_FINAL_PRECOMMIT_AUDIT_AND_UI_ALIGNMENT_14.md
+FABRIC_STAGED_BLOB_SHA256=Fabric 367632e24d794f7b37c27396ba56d3b31c52293efcdee9e59fb787efddd84043 Knowledge/00-GYPPORT-UNIVERSE/steps/GM-EXPENSES-RELEASE-READINESS/GYPPORT_PRE_COMMIT_ENV_UI_AUDIT_HARDENING_13.md
+FABRIC_STAGED_BLOB_SHA256=Fabric d87501dd56962e2196405dbf1b54f9efda3fc1a5cb02f87505eff13b18a9fb2d Knowledge/gm-expenses/01-domain/GYPPORT_GM_EXPENSES_DOMAIN_BASELINE_v1.0.md
+FABRIC_STAGED_BLOB_SHA256=Fabric 528fdb8bfa09f586135088a258b35bca3aa98e7a8887af4d8ad6415bf8e6734d Knowledge/gm-expenses/02-persistence/GYPPORT_GM_EXPENSES_PERSISTENCE_BASELINE_v1.0.md
+FABRIC_STAGED_BLOB_SHA256=Fabric 423ad95b9492fd0ee0e0036ce039fd3b95128606aa958300334c32419ef35b41 gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/CASE-CARD-FINAL-HEADER-ALIGNMENT-15-2026-09-17/CASE_CARD_FINAL_HEADER_ALIGNMENT_15_EVIDENCE_2026-09-17.md
+FABRIC_STAGED_BLOB_SHA256=Fabric 2cf18403909542f775d9ce5a0cddb9366de17b89eb1fb59ca83d0063ceb33b8b gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/CASE-LEVEL-RENDITION-CANONICALIZATION-11-2026-09-16/CASE_LEVEL_RENDITION_CANONICALIZATION_11_EVIDENCE_2026-09-16.md
+FABRIC_STAGED_BLOB_SHA256=Fabric 4450b4781b485fe265196ce866b0b16c79359b5b4926e9f462883d3e3228b621 gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/CASE-LEVEL-RENDITION-CANONICALIZATION-11-2026-09-16/s11-host-package.log
+FABRIC_STAGED_BLOB_SHA256=Fabric f602ab415ec8a3b54ab7102849c2d51c35b234dc116c47c6967f4cc8a643334c gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/CASE-LEVEL-RENDITION-CANONICALIZATION-11-2026-09-16/s11-host-permission-unit.log
+FABRIC_STAGED_BLOB_SHA256=Fabric 099ea457b6093d4f88112bebacb4b718315372acf2ad186fb782cc366af7f603 gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/CASE-LEVEL-RENDITION-CANONICALIZATION-11-2026-09-16/s11-host-realdb-result.json
+FABRIC_STAGED_BLOB_SHA256=Fabric d27421b2b77b5651463b1161955ceddc2799292c4683c1a5abe21da1e9b26f18 gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/CASE-LEVEL-RENDITION-CANONICALIZATION-11-2026-09-16/s11-legacy-impact-results.txt
+FABRIC_STAGED_BLOB_SHA256=Fabric 0220f1dd90b72f79e51e00159a41b5cdab3453ad67a0161cccab8f70a01d3ae4 gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/CASE-LEVEL-RENDITION-CANONICALIZATION-11-2026-09-16/s11-legacy-impact.sql
+FABRIC_STAGED_BLOB_SHA256=Fabric c5a4aa5b7a03fc03d5968950ad0f84db142918b24f1a2a987ae883e8e8abb360 gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/CASE-LEVEL-RENDITION-CANONICALIZATION-11-2026-09-16/s11-legacy-links.sql
+FABRIC_STAGED_BLOB_SHA256=Fabric e0d35ce0d12916c07ca8b3ee84705027b095167d278a2c76751b285ae7380296 gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/CASE-LEVEL-RENDITION-CANONICALIZATION-11-2026-09-16/s11-module-install.log
+FABRIC_STAGED_BLOB_SHA256=Fabric 8aebf2b3f9c199c6e99ba74fa308cd750413fc1f9c72b34515022090e07f18f4 gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/CASE-LEVEL-RENDITION-CANONICALIZATION-11-2026-09-16/s11-runtime-smoke-results.txt
+FABRIC_STAGED_BLOB_SHA256=Fabric 344aae4076e721dadcf0c108885c3b50079eaf92c9de55855a1732c2eeee05f2 gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/CASE-LEVEL-RENDITION-CANONICALIZATION-11-2026-09-16/s11-runtime-smoke.ps1
+FABRIC_STAGED_BLOB_SHA256=Fabric 4e20a7452c9b9f1af3c95c5328f4cb7eda9efc1142f32338003fe9b90bae82a1 gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/CASE-LEVEL-RENDITION-CANONICALIZATION-11-2026-09-16/s11-studio-contracts.log
+FABRIC_STAGED_BLOB_SHA256=Fabric 5f54b130c9d53bfbc85fcd89b084809be26e1e5f7f6dbb5c2f0eefb79cdfd7e8 gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/CLOSED-PROGRESS-AND-MULTIPLE-ADVANCES-FIX-10-2026-09-16/CLOSED_PROGRESS_AND_MULTIPLE_ADVANCES_FIX_10_EVIDENCE_2026-09-16.md
+FABRIC_STAGED_BLOB_SHA256=Fabric 624d4f0ce1f6806aa990c176520fb52d600881756a4e3b7fe7a3b2763d2c1e4f gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/CLOSED-PROGRESS-AND-MULTIPLE-ADVANCES-FIX-10-2026-09-16/s10-host-package.log
+FABRIC_STAGED_BLOB_SHA256=Fabric 555f548b34133a50746bab265680b7edd73da1362c1b287f34dd3cd5be77827e gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/CLOSED-PROGRESS-AND-MULTIPLE-ADVANCES-FIX-10-2026-09-16/s10-host-realdb-result.json
+FABRIC_STAGED_BLOB_SHA256=Fabric bdeea2f5f61702da85b7730b92c1c0964bd5ff6de485e0ed96c35c9f33d337fc gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/CLOSED-PROGRESS-AND-MULTIPLE-ADVANCES-FIX-10-2026-09-16/s10-module-install.log
+FABRIC_STAGED_BLOB_SHA256=Fabric 61f12016ed5fb065eb7e0e7b59b464d5190ee1c805598f689a251785835fc3b3 gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/CLOSED-PROGRESS-AND-MULTIPLE-ADVANCES-FIX-10-2026-09-16/s10-runtime-smoke-results.txt
+FABRIC_STAGED_BLOB_SHA256=Fabric 6626c1a9f973b7696be72f75767fafbabb5236ec3e2f6741611e5ead679111e7 gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/CLOSED-PROGRESS-AND-MULTIPLE-ADVANCES-FIX-10-2026-09-16/s10-runtime-smoke.ps1
+FABRIC_STAGED_BLOB_SHA256=Fabric 86f28e3cf070077e5a67ed45212c18a040594777b9ee8c14e838ad62c1aacd42 gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/FINAL-PRECOMMIT-AUDIT-AND-UI-ALIGNMENT-14-2026-09-17/FINAL_PRECOMMIT_AUDIT_AND_UI_ALIGNMENT_14_EVIDENCE_2026-09-17.md
+FABRIC_STAGED_BLOB_SHA256=Fabric 9127a2ff38ca24d3065c075ad611c2c58b6394ce88c6446da81261f1dc2d733d gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/FINAL-PRECOMMIT-AUDIT-AND-UI-ALIGNMENT-14-2026-09-17/audit-architecture-verification.txt
+FABRIC_STAGED_BLOB_SHA256=Fabric ca5f39114420557e6b90f252658fce50b52a5aae1fd156afb8d04bedb3bdeb73 gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/FINAL-PRECOMMIT-AUDIT-AND-UI-ALIGNMENT-14-2026-09-17/cleanup-audit-record-3310-output.txt
+FABRIC_STAGED_BLOB_SHA256=Fabric d9d35fa105ea712d4a86977a6cff11d3a90e238db3a96552dcd942ebec4cb216 gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/FINAL-PRECOMMIT-AUDIT-AND-UI-ALIGNMENT-14-2026-09-17/cleanup-audit-record-3310.sql
+FABRIC_STAGED_BLOB_SHA256=Fabric 11a05b93d7cb883abf8409bbf33e7dcb46f1013a75676143396cb9bddab3b892 gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/FINAL-PRECOMMIT-AUDIT-AND-UI-ALIGNMENT-14-2026-09-17/host-realdb-result.json
+FABRIC_STAGED_BLOB_SHA256=Fabric 33a6c0fd72217dc35b662d106556ffe0ade7258c87fd93145997687009853b89 gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/FINAL-PRECOMMIT-AUDIT-AND-UI-ALIGNMENT-14-2026-09-17/host-realdb-surefire-summary.txt
+FABRIC_STAGED_BLOB_SHA256=Fabric 5e9029395d9a7eb45e8ecc6460ec457eca844cb9986b62216f205aba9abd6e9a gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/FINAL-PRECOMMIT-AUDIT-AND-UI-ALIGNMENT-14-2026-09-17/studio-case-card-layout-verification.txt
+FABRIC_STAGED_BLOB_SHA256=Fabric e1cb82550f00bb001ff537f957bfa3b092b9ee63b493fb73a6bae36dce5c1975 gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/FINAL-PRECOMMIT-AUDIT-AND-UI-ALIGNMENT-14-2026-09-17/tracked-launcher-verification.txt
+FABRIC_STAGED_BLOB_SHA256=Fabric 1ab7498fd553246975a643a7a2e01bba142298cf8cebadb7d203f4d8b754ca6d gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/MVP_FINAL_RELEASE_CONSOLIDATION_07_EVIDENCE_2026-09-16.md
+FABRIC_STAGED_BLOB_SHA256=Fabric 7c99df909dc331b597be67b5f12aa9d3330ae9e0d82f3cf175b50498086a15b9 gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/PRE-COMMIT-ENV-UI-AUDIT-HARDENING-13-2026-09-17/PRE_COMMIT_ENV_UI_AUDIT_HARDENING_13_EVIDENCE_2026-09-17.md
+FABRIC_STAGED_BLOB_SHA256=Fabric 954ca2daef709cc15d493e38e0da3c3c81c7e411f05dc1e88522b3ce4a82c142 gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/PRE-COMMIT-ENV-UI-AUDIT-HARDENING-13-2026-09-17/env-scope-audit-before-removal.txt
+FABRIC_STAGED_BLOB_SHA256=Fabric ada82938b7acd860a9a6c5be7b2cbf8b8d40f3df42478764ef88c103213cb3e9 gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/PRE-COMMIT-ENV-UI-AUDIT-HARDENING-13-2026-09-17/gm-expenses-module-tests-summary.txt
+FABRIC_STAGED_BLOB_SHA256=Fabric 7b0ca7730711cfea7e17552e796177c28c2360e233e5f08aa5d8599c1e36778f gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/PRE-COMMIT-ENV-UI-AUDIT-HARDENING-13-2026-09-17/host-realdb-result.json
+FABRIC_STAGED_BLOB_SHA256=Fabric d70ea05b8cb1e1f52e8cd93d5989ddc2b23528a76417c6fe0c03a8bd5c25d914 gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/PRE-COMMIT-ENV-UI-AUDIT-HARDENING-13-2026-09-17/host-realdb-surefire-summary.txt
+FABRIC_STAGED_BLOB_SHA256=Fabric 573cff6d0cb558c6da7d9979d2400dd4ea0bb591ca701c2afacbc66857af995e gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/PRE-COMMIT-ENV-UI-AUDIT-HARDENING-13-2026-09-17/known-test-expense-cleanup-3310-output.txt
+FABRIC_STAGED_BLOB_SHA256=Fabric 344e48bd421349fcf9fcdf31644c2dd4d9da87e5337f264e2797606e61a47ff5 gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/PRE-COMMIT-ENV-UI-AUDIT-HARDENING-13-2026-09-17/known-test-expense-cleanup-3310.sql
+FABRIC_STAGED_BLOB_SHA256=Fabric 7768e164fa047d1cdefb5afbc78c611b58e67085703a41861354c2eb17d173b2 gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/PRE-COMMIT-ENV-UI-AUDIT-HARDENING-13-2026-09-17/known-test-expense-command-receipts-3310.txt
+FABRIC_STAGED_BLOB_SHA256=Fabric 051d47fc4030820f1fc0bf6d3bf4abffdf6dfb38e6d46ba6342c1645c629a988 gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/PRE-COMMIT-ENV-UI-AUDIT-HARDENING-13-2026-09-17/launcher-guard-mutation-tests.ps1
+FABRIC_STAGED_BLOB_SHA256=Fabric f45ca33664aa018cc7f0d55950b4fd4f7d8639e48ad995e8721e842676380826 gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/PRE-COMMIT-ENV-UI-AUDIT-HARDENING-13-2026-09-17/launcher-guard-mutation-tests.txt
+FABRIC_STAGED_BLOB_SHA256=Fabric 0d9da4b264cf399385b7e70028205758a3df641c4ea3fd9c6a165d12db2b568c gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/PRE-COMMIT-ENV-UI-AUDIT-HARDENING-13-2026-09-17/launcher-output-2026-09-17T125330Z.txt
+FABRIC_STAGED_BLOB_SHA256=Fabric 40fa2ce92a5511b6ae8653484dc682dc241bb83d716a21369cdf677b1f9adbb9 gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/PRE-COMMIT-ENV-UI-AUDIT-HARDENING-13-2026-09-17/local-runtime-verification-2026-09-17T1253Z.txt
+FABRIC_STAGED_BLOB_SHA256=Fabric 3f5a4290d671fc12de4e2e90ba8e519a41550ced7b56d60d89553d101b8b2857 gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/PRE-COMMIT-ENV-UI-AUDIT-HARDENING-13-2026-09-17/plain-process-env-probe-after-removal.txt
+FABRIC_STAGED_BLOB_SHA256=Fabric ca5a869a3853415a3dd5168c4f92510983a83b9e31d565df6abc81846259263b gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/PRE-COMMIT-ENV-UI-AUDIT-HARDENING-13-2026-09-17/plain-process-env-probe-before-removal.txt
+FABRIC_STAGED_BLOB_SHA256=Fabric 5285283a7023f309675e8ee6a85c9e800169904c73c67b64b84c79ff6fa62b59 gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/PRE-COMMIT-ENV-UI-AUDIT-HARDENING-13-2026-09-17/plain-process-env-probe.ps1
+FABRIC_STAGED_BLOB_SHA256=Fabric f9ca03ecea223560ce21b897060982ed0033836e56a6dfbf66c9970316edb013 gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/PRE-COMMIT-ENV-UI-AUDIT-HARDENING-13-2026-09-17/review-history-schema-audit-3310.txt
+FABRIC_STAGED_BLOB_SHA256=Fabric aed5087d55892aeaae2737a5759a4a663cf892802be7034aba86540f945e618e gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/PRE-COMMIT-ENV-UI-AUDIT-HARDENING-13-2026-09-17/start-runtime-local.hardened.ps1
+FABRIC_STAGED_BLOB_SHA256=Fabric cb871050c7ba4096a8f9df243814fc0c8d1caf660d02ea5925e7359978d2a48f gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/PRE-COMMIT-ENV-UI-AUDIT-HARDENING-13-2026-09-17/studio-dual-indicators-verification.txt
+FABRIC_STAGED_BLOB_SHA256=Fabric 573e447612b7a6f96528f7ce50d050cc627becbbdc2323cc89dd149c49cfdaa0 gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/RUNTIME-REHEARSAL-03-2026-09-16/RUNTIME_REHEARSAL_03_EVIDENCE_2026-09-16.md
+FABRIC_STAGED_BLOB_SHA256=Fabric 2ab522eefad2b76dac04c11532c5b1f3a4bf4888b309c42a1c364eb1fe3f1307 gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/RUNTIME-REHEARSAL-03-2026-09-16/r03-container-name.txt
+FABRIC_STAGED_BLOB_SHA256=Fabric 46912e2af68ba5ef65f49895333a18be6037e3fe1e7cbfe466d58233cd4fae7f gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/RUNTIME-REHEARSAL-03-2026-09-16/r03-copy-counts-before.txt
+FABRIC_STAGED_BLOB_SHA256=Fabric 46912e2af68ba5ef65f49895333a18be6037e3fe1e7cbfe466d58233cd4fae7f gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/RUNTIME-REHEARSAL-03-2026-09-16/r03-dev-counts.txt
+FABRIC_STAGED_BLOB_SHA256=Fabric 71f8a06c2c1f23dafb785ffe69cf39d1a4f75f3f1e1a9c287238bb587d88c167 gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/RUNTIME-REHEARSAL-03-2026-09-16/r03-host-package.log
+FABRIC_STAGED_BLOB_SHA256=Fabric 6ea438894834235b77658fbde76a86420ba9239840bbe1d9bb56b2ec3f8a7cf1 gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/RUNTIME-REHEARSAL-03-2026-09-16/r03-module-install.log
+FABRIC_STAGED_BLOB_SHA256=Fabric 91ff3d4be9fc62bb37026f88817e75458a22d5c64f78ae66337a716303b0910f gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/RUNTIME-REHEARSAL-03-2026-09-16/r03-module-test.log
+FABRIC_STAGED_BLOB_SHA256=Fabric 1098a60d987fc936de5f58a568ec2f20475e49e02672e7f97a5fe78d7f80af5d gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/RUNTIME-REHEARSAL-03-2026-09-16/r03-postmigration-results.txt
+FABRIC_STAGED_BLOB_SHA256=Fabric 47b706813b917ac8e2c0783c8f08a76fc0016da98092a0d60f87d1c4c9cfb528 gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/RUNTIME-REHEARSAL-03-2026-09-16/r03-postmigration.ps1
+FABRIC_STAGED_BLOB_SHA256=Fabric 89349a9fca082bf0f01ba487b3984a122d27c32497ea4e20b647b71d96a9637c gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/RUNTIME-REHEARSAL-03-2026-09-16/r03-premigration-records.txt
+FABRIC_STAGED_BLOB_SHA256=Fabric b737d9f05d693a82d8136d619a5c88cf0a060db22342e18830a82b0731ab9118 gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/RUNTIME-REHEARSAL-03-2026-09-16/r03-premigration.sql
+FABRIC_STAGED_BLOB_SHA256=Fabric 313785869b925509ff1854d03c0a1bedbfb805d02d3e6bfb63d06801077e8a25 gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/RUNTIME-REHEARSAL-03-2026-09-16/r03-runtime-smoke-results.txt
+FABRIC_STAGED_BLOB_SHA256=Fabric a5f4c64da1d7fb4d277ded2a459be49e249e128ddc5dda25a105b3aec3a4a4d7 gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/RUNTIME-REHEARSAL-03-2026-09-16/r03-runtime-smoke.ps1
+FABRIC_STAGED_BLOB_SHA256=Fabric 920ebc01b8a978c4a55666d7c6187fb43674b50e924ed4cd0e7f6f24ff435ac7 gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/RUNTIME-REHEARSAL-03-2026-09-16/r03-start-backend.ps1
+FABRIC_STAGED_BLOB_SHA256=Fabric 4a6c77113fe57f85401988fe11b5b9696f1f5ce2b77d01d209918272bc57a6d0 gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/RUNTIME-REHEARSAL-03-2026-09-16/r03-studio-contracts.log
+FABRIC_STAGED_BLOB_SHA256=Fabric 9b3456a93c4495839c5a598f3813859bf8bcc7e2c15bf767f7f4838d0de22d00 gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/RUNTIME-REHEARSAL-FINAL-12-2026-09-17/RUNTIME_REHEARSAL_FINAL_12_EVIDENCE_2026-09-17.md
+FABRIC_STAGED_BLOB_SHA256=Fabric 78d08d5416d3f0a79739aff99220289957fdd455323836c8366c48ab7117b443 gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/RUNTIME-REHEARSAL-FINAL-12-2026-09-17/f12-access-log-summary.txt
+FABRIC_STAGED_BLOB_SHA256=Fabric 3ece45778607f897626e9f58212d26fcfaab2a43e7b5b56429df507f93fe4e47 gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/RUNTIME-REHEARSAL-FINAL-12-2026-09-17/f12-card-payload.json
+FABRIC_STAGED_BLOB_SHA256=Fabric b3a736946737d9ac068e540d4219d325b65aac55782f0802e38f22f8b4dac0a8 gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/RUNTIME-REHEARSAL-FINAL-12-2026-09-17/f12-copy-before-columns.txt
+FABRIC_STAGED_BLOB_SHA256=Fabric c20268c28bbf559c79ae0660c09b32248d5641f0a326f8c9320ec07cafb10259 gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/RUNTIME-REHEARSAL-FINAL-12-2026-09-17/f12-copy-before-counts.txt
+FABRIC_STAGED_BLOB_SHA256=Fabric 66b310411001d30d192bb6effc8d3e7d931f7268473a2780782a5ff962c02335 gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/RUNTIME-REHEARSAL-FINAL-12-2026-09-17/f12-copy-before-expenses-crc.txt
+FABRIC_STAGED_BLOB_SHA256=Fabric 95146c49e45bdede037510db2a2cf42663e45fcaeb69dfd6c84e5a4f87fab181 gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/RUNTIME-REHEARSAL-FINAL-12-2026-09-17/f12-copy-before-flyway.txt
+FABRIC_STAGED_BLOB_SHA256=Fabric 988ca5b85138e06765c7a4a31746388d170a26dee42b96c7f9714a68fd97b846 gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/RUNTIME-REHEARSAL-FINAL-12-2026-09-17/f12-copy-before-triggers.txt
+FABRIC_STAGED_BLOB_SHA256=Fabric 95146c49e45bdede037510db2a2cf42663e45fcaeb69dfd6c84e5a4f87fab181 gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/RUNTIME-REHEARSAL-FINAL-12-2026-09-17/f12-dev-after-copy-flyway.txt
+FABRIC_STAGED_BLOB_SHA256=Fabric b3a736946737d9ac068e540d4219d325b65aac55782f0802e38f22f8b4dac0a8 gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/RUNTIME-REHEARSAL-FINAL-12-2026-09-17/f12-dev-columns.txt
+FABRIC_STAGED_BLOB_SHA256=Fabric c20268c28bbf559c79ae0660c09b32248d5641f0a326f8c9320ec07cafb10259 gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/RUNTIME-REHEARSAL-FINAL-12-2026-09-17/f12-dev-counts.txt
+FABRIC_STAGED_BLOB_SHA256=Fabric 66b310411001d30d192bb6effc8d3e7d931f7268473a2780782a5ff962c02335 gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/RUNTIME-REHEARSAL-FINAL-12-2026-09-17/f12-dev-expenses-crc.txt
+FABRIC_STAGED_BLOB_SHA256=Fabric 95146c49e45bdede037510db2a2cf42663e45fcaeb69dfd6c84e5a4f87fab181 gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/RUNTIME-REHEARSAL-FINAL-12-2026-09-17/f12-dev-flyway.txt
+FABRIC_STAGED_BLOB_SHA256=Fabric c8321f79cb939ce70c3b7b2a707f9ecf7b0dace3a2ce191c10d2f039bd334707 gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/RUNTIME-REHEARSAL-FINAL-12-2026-09-17/f12-dev-legacy.txt
+FABRIC_STAGED_BLOB_SHA256=Fabric e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/RUNTIME-REHEARSAL-FINAL-12-2026-09-17/f12-dev-routines.txt
+FABRIC_STAGED_BLOB_SHA256=Fabric 988ca5b85138e06765c7a4a31746388d170a26dee42b96c7f9714a68fd97b846 gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/RUNTIME-REHEARSAL-FINAL-12-2026-09-17/f12-dev-triggers.txt
+FABRIC_STAGED_BLOB_SHA256=Fabric d24bb79b190883901fc674aa41de7edf081529587ea50ea3a14441608a1b65cd gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/RUNTIME-REHEARSAL-FINAL-12-2026-09-17/f12-host-package.log
+FABRIC_STAGED_BLOB_SHA256=Fabric 5206a5de9fa338f46b040a0954b3de9c43bb57eb0caaaf1c872ed247cd570317 gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/RUNTIME-REHEARSAL-FINAL-12-2026-09-17/f12-jar-proof.ps1
+FABRIC_STAGED_BLOB_SHA256=Fabric b9c7d5ba821c1e78b0b3950c1809053859a3100b08c7616de7cc5899c1812b87 gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/RUNTIME-REHEARSAL-FINAL-12-2026-09-17/f12-jar-proof.txt
+FABRIC_STAGED_BLOB_SHA256=Fabric e6af8203f911254debf3e93f22a54f72b9e71f6c0bf80f2435baf32b60de3f0f gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/RUNTIME-REHEARSAL-FINAL-12-2026-09-17/f12-legacy.sql
+FABRIC_STAGED_BLOB_SHA256=Fabric c48c5ae24ee68837e34fe507a44070f0378237d8b501fc43d0e83ceaafecad71 gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/RUNTIME-REHEARSAL-FINAL-12-2026-09-17/f12-migration-log-extract.txt
+FABRIC_STAGED_BLOB_SHA256=Fabric 7ba8aef89b6e56c3f09b14530388c5c8325b434ab6e346e6afa0f12e8bec8d31 gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/RUNTIME-REHEARSAL-FINAL-12-2026-09-17/f12-module-install.log
+FABRIC_STAGED_BLOB_SHA256=Fabric 32d15b8e8329d371a733686293b3d19746331fb6fdd5a4d47d45463f6c052711 gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/RUNTIME-REHEARSAL-FINAL-12-2026-09-17/f12-postmigration-results.txt
+FABRIC_STAGED_BLOB_SHA256=Fabric cb7a6909c6d97445bdfb86625aa8ae3a5d58bc88fb34159ff9e15459b9918555 gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/RUNTIME-REHEARSAL-FINAL-12-2026-09-17/f12-postmigration.ps1
+FABRIC_STAGED_BLOB_SHA256=Fabric d26f08761fd780b7ddc86ce8f1182ea1059d2c44cb25b4a247b5cb6620955b12 gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/RUNTIME-REHEARSAL-FINAL-12-2026-09-17/f12-rows-check-results.txt
+FABRIC_STAGED_BLOB_SHA256=Fabric 9016f0f059ebc5d6837b74b6abc79f4c1bda6dbfed75a30a9fd38153ff074a9f gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/RUNTIME-REHEARSAL-FINAL-12-2026-09-17/f12-rows-check.sql
+FABRIC_STAGED_BLOB_SHA256=Fabric d84adc1b9a14ece446ebcbe4aa9f185c7920c1466164620125cfb2f5b9f74a8d gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/RUNTIME-REHEARSAL-FINAL-12-2026-09-17/f12-runtime-smoke-results.txt
+FABRIC_STAGED_BLOB_SHA256=Fabric 572fcade659d426004d4f55f9ddb36c2ddd8d6b81d547df94cd46d29acfb95de gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/RUNTIME-REHEARSAL-FINAL-12-2026-09-17/f12-runtime-smoke.ps1
+FABRIC_STAGED_BLOB_SHA256=Fabric 1fcece0064b14fa0bb74bf5d3ff6d698963a86f36e9b448b5378e96e308e9341 gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/RUNTIME-REHEARSAL-FINAL-12-2026-09-17/f12-snapshot.sh
+FABRIC_STAGED_BLOB_SHA256=Fabric 143e28b7ef319ae081197705e41a906abeb15a445f08426344469e00536eb43e gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/RUNTIME-REHEARSAL-FINAL-12-2026-09-17/f12-start-backend.ps1
+FABRIC_STAGED_BLOB_SHA256=Fabric 09c2890b090f451671277b2b0ffdf984a5869ff8c01cdc343531e437c05c7d1d gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/RUNTIME-REHEARSAL-FINAL-12-2026-09-17/f12-studio-contracts-full.log
+FABRIC_STAGED_BLOB_SHA256=Fabric 36ad5ec712bcf8fc98112ce5a6d3a1789e33ea75e72ddd74b2a7e71493134253 gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/evidence/RUNTIME-REHEARSAL-FINAL-12-2026-09-17/f12-zero-tenant-period-summary.json
+FABRIC_STAGED_BLOB_SHA256=Fabric 22d3bfc50a10b8c38721c022f6769749372d3e5d7dbf364601b86ee570f639a4 gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/handoffs/SHARED_DEV_MIGRATION_V43_V63_PLAN_2026-09-16.md
+SECRET_SCAN_PRE_COMMIT=CLEAN (230 blobs; live credential values compared in memory, never printed; 16 benign pattern hits: synthetic test and smoke passwords, PRESENT/ABSENT markers, phrase mentions without values)
+UNRELATED_WIP_EXCLUDED=Gystigo 5 (README.md deletion, AuthPage.css, onboarding/ShortRegisterPage.jsx, fixtures/HeaderBrandingFixture.jsx, fixtures/header-branding.html); Fabric 31 (Knowledge/AI, Architecture, Derived, Security, UIX, gm-accounting, gm-expenses README.md, 03-application, 04-integration, 05-implementation)
+NOT_COMMITTED_RUNTIME_OUTPUT=target/runtime-local (11 document copies, 9 runtime jars, logs, access logs, backend.pid), dumps, .env and generated passwords
+LOCAL_RUNTIME=restored after the pinned-port test: backend on 127.0.0.1:8080 with jar ecd17c12f8af against 127.0.0.1:3310/gypport_runtime_local at V63
+KNOWN_NON_BLOCKING_DEBT=ERROR_DISPATCH_404_MASKED_AS_401 for unmapped routes (SecurityConfig unchanged since 59bd77f); expenses endpoints return their own 404
+KNOWN_NON_BLOCKING_DEBT=audit_logs has no application writer and no append-only triggers; ADR-0010 is PROPOSED (separate foundation)
+KNOWN_NON_BLOCKING_DEBT=Shared DEV legacy data not regularized: 1 OBSERVADO expense without OBSERVED event (5E63494A...), 3 CERRADO settlements on EN_RENDICION advances (Case 0BA391C4), 16 draft advances, 3 advances outside a Case, 4 expenses without a Case (separate Owner STEP)
+KNOWN_NON_BLOCKING_DEBT=Studio shell topbar reaches 336px at a 320px viewport (shell layout, pre-existing)
+KNOWN_NON_BLOCKING_DEBT=the Case and settlement API still return the raw closedBy account id; Studio never displays it
+KNOWN_NON_BLOCKING_DEBT=11 local runtime document copies live under target/runtime-local/documents and are deleted by mvn clean; the originals are in Docker volume gypport_expense_documents_dev_data (environment track)
+KNOWN_NON_BLOCKING_DEBT=the official DEV backend image gystigo-backend:4.1.0-java25 is stale; rebuild it from the accepted commits for the Shared DEV migration
+KNOWN_NON_BLOCKING_DEBT=PersonIdentityReconciliationHttpTest and GmFleetsHttpApiTest pin 127.0.0.1:3310, now the local runtime database port; running them requires pausing the local runtime (pre-existing since 2026-08-31)
+KNOWN_NON_BLOCKING_DEBT=runtime logs under target/runtime-local hold Spring generated security password lines; they are ignored and never promoted
+KNOWN_NON_BLOCKING_DEBT=gm-operational-resources and gm-banking integrations are later foundations
+KNOWN_NON_BLOCKING_DEBT=BoxGhost evidence folders and stored prompts are missing for the early track STEPs (reconciliation 01 to STEP 06); their decisions live in Reglas.md
+```
+
+## Architecture invariants
+
+```text
+EXPENSE_CASE=center of funding and rendition
+ADVANCES_PER_CASE=MULTIPLE_VALID (any number, also in the same currency)
+EXPENSES_BELONG_TO=EXPENSE_CASE
+RENDITION=CASE_LEVEL, one per currency
+CASE_BALANCE=delivered + reimbursed - justified - returned - authorized adjustments
+JUSTIFIED_TOTAL=APROBADO expenses of the Case; 0 while no advance is delivered
+FIFO=NON_CANONICAL, no compatibility code
+RETURN_REIMBURSEMENT_RECONCILE=Case commands per currency; none names an advance
+RECONCILE_REQUIRES_CASE_BALANCE_ZERO=YES
+PER_ADVANCE_RENDITION_API_FOR_CASE_ADVANCES=REFUSED, reads included
+CLOSE_CASE_CLOSES=every reconciled rendition row and every advance of the Case, in the same transaction
+ADVANCE_SETTLEMENT_ROWS=technical carriers, not authoritative
+RETURN_AND_REIMBURSEMENT_COEXIST=YES (V63 unified equation)
+DELIVERY_PLAN=fixed at registration (V62); a request may repeat it but never change it
+DELIVERY_CONFIRMED_BY=the authenticated account; no chosen deliverer or receiver
+RECHAZADO=FINAL
+OBSERVADO_REQUIRES_OBSERVED_EVENT=YES, in the same transaction
+EXPENSES_HISTORY=append-only (16 BEFORE UPDATE or DELETE guards on 8 tables)
+GLOBAL_AUDIT_LOGS_WRITER=NOT_IMPLEMENTED (ADR-0010 PROPOSED); no parallel audit architecture and no V64
+CARD_CONCILIADO=one per Case in the header; 100% only when closed without pending amounts
+CARD_USO=one per currency in Finanzas; the text keeps the real percentage, the fill stops at 100%
+REPORTS_WITHOUT_DELIVERED_ADVANCE=numeric zeros, never No aplica
+LOCAL_RUNTIME_LAUNCHER=Gystigo/platform_os/server/scripts/start-runtime-local.ps1; refuses 3308, gypport-mysql-dev and core_business_dev
+FINAL_MIGRATION_HEAD=V63
+```
+
+## Known pre-existing debts
+
+```text
+KNOWN_PREEXISTING_FAILURES=0
+```
+
+## Reuse contract
+
+```text
+BASELINE_FOUND=YES
+BASELINE_ID=GYPPORT-GM-EXPENSES-MVP-RELEASE-VERIFIED-BASELINE-2026-09-17
+BASELINE_REUSE_DECISION=REUSE|PARTIAL_INVALIDATION|FULL_INVALIDATION
+BASELINE_REUSE_REASON=<short evidence-based reason>
+```
+
+REUSE means `FULL_HISTORICAL_REGRESSION_RERUN=NO`: the new STEP runs only its own tests, impact-selected tests
+and the required integration smoke. The decision is proven from repository ancestry, path and contract impact,
+migration semantics and current Owner decisions. A complete historical regression is never selected merely
+"to be safe".
+
+## Baseline invalidation triggers
+
+- a migration after V63 changes expense, expense_case, expense_advance, advance_settlement or an expenses history table, or the V62/V63 constraints
+- an advance-level rendition, a FIFO or per-advance allocation of approved expenses, or a one-active-advance rule is reintroduced
+- Cerrar expediente stops closing the reconciled rendition rows and advances in one transaction, or Conciliar accepts a non-zero Case balance
+- a review decision can persist without its history event, or an expenses history table loses its append-only guard
+- the Case card moves Conciliado out of the header or Uso out of Finanzas, or reports stop using numeric zeros
+- the tracked local launcher loses its Shared DEV guard
+- the Shared DEV V43 to V63 migration produces a schema or data different from the FINAL_12 rehearsal
+- the gm-expenses Host adaptation to MyProfileService.getProfile(tenantId, userAccountId) changes
+
+An invalidation does not by itself require a full rerun: impact analysis selects the smallest sufficient
+verification scope.
+
+## Closeout
+
+```text
+STATUS=OWNER_ACCEPTED_COMMITTED_LOCAL
+GENERATED_BY=Fabric/tools/verification/New-GypportVerifiedBaseline.ps1
+GENERATOR_MODE=GENERATE_ONLY
+GENERATOR_APPROVAL=NONE
+OWNER_REVIEW_REQUIRED=YES
+AUTO_START_NEXT_STEP=NO
+COMMIT_PERFORMED_BY_GENERATOR=NO
+PUSH_PERFORMED=NO
+```

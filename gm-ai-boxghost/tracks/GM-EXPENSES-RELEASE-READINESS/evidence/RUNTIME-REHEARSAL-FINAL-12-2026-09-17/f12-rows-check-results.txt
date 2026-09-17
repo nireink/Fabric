@@ -1,0 +1,8 @@
+scope	rows_count	closed_rows	justified	returned	unbalanced_rows	balance_events
+construccion	4	4	35000.0000	2300.0000	0	1
+scope	rows_count
+tramo_adicional	0
+scope	n
+all_reconciled_rows_violating_v63	0
+scope	max_version	failed
+flyway	63	0

@@ -1,0 +1,54 @@
+﻿section
+## flyway
+flyway_max	history_rows	failed
+43	27	0
+section
+## legacy OBSERVADO without OBSERVED event
+expense	tenant_id	expense_case_id	created_at
+5E63494AA2564C1E847CD54A6ED67A51	1	NULL	2026-08-30 21:08:18.073
+section
+## CERRADO settlements whose advance is not RENDIDO/CERRADO
+settlement	advance	advance_status	tenant_id	expense_case	case_status
+9D7A12DC79FA4875BE69D4C03CF0EE2B	F0C327D036E64589ACA0F3EE2D4CE5DE	EN_RENDICION	1	0BA391C4DB43456B94E8A2D11830E4CF	ABIERTO
+FCC0767F7255434FB3DA80067AC5DF70	F6FA3D5C4E7D4A5BADBD5BC3309E5961	EN_RENDICION	1	0BA391C4DB43456B94E8A2D11830E4CF	ABIERTO
+C9B76C15B3934BFC935275B1F72E1C3A	5E8C3A33103147FBB635B9BFEA9D34D3	EN_RENDICION	1	0BA391C4DB43456B94E8A2D11830E4CF	ABIERTO
+section
+## BORRADOR advances
+tenant_id	in_case	drafts	cases
+1	0	3	NULL
+1	1	10	2075C587925744589B60E2D1D64DF79B
+4	1	1	08D650101FF14F70B3A6E8D73041D8E2
+70	1	2	4D42339D04E4485C99EEBDB68D6F3CBF
+section
+## advance states and delivery method codes
+lifecycle_status	delivery_method_code	advances
+BORRADOR	(null)	16
+EN_RENDICION	EFECTIVO	12
+EN_RENDICION	TRANSFERENCIA	1
+ENTREGADO	TRANSFERENCIA	1
+section
+## settlements by status
+lifecycle_status	reconciliation_result	settlements	with_return	with_reimbursement	with_adjustment
+ABIERTO	PENDING	4	0	0	0
+CERRADO	RECONCILED	3	3	0	0
+CON_DIFERENCIA	NOT_RECONCILED	4	0	0	0
+EN_CONCILIACION	PENDING	2	0	0	0
+section
+## Case+currency groups with more than one financially active advance (S06 legacy)
+tenant_id	expense_case	case_status	advance_currency	active_advances	statuses
+1	0BA391C4DB43456B94E8A2D11830E4CF	ABIERTO	USD	4	EN_RENDICION,EN_RENDICION,EN_RENDICION,EN_RENDICION
+1	2075C587925744589B60E2D1D64DF79B	ABIERTO	USD	12	EN_RENDICION,EN_RENDICION,BORRADOR,BORRADOR,BORRADOR,BORRADOR,BORRADOR,BORRADOR,BORRADOR,BORRADOR,BORRADOR,BORRADOR
+1	76ECF6DA951148C992F37CE85CC40ECF	ABIERTO	USD	3	EN_RENDICION,EN_RENDICION,EN_RENDICION
+70	4D42339D04E4485C99EEBDB68D6F3CBF	ABIERTO	USD	2	BORRADOR,BORRADOR
+section
+## other legacy shapes
+advances_without_case	cases_with_legacy_advance_link	expenses_without_case	open_cases	closed_cases
+3	9	4	17	0
+section
+## tenants holding expenses data, with synthetic-account share
+tenant_id	accounts	example_test_accounts	cases	advances	expenses
+1	1	0	7	25	19
+4	1	1	3	2	7
+33	1	0	1	1	5
+70	1	0	3	2	16
+387	1	1	3	0	7

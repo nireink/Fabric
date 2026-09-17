@@ -1,0 +1,52 @@
+GYPPORT_FINAL_PRECOMMIT_AUDIT_AND_UI_ALIGNMENT_14 - Part B, the tracked safe local launcher
+
+Canonical home (existing tracked scripts folder of the Host module, next to run-expenses-real-db-tests.ps1 and
+run-host-isolated-db-tests.ps1): Gystigo/platform_os/server/scripts/
+  start-runtime-local.ps1  SHA-256 20f37f0e6d618215b6215776156029448061b100fecbe360863e241b58641e81
+  stop-runtime-local.ps1   SHA-256 c13bb2488924c93cc2ba983747c6a7e7dfef8729d3a9896effdfc7033e4eaeec
+  git check-ignore: not ignored (new files, pending the controlled commit)
+Runtime state stays in Gystigo/platform_os/server/target/runtime-local (staged jar in app/, logs/, access-logs/,
+backend.pid, documents/). The previous copies target/runtime-local/start-runtime-local.ps1 and stop-runtime-local.ps1 were
+deleted after the tracked launcher proved itself (the STEP 13 hardened copy stays in BoxGhost evidence). One launcher remains.
+
+1. Guard mutation tests against the TRACKED launcher (scratch copies; Java start and runtime folders neutralized)
+Name                            ExitCode Refused ReachedJavaStart DisplayLines NewJavaProcesses
+M1_PORT_3308                           1    True            False                             0
+M2_HOST_GYPPORT_MYSQL_DEV              1    True            False                             0
+M3_DATABASE_CORE_BUSINESS_DEV          1    True            False                             0
+M4_URL_LOCALHOST_3308                  1    True            False                             0
+M5_JAVA_TOOL_OPTIONS_SHARED_DEV        1    True            False                             0
+GUARD_MUTANTS_REFUSED=5/5  (message: "Local runtime refused to start because the datasource points to Shared DEV.")
+SCRATCH_RUNTIME_FOLDERS_CREATED=False
+
+2. Switch-over and control (2026-09-17T13:33Z)
+stop-runtime-local.ps1 (tracked) -> STOPPED_PID=47236; port 8080 free
+CONTROL_REAL_CONFIGURATION ExitCode=1 Refused=False ReachedJavaStart=True DisplayLines=ENV=,DB_HOST=,DB_PORT=,DB_NAME= NewJavaProcesses=0
+CONTROL_OUTPUT_BEFORE_JAVA=[ENV=LOCAL_EDUARDO | DB_HOST=127.0.0.1 | DB_PORT=3310 | DB_NAME=gypport_runtime_local]
+CONTROL_OK=True
+
+3. Real start through Win32_Process.Create (fresh environment, no SPRING_* variables)
+WMI_CREATE_RETURN=0 LAUNCHED_UTC=2026-09-17T13:33:47.8472349Z -> port 8080 listening after 7 s on 127.0.0.1, PID 2460
+Launcher output: ENV=LOCAL_EDUARDO, DB_HOST=127.0.0.1, DB_PORT=3310, DB_NAME=gypport_runtime_local, BACKEND_PID=2460,
+  BACKEND_LOG=target\runtime-local\logs\backend-20260917-083349.out.log, RUNTIME_JAR=gystigo-host-runtime-ecd17c12f8af.jar
+Command line: datasource 127.0.0.1:3310/gypport_runtime_local=True, 3308=False, core_business_dev=False, gypport-mysql-dev=False,
+  password on command line=False
+TCP: BACKEND_CONNECTIONS_3310=10 (established), BACKEND_CONNECTIONS_3308=0, remote [127.0.0.1:3310], listen [127.0.0.1:8080]
+Log: Database jdbc:mysql://127.0.0.1:3310/gypport_runtime_local (MySQL 8.4); schema 63, up to date, no migration;
+  Started ServerApplication in 5.414 s; ERROR lines 0; Shared DEV mentions 0
+HTTP (no credentials): GET /auth/me -> 401; POST /auth/login {} -> 401 (reachable)
+DB (read only): LOCAL_3310 V63 rows=47 failed=0; SHARED_DEV_3308 V43 rows=27 failed=0 last_installed_on=2026-09-10 02:59:04
+
+4. mvn clean survival (real Maven wrapper, offline, on a disposable replica: parent pom + server pom + tracked scripts +
+   fake target/runtime-local with backend.pid, logs, a jar, documents and target/classes)
+BEFORE target_exists=True launchers_present=2/2
+MVN_CLEAN_EXIT=0
+   [INFO] Building  0.1.0-SNAPSHOT
+   [INFO] Deleting <replica>\Gystigo\platform_os\server\target
+   [INFO] BUILD SUCCESS
+AFTER target_exists=False
+AFTER scripts\start-runtime-local.ps1 present=True identical_to_tracked=True
+AFTER scripts\stop-runtime-local.ps1 present=True identical_to_tracked=True
+LAUNCHER_SURVIVES_MVN_CLEAN=True
+GIT_IGNORED_TRACKED_SCRIPTS=0
+The server pom configures no maven-clean-plugin filesets: `mvn clean` removes target/ only.

@@ -1,0 +1,8 @@
+﻿PASS synthetic session :: login=200
+PASS D four USD advances and one EUR advance registered in the same open Case :: case=201 usd=201,201,201,201 eur=201
+PASS E no one-active-advance refusal anywhere :: registration responses carry no refusal text
+PASS D a draft is delivered beside drafts, and another beside a delivered advance :: second=200 first=200
+PASS F drafts block Cerrar expediente :: close=400 message=El expediente tiene anticipos en borrador; confirma su entrega o cancélalos.
+PASS the Case holds all its tranches; its card reads 37000 delivered and nothing used yet :: advances=USD:30000.0000:ENTREGADO,USD:2000.0000:ENTREGADO,USD:300.0000:CANCELADO,USD:5000.0000:ENTREGADO,EUR:70.0000:BORRADOR delivered=37000.0000 spent=0 case=ABIERTO
+CASE=d4ffec58-f488-43f6-a9dc-608b1682b96a
+S10_RUNTIME_CHECKS=6 FAILURES=0

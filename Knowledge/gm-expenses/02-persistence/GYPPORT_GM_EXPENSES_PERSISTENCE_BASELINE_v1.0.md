@@ -159,6 +159,36 @@ result_snapshot: required, JSON object — the authoritative replay response
 payload_hash:    SHA-256, BINARY(32)
 ```
 
+### 10.1 Two complementary audit layers (Owner rule, GYPPORT_FINAL_PRECOMMIT_AUDIT_AND_UI_ALIGNMENT_14)
+
+GYPPORT reuses its existing audit infrastructure. No parallel audit architecture,
+audit table, generic `updated_by` column or migration is added for it.
+
+- **Domain history** — the semantic, append-only tables above (every one has
+  BEFORE UPDATE and BEFORE DELETE refusal triggers). They answer the business
+  questions: who decided, when, why and, for material changes, the previous and new
+  snapshots. Review transitions go to `expense_review_event`; material field changes to
+  `expense_revision_event` (see the domain baseline §4); command execution (actor, time,
+  target, committed version) to `expense_command_receipt`.
+- **Global / transversal audit** — `audit_logs` (created by core V1; its actor key
+  points at the global `user_accounts` since V58) with the action catalog
+  `audit_action_types`. It records administrative or system operations: tenant
+  context, actor, action code, entity (`entity_name`, `entity_id`, `entity_uuid`,
+  `entity_version`), `old_values` / `new_values` JSON, `request_id` /
+  `correlation_id`, `ip_address`, `user_agent` and `created_at` (database clock).
+  - The actor is the global UserAccount of the execution context. `tenant_id` and
+    `user_account_id` are nullable: a `NULL` actor is the canonical system-event
+    semantics (GYPPORT_FINAL_CANONICAL_FOUNDATION_REGISTER_v1.0 §6.4), never a
+    fabricated account and never a business participant (responsible, supervisor,
+    employee, receiver).
+  - Domain events are not duplicated into `audit_logs`.
+  - State on 2026-09-17: no application port, service or adapter writes `audit_logs`
+    yet (ADR-0010 is PROPOSED), and the table has no append-only triggers. Neither
+    blocks the MVP: every business audit question is answered by the domain history.
+    The first record is the audit of the DEV test-data cleanup of
+    GYPPORT_PRE_COMMIT_ENV_UI_AUDIT_HARDENING_13, on the local 3310 copy only
+    (action `LEGACY_DEV_TEST_DATA_REGULARIZATION`, actor `NULL`).
+
 ## 11. Migration decision (final)
 
 The design-evolution artifacts previously referred to as `C5`, `V2`, `V3`,
@@ -288,3 +318,44 @@ EXPECTED_FILE=V12__gm_expenses_add_advance_delivery_method.sql
 `V12` adds this column and extends/recreates the delivered-snapshot
 `CHECK`; it must not alter any other `V11` structure. Not created by this
 document — schema implementation is a separate, later work package.
+
+### Advance planned delivery (`V62`)
+
+GM_EXPENSES_FINAL_ADJUSTMENT_V62_04 (Owner-approved option A of
+IMPLEMENTATION_02 §32). A `BORRADOR` stores the delivery plan chosen when it
+is registered, without relaxing the `V12` delivered-snapshot invariant:
+
+```text
+COLUMN=planned_delivery_method_code  TYPE=VARCHAR(30) NULL  PATTERN=^[A-Z][A-Z0-9_]{0,29}$
+COLUMN=planned_rendition_days        TYPE=SMALLINT NULL     RANGE=1..365
+CHECK=chk_advance_planned_delivery_method_code
+CHECK=chk_advance_planned_rendition_days
+CHECK=chk_advance_planned_delivery_pair (both NULL or both NOT NULL)
+EXISTING_ROWS=NULL (no plan recorded; no data rewrite)
+FILE=V62__gm_expenses_advance_planned_delivery.sql
+```
+
+`delivery_method_code` and `rendition_due_at` keep meaning what actually
+happened at `DELIVER`; the plan columns are written with the draft and never
+rewritten.
+
+### Unified settlement reconciliation (`V63`)
+
+GM_EXPENSES_UNIFIED_RECONCILIATION_V63_05 (Owner-approved option A; Domain
+Baseline RN-001). A real return and a later reimbursement may both be positive
+on one `advance_settlement`, and a `RECONCILED` row satisfies one equation:
+
+```text
+DROPPED=chk_settlement_return_reimburse
+RECREATED=chk_settlement_reconciled_equation
+  reconciliation_result <> 'RECONCILED'
+  OR advance_amount_snapshot + reimbursement_amount
+     = justified_expense_total + returned_amount + authorized_adjustment_total
+UNCHANGED=chk_settlement_adjustment_shortfall_only (reimbursement_amount = 0 OR authorized_adjustment_total = 0)
+DATA_REWRITE=NONE (every V11 branch is a special case of the unified equation)
+FILE=V63__gm_expenses_unified_settlement_reconciliation.sql
+```
+
+Both CHECK changes run in one `ALTER TABLE`. The fresh baseline `B17` carries
+the same V11 constraint names, so both migration lineages reach the same
+schema.

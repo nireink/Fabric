@@ -1,0 +1,25 @@
+# Read-only legacy impact of the Case-level rendition rule (2026-09-17T04:1xZ). SELECT statements only:
+# s11-legacy-impact.sql and s11-legacy-links.sql, run against the isolated runtime copy (127.0.0.1:3310, V63, includes
+# earlier synthetic smoke data) and against Shared DEV (127.0.0.1:3308, V43, read only).
+
+## runtime copy 127.0.0.1:3310
+cases_with_delivered_advances                       33
+cases_all_delivered_rows_closed_justified_differs   0
+case_expenses_linked_to_an_advance                  9
+case_expenses_with_advance_link_approved            3
+advance_linked_expenses_outside_their_advance_case  0
+open_case_rows_with_justified_total                 6
+
+## Shared DEV 127.0.0.1:3308 (read only, Flyway 43)
+cases_with_delivered_advances                       8
+cases_all_delivered_rows_closed_justified_differs   0
+case_expenses_linked_to_an_advance                  9
+case_expenses_with_advance_link_approved            3
+advance_linked_expenses_outside_their_advance_case  0
+open_case_rows_with_justified_total                 1
+
+## Reading
+- No approved expense leaves its Case's justified total: every advance-linked expense already belongs to that Case.
+- No Case whose delivered advances are all closed changes its displayed justified total.
+- Open legacy rows that carry a per-advance justified total are only technical carriers now: an approval resets them
+  and Conciliar sets them to the money they hold. Nothing was repaired or rewritten.

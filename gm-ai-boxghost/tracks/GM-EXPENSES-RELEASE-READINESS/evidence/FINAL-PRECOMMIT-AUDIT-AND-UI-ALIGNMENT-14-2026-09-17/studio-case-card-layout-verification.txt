@@ -1,0 +1,28 @@
+GYPPORT_FINAL_PRECOMMIT_AUDIT_AND_UI_ALIGNMENT_14 - Part C, Conciliado in the Case header, Uso in Finanzas (Studio only)
+
+Contracts (npx vitest run --config vitest.config.js, Gystigo/platform_os/studio/channel/browser/shell)
+  ExpenseCaseCard.contract.mjs + ExpenseCases.contract.mjs: 2 files, 62 tests passed
+  Full Studio suite: 53 files, 630 tests passed (629 in HARDENING_13; +1 CONCILIADO_ONCE_PER_CASE)
+ESLint (shell config): ExpenseCaseCard.jsx, caseRules.js, fixtures/ExpenseCaseCardsFixture.jsx -> exit 0
+
+Browser (fixture gypport-expense-case-cards-fixture, http://localhost:5189/fixtures/expense-case-cards.html; synthetic data).
+Per page: 20 cards, 21 currency rows. "above/below" = relative to the Finanzas divider; fill = fill px / track px.
+
+1280 px: document overflow 0 px, cards overflowing 0, Conciliado indicators 20 (one per card), Uso indicators 21 (one per
+  currency), misplaced 0, hidden 0
+  Compra Teléfono  Cerrado | Conciliado 100% fill 35/35 above, under the status, right-aligned with it | Uso 87% fill 30/35 below (Finanzas column 4)
+  Viaje Loja       Cerrado | Conciliado 100% fill 35/35 above                                           | Uso 29% fill 10/35 below
+  open overuse     Abierto | Conciliado Pendiente fill 0/35 above                                        | Uso 110% fill 35/35 below (text kept, fill clamped)
+  no advance       Abierto | Conciliado Pendiente fill 0/35 above                                        | Uso 0% fill 0/35 below
+  two currencies   Abierto | one Conciliado Pendiente 0/35                                                | Uso 75% 26/35 and Uso 25% 9/35 below
+768 px: overflow 0, cards overflowing 0, 20 + 21 indicators, misplaced 0, hidden 0; same results (Uso at x=588)
+375 px: overflow 0, cards overflowing 0, 20 + 21 indicators, misplaced 0, hidden 0; same results (Uso at x=182, Finanzas in 2 columns)
+320 px: overflow 0, cards overflowing 0, widest card content 294 px = card client width 294 px, header scroll width 320 px,
+  20 + 21 indicators, misplaced 0, hidden 0; same results (Uso at x=154)
+
+Visual check (screenshots seen during the STEP, not stored):
+  800 px: Compra Teléfono shows the Cerrado pill with Conciliado 100% and a full bar right below it, above the divider; Finanzas
+  reads Entregado USD 300.00 · Usado USD 260.00 · Justificado USD 260.00 · Uso 87% with its bar, then Devuelto USD 40.00 ·
+  Reembolsado USD 0.00 · Pendiente de conciliar USD 0.00. Open cards show Abierto with Conciliado Pendiente on an empty bar.
+  375 px: title and Cerrado pill, Fecha beside Conciliado 100% under the pill, context full width, divider, Finanzas in two
+  columns with Uso 87% and its bar next to Justificado.

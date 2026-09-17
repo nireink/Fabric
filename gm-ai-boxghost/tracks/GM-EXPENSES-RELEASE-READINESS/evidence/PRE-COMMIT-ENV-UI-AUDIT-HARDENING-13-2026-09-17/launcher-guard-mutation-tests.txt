@@ -1,0 +1,16 @@
+GYPPORT_PRE_COMMIT_ENV_UI_AUDIT_HARDENING_13 - launcher Shared DEV guard, mutation tests (re-run 2026-09-17T12:57:42.1780782Z, backend running)
+Each mutant = scratch copy of the hardened launcher with one Shared DEV marker and Java start replaced by a throw.
+
+Name                            ExitCode Refused ReachedJavaStart DisplayLines NewJavaProcesses FirstError                                                                                  
+----                            -------- ------- ---------------- ------------ ---------------- ----------                                                                                  
+M1_PORT_3308                           1    True            False                             0 powershell.exe : Local runtime refused to start because the datasource points to Shared DEV.
+M2_HOST_GYPPORT_MYSQL_DEV              1    True            False                             0 powershell.exe : Local runtime refused to start because the datasource points to Shared DEV.
+M3_DATABASE_CORE_BUSINESS_DEV          1    True            False                             0 powershell.exe : Local runtime refused to start because the datasource points to Shared DEV.
+M4_URL_LOCALHOST_3308                  1    True            False                             0 powershell.exe : Local runtime refused to start because the datasource points to Shared DEV.
+M5_JAVA_TOOL_OPTIONS_SHARED_DEV        1    True            False                             0 powershell.exe : Local runtime refused to start because the datasource points to Shared DEV.
+GUARD_MUTANTS_REFUSED=5/5
+
+CONTROL (first run 2026-09-17T12:53Z, port 8080 free, unmodified configuration, Java start neutralized):
+CONTROL_REAL_CONFIGURATION ExitCode=1 Refused=False ReachedJavaStart=True DisplayLines=ENV=,DB_HOST=,DB_PORT=,DB_NAME= NewJavaProcesses=0
+CONTROL_OUTPUT_BEFORE_JAVA=[ENV=LOCAL_EDUARDO | DB_HOST=127.0.0.1 | DB_PORT=3310 | DB_NAME=gypport_runtime_local]
+CONTROL_OK=True

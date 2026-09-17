@@ -1,0 +1,9 @@
+Host real-DB expenses suite (run-expenses-real-db-tests.ps1, RealDb, fresh MySQL 8.4.10, runId 6eec07f2-8ed4-460c-877f-e14f246cecbb)
+Tests run: 36, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 48.34 s -- in com.gypport.server.module.expenses.ExpenseCaseHttpApiTest
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.243 s -- in com.gypport.server.module.expenses.ExpenseFleetHttpApiTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.528 s -- in com.gypport.server.module.expenses.ExpenseReviewHistoryIntegrityHttpApiTest
+Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.654 s -- in com.gypport.server.module.expenses.ExpensesTestDatabaseGuardTest
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.998 s -- in com.gypport.server.module.expenses.GmExpensesHostIntegrationTest
+Tests run: 28, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.89 s -- in com.gypport.server.module.expenses.GmExpensesHttpApiTest
+Tests run: 103, Failures: 0, Errors: 0, Skipped: 0
+BUILD SUCCESS

@@ -1,0 +1,13 @@
+Host real-DB expenses suite (run-expenses-real-db-tests.ps1, RealDb, fresh MySQL 8.4.10, runId 58a3c154-f38f-4f77-bff3-910fec28ec5c)
+Tests run: 36, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 54.88 s -- in com.gypport.server.module.expenses.ExpenseCaseHttpApiTest
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.835 s -- in com.gypport.server.module.expenses.ExpenseFleetHttpApiTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.240 s -- in com.gypport.server.module.expenses.ExpenseReviewHistoryIntegrityHttpApiTest
+Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.660 s -- in com.gypport.server.module.expenses.ExpensesTestDatabaseGuardTest
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.651 s -- in com.gypport.server.module.expenses.GmExpensesHostIntegrationTest
+Tests run: 28, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 21.66 s -- in com.gypport.server.module.expenses.GmExpensesHttpApiTest
+Tests run: 102, Failures: 0, Errors: 0, Skipped: 0
+BUILD SUCCESS
+
+Forced history failure exercised inside MySQL (test-only trigger), from the same run log:
+SQL state [45000]; error code [1644]; Forced review history failure (test only)
+Caused by: java.sql.SQLException: Forced review history failure (test only)
