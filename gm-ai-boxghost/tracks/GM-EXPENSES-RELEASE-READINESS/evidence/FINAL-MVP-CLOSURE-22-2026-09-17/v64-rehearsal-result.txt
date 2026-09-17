@@ -1,0 +1,54 @@
+== V64 rehearsal on a disposable copy of Shared DEV ==
+COPY_READY=YES
+-- restoring the current Shared DEV bytes (read-only dump) --
+DUMP_BYTES=1008792
+RESTORED=YES
+BEFORE:
+flyway=63
+cases=30 tenants=7
+balance_events=14
+review_events=131
+expenses=82 advances=54
+-- checksums before --
+core_business_v64_rehearsal.expense	2090782061
+core_business_v64_rehearsal.expense_advance	1970213055
+core_business_v64_rehearsal.advance_settlement	4042507783
+core_business_v64_rehearsal.settlement_balance_event	2867027185
+core_business_v64_rehearsal.expense_review_event	11987464
+core_business_v64_rehearsal.expense_command_receipt	1866156047
+-- applying V64 --
+V64_APPLIED=YES
+-- checksums after --
+core_business_v64_rehearsal.expense	2090782061
+core_business_v64_rehearsal.expense_advance	1970213055
+core_business_v64_rehearsal.advance_settlement	4042507783
+core_business_v64_rehearsal.settlement_balance_event	2867027185
+core_business_v64_rehearsal.expense_review_event	11987464
+core_business_v64_rehearsal.expense_command_receipt	1866156047
+FINANCIAL_TABLES_UNCHANGED=YES
+-- backfill proof --
+backfilled_cases=30
+cases_without_number=0
+duplicate_numbers=0
+duplicate_sequences=0
+date_matches_created_utc=30 of 30
+number_matches_parts=30 of 30
+counter_rows=13 max_gap=0
+owner_case=202609170001 fecha=2026-09-17
+sample=202608310001 Viaje los encuentros
+sample=202608310002 Viaje A Loja
+sample=202609010001 20260901 - Viaje Zamora
+sample=202609020001 20260501 - SUSCRIPCION IA - PROYECTO GYPPORT Business Platform
+sample=202609030001 Compra Camaras
+sample=202609100001 PRUEBA20260909
+sample=202609130001 Viaje Loja
+sample=202609170001 Compra Filtro
+-- uniqueness, immutability and the counter under a real database --
+DUPLICATE_NUMBER_REFUSED=YES
+NUMBER_IMMUTABLE=YES
+COUNTER_ALLOCATES=1 then 2
+OVERFLOW_REFUSED=YES
+-- structure after V64 --
+triggers=34
+tables=108
+REHEARSAL_DONE

@@ -359,3 +359,29 @@ FILE=V63__gm_expenses_unified_settlement_reconciliation.sql
 Both CHECK changes run in one `ALTER TABLE`. The fresh baseline `B17` carries
 the same V11 constraint names, so both migration lineages reach the same
 schema.
+
+### ExpenseCase business number (`V64`)
+
+*Owner decision of GM_EXPENSES_FINAL_MVP_CLOSURE_22. Additive; no existing column, constraint, trigger or row value is
+altered and no financial table is touched.*
+
+```text
+expense_case.case_business_date  DATE NOT NULL          - the persisted business day
+expense_case.case_sequence       SMALLINT UNSIGNED NOT NULL - 1..9999 within tenant and that day
+expense_case.case_number         CHAR(12) ascii, STORED generated from the two columns above
+UNIQUE (tenant_id, case_number)              UNIQUE (tenant_id, case_business_date, case_sequence)
+CHECK case_sequence BETWEEN 1 AND 9999       CHECK (case_business_date IS NULL) = (case_sequence IS NULL)
+expense_case_number_sequence (tenant_id, case_business_date, last_sequence, updated_at), PK (tenant_id, case_business_date)
+  CHECK last_sequence BETWEEN 1 AND 9999     no FK to tenants: the module references the tenant by value
+TRIGGER trg_expense_case_business_number_immutable  BEFORE UPDATE - the number is history
+TRIGGER trg_case_number_sequence_no_delete          BEFORE DELETE - the counter is never removed
+```
+
+The number is generated, not written by the application: `case_number` is a stored generated column, so its parts and
+its visible value cannot drift apart. The application only allocates the sequence, with one statement that both locks
+and advances the counter row (`INSERT ... ON DUPLICATE KEY UPDATE last_sequence = LAST_INSERT_ID(last_sequence + 1)`)
+inside the creating transaction.
+
+Backfill: every existing Case took the UTC day of its `created_at` - the day its users already saw - ordered by
+`created_at`, then `expense_case_id`. Rehearsed on a disposable copy of Shared DEV V63: 30 of 30 Cases numbered, 0
+duplicates, the six financial tables byte-identical before and after (CHECKSUM TABLE), the counter seeded with no gap.

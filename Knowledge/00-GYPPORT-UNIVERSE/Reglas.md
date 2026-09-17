@@ -1301,3 +1301,294 @@ VERIFIED_FILE_COUNT=132
 BASELINE_REUSE_ALLOWED=YES
 ```
 
+
+
+2026-09-17 — gm-expenses / Regla de semántica financiera, movimientos reales y reverso
+
+Decisiones del Owner en GM_EXPENSES_OWNER_SMOKE_FINAL_FIX_20, tras el smoke real del Owner sobre Shared DEV V63. El
+detalle canónico vive en Fabric/Knowledge/gm-expenses/01-domain/GYPPORT_GM_EXPENSES_DOMAIN_BASELINE_v1.0.md.
+
+```text
+TOTAL_ANTICIPOS=suma de los anticipos ENTREGADOS del expediente
+TOTAL_GASTOS=suma de los gastos APROBADO del expediente
+TOTAL_GASTOS_NUNCA_SE_CALCULA_COMO=aprobados - rechazados
+IMPACTO_FINANCIERO_GASTO_RECHAZADO=CERO
+IMPACTO_FINANCIERO_GASTO_OBSERVADO=CERO hasta que se apruebe
+IMPACTO_FINANCIERO_GASTO_PENDIENTE_REVISION=CERO hasta que se apruebe
+IMPACTO_FINANCIERO_GASTO_REGISTRADO=CERO hasta que se apruebe
+GASTO_RECHAZADO=permanece en el historial inmutable; no crea anticipo, devolución, reembolso ni ajuste
+TOTAL_A_CONCILIAR=TOTAL_ANTICIPOS - TOTAL_GASTOS
+DIRECCION_DE_TOTAL_A_CONCILIAR=Por devolver (mayor que 0), Por reembolsar (menor que 0), Balanceado (igual a 0)
+SALDO_FINAL=anticipos + reembolsado - gastos - devuelto - ajustes autorizados (RN-001, V63, sin cambios)
+DEVOLUCION=dinero que el responsable devolvió realmente a la empresa
+REEMBOLSO=dinero que la empresa pagó realmente al responsable
+MOVIMIENTOS_REALES_SOLO_POR_OPERACION_EXPLICITA=YES (nunca derivados de rechazar, observar, corregir o cancelar un gasto)
+USADO_Y_USO=métricas operativas; no deciden la conciliación
+USO_MAYOR_A_100=el texto conserva el porcentaje; el relleno se detiene en 100 %
+```
+
+Registrar devolución y Registrar reembolso (UX y backend):
+
+```text
+PRELLENADO_DEL_SALDO_COMPLETO=NO
+MONTO_EXPLICITO=YES (el máximo disponible se muestra como información)
+MOTIVO_OBLIGATORIO=YES (el backend lo exige, no solo el formulario)
+CONFIRMACION_EXPLICITA_ANTES_DE_REGISTRAR=YES, nombrando que es un movimiento real de dinero
+AVISO_DE_GASTOS_SIN_RESOLVER=YES, con cantidad y monto
+PROHIBIR_DEVOLUCION_TEMPRANA=NO (el aviso informa; el backend sigue siendo la autoridad)
+```
+
+Reverso de un movimiento registrado:
+
+```text
+CORRECCION_DE_UN_MOVIMIENTO=reverso compensatorio, nunca edición ni borrado
+MOVIMIENTO_ORIGINAL=inmutable
+REVERSO_REFERENCIA_AL_EVENTO_ORIGINAL=YES (reverses_balance_event_id, V11)
+MONTO_DEL_REVERSO=igual al del movimiento original
+UN_SOLO_REVERSO_POR_MOVIMIENTO=YES
+MOTIVO_DEL_REVERSO=obligatorio
+EXPEDIENTE_O_RENDICION_CERRADA=no admite reverso
+ACTOR=cuenta global autenticada; FECHA=hora del servidor; IDEMPOTENCIA=preservada
+TRAS_EL_REVERSO=la rendición vuelve a quedar pendiente y el expediente se concilia de nuevo
+CORRECCION_PARCIAL=reverso completo y luego un movimiento nuevo y correcto
+MOVIMIENTO_DEL_EXPEDIENTE_REPARTIDO_EN_VARIAS_FILAS=se reversa como un solo movimiento, en la misma transacción
+ARQUITECTURA_DE_REVERSO_PARALELA=NO (se reutiliza el esquema V11)
+```
+
+Caso del smoke del Owner (expediente 437a92bf-bd12-4ab4-9d0d-13dcd6f1fae0):
+
+```text
+DEVOLUCION_REAL_DE_USD_300=NO OCURRIO (confirmado por el Owner)
+EVENTOS_29_Y_30=no se borran ni se reescriben
+CORRECCION=reverso completo de los dos eventos, ejecutado por el Owner a través del producto para que quede el actor real
+CORRECCION_AUTOMATICA_DE_DATOS_EN_SHARED_DEV=NO
+RESULTADO_ESPERADO=anticipos 320, gastos 400, devuelto 0, reembolsado 0, por reembolsar 80
+```
+
+Vocabulario financiero de la tarjeta y el detalle del expediente:
+
+```text
+Total anticipos · Total gastos · Total a conciliar (con su dirección) · Usado · Uso · Devuelto · Reembolsado · posición
+POSICION=Por justificar o devolver / Por reembolsar / Pendiente de conciliar (sin cambios)
+MONEDA_EN_NEGATIVO=NO (monto positivo más dirección)
+SALDO_INTERNO_CON_SIGNO=YES (por ejemplo -80)
+```
+
+Lo que esta entrada sustituye de forma explícita:
+
+```text
+"Entregado" en la tarjeta y el detalle del expediente (2026-09-16, MVP_07) -> "Total anticipos"
+"Justificado" en la tarjeta y el detalle del expediente (2026-09-16, MVP_07) -> "Total gastos"
+"Motivo (opcional)" en Registrar devolución y Registrar reembolso -> motivo obligatorio
+"El monto parte de lo que el backend reporta como pendiente" -> sin prellenado, monto explícito y confirmado
+"REVERSION_AUTOMATICA_DE_DEVOLUCION=NO" (2026-09-16) -> sigue vigente: el reverso nunca es automático, ahora existe como
+operación explícita del usuario
+```
+
+Los reportes conservan Entregado / Usado (todo el expediente) / Justificado hasta que el Owner decida si su vocabulario
+sigue al de la tarjeta.
+
+
+2026-09-17 — gm-expenses / Identificador de negocio del expediente (ID Gasto) — REGLA PROSPECTIVA, BLOQUEADA
+
+Decisiones del Owner en GM_EXPENSES_OWNER_SMOKE_FINAL_FIX_20 §12-§21. La regla queda registrada; su implementación está
+BLOQUEADA por evidencia de arquitectura (§15 y §17 del propio STEP ordenan detenerse antes de inventar arquitectura).
+
+```text
+REGLA_PROSPECTIVA=YES
+ESTADO=BLOQUEADO_PENDIENTE_DECISION_DEL_OWNER
+ID_TECNICO=UUID público del expediente (uso interno y de API)
+ID_DE_NEGOCIO_VISIBLE=caseNumber con formato YYYYMMDD####
+ETIQUETA_EN_LA_UI=ID Gasto
+REFERENCIA_COMPLETA_EC=RUC-NUMERO_DE_ESTABLECIMIENTO-CASE_NUMBER (derivada, no almacenada como verdad)
+ALCANCE_DE_LA_SECUENCIA=TENANT + ESTABLECIMIENTO + FECHA_DE_NEGOCIO
+CASE_NUMBER_INMUTABLE=YES
+GENERACION=servidor, en la transacción de creación, con contador persistente y seguro ante concurrencia
+UUID_COMO_IDENTIFICADOR_NORMAL_DEL_USUARIO=NO
+DERIVAR_DE_LA_POSICION_EN_LA_LISTA_O_DEL_BIGINT=NO
+RUC_COMO_CLAVE_DE_TENANT=NO
+DUPLICAR_RUC_O_MAESTRO_DE_ESTABLECIMIENTOS_EN_GM_EXPENSES=NO
+REUTILIZAR_document_sequences_DEL_SRI=NO
+FECHA_DE_NEGOCIO=la misma que muestra Fecha; no se mezcla UTC con hora local
+```
+
+Evidencia del bloqueo (auditoría de solo lectura, 2026-09-17, Shared DEV V63):
+
+```text
+ESTABLECIMIENTO_CANONICO=sri_establishments (Host, capacidad fiscal diferida GYSTIGO_HOST_FISCAL_CONFIGURATION, fuera del MVP)
+FILAS_EN_SHARED_DEV=sri_establishments 0, tax_subjects 0, emission_points 0, document_sequences 0, user_establishments 0
+LECTORES_O_ESCRITORES_EN_PRODUCCION=0 (ningún repositorio, puerto, adaptador, caso de uso, endpoint ni pantalla)
+ESTABLECIMIENTO_EN_EL_CONTEXTO_DE_CREACION_DEL_EXPEDIENTE=NO (tenant, alcance, organización, actor, operación, instante)
+EXPEDIENTES_SIN_ESTABLECIMIENTO_RESOLUBLE=29 de 29, en 7 tenants
+ZONA_HORARIA_RESOLUBLE=NO (tenants.time_zone NULL en 15 de 15, country_code NULL en 15 de 15, countries sin zona horaria,
+sin Clock inyectable, sin zona en la sesión ni en el frontend)
+EXPEDIENTES_QUE_CAMBIAN_DE_DIA_ENTRE_UTC_Y_ECUADOR=4 de 29
+V64_CREADA=NO
+INVENTAR_ESTABLECIMIENTO_001_PARA_COMPLETAR_EL_BACKFILL=NO
+```
+
+
+2026-09-17 — gm-expenses / Hechos de negocio del expediente del smoke del Owner y reglas de anticipo entregado
+
+Decisiones y hechos confirmados por el Owner en GM_EXPENSES_OWNER_SMOKE_FINAL_CORRECTION_21. Completan la regla de
+semántica financiera del mismo día (GM_EXPENSES_OWNER_SMOKE_FINAL_FIX_20), que sigue vigente.
+
+Hechos del expediente 437a92bf-bd12-4ab4-9d0d-13dcd6f1fae0 "Compra Filtro":
+
+```text
+ANTICIPOS=USD 200.00 EN_RENDICION + USD 100.00 EN_RENDICION + USD 20.00 ENTREGADO, los tres entregados realmente
+TOTAL_ANTICIPOS=USD 320.00
+GASTOS_APROBADOS=200 + 80 + 90 + 30
+TOTAL_GASTOS=USD 400.00
+GASTO_RECHAZADO=USD 200.00 con efecto financiero CERO
+DEVUELTO_REAL=USD 0.00 (el Owner confirma que no hubo devolución real de efectivo)
+REEMBOLSADO_REAL=USD 0.00
+TOTAL_A_CONCILIAR=USD 80.00 Por reembolsar
+PENDIENTE=USD 80.00 Por reembolsar
+USADO=USD 400.00  USO=125 %
+```
+
+Regla del anticipo entregado:
+
+```text
+UN_ANTICIPO_CUENTA_EN_TOTAL_ANTICIPOS_CUANDO_EL_DINERO_SE_ENTREGO=YES
+ESTADOS_QUE_SIGUEN_CONTANDO=ENTREGADO, EN_RENDICION, RENDIDO, CERRADO (mientras exista la entrega)
+UN_CAMBIO_DE_ESTADO_POSTERIOR_A_LA_ENTREGA_NO_QUITA_EL_ANTICIPO_DEL_FINANCIAMIENTO=YES
+BORRADOR_O_CANCELADO_SIN_ENTREGA=efecto financiero cero
+NO_CONFUNDIR=el estado del anticipo con el hecho de que el dinero se entregó
+```
+
+Presentación de la posición en la tarjeta y el detalle:
+
+```text
+ETIQUETA_DE_LA_POSICION=Pendiente
+DIRECCION_DE_LA_POSICION=leyenda bajo el monto: Por justificar o devolver / Por reembolsar / Pendiente de conciliar
+MISMA_FORMA_QUE=Total a conciliar (monto positivo más dirección)
+TOTAL_A_CONCILIAR_Y_PENDIENTE=valores distintos que no se colapsan; coinciden cuando no hay movimientos reales
+```
+
+Lo que esta entrada sustituye de forma explícita:
+
+```text
+"La dirección es la etiqueta de la fila" (2026-09-16, MVP_07, y 2026-09-17, FINAL_FIX_20) -> la fila se llama Pendiente
+y la dirección viaja como leyenda; las palabras de la dirección no cambian
+```
+
+Auditoría de los eventos de devolución almacenados del expediente:
+
+```text
+DEVOLUCION_ALMACENADA=USD 300.00 en dos eventos RETURN_REGISTERED (29 y 30), reason "100", actor 1, 16:40:29.559Z
+ORIGEN=un solo comando explícito CaseRenditionReturn (recibo 2817); no existe otro camino que los pueda crear
+PRIMER_RECHAZO_DEL_EXPEDIENTE=16:41:55.882Z, 86 segundos DESPUES de la devolución
+RECHAZAR_UN_GASTO_PUDO_CAUSARLA=NO (el caso de uso de rechazo solo cambia el gasto y su historial)
+ESCRITORES_DE_settlement_balance_event=5, todos comandos explícitos de movimiento
+CORRECCION=reverso compensatorio a través del producto; los eventos no se borran ni se reescriben
+CORRECCION_AUTOMATICA_EN_ESTE_STEP=NO
+```
+
+
+2026-09-17 — gm-expenses / Identificador de negocio del expediente (ID Gasto) — REGLA CANONICA
+
+Decisiones del Owner en GM_EXPENSES_FINAL_MVP_CLOSURE_22. Sustituyen a la regla prospectiva bloqueada del mismo día.
+El detalle canónico vive en Fabric/Knowledge/gm-expenses/01-domain/GYPPORT_GM_EXPENSES_DOMAIN_BASELINE_v1.0.md.
+
+```text
+ALCANCE_DE_LA_SECUENCIA=TENANT + FECHA_DE_NEGOCIO
+ESTABLECIMIENTO_REQUERIDO_PARA_GENERAR_EL_ID=NO
+ID_TECNICO=UUID (sigue siendo el identificador de ruta de la API)
+ID_DE_NEGOCIO_VISIBLE=case_number con formato YYYYMMDD####, por ejemplo 202609170001
+ETIQUETA_EN_LA_UI=ID Gasto
+RANGO_DE_LA_SECUENCIA=0001 a 9999 por tenant y fecha de negocio
+SUPERAR_9999_EN_UN_DIA=se rechaza la creación con un error de dominio claro; no se amplía el formato en silencio
+UNICIDAD=UNIQUE (tenant_id, case_number) y UNIQUE (tenant_id, case_business_date, case_sequence)
+DOS_TENANTS_PUEDEN_TENER_EL_MISMO_NUMERO_VISIBLE=YES (la propiedad del tenant es explícita)
+GENERACION=servidor, persistente, transaccional y segura ante concurrencia (contador por tenant y fecha)
+PROHIBIDO_GENERAR_CON=MAX()+1 sin bloqueo, contadores en memoria, el frontend, la posición de la lista, EXP. NN,
+una transformación del UUID o document_sequences del SRI
+INMUTABLE=case_business_date, case_sequence y case_number nunca cambian tras la creación
+REFERENCIA_COMPLETA_EC=RUC-NUMERO_DE_ESTABLECIMIENTO-CASE_NUMBER, derivada y opcional
+REFERENCIA_COMPLETA_REQUERIDA_PARA_EL_ID=NO (si no se puede componer, queda no disponible y el ID sigue siendo válido)
+RUC_COMO_CLAVE_DE_TENANT=NO
+DUPLICAR_RUC_ORGANIZACION_O_ESTABLECIMIENTO_EN_GM_EXPENSES=NO
+```
+
+Lo que esta entrada sustituye de forma explícita:
+
+```text
+ALCANCE_DE_LA_SECUENCIA=TENANT + ESTABLECIMIENTO + FECHA_DE_NEGOCIO (2026-09-17, regla prospectiva bloqueada) ->
+TENANT + FECHA_DE_NEGOCIO; el establecimiento participa solo en la referencia completa cuando existe
+ESTADO=BLOQUEADO_PENDIENTE_DECISION_DEL_OWNER -> IMPLEMENTADO EN V64
+```
+
+Fecha de negocio:
+
+```text
+FECHA_DE_NEGOCIO=se persiste al crear el expediente y nunca se recalcula
+FECHA_VISIBLE_Y_YYYYMMDD_DEL_ID=la misma fecha persistida
+RESOLUCION_PARA_EXPEDIENTES_NUEVOS=1) tenants.time_zone si está configurada; 2) la zona por defecto de la plataforma
+PROPIEDAD_DE_PLATAFORMA=gypport.business.default-zone (configuración del Host, no código de dominio)
+ZONA_CONFIGURADA_EN_ESTE_DESPLIEGUE=America/Guayaquil
+HARDCODEAR_ECUADOR_EN_GM_EXPENSES=NO
+EXPEDIENTES_HISTORICOS=conservan la fecha que sus usuarios ya veían (día UTC de created_at); no se les cambia la fecha
+por una regla de zona posterior
+BACKFILL=determinista por tenant y fecha, ordenando por created_at y luego por el id interno estable
+```
+
+Jerarquía visual de la tarjeta y el detalle:
+
+```text
+GRUPO_1_IDENTIDAD=EXP. NN: nombre / Fecha / ID Gasto
+GRUPO_2_ASIGNACION=Responsable / Supervisor / Recurso asignado (Conciliado vive aquí, a la altura de Responsable)
+GRUPO_3_FINANZAS=Total anticipos · Total gastos · Total a conciliar · Uso, luego Devuelto · Reembolsado · Pendiente,
+luego Usado
+SEPARADORES=espaciado y filetes sutiles; nunca tarjetas anidadas pesadas
+ESTADO_ABIERTO_CERRADO=arriba a la derecha
+UUID_EN_LA_TARJETA=NO
+REFERENCIA_COMPLETA_EN_LA_TARJETA=NO
+```
+
+
+2026-09-17 - gm-expenses / EXP. NN e ID son la misma secuencia - REGLA CANONICA
+
+Decision del Owner en GM_EXPENSES_FINAL_CASE_CARD_NUMBERING_ALIGNMENT_22A. Aclara y sustituye la numeracion de
+presentacion de STEP 20 FINAL. El detalle canonico vive en
+Fabric/Knowledge/gm-expenses/01-domain/GYPPORT_GM_EXPENSES_DOMAIN_BASELINE_v1.0.md.
+
+```text
+FUENTE_UNICA_DE_LA_SECUENCIA=case_sequence
+CONTADOR_SEPARADO_PARA_EXP=NO
+CONTADOR_SEPARADO_PARA_EL_ID=NO
+EXP_SE_DERIVA_DE=case_sequence
+ID_SE_DERIVA_DE=case_number
+COMPOSICION_DE_CASE_NUMBER=fecha_de_negocio + case_sequence con cuatro digitos
+ALCANCE_DE_LA_SECUENCIA=TENANT + FECHA_DE_NEGOCIO (sin cambios)
+ETIQUETA_VISIBLE_DEL_NUMERO_COMPLETO=ID: (antes ID Gasto:)
+FORMATO_DE_EXP=minimo dos digitos y nunca se trunca: 1 -> EXP. 01, 9 -> EXP. 09, 27 -> EXP. 27, 100 -> EXP. 100
+LA_API_ENVIA_LA_SECUENCIA=YES (caseSequence, junto a caseNumber y businessDate, en la lista y en el detalle)
+STUDIO_CALCULA_ALGUNA_NUMERACION=NO
+```
+
+Lo que esta entrada sustituye de forma explicita:
+
+```text
+EXP_NN=posicion de la tarjeta en la lista del backend, continua entre paginas (STEP 20 FINAL) ->
+EXP. NN es la secuencia persistida del expediente
+```
+
+Lo que esta prohibido:
+
+```text
+DERIVAR_EXP_DE=indice del arreglo, paginacion, orden, filtro, orden de pantalla o cantidad de expedientes devueltos
+ORDENAR_O_FILTRAR_RENUMERA=NO (un expediente se llama igual en cualquier vista)
+PARSEAR_CASE_NUMBER_COMO_FUENTE_CANONICA=NO (solo compatibilidad mientras una API desplegada no envie caseSequence)
+REPARAR_EN_STUDIO_UNA_INCONSISTENCIA_DEL_BACKEND=NO (se muestra lo que llego y falla el contrato)
+NUEVA_MIGRACION_O_NUEVA_COLUMNA=NO
+```
+
+Comportamiento diario:
+
+```text
+MISMO_EXP_EN_DIAS_DISTINTOS=correcto; la secuencia reinicia con la fecha de negocio
+LO_QUE_LOS_DISTINGUE=el numero completo, por ejemplo 202609170001 y 202609180001
+EXPEDIENTE_SIN_IDENTIDAD_DE_NEGOCIO=no muestra EXP ni ID; nunca se inventa uno
+```

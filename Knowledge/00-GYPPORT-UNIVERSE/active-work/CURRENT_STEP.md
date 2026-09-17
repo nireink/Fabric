@@ -6,13 +6,13 @@ not an Owner approval and not an execution trigger.
 
 ```text
 CURRENT_TRACK=GM_EXPENSES_RELEASE_READINESS
-CURRENT_STEP_ID=GM_EXPENSES_MVP_CONTROLLED_COMMIT_GATE_17
-CURRENT_PHASE=FINAL_PRECOMMIT_PROOF_AND_CONTROLLED_COMMITS
-MODE=FINAL_PRECOMMIT_PROOF_AND_CONTROLLED_COMMITS
-STATUS=GM_EXPENSES_MVP_COMMITTED_LOCAL_READY_FOR_SHARED_DEV
+CURRENT_STEP_ID=GM_EXPENSES_CONTROLLED_COMMIT_GATE_23
+CURRENT_PHASE=PRECOMMIT_AUDIT_THEN_EXPLICIT_STAGING_THEN_COMMIT
+MODE=READ_ONLY_PRECOMMIT_AUDIT_THEN_EXPLICIT_STAGING_THEN_COMMIT
+STATUS=COMMITTED_LOCALLY_WAITING_OWNER_REVIEW
 
-PROMPT_SOURCE=Fabric/Knowledge/00-GYPPORT-UNIVERSE/steps/GM-EXPENSES-RELEASE-READINESS/GM_EXPENSES_MVP_CONTROLLED_COMMIT_GATE_17.md
-REQUIRED_BASELINES=GYPPORT-PKG2D-CROSS-TENANT-GLOBAL-ACCOUNT-VERIFIED-BASELINE-2026-09-16,GYPPORT-GM-EXPENSES-MVP-RELEASE-VERIFIED-BASELINE-2026-09-17
+PROMPT_SOURCE=Fabric/Knowledge/00-GYPPORT-UNIVERSE/steps/GM-EXPENSES-RELEASE-READINESS/GM_EXPENSES_CONTROLLED_COMMIT_GATE_23.md
+REQUIRED_BASELINES=GYPPORT-GM-EXPENSES-MVP-RELEASE-VERIFIED-BASELINE-2026-09-17
 BASELINE_REUSE_REQUIRED=YES
 FULL_HISTORICAL_REGRESSION_RERUN=NO
 
@@ -23,11 +23,11 @@ AUTO_PUSH=NO
 
 ## Next action
 
-STOP: GM_EXPENSES_MVP_CONTROLLED_COMMIT_GATE_17 committed the accepted gm-expenses MVP locally and waits for Owner review; nothing was pushed.
-Commits: gm-expenses 545eae0 (master), Gystigo bcb9591 (feature/gm-fleets-minimum-vehicle-master-01), Fabric = the commit that adds this file; migration head V63.
-Verified baseline: GYPPORT-GM-EXPENSES-MVP-RELEASE-VERIFIED-BASELINE-2026-09-17 (release COMMITTED_LOCAL, READY_FOR_SHARED_DEV_MIGRATION). Shared DEV is still V43 and the official DEV backend is not rebuilt.
-Next gate, only after Owner acceptance: fresh Shared DEV backup, migrate V43 to V63 per gm-ai-boxghost/tracks/GM-EXPENSES-RELEASE-READINESS/handoffs/SHARED_DEV_MIGRATION_V43_V63_PLAN_2026-09-16.md, rebuild the DEV backend from the accepted commits, Owner real-login smoke.
-Not authorized now: push, Shared DEV migration, official DEV backend rebuild or restart, Shared DEV legacy data cleanup, Gystigo branch normalization.
+STOP: the gm-expenses MVP closure is committed locally and nothing is pushed. gm-expenses 874a3e5, Gystigo 0293ff4, Fabric on this commit; 57 accepted paths, 0 unrelated paths staged, 15 unrelated WIP paths preserved untouched.
+Runtime is deliberately unchanged: Shared DEV is still V63 and 8080 still serves the STEP 18 image, so the Owner screen keeps showing no EXP and no ID until deployment.
+NEXT_STEP=GM_EXPENSES_SHARED_DEV_V64_DEPLOYMENT_24 - migrate Shared DEV V63 to V64 with a verified backup, rebuild the official DEV backend from gm-expenses 874a3e5 and Gystigo 0293ff4, and smoke it. Not performed yet.
+After deployment, and only then, the Owner corrects the live USD 300 return of Case 437a92bf through the authenticated reverso, so the real actor and instant are recorded.
+Push of the three repositories remains a separate Owner authorization.
 
 ## How to use this file
 

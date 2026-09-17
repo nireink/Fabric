@@ -33,6 +33,7 @@ MODES:
 - `ExpenseCategory`
 - `ExpenseAdjustment`
 - `ExpenseDocument`
+- `ExpenseCase` (with its business number, `CaseNumber`)
 
 ## 3. ExpenseAdvance
 
@@ -296,6 +297,17 @@ Rules:
   financial history: the return is never reversed automatically, no
   reimbursement is created automatically, and approving an expense is never
   blocked because a return exists.
+- A movement registered by mistake is corrected by a **reverso**, never by an edit or a
+  deletion (Owner decision GM_EXPENSES_OWNER_SMOKE_FINAL_FIX_20 §8, on the reversal shape V11
+  anticipated). The reverso is a new compensating event that names the movement it reverses
+  (`reverses_balance_event_id`), for exactly that movement's amount, with a required motive,
+  at most once per movement, and only while the Case and its rendition are open. The
+  rendition goes back to pending, so the Case must be reconciled again. A partial correction
+  is a reverso followed by a new, correct movement. The actor is the authenticated global
+  UserAccount and the instant is the server's.
+- A Case movement stored across several rendition rows is reversed as the one movement the
+  Owner registered: the Case's movements are grouped by type, instant, actor and motive, and
+  every event of the movement is compensated in the same transaction.
 - A new return is capped at `max(balance, 0)` and a new reimbursement at
   `max(-balance, 0)`, measured after the justified total is refreshed.
 - `RETURN_REVERSED` corrects a return entered wrongly or never physically
@@ -407,24 +419,37 @@ Rules:
 
 ### Financial presentation vocabulary
 
-*Owner decision of GM_EXPENSES_MVP_FINAL_RELEASE_CONSOLIDATION_07. Presentation
-only: RN-001, the caps and the reconciliation behavior above are unchanged.*
+*Owner decision of GM_EXPENSES_MVP_FINAL_RELEASE_CONSOLIDATION_07, amended 2026-09-17 by
+GM_EXPENSES_OWNER_SMOKE_FINAL_FIX_20 §3/§10 (Total anticipos, Total gastos, Total a conciliar).
+Presentation only: RN-001, the caps and the reconciliation behavior above are unchanged.*
 
-The Case card, the Case detail (its Resumen financiero; since
+The Case card and the Case detail (its Resumen financiero; since
 GM_EXPENSES_CASE_LEVEL_RENDITION_CANONICALIZATION_11 no advance has a rendition of its own)
-and the reports use one vocabulary:
+use one vocabulary:
 
 | Term | Meaning |
 |---|---|
-| Entregado | money delivered by the Case's advances |
-| Usado | operational metric: the Case's expenses that are neither rejected nor excluded |
-| Justificado | the Case's approved expenses |
+| Total anticipos | money delivered by the Case's advances. An advance counts once its delivery exists, and a later state (EN_RENDICION, RENDIDO, CERRADO) never removes it from the funding; a draft or cancelled advance with no delivery counts zero (GM_EXPENSES_OWNER_SMOKE_FINAL_CORRECTION_21 §2) |
+| Total gastos | the Case's approved expenses (APROBADO), never approved minus rejected |
+| Total a conciliar | Total anticipos − Total gastos, before the real cash movements, with its direction: Por devolver, Por reembolsar or Balanceado |
+| Usado | operational metric: the Case's expenses that are neither rejected nor excluded; it never decides the reconciliation |
 | Devuelto | returns registered on the Case |
 | Reembolsado | reimbursements registered on the Case |
 | Ajuste autorizado | an authorized adjustment, shown only when one exists |
+| Pendiente | the position the real movements land on, shown like Total a conciliar: the amount with its direction as the caption (GM_EXPENSES_OWNER_SMOKE_FINAL_CORRECTION_21 §8) |
 | Por justificar o devolver | balance greater than 0 |
 | Por reembolsar | balance less than 0 |
 | Pendiente de conciliar | balance equal to 0 (USD 0.00), also USD 0.00 before any advance is delivered (card, Case detail and reports) |
+
+*Superseded (kept for history): "Entregado" is now Total anticipos and "Justificado" is now
+Total gastos on the card and in the Case detail (MVP_FINAL_RELEASE_CONSOLIDATION_07 wording).
+The reports keep Entregado / Usado (todo el expediente) / Justificado until the Owner decides
+whether their vocabulary follows.*
+
+A rejected, observed, registered or unreviewed expense weighs zero in Total gastos, in Total a
+conciliar and in the balance, and rejecting one creates no advance, return, reimbursement or
+adjustment (GM_EXPENSES_OWNER_SMOKE_FINAL_FIX_20 §1/§2). Total a conciliar and the position
+differ exactly by what really moved, which is why both are shown.
 
 Rules:
 - A surface that shows a direction also shows the movements that explain it, so
@@ -477,6 +502,44 @@ Rules:
   is open; Conciliado 100% once closed, with Uso as a plain figure beside it."; HARDENING_13
   "two indicators per currency in a column beside the amounts, side by side below them on
   narrow screens".*
+
+### ExpenseCase business number — "ID Gasto" (Owner decision, GM_EXPENSES_FINAL_MVP_CLOSURE_22, schema `V64`)
+
+A Case carries three separate identities, and they never do each other's work:
+
+| Level | What it is | Where it is used |
+|---|---|---|
+| Technical id | the public UUID | every API route, unchanged |
+| Business number | `caseNumber`, format `YYYYMMDD####` (for example `202609170001`) | shown as "ID Gasto" wherever a person reads or quotes the Case |
+| Full business reference | `RUC-ESTABLISHMENT_NUMBER-CASE_NUMBER`, derived | traceability, export, reports, support; never on the Case card |
+
+Rules:
+- The sequence runs per **tenant and business date** and needs nothing else. An establishment and a RUC take part only in
+  the full reference, when that fiscal data exists; their absence never stops a Case from getting its number.
+  *Superseded (kept for history): the sequence scope "tenant + establishment + business date", which blocked the number
+  behind a fiscal foundation that holds no data.*
+- `case_business_date` is resolved once, when the Case is created - the tenant's configured zone, otherwise the
+  platform's `gypport.business.default-zone` - and then persisted. The Case's "Fecha" and the `YYYYMMDD` of its number
+  are that same stored day, so they can never disagree, and a later timezone configuration never renumbers or re-dates
+  anything.
+- Historical Cases keep the day their users already saw (the UTC day of `created_at`) and were numbered deterministically
+  within tenant and day by `created_at`, then the internal id.
+- 1..9999 per tenant and day. Passing it refuses the creation with a domain error rather than widening the format.
+- The number is allocated server-side by a persistent counter inside the creating transaction, so concurrent creations
+  cannot collide and a rolled-back creation keeps no number. Never `MAX()+1`, a process counter, the UI, "EXP. NN", a
+  transformation of the UUID, or the SRI `document_sequences`.
+- `case_business_date`, `case_sequence` and `case_number` are immutable once assigned, enforced in the database.
+- **One sequence, two representations** (Owner decision, GM_EXPENSES_FINAL_CASE_CARD_NUMBERING_ALIGNMENT_22A). The
+  card's short "EXP. NN" and the complete number are the same `case_sequence`: sequence 1 reads `EXP. 01` and ends the
+  number as `202609170001`. There is no second counter and no second column - the API sends the sequence
+  (`caseSequence`) beside the number, and the UI counts nothing.
+  The display keeps a minimum of two digits and is never truncated: 1 -> `EXP. 01`, 9 -> `EXP. 09`, 27 -> `EXP. 27`,
+  100 -> `EXP. 100`. The sequence restarts with the business date, so `EXP. 01` legitimately reappears on another day
+  and the complete number is what tells the two apart.
+  *Superseded (kept for history): "EXP. NN" as the card's position in the backend's newest-first list, continuous
+  across pages. A Case's number must not depend on the page, the order, a sort or a filter, so sorting or filtering a
+  list never renames what it shows; a Case read from a backend that sends no business identity simply has no EXP.*
+  The visible label of the complete number is `ID:` (it was `ID Gasto:` while the feature was being built).
 
 ## 6. Money
 

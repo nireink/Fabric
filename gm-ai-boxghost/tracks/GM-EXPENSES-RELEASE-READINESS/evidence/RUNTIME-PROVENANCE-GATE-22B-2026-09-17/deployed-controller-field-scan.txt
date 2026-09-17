@@ -1,0 +1,23 @@
+Deployed backend: gystigo-backend:4.1.0-java25-gm-expenses-mvp-bcb9591 (sha256:9e3ff62f02d6...)
+Source: /app/app.jar copied out of the running container, read-only.
+File: BOOT-INF/classes/com/gypport/server/module/expenses/ExpenseCaseController.class
+Bytes: 36407   sha256: 569a184f1758e644851ac56ab08413e8380d5f5348ded91e6171c124a00e53b1
+
+Scan of the JSON field names the controller writes (controls first):
+  responsibleName      PRESENT
+  reviewerName         PRESENT
+  createdAt            PRESENT
+  closedAt             PRESENT
+  caseId               PRESENT
+  financialSummary     PRESENT
+  caseNumber           ABSENT
+  caseSequence         ABSENT
+  businessDate         ABSENT
+  movements            ABSENT
+  baseToReturn         ABSENT
+  baseToReimburse      ABSENT
+  movement-reversals   ABSENT
+  rendition/returns    PRESENT
+
+The fields the Owner does see are present; the fields the Owner does not see are absent.
+This deployed API therefore cannot return caseNumber, caseSequence or businessDate.

@@ -1,0 +1,5 @@
+README.md
+platform_os/studio/channel/browser/shell/fixtures/HeaderBrandingFixture.jsx
+platform_os/studio/channel/browser/shell/fixtures/header-branding.html
+platform_os/studio/channel/browser/shell/src/application/AuthPage.css
+platform_os/studio/channel/browser/shell/src/application/onboarding/ShortRegisterPage.jsx
