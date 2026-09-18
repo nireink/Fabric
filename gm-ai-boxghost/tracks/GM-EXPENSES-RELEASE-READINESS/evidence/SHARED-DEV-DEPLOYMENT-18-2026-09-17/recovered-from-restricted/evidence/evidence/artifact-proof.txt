@@ -1,0 +1,29 @@
+GYSTIGO_ARTIFACT=C:\Users\elbur\AppData\Local\Temp\claude\D--NZXTG7-GYPPORT-GYPPORT-ERP\6bd391c2-9dd7-4c98-8f41-546e5a9baea1\scratchpad\s18\build\src\Gystigo\platform_os\server\target\gystigo-host-runtime-0.1.0-SNAPSHOT.jar
+GYSTIGO_ARTIFACT_SHA256=da5fa8c361953f739058c6098656bdec266a4f320c7efa487b4ab95d2e3a9d8d bytes=31318800
+MODULE gm-entities         isolated_m2_jar_sha256=7956c646d4e2800d118e0538ed1efeea8628fca985bcad729be583ec73898df1 nested_in_artifact=BOOT-INF/lib/gm-entities-0.1.0-SNAPSHOT.jar nested_equals_isolated_build=True
+MODULE gm-organizations    isolated_m2_jar_sha256=1ccb2469d2ba3533617ea4a4c91fe42e54db80a63454857c45538a342a1911f2 nested_in_artifact=BOOT-INF/lib/gm-organizations-0.1.0-SNAPSHOT.jar nested_equals_isolated_build=True
+MODULE gm-expenses         isolated_m2_jar_sha256=0c39764d5cbee6188cd30e3d360a6ac2e1611f25c11637b8256a3acd0b1aa35e nested_in_artifact=BOOT-INF/lib/gm-expenses-0.1.0-SNAPSHOT.jar nested_equals_isolated_build=True
+MODULE gm-fleets           isolated_m2_jar_sha256=e6c0cee8b2eeb69b1bf57b07612b9538f5aa6c3118921bb0f76714a0c6333fc4 nested_in_artifact=BOOT-INF/lib/gm-fleets-0.1.0-SNAPSHOT.jar nested_equals_isolated_build=True
+MODULE gm-human-resources  isolated_m2_jar_sha256=f98db3356eef98108f785483edba57242f3bde8092ec68d497ac3839d4abf3ad nested_in_artifact=BOOT-INF/lib/gm-human-resources-0.1.0-SNAPSHOT.jar nested_equals_isolated_build=True
+MODULE gm-security         isolated_m2_jar_sha256=a9552ae398dc0749f6dde44e4b0d95f847190b99f1f8ff068681d237fd82c6f3 nested_in_artifact=BOOT-INF/lib/gm-security-0.1.0-SNAPSHOT.jar nested_equals_isolated_build=True
+MODULE gm-fuel-stations    isolated_m2_jar_sha256=4377f0e0cface0ac879cbb304e416b3c91666be3da41ede69e974c572cedd51f nested_in_artifact=BOOT-INF/lib/gm-fuel-stations-0.1.0-SNAPSHOT.jar nested_equals_isolated_build=True
+OTHER_GYPPORT_LIBS_IN_ARTIFACT=[]
+GM_EXPENSES_JAR_SHA256=0c39764d5cbee6188cd30e3d360a6ac2e1611f25c11637b8256a3acd0b1aa35e
+GM_EXPENSES_TARGET_EQUALS_INSTALLED=True
+PACKAGED_MIGRATIONS=64 BASELINE_MIGRATIONS=64 ALL_EQUAL_BASELINE=True MISSING=[] EXTRA=[] DIFFERENT=[]
+V62 V62__gm_expenses_advance_planned_delivery.sql packaged=d805797cc90a448962425986074d1b0e82ac48813eb43e4eb6da621dd818c1bd baseline=d805797cc90a448962425986074d1b0e82ac48813eb43e4eb6da621dd818c1bd MATCH=True
+V63 V63__gm_expenses_unified_settlement_reconciliation.sql packaged=6db2eacc9842d9481b9ae34823365c48bc118bad882a5bab90fb97f95ec4e7bb baseline=6db2eacc9842d9481b9ae34823365c48bc118bad882a5bab90fb97f95ec4e7bb MATCH=True
+HIGHEST_MIGRATION=V63 V64_OR_BEYOND=[] DUPLICATE_VERSIONS=[]
+HOST_CLASSES=188 COMMITTED_HOST_SOURCES(bcb9591)=188 EQUAL=True
+GM_EXPENSES_CLASSES=217 COMMITTED_SOURCES(545eae0)=217 EQUAL=True
+GM_EXPENSES_DELETED_CLASSES_ABSENT=True
+GM_EXPENSES_CLASS_FILES=250 IDENTICAL_TO_TESTED_JAR_1C6FEF03=250 DIFFERENT=[] ONLY_IN_TESTED=[]
+HOST_CLASSES_AND_RESOURCES=224 IDENTICAL_TO_TESTED_JAR_F4A55094=224 DIFFERENT=[] ONLY_IN_TESTED=[]
+NESTED gm-entities         classes_new=105 classes_tested=105 content_identical=True differing=0 sample=[]
+NESTED gm-organizations    classes_new=19 classes_tested=19 content_identical=True differing=0 sample=[]
+NESTED gm-expenses         classes_new=250 classes_tested=250 content_identical=True differing=0 sample=[]
+NESTED gm-fleets           classes_new=47 classes_tested=47 content_identical=True differing=0 sample=[]
+NESTED gm-human-resources  classes_new=33 classes_tested=33 content_identical=True differing=0 sample=[]
+NESTED gm-security         classes_new=54 classes_tested=54 content_identical=True differing=0 sample=[]
+NESTED gm-fuel-stations    classes_new=111 classes_tested=111 content_identical=True differing=0 sample=[]
+THIRD_PARTY_LIBS=56 IDENTICAL_TO_TESTED_JAR=True DIFFERENT=[]

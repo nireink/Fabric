@@ -1,0 +1,49 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.04kB 0.0s done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/eclipse-temurin:25-jre-noble
+#2 DONE 0.1s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/5] FROM docker.io/library/eclipse-temurin:25-jre-noble@sha256:2f1da100788559b397bcf48c736169ea5b070bde84e55f203bbee8e83d87a175
+#4 resolve docker.io/library/eclipse-temurin:25-jre-noble@sha256:2f1da100788559b397bcf48c736169ea5b070bde84e55f203bbee8e83d87a175 0.0s done
+#4 DONE 0.0s
+
+#5 [2/5] RUN groupadd --system --gid 10001 app     && useradd --system --uid 10001 --gid app --home-dir /app --shell /usr/sbin/nologin app
+#5 CACHED
+
+#6 [3/5] WORKDIR /app
+#6 CACHED
+
+#7 [internal] load build context
+#7 ...
+
+#8 [4/5] RUN mkdir -p /app/data/expense-documents && chown -R app:app /app/data
+#8 DONE 0.3s
+
+#7 [internal] load build context
+#7 transferring context: 31.32MB 3.0s done
+#7 DONE 3.2s
+
+#9 [5/5] COPY --chown=app:app gystigo-host-runtime-0.1.0-SNAPSHOT.jar /app/app.jar
+#9 DONE 0.4s
+
+#10 exporting to image
+#10 exporting layers
+#10 exporting layers 1.3s done
+#10 exporting manifest sha256:2f953ce8e651f3d4c7fd9c7fb397ea99163334b732c69a40b62caacb8a2b80f5 0.0s done
+#10 exporting config sha256:80462d4422e58bca74ff98b1710dd83573538e966830fb36a18e5dd6d0ad16c4 0.0s done
+#10 exporting attestation manifest sha256:94792ab0d03cfd9129656a66ec07f0028471e476618dbc3a2c976ef074bf6d7a 0.0s done
+#10 exporting manifest list sha256:9e3ff62f02d670bd003408a5d3631f4e17daa0cf0dbb00b887c0266e99048f81 0.0s done
+#10 naming to docker.io/library/gystigo-backend:4.1.0-java25-gm-expenses-mvp-bcb9591 done
+#10 unpacking to docker.io/library/gystigo-backend:4.1.0-java25-gm-expenses-mvp-bcb9591
+#10 unpacking to docker.io/library/gystigo-backend:4.1.0-java25-gm-expenses-mvp-bcb9591 0.3s done
+#10 DONE 1.7s
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/703fny09jabulh9p8gb8goca4

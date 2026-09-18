@@ -1,0 +1,8 @@
+Gystigo bcb959158b781e3fcd876bacc6fcf0f1f1c79b9f
+Modules/gm-expenses 545eae0fb287f8e04f7f1b4ac73780304ec53f22
+Modules/gm-entities e6d3cbcc5e004e8fbd11c78dc1817b5a00e6bffb
+Modules/gm-organizations 62f3de4cf6e30b874c2342b1cb864f704293504c
+Modules/gm-fleets 756cccc5fcfcdf5b745a612afbb1071495441036
+Modules/gm-human-resources 08f10c72c23eeaace12f00cc317c6a4a672b9405
+Modules/gm-security d3fa0b470cb117fb5c1620b6860ecc34ad73a50d
+Modules/gm-fuel-stations 8ee330d78149b8f8d0b1886b0d34ac82efc9361b

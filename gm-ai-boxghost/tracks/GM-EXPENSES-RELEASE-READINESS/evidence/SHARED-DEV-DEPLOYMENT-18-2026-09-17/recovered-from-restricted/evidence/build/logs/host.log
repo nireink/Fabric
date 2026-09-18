@@ -1,0 +1,63 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] gystigo-platform-parent                                            [pom]
+[INFO]                                                                    [jar]
+[INFO] 
+[INFO] ----------------< com.gypport:gystigo-platform-parent >-----------------
+[INFO] Building gystigo-platform-parent 0.1.0-SNAPSHOT                    [1/2]
+[INFO]   from pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ gystigo-platform-parent ---
+[INFO] 
+[INFO] ------------------< com.gypport:gystigo-host-runtime >------------------
+[INFO] Building  0.1.0-SNAPSHOT                                           [2/2]
+[INFO]   from server\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ gystigo-host-runtime ---
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ gystigo-host-runtime ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 39 resources from ..\..\database\core\migration to target\classes\db\migration
+[INFO] Copying 16 resources from ..\..\database\modules\gm-expenses\migration to target\classes\db\migration
+[INFO] Copying 4 resources from ..\..\database\modules\gm-fleets\migration to target\classes\db\migration
+[INFO] Copying 5 resources from ..\..\database\modules\gm-fuel-stations\migration to target\classes\db\migration
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ gystigo-host-runtime ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 188 source files with javac [debug parameters release 25] to target\classes
+[INFO] /C:/Users/elbur/AppData/Local/Temp/claude/D--NZXTG7-GYPPORT-GYPPORT-ERP/6bd391c2-9dd7-4c98-8f41-546e5a9baea1/scratchpad/s18/build/src/Gystigo/platform_os/server/src/main/java/com/gypport/server/module/expenses/ExpensesErrorMapper.java: C:\Users\elbur\AppData\Local\Temp\claude\D--NZXTG7-GYPPORT-GYPPORT-ERP\6bd391c2-9dd7-4c98-8f41-546e5a9baea1\scratchpad\s18\build\src\Gystigo\platform_os\server\src\main\java\com\gypport\server\module\expenses\ExpensesErrorMapper.java uses or overrides a deprecated API.
+[INFO] /C:/Users/elbur/AppData/Local/Temp/claude/D--NZXTG7-GYPPORT-GYPPORT-ERP/6bd391c2-9dd7-4c98-8f41-546e5a9baea1/scratchpad/s18/build/src/Gystigo/platform_os/server/src/main/java/com/gypport/server/module/expenses/ExpensesErrorMapper.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ gystigo-host-runtime ---
+[INFO] Copying 3 resources from src\test\resources to target\test-classes
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ gystigo-host-runtime ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 115 source files with javac [debug parameters release 25] to target\test-classes
+[INFO] /C:/Users/elbur/AppData/Local/Temp/claude/D--NZXTG7-GYPPORT-GYPPORT-ERP/6bd391c2-9dd7-4c98-8f41-546e5a9baea1/scratchpad/s18/build/src/Gystigo/platform_os/server/src/test/java/com/gypport/server/module/auth/infrastructure/persistence/jdbc/JdbcEmailVerificationChallengeRepositoryTest.java: Some input files use unchecked or unsafe operations.
+[INFO] /C:/Users/elbur/AppData/Local/Temp/claude/D--NZXTG7-GYPPORT-GYPPORT-ERP/6bd391c2-9dd7-4c98-8f41-546e5a9baea1/scratchpad/s18/build/src/Gystigo/platform_os/server/src/test/java/com/gypport/server/module/auth/infrastructure/persistence/jdbc/JdbcEmailVerificationChallengeRepositoryTest.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ gystigo-host-runtime ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.5.0:jar (default-jar) @ gystigo-host-runtime ---
+[INFO] Building jar: C:\Users\elbur\AppData\Local\Temp\claude\D--NZXTG7-GYPPORT-GYPPORT-ERP\6bd391c2-9dd7-4c98-8f41-546e5a9baea1\scratchpad\s18\build\src\Gystigo\platform_os\server\target\gystigo-host-runtime-0.1.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- spring-boot:4.1.0:repackage (default) @ gystigo-host-runtime ---
+[INFO] Replacing main artifact C:\Users\elbur\AppData\Local\Temp\claude\D--NZXTG7-GYPPORT-GYPPORT-ERP\6bd391c2-9dd7-4c98-8f41-546e5a9baea1\scratchpad\s18\build\src\Gystigo\platform_os\server\target\gystigo-host-runtime-0.1.0-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to C:\Users\elbur\AppData\Local\Temp\claude\D--NZXTG7-GYPPORT-GYPPORT-ERP\6bd391c2-9dd7-4c98-8f41-546e5a9baea1\scratchpad\s18\build\src\Gystigo\platform_os\server\target\gystigo-host-runtime-0.1.0-SNAPSHOT.jar.original
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for gystigo-platform-parent 0.1.0-SNAPSHOT:
+[INFO] 
+[INFO] gystigo-platform-parent ............................ SUCCESS [  0.218 s]
+[INFO]  ................................................... SUCCESS [ 17.390 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  18.167 s
+[INFO] Finished at: 2026-09-17T11:18:38-05:00
+[INFO] ------------------------------------------------------------------------

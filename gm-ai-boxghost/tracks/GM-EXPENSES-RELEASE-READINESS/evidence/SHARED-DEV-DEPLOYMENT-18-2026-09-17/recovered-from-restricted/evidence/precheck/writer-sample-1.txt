@@ -1,0 +1,14 @@
+now=2026-09-17 16:14:31.439 uptime_s=17691
+binlog.000040	158			
+Connections=1870
+Innodb_rows_deleted=0
+Innodb_rows_inserted=0
+Innodb_rows_updated=0
+Threads_connected=1
+session id=5 user=event_scheduler host=localhost db=- command=Daemon time=17687 state=Waiting on empty queue
+session id=1870 user=root host=localhost db=core_business_dev command=Query time=0 state=executing
+innodb_trx=0
+account user=root host=127.0.0.1 current=0 total=1756
+account user=root host=localhost current=1 total=107
+account user=- host=- current=33 total=69
+account user=event_scheduler host=localhost current=1 total=1

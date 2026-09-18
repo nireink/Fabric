@@ -1,0 +1,13 @@
+events_total=0 enabled=0
+schema=core_business_dev
+schema=gm_expenses_wp04_verify
+schema=information_schema
+schema=mysql
+schema=performance_schema
+schema=sys
+version=8.4.10 log_bin=1 binlog_format=ROW log_bin_trust_function_creators=0 sql_mode=ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION
+Com_alter_table	0
+Com_create_table	35
+Com_delete	0
+Com_insert	0
+Com_update	0

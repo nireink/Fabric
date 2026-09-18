@@ -1,0 +1,22 @@
+# GM_EXPENSES_SHARED_DEV_DEPLOYMENT_18 - disposable deployment Dockerfile (never committed).
+# Runtime stage copied verbatim from Gystigo@bcb959158b781e3fcd876bacc6fcf0f1f1c79b9f platform_os/server/Dockerfile;
+# the build stage is replaced by the artifact built from the clean commit exports (SHA-256 recorded in evidence).
+FROM eclipse-temurin:25-jre-noble AS runtime
+
+RUN groupadd --system --gid 10001 app \
+    && useradd --system --uid 10001 --gid app --home-dir /app --shell /usr/sbin/nologin app
+
+WORKDIR /app
+
+# gypport.expenses.document-storage-path defaults to ./data/expense-documents (relative to
+# the working directory) - FilesystemDocumentStoragePort does not create this directory
+# itself, and /app is root-owned, so the non-root app user cannot create it on first write.
+RUN mkdir -p /app/data/expense-documents && chown -R app:app /app/data
+
+COPY --chown=app:app gystigo-host-runtime-0.1.0-SNAPSHOT.jar /app/app.jar
+
+USER app:app
+
+EXPOSE 8080
+
+ENTRYPOINT ["java", "-jar", "/app/app.jar"]

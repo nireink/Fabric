@@ -1,0 +1,39 @@
+﻿PASS synthetic session, tenant A :: login=200
+PASS S18 authentication path reachable (anonymous /auth/me 401) and tenant context for the session :: anonymous=401 me=200
+PASS §9 four USD advances allowed in one Case and delivered :: create=201,201,201,201 deliver=200,200,200,200
+PASS §9 Case totals: delivered 37300, justified 35000, 2300 to return, Conciliar not offered yet :: delivered=37300.0000 justified=35000.0000 pendingReturn=2300.0000 renditions=1
+PASS §9 the Case-level return balances the Case and offers Conciliar :: return=200 status=ABIERTO canReconcile=True
+PASS §9 Conciliar and Cerrar expediente close the Case and every funding advance :: reconcile=200 close=200 advances=CERRADO,CERRADO,CERRADO,CERRADO
+PASS §10 delivered 30000 -> 32000, justified stays 29500, 500 -> 2500 to return, older views stale :: before=30000.0000/500.0000 after=32000.0000/29500.0000/2500.0000 stale=409
+PASS §11 a later approval is allowed after a real return and opens a Case-level reimbursement :: accept=200 status=ABIERTO owed=20.0000 refusedReturn=400
+PASS §11 the reimbursement balances the Case, Conciliar and close succeed, both movements persist :: reimburse=200 reconcile=200 close=200 returned=20.0000 reimbursed=20.0000
+PASS §12 several drafts are allowed beside a delivered advance :: draftA=201 draftB=201
+PASS §12 closure refused with the plural copy :: close=400 message=Hay 2 anticipos en borrador por un total de USD 75.00. Confirma su entrega o cancélalos antes de cerrar el expediente.
+PASS §12 after cancelling one draft, the singular copy :: cancel=200 close=400 message=Hay 1 anticipo en borrador por USD 50.00. Confirma su entrega o cancélalo antes de cerrar el expediente.
+PASS §12 delivering the last draft beside the others removes the draft blocker :: deliver=200 next_blocker=La rendición del expediente tiene saldo pendiente; registra la devolución o el reembolso y vuelve a conciliar.
+PASS §12 once balanced and reconciled the Case closes :: close=200
+PASS §13 REGISTRADO -> PENDIENTE_REVISION -> APROBADO :: REGISTRADO -> PENDIENTE_REVISION -> APROBADO
+PASS §13 OBSERVADO -> correction -> PENDIENTE_REVISION -> APROBADO with its review history :: observed=OBSERVADO corrected=PENDIENTE_REVISION final=APROBADO amount=35.0000 history=SUBMITTED,OBSERVED,CORRECTION_SUBMITTED,ACCEPTED
+PASS §13 RECHAZADO is terminal: approval and correction refused :: reject=200 accept=400 correct=400 status=RECHAZADO
+PASS §13 justified counts APROBADO only; Usado excludes the rejected expense :: justified=115.0000 used=135.0000
+PASS §14 A REGISTRADO blocks the close :: message=El expediente tiene gastos registrados sin enviar a revisión.
+PASS §14 B PENDIENTE_REVISION blocks the close :: message=El expediente tiene gastos pendientes de aprobación.
+PASS §14 C OBSERVADO blocks the close :: message=El expediente tiene gastos observados pendientes de corrección.
+PASS §14 D BORRADOR blocks the close :: message=Hay 1 anticipo en borrador por USD 40.00. Confirma su entrega o cancélalo antes de cerrar el expediente.
+PASS §14 E a balance other than 0 blocks the close :: pendingReturn=65.0000 message=La rendición del expediente tiene saldo pendiente; registra la devolución o el reembolso y vuelve a conciliar.
+PASS §14 F a balanced but unreconciled Case does not close :: message=Concilia la rendición del expediente antes de cerrarlo.
+PASS §14 with every blocker resolved Conciliar and the close succeed :: reconcile=200 close=200
+PASS §15 closed Case card data: 679 delivered, 200 used and justified, 499 returned, 20 reimbursed, nothing pending (Conciliado 100%, Uso 29%) :: close=200 usage=29%
+PASS §15 open overuse card data: Uso 110% with 100 to reimburse :: usage=110% pendingReimbursement=100.0000
+PASS §17 period summary equals the per-Case totals and never nets directions :: delivered=71729.0000 used=66420.0000 justified=66405.0000 returned=2954.0000 reimbursed=40.0000 pendingReturn=2530.0000 pendingReimbursement=120.0000
+PASS §17 categories, query with related Cases, vehicles and resources answer :: categories=200 query=200 lines=16 related=2530.0000/120.0000 vehicles=200 resources=200
+PASS S18 a REGISTRADO expense is edited before review :: edit=200 status=REGISTRADO amount=45.0000
+PASS S18 review-history API: the corrected expense carries SUBMITTED, OBSERVED, CORRECTION_SUBMITTED and ACCEPTED :: history=SUBMITTED,OBSERVED,CORRECTION_SUBMITTED,ACCEPTED
+PASS S18 Expenses list and read APIs answer for the tenant :: cases=200/10 advances=200/18 expenses=200/18
+PASS §16 Case detail without a delivered advance: Usado 260 and every funding amount 0, no rendition yet :: used=260.0000 delivered=0 renditions=0
+PASS §16 report values without a delivered advance are numbers: delivered 0, used 260, the rest 0 :: period={"currencies":[{"currency":"USD","delivered":0,"used":260.0000,"justified":0,"returned":0,"reimbursed":0,"authorizedAdjustments":0,"pendingReturn":0,"pendingReimbursement":0}]}
+PASS §18 advance detail keeps its history and names no rendition of its own :: status=CERRADO managedByCase=True
+PASS §21 per-advance settlement API refused for Case advances (2 deliberate probes) :: get=400 open=400
+PASS §19 tenant B reads and mutates nothing of tenant A (404 on every record, empty lists and reports) :: case=404 advance=404 expense=404 return=404 reimbursement=404 reconcile=404 close=404 addAdvance=404 addExpense=404 cancel=404 submit=404 lists=0/0/0 reports=0/0
+S18_SERVER_5XX=0 []
+S18_DEPLOY_CHECKS=37 FAILURES=0

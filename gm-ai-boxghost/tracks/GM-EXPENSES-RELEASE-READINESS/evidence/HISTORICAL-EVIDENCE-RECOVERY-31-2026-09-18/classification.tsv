@@ -1,0 +1,194 @@
+location	relative_path	bytes	sha256	category	reason
+RESTRICTED	core_business_dev_V43_20260917T162128Z.sql	838347	eb5f88d8d37a1fdb28f079ade99582e20f319635081c0af3dc8cb36840d13c56	C	SENSITIVE_RAW_EVIDENCE_RESTRICTED_ONLY: Shared DEV V43 dump (accounts, business and personal data)
+RESTRICTED	evidence/build/logs/gm-entities.log	3019	cd5682a9aaac61aed1c663b46abd52222c67ebd923e2ff3f7756a390543d31ec	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence
+RESTRICTED	evidence/build/logs/gm-expenses.log	24024	ed77ec5c087cdb2741a2a9da0f4e2a74754e70664d5d7140d7ab64a433beadc1	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence
+RESTRICTED	evidence/build/logs/gm-fleets.log	2979	0ad4fb035fb8066ae4164ce7def335f5de9a728626a2e340fcde2335339588bf	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence
+RESTRICTED	evidence/build/logs/gm-fuel-stations.log	3120	8f964e8e7f109adfd17027915d740b5d5f48b78ac1cc8f6fdb945194073a154c	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence
+RESTRICTED	evidence/build/logs/gm-human-resources.log	3158	33d2f24f017fc1114d995fd4c158d7a3a5c923d0aecb1581787a1896486c7a73	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence
+RESTRICTED	evidence/build/logs/gm-organizations.log	3118	829d6d8ebbd1aa11fc0473e15ae0efcf1c4ee6a13643f12d4882f830a6ac21fc	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence
+RESTRICTED	evidence/build/logs/gm-security.log	3925	d11be8cfc85891abcfb892b196d2dacc94248a2945f825e0d4eedbac5e5aae04	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence
+RESTRICTED	evidence/build/logs/host.log	5541	a33e6069721604390c9a1fb56f3a9cb89ad754e0cefceb463c0437232dc64318	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence
+RESTRICTED	evidence/build/logs/image-build.log	2047	cf5d64500e5af0c1cd0491d5c9bafab496e6360ccf44b2351175eee578cde6a4	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence
+RESTRICTED	evidence/db/post-audit.txt	43	f22a3af88417fe43a717254be3caf115b998246f2e547fb9177956191af36609	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence
+RESTRICTED	evidence/db/post-columns.txt	9063	e08105bb26c7b83a92a0c69ee6995e089ae3f464c2ac80e6c65bcf22731a1b09	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence
+RESTRICTED	evidence/db/post-constraints.txt	43411	c3897c4638b67259c684b18a647180140dd15f2d26aa916f200cac0656655532	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence
+RESTRICTED	evidence/db/post-counts.txt	2363	8ab21ee0bd6b1afb3162e91961a46a93fbef808e557e3e29352992a0a29606c7	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence
+RESTRICTED	evidence/db/post-expenses-columns.json	7819	5357d4155ffc656b34dd07b304a600e78c0706880ba037b5d0dfb46883e51f3e	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence
+RESTRICTED	evidence/db/post-expenses-crc.txt	639	66b310411001d30d192bb6effc8d3e7d931f7268473a2780782a5ff962c02335	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence (identical content also in: RUNTIME-REHEARSAL-FINAL-12-2026-09-17)
+RESTRICTED	evidence/db/post-flyway-history.txt	3133	6db3c339210267963a52175cb031439788fa909df0c59a48f9449b9e25ab0b06	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence
+RESTRICTED	evidence/db/post-flyway.txt	39	eceeaf908ad803bb73fda809b1a85bedffb7cabbc94077bd93b72477ed4c3d30	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence
+RESTRICTED	evidence/db/post-identity.txt	70	89317aff0d17c844895dca6b58ed1500dfab9353790f47180b9146d0c08ce68c	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence
+RESTRICTED	evidence/db/post-legacy.txt	2887	90476f3bc35bbd3af3c9fd6440db68a0fa2ff55c02ffb65bcdff5d7d19fc2428	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence
+RESTRICTED	evidence/db/post-migration-results.txt	3951	4dbacc2ddece88120610c9bb3aa9ae2b276fde09abb5b0d0343ecffc2d685187	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence
+RESTRICTED	evidence/db/post-routines.txt	0	e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence (identical content also in: CONTROLLED-COMMIT-GATE-23-2026-09-17, PERMANENT-EXPEDIENTE-SEQUENCE-V65-25-2026-09-17, PKG-2C-COMMIT-GATE-2026-09-15, RUNTIME-REHEARSAL-FINAL-12-2026-09-17, V65)
+RESTRICTED	evidence/db/post-triggers.txt	4515	635bb37e1c4e687a02b3c2492e8b8fb4db435eafc4d2132ec8b2113ed04f609d	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence
+RESTRICTED	evidence/db/postsmoke-audit.txt	43	f22a3af88417fe43a717254be3caf115b998246f2e547fb9177956191af36609	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence
+RESTRICTED	evidence/db/postsmoke-columns.txt	9063	e08105bb26c7b83a92a0c69ee6995e089ae3f464c2ac80e6c65bcf22731a1b09	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence
+RESTRICTED	evidence/db/postsmoke-constraints.txt	43411	c3897c4638b67259c684b18a647180140dd15f2d26aa916f200cac0656655532	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence
+RESTRICTED	evidence/db/postsmoke-counts.txt	2365	43cad4aa1c1a444e30eed8d3f99528f71eeb39bea990ead8c1a400d661217e8d	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence
+RESTRICTED	evidence/db/postsmoke-expenses-columns.json	7819	5357d4155ffc656b34dd07b304a600e78c0706880ba037b5d0dfb46883e51f3e	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence
+RESTRICTED	evidence/db/postsmoke-expenses-crc.txt	646	9a35e50486a04563daad5cdcb378db2de8f24124117c3516a145a95bb18126d5	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence
+RESTRICTED	evidence/db/postsmoke-flyway-history.txt	3133	6db3c339210267963a52175cb031439788fa909df0c59a48f9449b9e25ab0b06	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence
+RESTRICTED	evidence/db/postsmoke-flyway.txt	39	eceeaf908ad803bb73fda809b1a85bedffb7cabbc94077bd93b72477ed4c3d30	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence
+RESTRICTED	evidence/db/postsmoke-identity.txt	70	c39c48ccfe1b44ad4bbe863a70365007acfcc37396ad94f1da19efaa3a54ff57	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence
+RESTRICTED	evidence/db/postsmoke-legacy.txt	3702	c369ee157bf755021f7edb49cefb5a9c4eb33e81de93f63b7f97aa7f7001dd45	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence
+RESTRICTED	evidence/db/postsmoke-routines.txt	0	e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence (identical content also in: CONTROLLED-COMMIT-GATE-23-2026-09-17, PERMANENT-EXPEDIENTE-SEQUENCE-V65-25-2026-09-17, PKG-2C-COMMIT-GATE-2026-09-15, RUNTIME-REHEARSAL-FINAL-12-2026-09-17, V65)
+RESTRICTED	evidence/db/postsmoke-triggers.txt	4515	635bb37e1c4e687a02b3c2492e8b8fb4db435eafc4d2132ec8b2113ed04f609d	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence
+RESTRICTED	evidence/db/pre-audit.txt	43	f22a3af88417fe43a717254be3caf115b998246f2e547fb9177956191af36609	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence
+RESTRICTED	evidence/db/pre-columns.txt	8618	b3a736946737d9ac068e540d4219d325b65aac55782f0802e38f22f8b4dac0a8	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence (identical content also in: RUNTIME-REHEARSAL-FINAL-12-2026-09-17)
+RESTRICTED	evidence/db/pre-constraints.txt	38355	c5442709def1fddd095b54def7207e9ddad0881dc76fb6f5f5eaab2ed1afa14d	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence
+RESTRICTED	evidence/db/pre-counts.txt	2231	c20268c28bbf559c79ae0660c09b32248d5641f0a326f8c9320ec07cafb10259	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence (identical content also in: RUNTIME-REHEARSAL-FINAL-12-2026-09-17)
+RESTRICTED	evidence/db/pre-expenses-columns.json	7755	51fa383337873dea85a61a878399e28d7415cb904d4dbb7344abd9ea28a59f81	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence
+RESTRICTED	evidence/db/pre-expenses-crc.txt	639	66b310411001d30d192bb6effc8d3e7d931f7268473a2780782a5ff962c02335	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence (identical content also in: RUNTIME-REHEARSAL-FINAL-12-2026-09-17)
+RESTRICTED	evidence/db/pre-flyway-history.txt	1843	e8c3f343124ee90c0340addf19f50575b5cf5042eebf28abe9b2d55f6cc87c33	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence
+RESTRICTED	evidence/db/pre-flyway.txt	39	95146c49e45bdede037510db2a2cf42663e45fcaeb69dfd6c84e5a4f87fab181	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence (identical content also in: RUNTIME-REHEARSAL-FINAL-12-2026-09-17)
+RESTRICTED	evidence/db/pre-identity.txt	70	77e512cc3e0032b86843893e76f0d8469c099b5aba9bfadf8576e587266dc0ea	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence
+RESTRICTED	evidence/db/pre-legacy.txt	2887	58f88d4044dfd738b2dfab7cadf8e29edfb77e7cddca9b72677745f63c207078	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence
+RESTRICTED	evidence/db/pre-routines.txt	0	e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence (identical content also in: CONTROLLED-COMMIT-GATE-23-2026-09-17, PERMANENT-EXPEDIENTE-SEQUENCE-V65-25-2026-09-17, PKG-2C-COMMIT-GATE-2026-09-15, RUNTIME-REHEARSAL-FINAL-12-2026-09-17, V65)
+RESTRICTED	evidence/db/pre-triggers.txt	4050	988ca5b85138e06765c7a4a31746388d170a26dee42b96c7f9714a68fd97b846	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence (identical content also in: RUNTIME-REHEARSAL-FINAL-12-2026-09-17)
+RESTRICTED	evidence/db/restore-audit.txt	43	f22a3af88417fe43a717254be3caf115b998246f2e547fb9177956191af36609	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence
+RESTRICTED	evidence/db/restore-columns.txt	8618	b3a736946737d9ac068e540d4219d325b65aac55782f0802e38f22f8b4dac0a8	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence (identical content also in: RUNTIME-REHEARSAL-FINAL-12-2026-09-17)
+RESTRICTED	evidence/db/restore-constraints.txt	38355	c5442709def1fddd095b54def7207e9ddad0881dc76fb6f5f5eaab2ed1afa14d	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence
+RESTRICTED	evidence/db/restore-counts.txt	2231	c20268c28bbf559c79ae0660c09b32248d5641f0a326f8c9320ec07cafb10259	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence (identical content also in: RUNTIME-REHEARSAL-FINAL-12-2026-09-17)
+RESTRICTED	evidence/db/restore-expenses-columns.json	7755	51fa383337873dea85a61a878399e28d7415cb904d4dbb7344abd9ea28a59f81	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence
+RESTRICTED	evidence/db/restore-expenses-crc.txt	639	66b310411001d30d192bb6effc8d3e7d931f7268473a2780782a5ff962c02335	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence (identical content also in: RUNTIME-REHEARSAL-FINAL-12-2026-09-17)
+RESTRICTED	evidence/db/restore-flyway-history.txt	1843	e8c3f343124ee90c0340addf19f50575b5cf5042eebf28abe9b2d55f6cc87c33	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence
+RESTRICTED	evidence/db/restore-flyway.txt	39	95146c49e45bdede037510db2a2cf42663e45fcaeb69dfd6c84e5a4f87fab181	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence (identical content also in: RUNTIME-REHEARSAL-FINAL-12-2026-09-17)
+RESTRICTED	evidence/db/restore-identity.txt	78	883bccd29b2b29496ae903759377ae1ed08dec4788ae80c4902bf2571089fc60	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence
+RESTRICTED	evidence/db/restore-legacy.txt	2887	58f88d4044dfd738b2dfab7cadf8e29edfb77e7cddca9b72677745f63c207078	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence
+RESTRICTED	evidence/db/restore-routines.txt	0	e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence (identical content also in: CONTROLLED-COMMIT-GATE-23-2026-09-17, PERMANENT-EXPEDIENTE-SEQUENCE-V65-25-2026-09-17, PKG-2C-COMMIT-GATE-2026-09-15, RUNTIME-REHEARSAL-FINAL-12-2026-09-17, V65)
+RESTRICTED	evidence/db/restore-triggers.txt	4050	988ca5b85138e06765c7a4a31746388d170a26dee42b96c7f9714a68fd97b846	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence (identical content also in: RUNTIME-REHEARSAL-FINAL-12-2026-09-17)
+RESTRICTED	evidence/deploy/compose.deploy18.yaml	85	34d5013d20b2968f6ea2ef4ad2bad3fd28d308c7ced216309fe5a951a58ae11a	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence
+RESTRICTED	evidence/deploy/migration-container.log	10525	1adacea30213c45efd6d4da52630ecfc0d13a79d14774f8e3219005e58a1bc8f	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence
+RESTRICTED	evidence/deploy/migration-run.out.txt	156	267b839ecd4264794f30edbdf4d7b8eeea6278ee1aff008d1290065b649375bb	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence
+RESTRICTED	evidence/deploy/official-backend-after-smoke.log	4848	8eaf8bfa6d49f3f97665d4d292111277f6803ded9df6418a18729ff330b161ca	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence
+RESTRICTED	evidence/deploy/official-backend-start.log	3216	6ee02a600427bbd0ab4419a153646abb97684831a72bc122e2d5438c0f2ec559	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence
+RESTRICTED	evidence/deploy/official-up.out.txt	164	78aed509c2bd202e8c702f35bf831ec898befb316ce106ae3a54f7977caa3cf5	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence
+RESTRICTED	evidence/deploy/old-backend-container-nonsecret.json	1978	db16d8ddf446aa893ef8e5d5283d9a18613e0f0afb098b15131f26abd4c344af	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence
+RESTRICTED	evidence/evidence/artifact-proof.txt	3749	48cdd372272cae576e96c5df5a53d038fa2d3b1f2e5e811777b953277a674f48	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence
+RESTRICTED	evidence/evidence/backup-verify.txt	846	46d3bbf91566856c7f928fac3a3a34c43cbe84340704f5328b26a4ee5752db7a	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence
+RESTRICTED	evidence/evidence/backup.txt	703	2225668101ccd13d7a8e6333324da8c5a906598cc5bdccdb901205597a3b63d3	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence
+RESTRICTED	evidence/evidence/DEPLOYMENT_18_RECORD.md	8995	48b6bdeff910fdeab2a792a8574f0eb1b0d7c9b697f95207b70d7fe8c2d9c486	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence
+RESTRICTED	evidence/evidence/migration.txt	8671	4623bfecdee8b2bdfe11bb28aee43e4e177a2b10167443a92766ba171578d1ac	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence
+RESTRICTED	evidence/evidence/post-smoke.txt	4184	fb9f0b7978f9c14d242602022dacc3907521bb81a16993cdc209e87cd6f86347	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence
+RESTRICTED	evidence/precheck/backup-file.txt	144	7ea30af4949a70595758f739a20296f5f6416b35ca04c07f94d59f34121709e4	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence
+RESTRICTED	evidence/precheck/mysqldump.stderr.txt	0	e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence (identical content also in: CONTROLLED-COMMIT-GATE-23-2026-09-17, PERMANENT-EXPEDIENTE-SEQUENCE-V65-25-2026-09-17, PKG-2C-COMMIT-GATE-2026-09-15, RUNTIME-REHEARSAL-FINAL-12-2026-09-17, V65)
+RESTRICTED	evidence/precheck/restore.out.txt	0	e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence (identical content also in: CONTROLLED-COMMIT-GATE-23-2026-09-17, PERMANENT-EXPEDIENTE-SEQUENCE-V65-25-2026-09-17, PKG-2C-COMMIT-GATE-2026-09-15, RUNTIME-REHEARSAL-FINAL-12-2026-09-17, V65)
+RESTRICTED	evidence/precheck/server-facts.txt	438	880a5968b78afac0a2d2c0eda1effe51fc5f4c24e262032f85b70b0cf4c0a6e7	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence
+RESTRICTED	evidence/precheck/verify-container-id.txt	65	ee75a4b79878b8a6e64e153f8778b169e84c558801822de2fd4e7a17518469b1	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence
+RESTRICTED	evidence/precheck/writer-investigation.txt	659	3eb05381528ec1b5ffa22f7d7ba0a5f71d855e3169ed00d208c14fd98b913597	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence
+RESTRICTED	evidence/precheck/writer-sample-1.txt	600	800399220606c727fac0832eabe86e5374e9d207506fec05f05aba572fae30de	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence
+RESTRICTED	evidence/smoke/s18-runtime-smoke-results.txt	5554	c52b1d6af27556d3166751c604ef68449f4cbedf360e74dc6f37d014bbecf12a	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence
+RESTRICTED	evidence/smoke/s18-smoke-ids.json	2328	b8618bbbc1849de1588b65b961b94cef1b7c3677b940b108b0f40f5eef7176ef	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence
+RESTRICTED	evidence/smoke/s18-tenant-a-case-list.json	84101	c32f3c1a99d84444847fa51e737016fe15e4789e3d2c4805d0d667b47a87ce26	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence
+RESTRICTED	evidence/smoke/s18-zero-tenant-case-detail.json	2134	c647c0a575ce54cec27b7ceeec8284fa55e6322c204bbae8937df025821a5b5c	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence
+RESTRICTED	evidence/smoke/s18-zero-tenant-period-summary.json	181	6e6cc8df5e202a9e7f3c28b01366b088dbe7ea553c49fe4073506a9f50e5cde2	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence (identical content also in: RUNTIME-REHEARSAL-FINAL-12-2026-09-17)
+RESTRICTED	evidence/smoke/s18-zero-tenant-related-funding.json	238	6f52266558cff32629ce1ecd7f14b3cb65bdb54e4731ad6c28654fe832e92a40	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence
+RESTRICTED	evidence/tooling/build_export-commits.txt	491	6c9c62f809a822a5242e8f44286c70e78521a980489be608aead35db193a02f4	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence
+RESTRICTED	evidence/tooling/build_image_Dockerfile	1006	2e4c180790b7b7824c09e2265dbc9dc33c35bbcff8d85e79145a0da401a9026b	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence
+RESTRICTED	evidence/tooling/s18-backup-verify.sh	2054	8f5c78cb4f3b23b331e239c0bdadd089e41f4af2134ba99f9de543343d804402	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence
+RESTRICTED	evidence/tooling/s18-backup.sh	2754	8ba60b88164f60b6cdeebc120d990595d513441511ffd107cc546dfed2f4b514	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence
+RESTRICTED	evidence/tooling/s18-deploy-smoke.ps1	34683	e4fe681a993c633575d42c1bf0b5686ca90ec4e1dc27294af8be8205242d3970	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence
+RESTRICTED	evidence/tooling/s18-migrate.sh	4671	f7a865caeceb5e39cf9cb62053a589423abff2d965536fcd91a6d3258b274f8b	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence
+RESTRICTED	evidence/tooling/s18_artifact_proof.py	8279	b1ec1aa889f24e1f9f239a29c34e6f7bb5d70b738abfe29925883ed7d8d4ac36	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence
+RESTRICTED	evidence/tooling/s18_db.py	18328	c2e7befb67890a683d67cfe44c961ff0cfe3cd2ff249acc73a058d15a26c07ad	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence
+RESTRICTED	evidence/tooling/s18_export_proof.py	4135	b5b745971b801b0e9c2ef36a16f33814771ca1d1db14fb316e3d1b6fe9d32ed9	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence
+RESTRICTED	evidence/tooling/s18_image_context.py	2263	c7bf98694a94cbf690523a0731d8e36666a19d03a153cfe78d6231842d6b789a	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence
+RESTRICTED	evidence/tooling/s18_make_smoke.py	6951	fd0e16fff94b030990a10f0dccde0a55f426924ac60569e4fd5f2fc0d913056e	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence
+RESTRICTED	evidence/tooling/s18_post_smoke.py	4848	42538752fb74450190a62e56fafd895c8d95599efda2a831255fb7b7d1dcc728	B	MISSING_CANONICAL_EVIDENCE_RECOVERABLE: non-sensitive STEP 18 evidence
+SCRATCHPAD	s18-backup-verify.sh	2054	8f5c78cb4f3b23b331e239c0bdadd089e41f4af2134ba99f9de543343d804402	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	s18-backup.sh	2754	8ba60b88164f60b6cdeebc120d990595d513441511ffd107cc546dfed2f4b514	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	s18-deploy-smoke.ps1	34683	e4fe681a993c633575d42c1bf0b5686ca90ec4e1dc27294af8be8205242d3970	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	s18-migrate.sh	4671	f7a865caeceb5e39cf9cb62053a589423abff2d965536fcd91a6d3258b274f8b	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	s18_artifact_proof.py	8279	b1ec1aa889f24e1f9f239a29c34e6f7bb5d70b738abfe29925883ed7d8d4ac36	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	s18_db.py	18328	c2e7befb67890a683d67cfe44c961ff0cfe3cd2ff249acc73a058d15a26c07ad	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	s18_export_proof.py	4135	b5b745971b801b0e9c2ef36a16f33814771ca1d1db14fb316e3d1b6fe9d32ed9	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	s18_image_context.py	2263	c7bf98694a94cbf690523a0731d8e36666a19d03a153cfe78d6231842d6b789a	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	s18_make_smoke.py	6951	fd0e16fff94b030990a10f0dccde0a55f426924ac60569e4fd5f2fc0d913056e	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	s18_post_smoke.py	4848	42538752fb74450190a62e56fafd895c8d95599efda2a831255fb7b7d1dcc728	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	build/export-commits.txt	491	6c9c62f809a822a5242e8f44286c70e78521a980489be608aead35db193a02f4	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	build/logs/gm-entities.log	3019	cd5682a9aaac61aed1c663b46abd52222c67ebd923e2ff3f7756a390543d31ec	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	build/logs/gm-expenses.log	24024	ed77ec5c087cdb2741a2a9da0f4e2a74754e70664d5d7140d7ab64a433beadc1	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	build/logs/gm-fleets.log	2979	0ad4fb035fb8066ae4164ce7def335f5de9a728626a2e340fcde2335339588bf	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	build/logs/gm-fuel-stations.log	3120	8f964e8e7f109adfd17027915d740b5d5f48b78ac1cc8f6fdb945194073a154c	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	build/logs/gm-human-resources.log	3158	33d2f24f017fc1114d995fd4c158d7a3a5c923d0aecb1581787a1896486c7a73	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	build/logs/gm-organizations.log	3118	829d6d8ebbd1aa11fc0473e15ae0efcf1c4ee6a13643f12d4882f830a6ac21fc	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	build/logs/gm-security.log	3925	d11be8cfc85891abcfb892b196d2dacc94248a2945f825e0d4eedbac5e5aae04	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	build/logs/host.log	5541	a33e6069721604390c9a1fb56f3a9cb89ad754e0cefceb463c0437232dc64318	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	build/logs/image-build.log	2047	cf5d64500e5af0c1cd0491d5c9bafab496e6360ccf44b2351175eee578cde6a4	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	db/post-audit.txt	43	f22a3af88417fe43a717254be3caf115b998246f2e547fb9177956191af36609	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	db/post-columns.txt	9063	e08105bb26c7b83a92a0c69ee6995e089ae3f464c2ac80e6c65bcf22731a1b09	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	db/post-constraints.txt	43411	c3897c4638b67259c684b18a647180140dd15f2d26aa916f200cac0656655532	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	db/post-counts.txt	2363	8ab21ee0bd6b1afb3162e91961a46a93fbef808e557e3e29352992a0a29606c7	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	db/post-expenses-columns.json	7819	5357d4155ffc656b34dd07b304a600e78c0706880ba037b5d0dfb46883e51f3e	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	db/post-expenses-crc.txt	639	66b310411001d30d192bb6effc8d3e7d931f7268473a2780782a5ff962c02335	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	db/post-flyway-history.txt	3133	6db3c339210267963a52175cb031439788fa909df0c59a48f9449b9e25ab0b06	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	db/post-flyway.txt	39	eceeaf908ad803bb73fda809b1a85bedffb7cabbc94077bd93b72477ed4c3d30	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	db/post-identity.txt	70	89317aff0d17c844895dca6b58ed1500dfab9353790f47180b9146d0c08ce68c	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	db/post-legacy.txt	2887	90476f3bc35bbd3af3c9fd6440db68a0fa2ff55c02ffb65bcdff5d7d19fc2428	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	db/post-migration-results.txt	3951	4dbacc2ddece88120610c9bb3aa9ae2b276fde09abb5b0d0343ecffc2d685187	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	db/post-routines.txt	0	e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	db/post-triggers.txt	4515	635bb37e1c4e687a02b3c2492e8b8fb4db435eafc4d2132ec8b2113ed04f609d	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	db/postsmoke-audit.txt	43	f22a3af88417fe43a717254be3caf115b998246f2e547fb9177956191af36609	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	db/postsmoke-columns.txt	9063	e08105bb26c7b83a92a0c69ee6995e089ae3f464c2ac80e6c65bcf22731a1b09	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	db/postsmoke-constraints.txt	43411	c3897c4638b67259c684b18a647180140dd15f2d26aa916f200cac0656655532	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	db/postsmoke-counts.txt	2365	43cad4aa1c1a444e30eed8d3f99528f71eeb39bea990ead8c1a400d661217e8d	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	db/postsmoke-expenses-columns.json	7819	5357d4155ffc656b34dd07b304a600e78c0706880ba037b5d0dfb46883e51f3e	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	db/postsmoke-expenses-crc.txt	646	9a35e50486a04563daad5cdcb378db2de8f24124117c3516a145a95bb18126d5	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	db/postsmoke-flyway-history.txt	3133	6db3c339210267963a52175cb031439788fa909df0c59a48f9449b9e25ab0b06	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	db/postsmoke-flyway.txt	39	eceeaf908ad803bb73fda809b1a85bedffb7cabbc94077bd93b72477ed4c3d30	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	db/postsmoke-identity.txt	70	c39c48ccfe1b44ad4bbe863a70365007acfcc37396ad94f1da19efaa3a54ff57	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	db/postsmoke-legacy.txt	3702	c369ee157bf755021f7edb49cefb5a9c4eb33e81de93f63b7f97aa7f7001dd45	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	db/postsmoke-routines.txt	0	e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	db/postsmoke-triggers.txt	4515	635bb37e1c4e687a02b3c2492e8b8fb4db435eafc4d2132ec8b2113ed04f609d	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	db/pre-audit.txt	43	f22a3af88417fe43a717254be3caf115b998246f2e547fb9177956191af36609	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	db/pre-columns.txt	8618	b3a736946737d9ac068e540d4219d325b65aac55782f0802e38f22f8b4dac0a8	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	db/pre-constraints.txt	38355	c5442709def1fddd095b54def7207e9ddad0881dc76fb6f5f5eaab2ed1afa14d	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	db/pre-counts.txt	2231	c20268c28bbf559c79ae0660c09b32248d5641f0a326f8c9320ec07cafb10259	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	db/pre-expenses-columns.json	7755	51fa383337873dea85a61a878399e28d7415cb904d4dbb7344abd9ea28a59f81	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	db/pre-expenses-crc.txt	639	66b310411001d30d192bb6effc8d3e7d931f7268473a2780782a5ff962c02335	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	db/pre-flyway-history.txt	1843	e8c3f343124ee90c0340addf19f50575b5cf5042eebf28abe9b2d55f6cc87c33	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	db/pre-flyway.txt	39	95146c49e45bdede037510db2a2cf42663e45fcaeb69dfd6c84e5a4f87fab181	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	db/pre-identity.txt	70	77e512cc3e0032b86843893e76f0d8469c099b5aba9bfadf8576e587266dc0ea	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	db/pre-legacy.txt	2887	58f88d4044dfd738b2dfab7cadf8e29edfb77e7cddca9b72677745f63c207078	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	db/pre-routines.txt	0	e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	db/pre-triggers.txt	4050	988ca5b85138e06765c7a4a31746388d170a26dee42b96c7f9714a68fd97b846	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	db/restore-audit.txt	43	f22a3af88417fe43a717254be3caf115b998246f2e547fb9177956191af36609	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	db/restore-columns.txt	8618	b3a736946737d9ac068e540d4219d325b65aac55782f0802e38f22f8b4dac0a8	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	db/restore-constraints.txt	38355	c5442709def1fddd095b54def7207e9ddad0881dc76fb6f5f5eaab2ed1afa14d	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	db/restore-counts.txt	2231	c20268c28bbf559c79ae0660c09b32248d5641f0a326f8c9320ec07cafb10259	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	db/restore-expenses-columns.json	7755	51fa383337873dea85a61a878399e28d7415cb904d4dbb7344abd9ea28a59f81	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	db/restore-expenses-crc.txt	639	66b310411001d30d192bb6effc8d3e7d931f7268473a2780782a5ff962c02335	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	db/restore-flyway-history.txt	1843	e8c3f343124ee90c0340addf19f50575b5cf5042eebf28abe9b2d55f6cc87c33	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	db/restore-flyway.txt	39	95146c49e45bdede037510db2a2cf42663e45fcaeb69dfd6c84e5a4f87fab181	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	db/restore-identity.txt	78	883bccd29b2b29496ae903759377ae1ed08dec4788ae80c4902bf2571089fc60	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	db/restore-legacy.txt	2887	58f88d4044dfd738b2dfab7cadf8e29edfb77e7cddca9b72677745f63c207078	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	db/restore-routines.txt	0	e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	db/restore-triggers.txt	4050	988ca5b85138e06765c7a4a31746388d170a26dee42b96c7f9714a68fd97b846	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	deploy/compose.deploy18.yaml	85	34d5013d20b2968f6ea2ef4ad2bad3fd28d308c7ced216309fe5a951a58ae11a	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	deploy/migration-container.log	10525	1adacea30213c45efd6d4da52630ecfc0d13a79d14774f8e3219005e58a1bc8f	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	deploy/migration-run.out.txt	156	267b839ecd4264794f30edbdf4d7b8eeea6278ee1aff008d1290065b649375bb	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	deploy/official-backend-after-smoke.log	4848	8eaf8bfa6d49f3f97665d4d292111277f6803ded9df6418a18729ff330b161ca	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	deploy/official-backend-start.log	3216	6ee02a600427bbd0ab4419a153646abb97684831a72bc122e2d5438c0f2ec559	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	deploy/official-up.out.txt	164	78aed509c2bd202e8c702f35bf831ec898befb316ce106ae3a54f7977caa3cf5	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	deploy/old-backend-container-nonsecret.json	1978	db16d8ddf446aa893ef8e5d5283d9a18613e0f0afb098b15131f26abd4c344af	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	evidence/artifact-proof.txt	3749	48cdd372272cae576e96c5df5a53d038fa2d3b1f2e5e811777b953277a674f48	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	evidence/backup-verify.txt	846	46d3bbf91566856c7f928fac3a3a34c43cbe84340704f5328b26a4ee5752db7a	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	evidence/backup.txt	703	2225668101ccd13d7a8e6333324da8c5a906598cc5bdccdb901205597a3b63d3	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	evidence/DEPLOYMENT_18_RECORD.md	8995	48b6bdeff910fdeab2a792a8574f0eb1b0d7c9b697f95207b70d7fe8c2d9c486	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	evidence/migration.txt	8671	4623bfecdee8b2bdfe11bb28aee43e4e177a2b10167443a92766ba171578d1ac	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	evidence/post-smoke.txt	4184	fb9f0b7978f9c14d242602022dacc3907521bb81a16993cdc209e87cd6f86347	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	precheck/backup-file.txt	144	7ea30af4949a70595758f739a20296f5f6416b35ca04c07f94d59f34121709e4	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	precheck/mysqldump.stderr.txt	0	e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	precheck/restore.out.txt	0	e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	precheck/server-facts.txt	438	880a5968b78afac0a2d2c0eda1effe51fc5f4c24e262032f85b70b0cf4c0a6e7	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	precheck/verify-container-id.txt	65	ee75a4b79878b8a6e64e153f8778b169e84c558801822de2fd4e7a17518469b1	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	precheck/writer-investigation.txt	659	3eb05381528ec1b5ffa22f7d7ba0a5f71d855e3169ed00d208c14fd98b913597	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	precheck/writer-sample-1.txt	600	800399220606c727fac0832eabe86e5374e9d207506fec05f05aba572fae30de	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	smoke/s18-runtime-smoke-results.txt	5554	c52b1d6af27556d3166751c604ef68449f4cbedf360e74dc6f37d014bbecf12a	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	smoke/s18-smoke-ids.json	2328	b8618bbbc1849de1588b65b961b94cef1b7c3677b940b108b0f40f5eef7176ef	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	smoke/s18-tenant-a-case-list.json	84101	c32f3c1a99d84444847fa51e737016fe15e4789e3d2c4805d0d667b47a87ce26	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	smoke/s18-zero-tenant-case-detail.json	2134	c647c0a575ce54cec27b7ceeec8284fa55e6322c204bbae8937df025821a5b5c	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	smoke/s18-zero-tenant-period-summary.json	181	6e6cc8df5e202a9e7f3c28b01366b088dbe7ea553c49fe4073506a9f50e5cde2	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	smoke/s18-zero-tenant-related-funding.json	238	6f52266558cff32629ce1ecd7f14b3cb65bdb54e4731ad6c28654fe832e92a40	D	DUPLICATE_BYTE_IDENTICAL of the restricted copy (session scratchpad)
+SCRATCHPAD	__pycache__/s18_db.cpython-313.pyc	28795	3eb96782e79b83b3bc5f215abc9f6137a58b7b2efe51a981ac0513a3888e5167	E	SUPERSEDED_DERIVED_OUTPUT: compiled Python bytecode of s18_db.py

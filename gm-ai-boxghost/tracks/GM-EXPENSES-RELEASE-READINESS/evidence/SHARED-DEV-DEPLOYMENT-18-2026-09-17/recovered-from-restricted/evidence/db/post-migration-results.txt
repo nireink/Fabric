@@ -1,0 +1,35 @@
+max=63 rows=47 failed=0 applied_44_63=20 beyond_63=0
+tables_before=102 tables_after=107 rows_before=3192 rows_after=3234
+tables_missing_after=[]
+tables_with_changed_counts=[flyway_schema_history 27->47]
+tables_added_by_migrations=[mdm_identity_intake_identifiers(0), mdm_identity_intakes(0), tax_subjects(0), user_tenant_membership_events(11), user_tenant_memberships(11)]
+tables_with_fewer_rows=[]
+responsible_reference                rows:crc before=13:33499136728 after=13:33499136728 same=True shared_columns=14 columns_added=- columns_removed=-
+vehicle_reference                    rows:crc before=28:51652535006 after=28:51652535006 same=True shared_columns=13 columns_added=- columns_removed=-
+expense_category                     rows:crc before=15:26811461622 after=15:26811461622 same=True shared_columns=11 columns_added=- columns_removed=-
+expense_advance                      rows:crc before=30:65674337299 after=30:65674337299 same=True shared_columns=34 columns_added=planned_delivery_method_code,planned_rendition_days columns_removed=-
+expense                              rows:crc before=54:96500809607 after=54:96500809607 same=True shared_columns=27 columns_added=- columns_removed=-
+advance_settlement                   rows:crc before=13:30735898215 after=13:30735898215 same=True shared_columns=19 columns_added=- columns_removed=-
+expense_advance_assignment_event     rows:crc before=0:0 after=0:0 same=True shared_columns=12 columns_added=- columns_removed=-
+expense_review_event                 rows:crc before=75:163441637360 after=75:163441637360 same=True shared_columns=12 columns_added=- columns_removed=-
+expense_revision_event               rows:crc before=21:41153451218 after=21:41153451218 same=True shared_columns=14 columns_added=- columns_removed=-
+settlement_adjustment_event          rows:crc before=0:0 after=0:0 same=True shared_columns=13 columns_added=- columns_removed=-
+settlement_balance_event             rows:crc before=3:8556796930 after=3:8556796930 same=True shared_columns=13 columns_added=- columns_removed=-
+expense_adjustment                   rows:crc before=0:0 after=0:0 same=True shared_columns=13 columns_added=- columns_removed=-
+expense_document                     rows:crc before=11:28520654467 after=11:28520654467 same=True shared_columns=27 columns_added=- columns_removed=-
+expense_command_receipt              rows:crc before=351:803404234708 after=351:803404234708 same=True shared_columns=13 columns_added=- columns_removed=-
+expense_allocation                   rows:crc before=0:0 after=0:0 same=True shared_columns=14 columns_added=- columns_removed=-
+expense_document_review_event        rows:crc before=0:0 after=0:0 same=True shared_columns=10 columns_added=- columns_removed=-
+expense_advance_participant_event    rows:crc before=30:73320038469 after=30:73320038469 same=True shared_columns=14 columns_added=- columns_removed=-
+expense_case                         rows:crc before=17:34181121633 after=17:34181121633 same=True shared_columns=17 columns_added=- columns_removed=-
+expense_case_resource                rows:crc before=11:26418872348 after=11:26418872348 same=True shared_columns=13 columns_added=- columns_removed=-
+EXPENSES_CONTENT_MISMATCHES=0
+triggers_before=29 triggers_after=32 changed_or_removed=[] new_or_changed=[trg_user_tenant_membership_event_no_delete, trg_user_tenant_membership_event_no_update, trg_user_tenant_membership_no_delete]
+routines_left_by_migrations=0
+expenses_delete_guards=17
+canonical_categories=8
+V61 origin_columns=2 old_columns=0 origin_fks=3 old_fks=0 identity_pair_check=1 retired_unique_key=0 accounts=11 accounts_without_membership=0
+V62 planned_columns=2 planned_checks=3 existing_rows_with_plan=0
+V63 return_reimburse_check=0 reconciled_equation_check=1 adjustment_shortfall_check=1 settlement_checks=10 unified_clause=1 reconciled_rows_violating=0
+ambiguous_legacy_links=0
+LEGACY_ROWS_UNCHANGED_EXCEPT_FLYWAY_LINE=True

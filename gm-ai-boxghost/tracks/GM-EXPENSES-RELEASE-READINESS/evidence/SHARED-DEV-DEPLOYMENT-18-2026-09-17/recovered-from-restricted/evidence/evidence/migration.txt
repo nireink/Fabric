@@ -1,0 +1,52 @@
+== final writer check
+binlog=binlog.000040:158
+rw_commits=0
+other_sessions=0
+flyway=43/27/0
+MIGRATION_CONTAINER_START_UTC=2026-09-17T16:24:38Z
+COMPOSE_RUN_EXIT=0 00c3f2f87c9e35313b804854ebc91f41408ce25085e06f74af9f87bca96b85e3
+MIGRATION_CONTAINER_ID=00c3f2f87c9e IMAGE=gystigo-backend:4.1.0-java25-gm-expenses-mvp-bcb9591 sha256:9e3ff62f02d670bd003408a5d3631f4e17daa0cf0dbb00b887c0266e99048f81 PUBLISHED_PORTS={}
+MIGRATION_RESULT=STARTED AFTER_POLLS=6 AT_UTC=2026-09-17T16:24:58Z
+2026-09-17T16:24:43.622Z  INFO 1 --- [server] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://mysql:3306/core_business_dev (MySQL 8.4)
+2026-09-17T16:24:43.902Z  INFO 1 --- [server] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 64 migrations (execution time 00:00.172s)
+2026-09-17T16:24:43.941Z  INFO 1 --- [server] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema `core_business_dev`: 43
+2026-09-17T16:24:43.979Z  INFO 1 --- [server] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema `core_business_dev` to version "44 - human resources permission namespace"
+2026-09-17T16:24:44.042Z  INFO 1 --- [server] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema `core_business_dev` to version "45 - gm fleets tenant safe vehicle references"
+2026-09-17T16:24:44.350Z  INFO 1 --- [server] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema `core_business_dev` to version "46 - gm fuel stations tenant safe references"
+2026-09-17T16:24:45.323Z  INFO 1 --- [server] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema `core_business_dev` to version "47 - gm fuel stations tenant safe product scope"
+2026-09-17T16:24:45.348Z  WARN 1 --- [server] [           main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: PROCEDURE core_business_dev.assert_fuel_receiving_tank_products_in_scope does not exist (SQL State: 42000 - E
+2026-09-17T16:24:45.780Z  INFO 1 --- [server] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema `core_business_dev` to version "48 - fiscal tax subject foundation"
+2026-09-17T16:24:45.786Z  WARN 1 --- [server] [           main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: PROCEDURE core_business_dev.assert_tax_subject_foundation_derivable does not exist (SQL State: 42000 - Error 
+2026-09-17T16:24:45.887Z  WARN 1 --- [server] [           main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Integer display width is deprecated and will be removed in a future release. (SQL State: HY000 - Error Code: 
+2026-09-17T16:24:46.821Z  INFO 1 --- [server] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema `core_business_dev` to version "49 - user establishment tax subject access"
+2026-09-17T16:24:46.826Z  WARN 1 --- [server] [           main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: PROCEDURE core_business_dev.assert_user_establishment_access_derivable does not exist (SQL State: 42000 - Err
+2026-09-17T16:24:47.317Z  INFO 1 --- [server] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema `core_business_dev` to version "50 - identity identifier collation reconciliation"
+2026-09-17T16:24:47.323Z  WARN 1 --- [server] [           main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: PROCEDURE core_business_dev.assert_identity_collation_keeps_identifiers_distinct does not exist (SQL State: 4
+2026-09-17T16:24:47.812Z  INFO 1 --- [server] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema `core_business_dev` to version "51 - universal identity intake"
+2026-09-17T16:24:48.011Z  INFO 1 --- [server] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema `core_business_dev` to version "52 - pending account identity reconciliation"
+2026-09-17T16:24:48.016Z  WARN 1 --- [server] [           main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: PROCEDURE core_business_dev.assert_user_account_identity_pairs_reconcilable does not exist (SQL State: 42000 
+2026-09-17T16:24:48.448Z  INFO 1 --- [server] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema `core_business_dev` to version "53 - user tenant membership foundation"
+2026-09-17T16:24:48.455Z  WARN 1 --- [server] [           main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: PROCEDURE core_business_dev.assert_user_tenant_membership_backfill_provable does not exist (SQL State: 42000 
+2026-09-17T16:24:48.612Z  INFO 1 --- [server] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema `core_business_dev` to version "54 - one active account per golden record"
+2026-09-17T16:24:48.617Z  WARN 1 --- [server] [           main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: PROCEDURE core_business_dev.assert_one_active_account_per_golden_record does not exist (SQL State: 42000 - Er
+2026-09-17T16:24:48.839Z  INFO 1 --- [server] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema `core_business_dev` to version "55 - user tenant membership catch up"
+2026-09-17T16:24:48.844Z  WARN 1 --- [server] [           main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: PROCEDURE core_business_dev.assert_user_tenant_membership_catch_up_provable does not exist (SQL State: 42000 
+2026-09-17T16:24:48.887Z  INFO 1 --- [server] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema `core_business_dev` to version "56 - tenantless platform sessions"
+2026-09-17T16:24:49.028Z  INFO 1 --- [server] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema `core_business_dev` to version "57 - tenant access subject membership fks"
+2026-09-17T16:24:49.032Z  WARN 1 --- [server] [           main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: PROCEDURE core_business_dev.assert_tenant_access_subjects_have_memberships does not exist (SQL State: 42000 -
+2026-09-17T16:24:49.703Z  INFO 1 --- [server] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema `core_business_dev` to version "58 - global user account actor fks"
+2026-09-17T16:24:49.708Z  WARN 1 --- [server] [           main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: PROCEDURE core_business_dev.assert_actor_columns_name_existing_accounts does not exist (SQL State: 42000 - Er
+2026-09-17T16:24:51.639Z  INFO 1 --- [server] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema `core_business_dev` to version "59 - global account challenge references"
+2026-09-17T16:24:51.643Z  WARN 1 --- [server] [           main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: PROCEDURE core_business_dev.assert_account_challenges_are_globally_unique does not exist (SQL State: 42000 - 
+2026-09-17T16:24:51.850Z  INFO 1 --- [server] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema `core_business_dev` to version "60 - global username uniqueness"
+2026-09-17T16:24:51.856Z  WARN 1 --- [server] [           main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: PROCEDURE core_business_dev.assert_usernames_are_globally_unique does not exist (SQL State: 42000 - Error Cod
+2026-09-17T16:24:51.975Z  INFO 1 --- [server] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema `core_business_dev` to version "61 - user account origin columns"
+2026-09-17T16:24:51.981Z  WARN 1 --- [server] [           main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: PROCEDURE core_business_dev.assert_user_account_origin_rename_is_safe does not exist (SQL State: 42000 - Erro
+2026-09-17T16:24:52.539Z  INFO 1 --- [server] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema `core_business_dev` to version "62 - gm expenses advance planned delivery"
+2026-09-17T16:24:52.781Z  INFO 1 --- [server] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema `core_business_dev` to version "63 - gm expenses unified settlement reconciliation"
+2026-09-17T16:24:52.946Z  INFO 1 --- [server] [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 20 migrations to schema `core_business_dev`, now at version v63 (execution time 00:08.428s)
+2026-09-17T16:24:55.428Z  INFO 1 --- [server] [           main] c.g.server.module.ServerApplication      : Started ServerApplication in 15.361 seconds (process running for 16.152)
+MIGRATION_CONTAINER_STOPPED=YES
+MIGRATION_CONTAINER_REMOVED=YES
+== Flyway after
+flyway_max=63 history_rows=47 failed=0 applied_44_63=20 beyond_63=0 first_new=2026-09-17 16:24:44 last_new=2026-09-17 16:24:52 total_exec_ms=8428 installed_by=root

@@ -1,0 +1,17 @@
+VERIFY_CONTAINER=gypport-backup-verify-18-10ff8a32 ID=2b7180bc6d1f BINDING=127.0.0.1:52237
+READY_AFTER_POLLS=5
+RESTORE_EXIT=0 SECONDS=7 RESTORE_OUTPUT_LINES=0
+FINGERPRINT restore container=2b7180bc6d1f tables=102 triggers=29 flyway=flyway_max=43 history_rows=27 failed=0
+COMPARE pre vs restore flyway          IDENTICAL
+COMPARE pre vs restore flyway-history  IDENTICAL
+COMPARE pre vs restore counts          IDENTICAL
+COMPARE pre vs restore triggers        IDENTICAL
+COMPARE pre vs restore routines        IDENTICAL
+COMPARE pre vs restore columns         IDENTICAL
+COMPARE pre vs restore constraints     IDENTICAL
+COMPARE pre vs restore expenses-crc    IDENTICAL
+COMPARE pre vs restore legacy          IDENTICAL
+COMPARE pre vs restore audit           IDENTICAL
+COMPARE_DIFFERENCES=0
+VERIFY_CONTAINER_REMOVED=YES
+LEFTOVER_CONTAINERS=0

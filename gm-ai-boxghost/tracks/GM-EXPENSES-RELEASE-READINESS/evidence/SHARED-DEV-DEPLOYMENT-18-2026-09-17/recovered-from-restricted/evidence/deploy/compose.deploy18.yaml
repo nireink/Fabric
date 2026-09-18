@@ -1,0 +1,3 @@
+services:
+  backend:
+    image: gystigo-backend:4.1.0-java25-gm-expenses-mvp-bcb9591

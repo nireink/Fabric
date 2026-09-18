@@ -1,0 +1,38 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------< com.gypport:gm-entities >-----------------------
+[INFO] Building gm-entities 0.1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ gm-entities ---
+[INFO] 
+[INFO] --- resources:3.4.0:resources (default-resources) @ gm-entities ---
+[INFO] skip non existing resourceDirectory C:\Users\elbur\AppData\Local\Temp\claude\D--NZXTG7-GYPPORT-GYPPORT-ERP\6bd391c2-9dd7-4c98-8f41-546e5a9baea1\scratchpad\s18\build\src\Modules\gm-entities\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ gm-entities ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 79 source files with javac [debug release 25] to target\classes
+[INFO] 
+[INFO] --- resources:3.4.0:testResources (default-testResources) @ gm-entities ---
+[INFO] skip non existing resourceDirectory C:\Users\elbur\AppData\Local\Temp\claude\D--NZXTG7-GYPPORT-GYPPORT-ERP\6bd391c2-9dd7-4c98-8f41-546e5a9baea1\scratchpad\s18\build\src\Modules\gm-entities\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ gm-entities ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 23 source files with javac [debug release 25] to target\test-classes
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ gm-entities ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.5.0:jar (default-jar) @ gm-entities ---
+[INFO] Building jar: C:\Users\elbur\AppData\Local\Temp\claude\D--NZXTG7-GYPPORT-GYPPORT-ERP\6bd391c2-9dd7-4c98-8f41-546e5a9baea1\scratchpad\s18\build\src\Modules\gm-entities\target\gm-entities-0.1.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- install:3.1.4:install (default-install) @ gm-entities ---
+[INFO] Installing C:\Users\elbur\AppData\Local\Temp\claude\D--NZXTG7-GYPPORT-GYPPORT-ERP\6bd391c2-9dd7-4c98-8f41-546e5a9baea1\scratchpad\s18\build\src\Modules\gm-entities\pom.xml to C:\Users\elbur\AppData\Local\Temp\claude\D--NZXTG7-GYPPORT-GYPPORT-ERP\6bd391c2-9dd7-4c98-8f41-546e5a9baea1\scratchpad\s18\build\m2\com\gypport\gm-entities\0.1.0-SNAPSHOT\gm-entities-0.1.0-SNAPSHOT.pom
+[INFO] Installing C:\Users\elbur\AppData\Local\Temp\claude\D--NZXTG7-GYPPORT-GYPPORT-ERP\6bd391c2-9dd7-4c98-8f41-546e5a9baea1\scratchpad\s18\build\src\Modules\gm-entities\target\gm-entities-0.1.0-SNAPSHOT.jar to C:\Users\elbur\AppData\Local\Temp\claude\D--NZXTG7-GYPPORT-GYPPORT-ERP\6bd391c2-9dd7-4c98-8f41-546e5a9baea1\scratchpad\s18\build\m2\com\gypport\gm-entities\0.1.0-SNAPSHOT\gm-entities-0.1.0-SNAPSHOT.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  6.814 s
+[INFO] Finished at: 2026-09-17T11:17:16-05:00
+[INFO] ------------------------------------------------------------------------

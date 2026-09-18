@@ -1,0 +1,26 @@
+binlog.000040	158			
+Created_tmp_disk_tables=2
+Created_tmp_tables=340
+Handler_delete=8
+Handler_update=399
+Handler_write=5739
+Innodb_rows_deleted=0
+Innodb_rows_inserted=4
+Innodb_rows_read=15498
+Innodb_rows_updated=0
+Innodb_system_rows_deleted=8
+Innodb_system_rows_inserted=8
+Innodb_system_rows_read=76589
+Innodb_system_rows_updated=331
+Uptime=18148
+metric dml_deletes=0
+metric dml_inserts=4
+metric dml_system_deletes=8
+metric dml_system_inserts=8
+metric dml_system_updates=331
+metric dml_updates=0
+metric trx_nl_ro_commits=0
+metric trx_rollbacks=0
+metric trx_ro_commits=0
+metric trx_rw_commits=0
+session id=5 user=event_scheduler host=localhost command=Daemon

@@ -1,0 +1,20 @@
+﻿{
+    "account:a":  "deploy-smoke-s18a-c3e414fb@example.test",
+    "me:a":  "{\"sessionContext\":\"TENANT\",\"permissions\":[\"fleets.vehicle.create\",\"fuelstations.site.manage\",\"expenses.expense.read\",\"expenses.advance.create\",\"expenses.adjustment.manage\",\"fuelstations.equipment.read\",\"fleets.vehicle.read\",\"expenses.document.manage\",\"fuelstations.site.read\",\"expenses.expense.approve\",\"expenses.reference.manage\",\"fleets.vehicle.manage\",\"expenses.expense.create\",\"expenses.settlement.manage\",\"expenses.advance.read\",\"organizations.organization.prepare\",\"organizations.organization.read\",\"entities.person.manage\",\"expenses.category.manage\",\"expenses.expense.review\",\"fuelstations.equipment.manage\"],\"userAccountId\":592,\"tenantId\":593,\"global\":{\"emailVerified\":true,\"emailAddress\":\"deploy-smoke-s18a-c3e414fb@example.test\",\"userAccountId\":592,\"identityStatus\":\"PENDING\",\"mdmPartyId\":null},\"activeOrganizationId\":null,\"contextualParticipation\":{\"tenantId\":593,\"partyId\":null},\"availableTenants\":[{\"displayName\":null,\"id\":593}],\"availableOrganizations\":[]}",
+    "case:S18 Construcción":  "6436ec5a-611a-4325-bd7a-d0bc2f7ba842",
+    "advance:Construcción:30000":  "9f60ddcd-3cb7-476c-9e1e-a336b0ae6f31",
+    "case:S18 Tramo adicional":  "ff5ccd19-ef30-4c74-8dc3-7a323fb9769d",
+    "case:S18 Devolución y reembolso":  "3d55495b-6a39-4846-a82e-40c66cdf4fd5",
+    "case:S18 Borradores":  "2cf78113-0a06-4f44-8b10-5feb411e104a",
+    "case:S18 Flujo de gastos y bloqueos":  "aab88aa9-8c32-48fa-a4ed-e48732ed1a89",
+    "case:S18 Viaje Loja (ensayo final)":  "603b8344-2849-485d-a007-0d7be6123a5d",
+    "case:S18 Sobreuso":  "7083a2fe-ce06-4bdb-b992-489ee42ad345",
+    "case:S18 Por justificar":  "4da1d032-4fbb-4f5a-b7a8-360ef2da834c",
+    "case:S18 Por reembolsar":  "7cb7f956-3b2b-43bd-ba85-51017ea32dd5",
+    "case:S18 Edición de gasto registrado":  "9cbfb8fb-7f37-4d80-bbeb-f014dbc2616f",
+    "account:z":  "deploy-smoke-s18z-0e04983e@example.test",
+    "case:S18 Sin anticipo entregado":  "487b52a7-d2b0-4a6b-a9a8-e36a0cc3a9bd",
+    "account:b":  "deploy-smoke-s18b-cbd7042b@example.test",
+    "case:Construcción":  "6436ec5a-611a-4325-bd7a-d0bc2f7ba842",
+    "case:Tramo adicional":  "ff5ccd19-ef30-4c74-8dc3-7a323fb9769d"
+}
