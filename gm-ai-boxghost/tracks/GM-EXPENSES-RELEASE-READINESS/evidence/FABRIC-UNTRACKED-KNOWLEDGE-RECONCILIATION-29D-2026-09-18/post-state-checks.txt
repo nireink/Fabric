@@ -1,0 +1,68 @@
+== Group A - committed with their bytes unchanged
+UNCHANGED Knowledge/AI/GYPPORT_AI_AGENT_AUTONOMY_STOP_GATES.md sha256=cf559ebbd2fd213cab96faa27b404deb9ba507cfcd8063f269207cf85fb636c3
+UNCHANGED Knowledge/AI/GYPPORT_AI_AGENT_USAGE_EFFICIENCY_KNOWLEDGE.md sha256=6d2bc7ec3315b5c17b7f8a78618f53ff4395de36a41fe3b315cf6005ee69c5d2
+UNCHANGED Knowledge/AI/GYPPORT_AI_KNOWN_FINDING_COMPLETION_POLICY.md sha256=8d6a402160f1ef9d434cd64e180626f8344571c29a6dde65185a6630e53d6980
+UNCHANGED Knowledge/Derived/owner-approved/GYPPORT-DATA-ACCESS-ARCHITECTURE-01.md sha256=49ee7d04534ecef17ea77db6e17fca91ff759b57f0c2659cc6b80390ccb062aa
+UNCHANGED Knowledge/Security/GYPPORT_ORGANIZATION_CONTROL_FOUNDATION.md sha256=b1d55dc5abe0757cdbb7cf65a519464f6134d10923d1e0153c36fdaf8b838c78
+UNCHANGED Knowledge/UIX/GYPPORT_MODULE_NAVIGATION_HIERARCHY.md sha256=f72733654b804ce5a14367a5a57115d868ba2563859a433911a8f6337c507bbd
+UNCHANGED Knowledge/UIX/GYPPORT_UIX_IMPLEMENTATION_AND_COMPLIANCE_GUIDE.md sha256=d089fcc7ab6ba4084ece8d1e57e424f593173834f2ec304862ea8ddff8d70f1b
+
+== Group F - 03/04/05 changed by the historical banner only
+BANNER_ONLY Knowledge/gm-expenses/03-application/GYPPORT_GM_EXPENSES_APPLICATION_ARCHITECTURE_BASELINE_v1.0.md banner_count=1 body_sha256_without_banner_equals_pre_state=YES new_sha256=e0e5caab7f262ef2b7ff57ef80a2e4f6562e9fc416a6515d4932ccb8009b3b50
+BANNER_ONLY Knowledge/gm-expenses/04-integration/GYPPORT_GM_EXPENSES_CROSS_REPOSITORY_INTEGRATION_BASELINE_v1.0.md banner_count=1 body_sha256_without_banner_equals_pre_state=YES new_sha256=b0fa9660aa44ae7ee403176a28ebbbca61caf3c7dde307c7fe86161719ab16c9
+BANNER_ONLY Knowledge/gm-expenses/05-implementation/GYPPORT_GM_EXPENSES_IMPLEMENTATION_CONSTRAINTS_v1.0.md banner_count=1 body_sha256_without_banner_equals_pre_state=YES new_sha256=dd0fd93c4d636290ac1a103e7b7e6ebfb2dfe1c5393bc4b0a624670ed73d3524
+
+== README - index/status rewritten, original archived
+ORIGINAL_ARCHIVED sha256=36b23019d32db77dcdf3d64d5d6307d64680da9b2eee88613a5a34f75aaaeb62 equals_pre_state=YES
+PURPOSE_BODY_CARRIED_BYTE_EXACT=YES PROVENANCE_BODY_CARRIED_BYTE_EXACT=YES NEW_README sha256=2a8cf3fb788731f4b836bcd61208f25f5802ccc0bf1c2bdc75b2777151abde1d bytes=4233
+STATUS_LINES: GM_EXPENSES_MVP_STATUS=FROZEN_OWNER_ACCEPTED_PUSHED | CURRENT_AUTHORITY=GYPPORT-GM-EXPENSES-MVP-FROZEN-OWNER-ACCEPTED-2026-09-17
+STALE_STATUS_LEFT=NO
+
+== Group E - Owner WIP byte-identical and untouched
+BYTE_IDENTICAL Knowledge/Architecture/GYPPORT_REGLAS_CANONICAS_ARQUITECTURA_DOMINIO_UIX.md sha256=a411d1bc00368858af2bfb6457b184d93e8becb6bd30b28a9f51b888080d4581
+BYTE_IDENTICAL Knowledge/gm-accounting/01-conceptual-model/GYPPORT_GM_ACCOUNTING_GENERAL_MODULE_MODEL_EXECUTION_PROMPT_v1.2.md sha256=4111190ec69bebf5a82fded2e5d1d06f6dda19d30d80fc71ca617b331d176fff
+
+== Groups B, C, D - relocated sources gone from Fabric, destinations carry the pre-state bytes
+GYPPORT_STORAGE source_in_fabric=REMOVED dest_sha256_equals_pre_state=YES Knowledge/Derived/proposed/GYPPORT-DATA-ACCESS-ARCHITECTURE-01.md -> GYPPORT-Storage/Fabric/Knowledge/Derived/proposed/GYPPORT-DATA-ACCESS-ARCHITECTURE-01.md
+GYPPORT_STORAGE source_in_fabric=REMOVED dest_sha256_equals_pre_state=YES Knowledge/Derived/proposed/reference-templates/gm-entities-data-access/README.md -> GYPPORT-Storage/Fabric/Knowledge/Derived/proposed/reference-templates/gm-entities-data-access/README.md
+GYPPORT_STORAGE source_in_fabric=REMOVED dest_sha256_equals_pre_state=YES Knowledge/Derived/proposed/reference-templates/gm-entities-data-access/src/main/java/com/gypport/template/dataaccess/party/application/CreatePartyUseCase.java -> GYPPORT-Storage/Fabric/Knowledge/Derived/proposed/reference-templates/gm-entities-data-access/src/main/java/com/gypport/template/dataaccess/party/application/CreatePartyUseCase.java
+GYPPORT_STORAGE source_in_fabric=REMOVED dest_sha256_equals_pre_state=YES Knowledge/Derived/proposed/reference-templates/gm-entities-data-access/src/main/java/com/gypport/template/dataaccess/party/application/PartyConflictException.java -> GYPPORT-Storage/Fabric/Knowledge/Derived/proposed/reference-templates/gm-entities-data-access/src/main/java/com/gypport/template/dataaccess/party/application/PartyConflictException.java
+GYPPORT_STORAGE source_in_fabric=REMOVED dest_sha256_equals_pre_state=YES Knowledge/Derived/proposed/reference-templates/gm-entities-data-access/src/main/java/com/gypport/template/dataaccess/party/domain/Party.java -> GYPPORT-Storage/Fabric/Knowledge/Derived/proposed/reference-templates/gm-entities-data-access/src/main/java/com/gypport/template/dataaccess/party/domain/Party.java
+GYPPORT_STORAGE source_in_fabric=REMOVED dest_sha256_equals_pre_state=YES Knowledge/Derived/proposed/reference-templates/gm-entities-data-access/src/main/java/com/gypport/template/dataaccess/party/domain/PartyId.java -> GYPPORT-Storage/Fabric/Knowledge/Derived/proposed/reference-templates/gm-entities-data-access/src/main/java/com/gypport/template/dataaccess/party/domain/PartyId.java
+GYPPORT_STORAGE source_in_fabric=REMOVED dest_sha256_equals_pre_state=YES Knowledge/Derived/proposed/reference-templates/gm-entities-data-access/src/main/java/com/gypport/template/dataaccess/party/domain/PartyRepository.java -> GYPPORT-Storage/Fabric/Knowledge/Derived/proposed/reference-templates/gm-entities-data-access/src/main/java/com/gypport/template/dataaccess/party/domain/PartyRepository.java
+GYPPORT_STORAGE source_in_fabric=REMOVED dest_sha256_equals_pre_state=YES Knowledge/Derived/proposed/reference-templates/gm-entities-data-access/src/main/java/com/gypport/template/dataaccess/party/domain/TenantId.java -> GYPPORT-Storage/Fabric/Knowledge/Derived/proposed/reference-templates/gm-entities-data-access/src/main/java/com/gypport/template/dataaccess/party/domain/TenantId.java
+GYPPORT_STORAGE source_in_fabric=REMOVED dest_sha256_equals_pre_state=YES Knowledge/Derived/proposed/reference-templates/gm-entities-data-access/src/main/java/com/gypport/template/dataaccess/party/infrastructure/persistence/jdbc/JdbcPartyQueryAdapter.java -> GYPPORT-Storage/Fabric/Knowledge/Derived/proposed/reference-templates/gm-entities-data-access/src/main/java/com/gypport/template/dataaccess/party/infrastructure/persistence/jdbc/JdbcPartyQueryAdapter.java
+GYPPORT_STORAGE source_in_fabric=REMOVED dest_sha256_equals_pre_state=YES Knowledge/Derived/proposed/reference-templates/gm-entities-data-access/src/main/java/com/gypport/template/dataaccess/party/infrastructure/persistence/jdbc/JdbcPartyRepository.java -> GYPPORT-Storage/Fabric/Knowledge/Derived/proposed/reference-templates/gm-entities-data-access/src/main/java/com/gypport/template/dataaccess/party/infrastructure/persistence/jdbc/JdbcPartyRepository.java
+GYPPORT_STORAGE source_in_fabric=REMOVED dest_sha256_equals_pre_state=YES Knowledge/Derived/proposed/reference-templates/gm-entities-data-access/src/main/java/com/gypport/template/dataaccess/party/infrastructure/persistence/jdbc/PartyRowMapper.java -> GYPPORT-Storage/Fabric/Knowledge/Derived/proposed/reference-templates/gm-entities-data-access/src/main/java/com/gypport/template/dataaccess/party/infrastructure/persistence/jdbc/PartyRowMapper.java
+GYPPORT_STORAGE source_in_fabric=REMOVED dest_sha256_equals_pre_state=YES Knowledge/Derived/proposed/reference-templates/gm-entities-data-access/src/main/java/com/gypport/template/dataaccess/party/ports/persistence/PartyPage.java -> GYPPORT-Storage/Fabric/Knowledge/Derived/proposed/reference-templates/gm-entities-data-access/src/main/java/com/gypport/template/dataaccess/party/ports/persistence/PartyPage.java
+GYPPORT_STORAGE source_in_fabric=REMOVED dest_sha256_equals_pre_state=YES Knowledge/Derived/proposed/reference-templates/gm-entities-data-access/src/main/java/com/gypport/template/dataaccess/party/ports/persistence/PartyQueryPort.java -> GYPPORT-Storage/Fabric/Knowledge/Derived/proposed/reference-templates/gm-entities-data-access/src/main/java/com/gypport/template/dataaccess/party/ports/persistence/PartyQueryPort.java
+GYPPORT_STORAGE source_in_fabric=REMOVED dest_sha256_equals_pre_state=YES Knowledge/Derived/proposed/reference-templates/gm-entities-data-access/src/main/java/com/gypport/template/dataaccess/party/ports/persistence/PartySearchCriteria.java -> GYPPORT-Storage/Fabric/Knowledge/Derived/proposed/reference-templates/gm-entities-data-access/src/main/java/com/gypport/template/dataaccess/party/ports/persistence/PartySearchCriteria.java
+GYPPORT_STORAGE source_in_fabric=REMOVED dest_sha256_equals_pre_state=YES Knowledge/Derived/proposed/reference-templates/gm-entities-data-access/src/main/java/com/gypport/template/dataaccess/party/ports/persistence/PartySummary.java -> GYPPORT-Storage/Fabric/Knowledge/Derived/proposed/reference-templates/gm-entities-data-access/src/main/java/com/gypport/template/dataaccess/party/ports/persistence/PartySummary.java
+BOXGHOST_IMPORT source_in_fabric=REMOVED dest_sha256_equals_pre_state=YES Knowledge/Derived/proposed/GYPPORT-AUDIT-FINDINGS-PARTIAL-02.md -> Fabric/gm-ai-boxghost/imports/GYPPORT-FABRIC-UNTRACKED-KNOWLEDGE-RECONCILIATION-29D/fabric/Knowledge/Derived/proposed/GYPPORT-AUDIT-FINDINGS-PARTIAL-02.md
+BOXGHOST_IMPORT source_in_fabric=REMOVED dest_sha256_equals_pre_state=YES Knowledge/Derived/proposed/GYPPORT-AUDIT-GYSTIGO-CRITICAL-FINDINGS-B.md -> Fabric/gm-ai-boxghost/imports/GYPPORT-FABRIC-UNTRACKED-KNOWLEDGE-RECONCILIATION-29D/fabric/Knowledge/Derived/proposed/GYPPORT-AUDIT-GYSTIGO-CRITICAL-FINDINGS-B.md
+BOXGHOST_IMPORT source_in_fabric=REMOVED dest_sha256_equals_pre_state=YES Knowledge/Derived/proposed/GYPPORT-IMPLEMENTATION-AUDIT-TEMPLATE-02.md -> Fabric/gm-ai-boxghost/imports/GYPPORT-FABRIC-UNTRACKED-KNOWLEDGE-RECONCILIATION-29D/fabric/Knowledge/Derived/proposed/GYPPORT-IMPLEMENTATION-AUDIT-TEMPLATE-02.md
+
+== Security / UIX - current bytes against the archived pre-edit copies (OP154-OP156)
+-- Knowledge/UIX/GYPPORT_MODULE_NAVIGATION_HIERARCHY.md (pre-edit sha256 cb23ffab6b4ead70, current f72733654b804ce5)
+104,106c104,106
+< Empleados      -> gm-workforce
+< Roles          -> Gystigo Security
+< Permisos       -> Gystigo Security
+---
+> Empleados      -> gm-human-resources
+> Roles          -> gm-security
+> Permisos       -> gm-security
+-- Knowledge/UIX/GYPPORT_UIX_IMPLEMENTATION_AND_COMPLIANCE_GUIDE.md (pre-edit sha256 a1424fcd62d3f809, current d089fcc7ab6ba408)
+106,108c106,108
+< Empleados      -> gm-workforce
+< Roles          -> Gystigo Security
+< Permisos       -> Gystigo Security
+---
+> Empleados      -> gm-human-resources
+> Roles          -> gm-security
+> Permisos       -> gm-security
+-- Knowledge/Security/GYPPORT_ORGANIZATION_CONTROL_FOUNDATION.md (pre-edit sha256 c88525b212606e15, current b1d55dc5abe0757c)
+142c142
+< WORKFORCE
+---
+> HUMAN_RESOURCES
