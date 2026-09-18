@@ -1,0 +1,10 @@
+Knowledge/AI/
+Knowledge/Architecture/GYPPORT_REGLAS_CANONICAS_ARQUITECTURA_DOMINIO_UIX.md
+Knowledge/Derived/
+Knowledge/Security/
+Knowledge/UIX/
+Knowledge/gm-accounting/
+Knowledge/gm-expenses/03-application/
+Knowledge/gm-expenses/04-integration/
+Knowledge/gm-expenses/05-implementation/
+Knowledge/gm-expenses/README.md

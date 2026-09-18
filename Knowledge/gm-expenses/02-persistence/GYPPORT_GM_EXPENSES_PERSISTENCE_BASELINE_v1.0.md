@@ -385,3 +385,27 @@ inside the creating transaction.
 Backfill: every existing Case took the UTC day of its `created_at` - the day its users already saw - ordered by
 `created_at`, then `expense_case_id`. Rehearsed on a disposable copy of Shared DEV V63: 30 of 30 Cases numbered, 0
 duplicates, the six financial tables byte-identical before and after (CHECKSUM TABLE), the counter seeded with no gap.
+
+### ExpenseCase permanent sequence (`V65`)
+
+*Owner decision of GM_EXPENSES_PERMANENT_EXPEDIENTE_SEQUENCE_V65_25. Additive; V64 and everything before it are
+untouched, and no financial table is read or written.*
+
+```text
+expense_case.expense_sequence       INT UNSIGNED NOT NULL - the permanent number inside the tenant ("EXP. NN")
+UNIQUE (tenant_id, expense_sequence)          CHECK expense_sequence >= 1
+expense_case_permanent_sequence (tenant_id, last_sequence, updated_at), PK (tenant_id)
+  CHECK last_sequence >= 1                     no FK to tenants, as V64's counter
+TRIGGER trg_expense_case_expense_sequence_immutable  BEFORE UPDATE - the number is history
+TRIGGER trg_case_permanent_sequence_no_delete       BEFORE DELETE - the counter is never removed
+```
+
+Two counters, never one: `expense_case_number_sequence` (V64) is keyed by tenant and business date and restarts every
+day to compose `case_number`; `expense_case_permanent_sequence` (V65) is keyed by the tenant alone and never restarts.
+Both are advanced with the same one-statement pattern (`INSERT ... ON DUPLICATE KEY UPDATE last_sequence =
+LAST_INSERT_ID(last_sequence + 1)`) inside the creating transaction; the permanent row is taken first, so two creations
+never wait on each other's rows in opposite orders. A creation that rolls back rolls its counter back with it, so the
+committed numbers run without holes.
+
+Backfill: every existing Case was numbered within its tenant by `created_at`, then `expense_case_id` - its real creation
+order - with the business date, the daily sequence, the business number and `created_at` read and never written.

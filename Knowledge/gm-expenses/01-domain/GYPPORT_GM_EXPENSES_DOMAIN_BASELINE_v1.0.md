@@ -529,17 +529,29 @@ Rules:
   cannot collide and a rolled-back creation keeps no number. Never `MAX()+1`, a process counter, the UI, "EXP. NN", a
   transformation of the UUID, or the SRI `document_sequences`.
 - `case_business_date`, `case_sequence` and `case_number` are immutable once assigned, enforced in the database.
-- **One sequence, two representations** (Owner decision, GM_EXPENSES_FINAL_CASE_CARD_NUMBERING_ALIGNMENT_22A). The
-  card's short "EXP. NN" and the complete number are the same `case_sequence`: sequence 1 reads `EXP. 01` and ends the
-  number as `202609170001`. There is no second counter and no second column - the API sends the sequence
-  (`caseSequence`) beside the number, and the UI counts nothing.
-  The display keeps a minimum of two digits and is never truncated: 1 -> `EXP. 01`, 9 -> `EXP. 09`, 27 -> `EXP. 27`,
-  100 -> `EXP. 100`. The sequence restarts with the business date, so `EXP. 01` legitimately reappears on another day
-  and the complete number is what tells the two apart.
-  *Superseded (kept for history): "EXP. NN" as the card's position in the backend's newest-first list, continuous
-  across pages. A Case's number must not depend on the page, the order, a sort or a filter, so sorting or filtering a
-  list never renames what it shows; a Case read from a backend that sends no business identity simply has no EXP.*
-  The visible label of the complete number is `ID:` (it was `ID Gasto:` while the feature was being built).
+- **Two numbers, two purposes** (Owner decision, GM_EXPENSES_PERMANENT_EXPEDIENTE_SEQUENCE_V65_25, schema `V65`).
+  A Case carries four identities, and none does another's work:
+
+  | Concept | Field | Scope | Example | Shown as |
+  |---|---|---|---|---|
+  | Technical id | the public UUID | global | `437a92bf-...` | routes only, never shown |
+  | Permanent expediente number | `expense_sequence` (`ExpenseSequence`, API `expenseSequence`) | tenant | 2 | `EXP. 02` |
+  | Daily case sequence | `case_sequence` (API `caseSequence`) | tenant + business date | 1 | composes the ID |
+  | Business number | `case_number` (`CaseNumber`, API `caseNumber`) | tenant | `202609170001` | `ID: 202609170001` |
+
+  `EXP. NN` counts the tenant's Cases in the order they were created - 1, 2, 3 ... 99, 100 - and never restarts: a new
+  business day resets only `case_sequence`. Creation order decides EXP and the business date decides the ID, so a Case
+  created today for an earlier business date still takes the next EXP while its ID reads that earlier day. The permanent
+  number is allocated server-side from its own counter (one row per tenant) inside the creating transaction, is unique
+  per tenant, is immutable once assigned and never takes part in `case_number`; the daily sequence never decides EXP.
+  The display keeps a minimum of two digits and is never truncated: 1 -> `EXP. 01`, 9 -> `EXP. 09`, 100 -> `EXP. 100`.
+  A payload without `expenseSequence` carries no EXP rather than a daily count dressed as a permanent one.
+  Historical Cases were numbered within their tenant by `created_at`, then the technical id.
+  *Superseded (kept for history): "EXP. NN" derived from `case_sequence` (GM_EXPENSES_FINAL_CASE_CARD_NUMBERING_ALIGNMENT_22A,
+  2026-09-17), under which the first Case of every business day read EXP. 01 again; and before it "EXP. NN" as the
+  card's position in the backend's newest-first list (STEP 20 FINAL). A Case's number never depends on the page, the
+  order, a sort or a filter.*
+  The visible label of the complete business number is `ID:` (it was `ID Gasto:` while the feature was being built).
 
 ## 6. Money
 

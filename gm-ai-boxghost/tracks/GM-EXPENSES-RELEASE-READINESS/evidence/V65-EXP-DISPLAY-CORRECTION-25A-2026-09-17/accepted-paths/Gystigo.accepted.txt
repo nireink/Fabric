@@ -1,0 +1,12 @@
+database/modules/gm-expenses/migration/V65__gm_expenses_case_permanent_sequence.sql
+platform_os/server/src/main/java/com/gypport/server/module/expenses/ExpenseCaseController.java
+platform_os/server/src/main/java/com/gypport/server/shared/config/ExpenseCaseConfig.java
+platform_os/server/src/test/java/com/gypport/server/module/expenses/ExpenseCaseHttpApiTest.java
+platform_os/studio/channel/browser/shell/fixtures/ExpenseCaseCardsFixture.jsx
+platform_os/studio/channel/browser/shell/fixtures/ExpenseCaseDetailFixture.jsx
+platform_os/studio/channel/browser/shell/src/application/expenses/cases/ExpenseCaseCard.jsx
+platform_os/studio/channel/browser/shell/src/application/expenses/cases/ExpenseCaseDetailPage.jsx
+platform_os/studio/channel/browser/shell/src/application/expenses/cases/caseRules.js
+platform_os/studio/verification/contracts/browser/AdvanceRenditionFlow.contract.mjs
+platform_os/studio/verification/contracts/browser/ExpenseCaseCard.contract.mjs
+platform_os/studio/verification/contracts/browser/ExpenseCaseListNumbering.contract.mjs

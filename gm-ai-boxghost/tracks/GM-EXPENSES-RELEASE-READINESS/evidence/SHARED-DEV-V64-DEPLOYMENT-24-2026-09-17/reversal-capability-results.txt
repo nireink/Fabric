@@ -1,0 +1,14 @@
+﻿PASS ADVANCE_REGISTERED :: status 201 {"advanceId":"231d605b-75db-48dc-91a5-9a03052c725b"}
+PASS ADVANCE_DELIVERED :: status 200 {"status":"ENTREGADO"}
+PASS RENDITION_PRESENT :: version 1 pendingReturn 200.0000
+PASS RETURN_REQUIRES_REASON :: status 400 {"message":"Indica el motivo del movimiento."}
+PASS RETURN_REGISTERED :: status 200 {"status":"RETURN_REGISTERED"}
+PASS MOVEMENT_LISTED :: movements 1 returned 100.0000
+PASS MOVEMENT_HAS_ID_AND_REASON :: movementId 584c4334-0d7c-470c-abb1-699b96f62ab1 reason 'Devolucion de prueba del despliegue' by ''
+PASS REVERSAL_REQUIRES_REASON :: status 400 {"message":"Indica el motivo del reverso."}
+PASS REVERSAL_ACCEPTED :: status 200 {"status":"MOVEMENT_REVERSED"}
+PASS RETURN_NETS_TO_ZERO :: returned 0.0000
+FAIL ORIGINAL_MOVEMENT_KEPT :: movements 1 (original + reverso)
+FAIL REVERSAL_IS_APPEND_ONLY :: reverso entry 
+REVERSAL_CHECKS=12 FAILURES=2
+MOVEMENTS_AFTER={"movementId":"584c4334-0d7c-470c-abb1-699b96f62ab1","currency":"USD","type":"DEVOLUCION","amount":{"amount":100.0000,"currency":"USD"},"reason":"Devolucion de prueba del despliegue","occurredAt":"2026-09-18T01:16:55.258Z","reversed":true,"reversedAt":"2026-09-18T01:16:55.364Z","canReverse":false}

@@ -1592,3 +1592,38 @@ MISMO_EXP_EN_DIAS_DISTINTOS=correcto; la secuencia reinicia con la fecha de nego
 LO_QUE_LOS_DISTINGUE=el numero completo, por ejemplo 202609170001 y 202609180001
 EXPEDIENTE_SIN_IDENTIDAD_DE_NEGOCIO=no muestra EXP ni ID; nunca se inventa uno
 ```
+
+
+2026-09-17 - gm-expenses / EXP. NN es el numero permanente del expediente - REGLA CANONICA
+
+Decision del Owner en GM_EXPENSES_PERMANENT_EXPEDIENTE_SEQUENCE_V65_25. Sustituye la regla "EXP. NN e ID son la misma
+secuencia" del mismo dia (GM_EXPENSES_FINAL_CASE_CARD_NUMBERING_ALIGNMENT_22A). El detalle canonico vive en
+Fabric/Knowledge/gm-expenses/01-domain/GYPPORT_GM_EXPENSES_DOMAIN_BASELINE_v1.0.md.
+
+```text
+EXP_NN=numero permanente del expediente dentro del tenant (expense_sequence, API expenseSequence)
+ALCANCE_DE_EXPENSE_SEQUENCE=TENANT
+EXPENSE_SEQUENCE_REINICIA_CON_LA_FECHA=NO
+ID=identificador de negocio YYYYMMDD#### (case_number)
+CASE_NUMBER_SE_DERIVA_DE=case_business_date + case_sequence diario (sin cambios, V64)
+ALCANCE_DE_CASE_SEQUENCE=TENANT + FECHA_DE_NEGOCIO
+UUID=identificador tecnico
+EXPENSE_SEQUENCE_PARTICIPA_EN_CASE_NUMBER=NO
+CASE_SEQUENCE_DECIDE_EXP=NO
+ORDEN_DE_EXP=orden real de creacion; la fecha de negocio decide solo el ID
+FECHA_DE_NEGOCIO_RETROACTIVA=toma el siguiente EXP; su ID lee la fecha anterior
+BACKFILL_HISTORICO=por tenant, created_at y luego el id tecnico como desempate
+FORMATO_DE_EXP=minimo dos digitos y nunca se trunca: 1 -> EXP. 01, 2 -> EXP. 02, 100 -> EXP. 100
+ASIGNACION=servidor, contador persistente por tenant, dentro de la transaccion de creacion
+UNICIDAD=UNIQUE (tenant_id, expense_sequence)
+INMUTABLE=SI (trigger); el contador no se borra
+PAYLOAD_SIN_EXPENSE_SEQUENCE=sin prefijo EXP; nunca se muestra el conteo diario como si fuera permanente
+MIGRACION=V65; V64 no se edita
+```
+
+Lo que esta entrada sustituye de forma explicita:
+
+```text
+EXP_NN_SE_DERIVA_DE=case_sequence (2026-09-17, NUMBERING_ALIGNMENT_22A) -> expense_sequence
+EL_PRIMER_EXPEDIENTE_DE_CADA_DIA_ES_EXP_01 (22A) -> NO; solo el ID reinicia su secuencia diaria
+```

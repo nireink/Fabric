@@ -1,0 +1,4 @@
+2026-09-17T20:55:23.538-05:00  INFO 26904 --- [server] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema `core_business_v65_rehearsal`: 64
+2026-09-17T20:55:23.705-05:00  INFO 26904 --- [server] [           main] o.f.core.internal.command.DbMigrate      : Migrating schema `core_business_v65_rehearsal` to version "65 - gm expenses case permanent sequence"
+2026-09-17T20:55:25.042-05:00  INFO 26904 --- [server] [           main] o.f.core.internal.command.DbMigrate      : Successfully applied 1 migration to schema `core_business_v65_rehearsal`, now at version v65 (execution 
+2026-09-17T20:55:29.081-05:00  INFO 26904 --- [server] [           main] c.g.server.module.ServerApplication      : Started ServerApplication in 16.066 seconds (process running for 16.983)

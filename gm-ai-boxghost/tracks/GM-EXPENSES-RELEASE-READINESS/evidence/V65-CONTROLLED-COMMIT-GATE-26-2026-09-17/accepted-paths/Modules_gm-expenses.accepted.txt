@@ -1,0 +1,9 @@
+src/main/java/com/gypport/business/expenses/casefile/application/ExpenseCaseService.java
+src/main/java/com/gypport/business/expenses/casefile/application/ExpenseSequencePort.java
+src/main/java/com/gypport/business/expenses/casefile/domain/CaseNumber.java
+src/main/java/com/gypport/business/expenses/casefile/domain/ExpenseCase.java
+src/main/java/com/gypport/business/expenses/casefile/domain/ExpenseSequence.java
+src/main/java/com/gypport/business/expenses/casefile/infrastructure/persistence/jdbc/JdbcExpenseCaseRepository.java
+src/main/java/com/gypport/business/expenses/casefile/infrastructure/persistence/jdbc/JdbcExpenseSequenceRepository.java
+src/test/java/com/gypport/business/expenses/casefile/application/CaseRenditionServiceTest.java
+src/test/java/com/gypport/business/expenses/casefile/domain/ExpenseSequenceTest.java

@@ -6,12 +6,12 @@ not an Owner approval and not an execution trigger.
 
 ```text
 CURRENT_TRACK=GM_EXPENSES_RELEASE_READINESS
-CURRENT_STEP_ID=GM_EXPENSES_CONTROLLED_COMMIT_GATE_23
-CURRENT_PHASE=PRECOMMIT_AUDIT_THEN_EXPLICIT_STAGING_THEN_COMMIT
-MODE=READ_ONLY_PRECOMMIT_AUDIT_THEN_EXPLICIT_STAGING_THEN_COMMIT
+CURRENT_STEP_ID=GM_EXPENSES_V65_CONTROLLED_COMMIT_GATE_26
+CURRENT_PHASE=VERIFY_EXISTING_V65_THEN_CONTROLLED_COMMIT
+MODE=CONTINUE_FROM_CURRENT_STEP_THEN_CONTROLLED_COMMIT
 STATUS=COMMITTED_LOCALLY_WAITING_OWNER_REVIEW
 
-PROMPT_SOURCE=Fabric/Knowledge/00-GYPPORT-UNIVERSE/steps/GM-EXPENSES-RELEASE-READINESS/GM_EXPENSES_CONTROLLED_COMMIT_GATE_23.md
+PROMPT_SOURCE=Fabric/Knowledge/00-GYPPORT-UNIVERSE/steps/GM-EXPENSES-RELEASE-READINESS/GM_EXPENSES_V65_CONTROLLED_COMMIT_GATE_26.md
 REQUIRED_BASELINES=GYPPORT-GM-EXPENSES-MVP-RELEASE-VERIFIED-BASELINE-2026-09-17
 BASELINE_REUSE_REQUIRED=YES
 FULL_HISTORICAL_REGRESSION_RERUN=NO
@@ -23,11 +23,10 @@ AUTO_PUSH=NO
 
 ## Next action
 
-STOP: the gm-expenses MVP closure is committed locally and nothing is pushed. gm-expenses 874a3e5, Gystigo 0293ff4, Fabric on this commit; 57 accepted paths, 0 unrelated paths staged, 15 unrelated WIP paths preserved untouched.
-Runtime is deliberately unchanged: Shared DEV is still V63 and 8080 still serves the STEP 18 image, so the Owner screen keeps showing no EXP and no ID until deployment.
-NEXT_STEP=GM_EXPENSES_SHARED_DEV_V64_DEPLOYMENT_24 - migrate Shared DEV V63 to V64 with a verified backup, rebuild the official DEV backend from gm-expenses 874a3e5 and Gystigo 0293ff4, and smoke it. Not performed yet.
-After deployment, and only then, the Owner corrects the live USD 300 return of Case 437a92bf through the authenticated reverso, so the real actor and instant are recorded.
-Push of the three repositories remains a separate Owner authorization.
+STOP for Owner review: the V65 permanent expediente numbering and the 25A display correction are committed locally - gm-expenses 39a2adf, Gystigo 5eed5d6, Fabric on this commit. Nothing is pushed.
+Runtime is unchanged on purpose: Shared DEV is V64, V65_DEPLOYED=NO, and 8080 serves gystigo-backend:4.1.0-java25-gm-expenses-v64-0293ff4, which sends no expenseSequence, so the real screen still shows no EXP prefix.
+NEXT_STEP=GM_EXPENSES_V65_SHARED_DEV_DEPLOYMENT_27 - back up Shared DEV, migrate V64 to V65 through the Host Flyway, rebuild the official backend from gm-expenses 39a2adf and Gystigo 5eed5d6, smoke it. Not performed; it needs its own Owner authorization.
+After deployment the real tenant reads Compra Filtro EXP. 08 (ID 202609170001) and VIAJE QUITO EXP. 09 (ID 202609170002), the real creation order; the Owner Case USD 300 return still awaits the Owner reverso.
 
 ## How to use this file
 

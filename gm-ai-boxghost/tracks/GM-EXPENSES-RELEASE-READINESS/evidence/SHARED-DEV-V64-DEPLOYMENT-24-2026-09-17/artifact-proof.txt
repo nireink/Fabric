@@ -1,0 +1,21 @@
+ARTIFACT=C:\Users\elbur\AppData\Local\Temp\claude\D--NZXTG7-GYPPORT-GYPPORT-ERP\6bd391c2-9dd7-4c98-8f41-546e5a9baea1\scratchpad\s24\build\src\Gystigo\platform_os\server\target\gystigo-host-runtime-0.1.0-SNAPSHOT.jar
+ARTIFACT_SHA256=eee602458e586b8a63a4b653b7a85d062fee718e68c298f979d3ffee1612de35 bytes=31343455
+MODULE gm-entities          nested=True equals_export_build=True
+MODULE gm-organizations     nested=True equals_export_build=True
+MODULE gm-expenses          nested=True equals_export_build=True
+MODULE gm-fleets            nested=True equals_export_build=True
+MODULE gm-human-resources   nested=True equals_export_build=True
+MODULE gm-security          nested=True equals_export_build=True
+MODULE gm-fuel-stations     nested=True equals_export_build=True
+PACKAGED_MIGRATIONS=65 COMMITTED_SQL_FILES=66 MISSING=[] DIFFERENT=[]
+V64_PACKAGED=['BOOT-INF/classes/db/migration/V64__gm_expenses_case_business_number.sql']
+V64_PACKAGED_SHA256=95dc6f57abf5609c198634c1fb036682d4cd512af0a9c06cc272338992c5fd21
+HIGHEST_PACKAGED_MIGRATION=V64
+CLASS CaseNumber.class                                             PRESENT
+CLASS BusinessDatePort.class                                       PRESENT
+CLASS JdbcCaseNumberSequenceRepository.class                       PRESENT
+CONTROLLER_FIELD caseNumber           PRESENT
+CONTROLLER_FIELD caseSequence         PRESENT
+CONTROLLER_FIELD businessDate         PRESENT
+CONTROLLER_FIELD movements            PRESENT
+CONTROLLER_FIELD movement-reversals   PRESENT

@@ -1,0 +1,24 @@
+== §5 fresh backup of Shared DEV ==
+BACKUP_PATH=/c/Users/elbur/AppData/Local/Temp/gypport/shared-dev-backups/core_business_dev-pre-v64-20260917T200210.sql
+BACKUP_SIZE=1011872
+BACKUP_SHA256=0f5fbd0ee6c2e7815d57a95c4a1947e7d06ce0bce41977a13aeb95bdab2505b1
+== §6 V64 from the committed Gystigo HEAD ==
+V64_COMMITTED_SHA256=95dc6f57abf5609c198634c1fb036682d4cd512af0a9c06cc272338992c5fd21
+V64_COMMITTED_BYTES=7568
+== restore validation on a disposable container ==
+RESTORED_TABLES=107
+RESTORED_CASES=30
+RESTORED_FLYWAY=63
+RESTORE_VALIDATION=PASS
+== V64 pre-flight on the restored copy (the committed byte) ==
+PREFLIGHT_V64_APPLIED=YES
+PREFLIGHT_CASES=30 numbered=30 null=0
+PREFLIGHT_DUPLICATES=0
+PREFLIGHT_OWNER_CASE=202609170001 date=2026-09-17 seq=1
+core_business_v64_preflight.expense	2090782061
+core_business_v64_preflight.expense_advance	1970213055
+core_business_v64_preflight.advance_settlement	4042507783
+core_business_v64_preflight.settlement_balance_event	2867027185
+core_business_v64_preflight.expense_review_event	11987464
+core_business_v64_preflight.expense_command_receipt	1866156047
+PREFLIGHT_DONE
