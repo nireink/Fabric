@@ -6,13 +6,13 @@ not an Owner approval and not an execution trigger.
 
 ```text
 CURRENT_TRACK=GM_EXPENSES_RELEASE_READINESS
-CURRENT_STEP_ID=GM_EXPENSES_V65_CONTROLLED_COMMIT_GATE_26
-CURRENT_PHASE=VERIFY_EXISTING_V65_THEN_CONTROLLED_COMMIT
-MODE=CONTINUE_FROM_CURRENT_STEP_THEN_CONTROLLED_COMMIT
-STATUS=COMMITTED_LOCALLY_WAITING_OWNER_REVIEW
+CURRENT_STEP_ID=GM_EXPENSES_OWNER_FINAL_SMOKE_AND_FREEZE_28
+CURRENT_PHASE=MVP_FREEZE
+MODE=OWNER_RUNTIME_VERIFICATION_THEN_AUTHENTICATED_CORRECTION_THEN_FREEZE
+STATUS=FROZEN_OWNER_ACCEPTED_COMMITTED_LOCAL
 
-PROMPT_SOURCE=Fabric/Knowledge/00-GYPPORT-UNIVERSE/steps/GM-EXPENSES-RELEASE-READINESS/GM_EXPENSES_V65_CONTROLLED_COMMIT_GATE_26.md
-REQUIRED_BASELINES=GYPPORT-GM-EXPENSES-MVP-RELEASE-VERIFIED-BASELINE-2026-09-17
+PROMPT_SOURCE=Fabric/Knowledge/00-GYPPORT-UNIVERSE/steps/GM-EXPENSES-RELEASE-READINESS/GM_EXPENSES_OWNER_FINAL_SMOKE_AND_FREEZE_28.md
+REQUIRED_BASELINES=GYPPORT-PKG2D-CROSS-TENANT-GLOBAL-ACCOUNT-VERIFIED-BASELINE-2026-09-16,GYPPORT-GM-EXPENSES-MVP-FROZEN-OWNER-ACCEPTED-2026-09-17
 BASELINE_REUSE_REQUIRED=YES
 FULL_HISTORICAL_REGRESSION_RERUN=NO
 
@@ -23,10 +23,11 @@ AUTO_PUSH=NO
 
 ## Next action
 
-STOP for Owner review: the V65 permanent expediente numbering and the 25A display correction are committed locally - gm-expenses 39a2adf, Gystigo 5eed5d6, Fabric on this commit. Nothing is pushed.
-Runtime is unchanged on purpose: Shared DEV is V64, V65_DEPLOYED=NO, and 8080 serves gystigo-backend:4.1.0-java25-gm-expenses-v64-0293ff4, which sends no expenseSequence, so the real screen still shows no EXP prefix.
-NEXT_STEP=GM_EXPENSES_V65_SHARED_DEV_DEPLOYMENT_27 - back up Shared DEV, migrate V64 to V65 through the Host Flyway, rebuild the official backend from gm-expenses 39a2adf and Gystigo 5eed5d6, smoke it. Not performed; it needs its own Owner authorization.
-After deployment the real tenant reads Compra Filtro EXP. 08 (ID 202609170001) and VIAJE QUITO EXP. 09 (ID 202609170002), the real creation order; the Owner Case USD 300 return still awaits the Owner reverso.
+STOP: GM_EXPENSES_OWNER_FINAL_SMOKE_AND_FREEZE_28 is complete. The gm-expenses MVP is FROZEN_OWNER_ACCEPTED_COMMITTED_LOCAL: gm-expenses 39a2adf, Gystigo 5eed5d6, Shared DEV Flyway 65, Fabric = the commit that adds this file. Nothing was pushed.
+The Owner accepted EXP. 08: Compra Filtro (ID 202609170001), EXP. 09: VIAJE QUITO (ID 202609170002) and the card layout in the real app, and reversed the USD 300.00 return through the product (events 35 and 36 reverse 29 and 30). Final smoke 29/29, read-only.
+The Case reads Pendiente 80.00 Por reembolsar, its real position; the reimbursement test is deferred and the synthetic DEV data is kept, both by Owner decision.
+Frozen baseline: GYPPORT-GM-EXPENSES-MVP-FROZEN-OWNER-ACCEPTED-2026-09-17. No MVP architecture or UI change without a new explicit track; new ideas go to backlog, post-MVP or the next release.
+Pending Owner decisions: the push of gm-expenses, Gystigo and Fabric; moving the Shared DEV backups from %LOCALAPPDATA%\Temp to GYPPORT_STORAGE (Restricted); promoting the missing STEP 18 evidence. No next STEP is selected.
 
 ## How to use this file
 

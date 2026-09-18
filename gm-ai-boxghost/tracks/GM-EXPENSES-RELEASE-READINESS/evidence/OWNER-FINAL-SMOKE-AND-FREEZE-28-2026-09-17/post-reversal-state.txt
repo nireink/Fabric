@@ -1,0 +1,13 @@
+CASE Compra Filtro | status=ABIERTO | EXP. 08 | ID 202609170001 | Fecha 2026-09-17
+EVENT 29 RETURN_REGISTERED 200.0000 | reverses=NULL | actor=1 | at=2026-09-17 16:40:29.559 | reason=100
+EVENT 30 RETURN_REGISTERED 100.0000 | reverses=NULL | actor=1 | at=2026-09-17 16:40:29.559 | reason=100
+EVENT 35 RETURN_REVERSED 200.0000 | reverses=29 | actor=1 | at=2026-09-18 04:04:03.129 | reason=Actulizacion
+EVENT 36 RETURN_REVERSED 100.0000 | reverses=30 | actor=1 | at=2026-09-18 04:04:03.129 | reason=Actulizacion
+ORIGINALS_UNCHANGED=YES
+REVERSALS=2 | total=300.0000 | each_matches_its_original=YES | actor_populated=YES | timestamp_populated=YES | reason_populated=YES
+REVERSAL_ACTOR user_account_id=1 exists=YES
+SINGLE_REVERSAL_KEY=1
+SETTLEMENT 61 status=EN_CONCILIACION result=PENDING returned=0.0000 reimbursed=0.0000
+SETTLEMENT 62 status=EN_CONCILIACION result=PENDING returned=0.0000 reimbursed=0.0000
+INPUTS delivered=320.0000 approved=400.0000 rejected=200.0000 returned=0.0000 reimbursed=0.0000
+REJECTED_EXPENSE status=RECHAZADO amount=200.0000

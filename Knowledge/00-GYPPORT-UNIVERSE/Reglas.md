@@ -1627,3 +1627,52 @@ Lo que esta entrada sustituye de forma explicita:
 EXP_NN_SE_DERIVA_DE=case_sequence (2026-09-17, NUMBERING_ALIGNMENT_22A) -> expense_sequence
 EL_PRIMER_EXPEDIENTE_DE_CADA_DIA_ES_EXP_01 (22A) -> NO; solo el ID reinicia su secuencia diaria
 ```
+
+
+2026-09-17 - gm-expenses / MVP de gm-expenses congelado - REGLA CANONICA
+
+Decision del Owner en GM_EXPENSES_OWNER_FINAL_SMOKE_AND_FREEZE_28 (§16), despues de aceptar en la aplicacion real la
+numeracion y el orden visual de la tarjeta y de ejecutar el reverso autenticado de la devolucion de USD 300.00 del
+expediente EXP. 08 Compra Filtro. El estado congelado es la baseline
+GYPPORT-GM-EXPENSES-MVP-FROZEN-OWNER-ACCEPTED-2026-09-17.
+
+```text
+GM_EXPENSES_MVP_STATUS=FROZEN_OWNER_ACCEPTED_COMMITTED_LOCAL
+CODIGO_CONGELADO=gm-expenses 39a2adf4dfff0196208a1f80719be1c12c047ac2, Gystigo 5eed5d692342cc889f2afff7a6c4f7f6b5cca1dc
+SHARED_DEV=Flyway 65
+CAMBIOS_DE_ARQUITECTURA_O_UI_DEL_MVP=solo con un track nuevo y explicito del Owner
+IDEAS_NUEVAS=backlog / post-MVP / siguiente release
+NUMERACION=congelada: UUID tecnico; EXP. NN = expense_sequence permanente por tenant; ID = case_number YYYYMMDD####
+SEMANTICA_FINANCIERA=congelada: la de las reglas del 2026-09-17 (Total anticipos, Total gastos, Total a conciliar, Pendiente con su direccion, RECHAZADO pesa cero)
+PUSH=pendiente; el Owner lo autoriza por separado
+```
+
+Caso del smoke del Owner (expediente 437a92bf-bd12-4ab4-9d0d-13dcd6f1fae0), cerrado:
+
+```text
+REVERSO_DE_LA_DEVOLUCION_DE_USD_300=ejecutado por el Owner en el producto: eventos 35 y 36 (RETURN_REVERSED) revierten 29 y 30
+EVENTOS_29_Y_30=intactos
+POSICION_FINAL=anticipos 320, gastos 400, devuelto 0, reembolsado 0, Pendiente 80 Por reembolsar
+REEMBOLSO_DE_USD_80=no registrado; el Owner lo difiere y la posicion Por reembolsar es la real del negocio
+DATOS_SINTETICOS_DE_SHARED_DEV=se conservan (decision del Owner)
+```
+
+
+2026-09-17 — GYPPORT® Universe / Registro de baseline GM-EXPENSES MVP FROZEN OWNER ACCEPTED
+
+Baseline del MVP congelado de gm-expenses, aceptado por el Owner y committed localmente. Se reutiliza segun
+VERIFIED_BASELINE_REUSE. El Owner fijo su id; como no sigue el patron -VERIFIED-BASELINE- del generador, el documento
+se escribio a mano con la misma estructura.
+
+```text
+BASELINE_ID=GYPPORT-GM-EXPENSES-MVP-FROZEN-OWNER-ACCEPTED-2026-09-17
+BASELINE_PATH=Fabric/Knowledge/00-GYPPORT-UNIVERSE/verification-baselines/GYPPORT_GM_EXPENSES_MVP_FROZEN_OWNER_ACCEPTED_2026-09-17.md
+STEP=GM_EXPENSES_OWNER_FINAL_SMOKE_AND_FREEZE_28
+PHASE=MVP_FREEZE
+STATUS=FROZEN_OWNER_ACCEPTED_COMMITTED_LOCAL
+ACCEPTED_COMMITS=gm-expenses=39a2adf4dfff0196208a1f80719be1c12c047ac2; Gystigo=5eed5d692342cc889f2afff7a6c4f7f6b5cca1dc
+MIGRATION_HEAD=V65
+VERIFIED_FILE_COUNT=46
+SUPERSEDES_BASELINE_ID=GYPPORT-GM-EXPENSES-MVP-RELEASE-VERIFIED-BASELINE-2026-09-17
+BASELINE_REUSE_ALLOWED=YES
+```

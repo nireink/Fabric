@@ -1,0 +1,32 @@
+== runtime
+PASS BACKEND_CONTAINER_UNCHANGED_SINCE_STEP27 :: container 445046e2801e image f44f598a5a78 started 2026-09-18T03:31:46.695560939Z restarts 0
+PASS BACKEND_HEALTH :: docker health healthy; the application answers HTTP (unauthenticated list 401, actuator 401)
+PASS UNAUTHENTICATED_LIST_REFUSED :: GET /api/expense-cases without a session -> 401
+PASS UNAUTHENTICATED_UUID_ROUTE_REFUSED :: GET /api/expense-cases/437a92bf-... without a session -> 401
+PASS NO_SERVER_ERROR_LOGGED :: backend log since start: ERROR lines 0, exceptions 0
+== Shared DEV, the Owner tenant and the Owner Case (read-only)
+PASS SHARED_DEV_V65 :: current 65, failed 0
+PASS NUMBERING_COMPRA_FILTRO :: EXP. 08 | ID 202609170001 | Fecha 2026-09-17
+PASS NUMBERING_VIAJE_QUITO :: EXP. 09 | ID 202609170002 | Fecha 2026-09-17
+PASS OWNER_TENANT_PERMANENT_NUMBERS :: 9 Cases numbered 1..9, counter at 9
+PASS ONE_CURRENCY :: 1 currency (USD) in advances and expenses
+PASS TOTAL_ANTICIPOS :: 320.00
+PASS TOTAL_GASTOS :: 400.00 (APROBADO only)
+PASS TOTAL_A_CONCILIAR :: 80.00 Por reembolsar
+PASS DEVUELTO :: 0.00
+PASS REEMBOLSADO :: 0.00
+PASS AJUSTES :: 0.00
+PASS PENDIENTE :: 80.00 Por reembolsar
+PASS USADO :: 400.00 (every expense not rejected or excluded)
+PASS USO :: 125%
+PASS REJECTED_EXPENSE_EFFECT_ZERO :: 1 RECHAZADO for 200.00; Total gastos and Usado exclude it
+PASS ORIGINAL_EVENTS_PRESERVED :: 29 and 30 RETURN_REGISTERED, 300.00 at 2026-09-17 16:40:29.559
+PASS REVERSAL_EVENTS_APPENDED :: 35->29 200.00, 36->30 100.00
+PASS AUTHENTICATED_ACTOR_RECORDED :: user_account 1 (a global UserAccount; the account that created the Case and registered the original returns)
+PASS REVERSAL_TIMESTAMP_AND_REASON :: 2026-09-18 04:04:03.129 (database time zone UTC), reason "Actulizacion"
+PASS DUPLICATE_REVERSAL_BLOCKED :: at most 1 reversal per original; UNIQUE uq_set_balance_single_reversal(reverses_balance_event_id)
+PASS LEDGER_AGREES_WITH_ROWS :: returns registered minus reversed = 0.00 = rows returned 0.00; reimbursement events 0
+PASS RENDITION_REOPENED :: 61 EN_CONCILIACION/PENDING, 62 EN_CONCILIACION/PENDING
+PASS REIMBURSEMENT_OFFERED :: Case ABIERTO, pending reimbursement 80.00, no row CERRADO
+PASS OWNER_TENANT_HAS_NO_SYNTHETIC_CASES :: 0 Cases created by @example.test accounts
+FINAL_SMOKE_CHECKS=29 FAILURES=0 WRITES=0
