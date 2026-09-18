@@ -1,0 +1,41 @@
+# Gystigo WIP byte snapshots - status|path|size|worktree_sha256|head_blob; README.md is deleted in the worktree (ABSENT)
+
+## before
+
+ D|README.md|size=0|worktree_sha256=ABSENT|head_blob=bc8578d404afdf7c373bb06794aa8b21293b24d7
+ M|platform_os/studio/channel/browser/shell/src/application/AuthPage.css|size=8435|worktree_sha256=7fb8d2be1392ae3a85cc8e2b817d1dc9e69db103d06eb05ec02bd551302afce2|head_blob=c7ebbfbe3d6c2b97177e87dcde8af1ae33647e26
+ M|platform_os/studio/channel/browser/shell/src/application/onboarding/ShortRegisterPage.jsx|size=7065|worktree_sha256=ac7f488ba8845ff5cdba10734cf897af729816a805d5f4ad141f58c40f640b82|head_blob=cfd227be2f7be9b7360cc975a3354072e1117ef1
+??|platform_os/studio/channel/browser/shell/fixtures/HeaderBrandingFixture.jsx|size=2039|worktree_sha256=2a0930b0ad467b429c4406e16cae529d365842f753c6f653af00afb17b04548e|head_blob=NOT_IN_HEAD
+??|platform_os/studio/channel/browser/shell/fixtures/header-branding.html|size=302|worktree_sha256=d5ce736cf5db5fd8535b2a329bdc4c15e85897301dca44310de35817e89e228f|head_blob=NOT_IN_HEAD
+STAGED_PATHS=0
+HEAD=5eed5d692342cc889f2afff7a6c4f7f6b5cca1dc BRANCH=feature/gm-fleets-minimum-vehicle-master-01
+
+## pre-switch
+
+ D|README.md|size=0|worktree_sha256=ABSENT|head_blob=bc8578d404afdf7c373bb06794aa8b21293b24d7
+ M|platform_os/studio/channel/browser/shell/src/application/AuthPage.css|size=8435|worktree_sha256=7fb8d2be1392ae3a85cc8e2b817d1dc9e69db103d06eb05ec02bd551302afce2|head_blob=c7ebbfbe3d6c2b97177e87dcde8af1ae33647e26
+ M|platform_os/studio/channel/browser/shell/src/application/onboarding/ShortRegisterPage.jsx|size=7065|worktree_sha256=ac7f488ba8845ff5cdba10734cf897af729816a805d5f4ad141f58c40f640b82|head_blob=cfd227be2f7be9b7360cc975a3354072e1117ef1
+??|platform_os/studio/channel/browser/shell/fixtures/HeaderBrandingFixture.jsx|size=2039|worktree_sha256=2a0930b0ad467b429c4406e16cae529d365842f753c6f653af00afb17b04548e|head_blob=NOT_IN_HEAD
+??|platform_os/studio/channel/browser/shell/fixtures/header-branding.html|size=302|worktree_sha256=d5ce736cf5db5fd8535b2a329bdc4c15e85897301dca44310de35817e89e228f|head_blob=NOT_IN_HEAD
+STAGED_PATHS=0
+HEAD=5eed5d692342cc889f2afff7a6c4f7f6b5cca1dc BRANCH=feature/gm-fleets-minimum-vehicle-master-01
+
+## post-switch
+
+ D|README.md|size=0|worktree_sha256=ABSENT|head_blob=bc8578d404afdf7c373bb06794aa8b21293b24d7
+ M|platform_os/studio/channel/browser/shell/src/application/AuthPage.css|size=8435|worktree_sha256=7fb8d2be1392ae3a85cc8e2b817d1dc9e69db103d06eb05ec02bd551302afce2|head_blob=c7ebbfbe3d6c2b97177e87dcde8af1ae33647e26
+ M|platform_os/studio/channel/browser/shell/src/application/onboarding/ShortRegisterPage.jsx|size=7065|worktree_sha256=ac7f488ba8845ff5cdba10734cf897af729816a805d5f4ad141f58c40f640b82|head_blob=cfd227be2f7be9b7360cc975a3354072e1117ef1
+??|platform_os/studio/channel/browser/shell/fixtures/HeaderBrandingFixture.jsx|size=2039|worktree_sha256=2a0930b0ad467b429c4406e16cae529d365842f753c6f653af00afb17b04548e|head_blob=NOT_IN_HEAD
+??|platform_os/studio/channel/browser/shell/fixtures/header-branding.html|size=302|worktree_sha256=d5ce736cf5db5fd8535b2a329bdc4c15e85897301dca44310de35817e89e228f|head_blob=NOT_IN_HEAD
+STAGED_PATHS=0
+HEAD=5eed5d692342cc889f2afff7a6c4f7f6b5cca1dc BRANCH=master
+
+## final
+
+ D|README.md|size=0|worktree_sha256=ABSENT|head_blob=bc8578d404afdf7c373bb06794aa8b21293b24d7
+ M|platform_os/studio/channel/browser/shell/src/application/AuthPage.css|size=8435|worktree_sha256=7fb8d2be1392ae3a85cc8e2b817d1dc9e69db103d06eb05ec02bd551302afce2|head_blob=c7ebbfbe3d6c2b97177e87dcde8af1ae33647e26
+ M|platform_os/studio/channel/browser/shell/src/application/onboarding/ShortRegisterPage.jsx|size=7065|worktree_sha256=ac7f488ba8845ff5cdba10734cf897af729816a805d5f4ad141f58c40f640b82|head_blob=cfd227be2f7be9b7360cc975a3354072e1117ef1
+??|platform_os/studio/channel/browser/shell/fixtures/HeaderBrandingFixture.jsx|size=2039|worktree_sha256=2a0930b0ad467b429c4406e16cae529d365842f753c6f653af00afb17b04548e|head_blob=NOT_IN_HEAD
+??|platform_os/studio/channel/browser/shell/fixtures/header-branding.html|size=302|worktree_sha256=d5ce736cf5db5fd8535b2a329bdc4c15e85897301dca44310de35817e89e228f|head_blob=NOT_IN_HEAD
+STAGED_PATHS=0
+HEAD=5eed5d692342cc889f2afff7a6c4f7f6b5cca1dc BRANCH=master

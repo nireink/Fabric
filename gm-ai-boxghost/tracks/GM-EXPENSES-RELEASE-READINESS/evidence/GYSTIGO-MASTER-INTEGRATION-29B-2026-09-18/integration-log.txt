@@ -1,0 +1,110 @@
+# GYPPORT_GYSTIGO_FROZEN_BASELINE_INTEGRATION_TO_MASTER_29B - raw integration log (Gystigo), in execution order
+
+## §3 state before any ref changed (pre-state)
+
+LOCAL_TIME=2026-09-17 23:58:31 -0500 UTC=2026-09-18T04:58:31Z
+CURRENT_BRANCH=feature/gm-fleets-minimum-vehicle-master-01
+HEAD=5eed5d692342cc889f2afff7a6c4f7f6b5cca1dc
+LOCAL_MASTER=afcba71ec75070992677e41197c2b48bbca01cde
+ORIGIN_MASTER_TRACKING=5f18f3345990f4a8a080ca9ee4e3cffa2604d534
+FEATURE_LOCAL=5eed5d692342cc889f2afff7a6c4f7f6b5cca1dc
+FEATURE_REMOTE_TRACKING=5eed5d692342cc889f2afff7a6c4f7f6b5cca1dc
+UPSTREAM_OF_CURRENT=origin/feature/gm-fleets-minimum-vehicle-master-01
+UPSTREAM_OF_MASTER=origin/master
+REMOTE origin	https://github.com/GYPPORT/Gystigo.git (fetch)
+REMOTE origin	https://github.com/GYPPORT/Gystigo.git (push)
+STAGED_PATHS=0
+-- git status --short
+ D README.md
+ M platform_os/studio/channel/browser/shell/src/application/AuthPage.css
+ M platform_os/studio/channel/browser/shell/src/application/onboarding/ShortRegisterPage.jsx
+?? platform_os/studio/channel/browser/shell/fixtures/HeaderBrandingFixture.jsx
+?? platform_os/studio/channel/browser/shell/fixtures/header-branding.html
+-- worktrees
+D:/NZXTG7/GYPPORT/GYPPORT ERP/GYPPORT/Gystigo                                                   5eed5d6 [feature/gm-fleets-minimum-vehicle-master-01]
+D:/NZXTG7/GYPPORT/GYPPORT ERP/GYPPORT/Gystigo/.claude/worktrees/aiws-004-p1-2-review-725e05     231b328 (detached HEAD)
+D:/NZXTG7/GYPPORT/GYPPORT ERP/GYPPORT/Gystigo/.claude/worktrees/gypport-aiws-003-review-d1ce8e  231b328 (detached HEAD)
+
+## §5-§7 fetch without pull, commit graph, frozen commits (graph-audit)
+
+FETCH_EXIT=0
+ORIGIN_MASTER=5f18f3345990f4a8a080ca9ee4e3cffa2604d534 LS_REMOTE_MASTER=5f18f3345990f4a8a080ca9ee4e3cffa2604d534
+ORIGIN_FEATURE=5eed5d692342cc889f2afff7a6c4f7f6b5cca1dc LS_REMOTE_FEATURE=5eed5d692342cc889f2afff7a6c4f7f6b5cca1dc
+REMOTE_HEADS=2
+A_ORIGIN_MASTER_IS_ANCESTOR_OF_FEATURE=YES
+B_LOCAL_MASTER_IS_ANCESTOR_OF_FEATURE=YES
+C_LOCAL_MASTER_UNIQUE_COMMITS_NOT_IN_FEATURE=0
+ORIGIN_MASTER_UNIQUE_COMMITS_NOT_IN_FEATURE=0
+ORIGIN_FEATURE_ONLY_COMMITS_NOT_IN_LOCAL_FEATURE=0
+COMMITS_ORIGIN_MASTER_TO_FEATURE=128
+COMMITS_LOCAL_MASTER_TO_FEATURE=97
+MERGE_COMMITS_IN_ORIGIN_MASTER_TO_FEATURE=0
+FROZEN MVP_RELEASE_BASELINE_STEP17_AND_STEP18_DEPLOY bcb959158b781e3fcd876bacc6fcf0f1f1c79b9f reachable_from_feature=YES
+FROZEN V64_DEPLOYMENT_STEP24 0293ff45e94b2ebbec67e792fea28e7b80bc8901 reachable_from_feature=YES
+FROZEN V65_DEPLOYMENT_STEP27_RUNTIME_STEP28_ACCEPTANCE_FROZEN_BASELINE 5eed5d692342cc889f2afff7a6c4f7f6b5cca1dc reachable_from_feature=YES
+DEPLOYED_IMAGE_SOURCE_GYSTIGO=5eed5d692342cc889f2afff7a6c4f7f6b5cca1dc
+
+## §9 non-force fast-forward of origin/master to the accepted head (push-master)
+
+REMOTE_MASTER_BEFORE=5f18f3345990f4a8a080ca9ee4e3cffa2604d534
+To https://github.com/GYPPORT/Gystigo.git
+   5f18f33..5eed5d6  5eed5d692342cc889f2afff7a6c4f7f6b5cca1dc -> master
+PUSH_EXIT=0
+REMOTE_MASTER_AFTER=5eed5d692342cc889f2afff7a6c4f7f6b5cca1dc
+
+## §10-§11 remote master verified, local master fast-forwarded by a non-forced refspec (verify-and-local-ff)
+
+== §10 verify remote master
+FETCH_EXIT=0
+ORIGIN_MASTER=5eed5d692342cc889f2afff7a6c4f7f6b5cca1dc LS_REMOTE_MASTER=5eed5d692342cc889f2afff7a6c4f7f6b5cca1dc
+ORIGIN_MASTER_CONTAINS_FEATURE_HEAD=YES
+FEATURE_COMMITS_NOT_IN_ORIGIN_MASTER=0
+== §11 fast-forward local master (non-forced refspec, refuses non-fast-forward)
+LOCAL_MASTER_BEFORE=afcba71ec75070992677e41197c2b48bbca01cde
+From https://github.com/GYPPORT/Gystigo
+   afcba71..5eed5d6  master     -> master
+LOCAL_FF_EXIT=0
+LOCAL_MASTER_AFTER=5eed5d692342cc889f2afff7a6c4f7f6b5cca1dc
+LOCAL_MASTER_REFLOG_LAST=fetch --no-tags origin refs/heads/master:refs/heads/master: fast-forward
+HEAD_STILL=5eed5d692342cc889f2afff7a6c4f7f6b5cca1dc ON=feature/gm-fleets-minimum-vehicle-master-01
+
+## §13-§14 master verified as the single line, then the remote feature branch deleted (master-verify-and-remote-delete)
+
+== §13 master is the single active line
+CURRENT_BRANCH=master LOCAL_MASTER=5eed5d692342cc889f2afff7a6c4f7f6b5cca1dc ORIGIN_MASTER=5eed5d692342cc889f2afff7a6c4f7f6b5cca1dc AHEAD_BEHIND=0/0 UPSTREAM=origin/master
+FROZEN_BASELINE_REACHABLE_FROM_MASTER=YES
+FEATURE_CONTAINED_IN_MASTER=YES
+== §14 delete the remote feature branch (standard, non-force)
+To https://github.com/GYPPORT/Gystigo.git
+ - [deleted]         feature/gm-fleets-minimum-vehicle-master-01
+DELETE_EXIT=0
+PRUNE_FETCH_EXIT=0
+LS_REMOTE_FEATURE=ABSENT TRACKING_FEATURE=ABSENT
+LS_REMOTE_MASTER_AFTER_DELETE=5eed5d692342cc889f2afff7a6c4f7f6b5cca1dc
+REMOTE_HEADS_NOW:
+  5eed5d692342 master
+
+## §15 safe local deletion (git branch -d) (local-delete)
+
+CURRENT_BRANCH=master FEATURE_TIP=5eed5d692342cc889f2afff7a6c4f7f6b5cca1dc CONTAINED_IN_MASTER=YES
+Deleted branch feature/gm-fleets-minimum-vehicle-master-01 (was 5eed5d6).
+BRANCH_D_EXIT=0
+FEATURE_LOCAL_EXISTS=NO
+FEATURE_CONFIG_LEFT=0
+
+## §16-§17 final Gystigo, gm-expenses and read-only Shared DEV state (final-state)
+
+== §16 final Gystigo
+ACTIVE_BRANCH=master LOCAL_MASTER=5eed5d692342cc889f2afff7a6c4f7f6b5cca1dc ORIGIN_MASTER=5eed5d692342cc889f2afff7a6c4f7f6b5cca1dc AHEAD_BEHIND=0/0
+FEATURE_LOCAL_EXISTS=NO FEATURE_REMOTE_EXISTS=NO
+UNRELATED_WIP_PRESERVED=YES (5 paths, identical status and bytes; staged 0)
+OTHER_LOCAL_BRANCHES_UNTOUCHED=15 local branches (feature removed); worktrees: 3
+== §17 gm-expenses (verify only)
+GM_EXPENSES_LOCAL=39a2adf4dfff0196208a1f80719be1c12c047ac2 ORIGIN=39a2adf4dfff0196208a1f80719be1c12c047ac2 DIRTY=0
+== Shared DEV and Owner Case (read-only)
+CASE Compra Filtro | status=ABIERTO | EXP. 08 | ID 202609170001 | Fecha 2026-09-17
+ORIGINALS_UNCHANGED=YES
+REVERSALS=2 | total=300.0000 | each_matches_its_original=YES | actor_populated=YES | timestamp_populated=YES | reason_populated=YES
+INPUTS delivered=320.0000 approved=400.0000 rejected=200.0000 returned=0.0000 reimbursed=0.0000
+SHARED_DEV_FLYWAY current=65 failed=0
+BACKEND gystigo-backend:4.1.0-java25-gm-expenses-v65-5eed5d6 healthy restarts=0
