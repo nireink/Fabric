@@ -1,0 +1,7 @@
+GATE core_business_dev-pre-v64-20260917T200210.sql temp_sha_ok=True restricted_sha_ok=True -> SAFE_TO_REMOVE
+GATE core_business_dev-pre-v65-20260917T222529.sql temp_sha_ok=True restricted_sha_ok=True -> SAFE_TO_REMOVE
+TEMP_REMOVED_COUNT=2
+POST core_business_dev-pre-v64-20260917T200210.sql restricted_present=True restricted_sha_ok=True temp_absent=True
+POST core_business_dev-pre-v65-20260917T222529.sql restricted_present=True restricted_sha_ok=True temp_absent=True
+TEMP_DIRECTORY_KEPT=YES remaining=9 (V64-from-commit-0293ff4.sql, V65-from-commit-5eed5d6.sql, post-migration-checksums.txt, post-v65-checksums.txt, pre-migration-checksums.txt, pre-v65-business-numbers.md5, pre-v65-checksums.txt, preflight-20260917T200210.txt, preflight-20260917T222529.txt)
+TEMP_DUMPS_REMAINING=0

@@ -1,0 +1,15 @@
+== pre-v64 (STEP 24) restored from the RESTRICTED copy
+CONTAINER=gypport-step30-restore-pre-v64 network=none image=mysql:8.4.10 ready=YES
+SQL_DUMP_READABLE=YES RESTORE_EXIT=0 RESTORE_ERROR=NONE
+RESTORED_TABLES=107 (expected 107)  RESTORED_CASES=30 (expected 30)  RESTORED_FLYWAY=63 (expected 63)  FLYWAY_FAILED=0
+FINANCIAL_CHECKSUMS_EQUAL_TO_PRE_MIGRATION_RECORD=6/6 (expense =, expense_advance =, advance_settlement =, settlement_balance_event =, expense_review_event =, expense_command_receipt =)
+CONTAINER_REMOVED=YES
+RESTORE_VALIDATION_PRE_V64=PASS
+== pre-v65 (STEP 27) restored from the RESTRICTED copy
+CONTAINER=gypport-step30-restore-pre-v65 network=none image=mysql:8.4.10 ready=YES
+SQL_DUMP_READABLE=YES RESTORE_EXIT=0 RESTORE_ERROR=NONE
+RESTORED_TABLES=108 (expected 108)  RESTORED_CASES=35 (expected 35)  RESTORED_FLYWAY=64 (expected 64)  FLYWAY_FAILED=0
+FINANCIAL_CHECKSUMS_EQUAL_TO_PRE_MIGRATION_RECORD=6/6 (expense =, expense_advance =, advance_settlement =, settlement_balance_event =, expense_review_event =, expense_command_receipt =)
+CONTAINER_REMOVED=YES
+RESTORE_VALIDATION_PRE_V65=PASS
+RESTRICTED_COPY_RESTORE_VALIDATION=PASS
